@@ -1,7 +1,7 @@
 #include "MCTSSearcher.h"
 
 #include <iostream>
-
+#include <cmath>
 #include "GameState.h"
 
 
@@ -110,10 +110,7 @@ void MCTSSearcher::forward(GameState gameState) {
 
 double MCTSSearcher::rollout(GameState gameState) {
     int depth = 0;
-    while (true) {
-        if (gameState.isTerminal()) {
-            return gameState.getTerminalValue(true);
-        }
+    while (!gameState.isTerminal()) {
         std::vector<int> legalActions = gameState.getLegalActions();
         int randomIndex = rng.randInt(legalActions.size());
         int action = legalActions[randomIndex];
@@ -121,8 +118,7 @@ double MCTSSearcher::rollout(GameState gameState) {
         depth++;
     }
 
-
-    return 0;
+    return gameState.getTerminalValue(true);
 }
 
 
