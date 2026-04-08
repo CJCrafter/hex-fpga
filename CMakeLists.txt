@@ -10,10 +10,10 @@ add_executable(MCTSHex
         mcts_tree.h
         GameState.cpp
         GameState.h
-        mcts_searcher.cpp
-        mcts_searcher.h
-        RolloutSTate.cpp
-        RolloutState.h
+#        mcts_searcher.cpp
+#        mcts_searcher.h
+#        RolloutSTate.cpp
+#        RolloutState.h
         hex.h
         hex.cpp
         main.cpp

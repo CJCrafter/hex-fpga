@@ -7,7 +7,7 @@ int main() {
     Hex hex(5);
     bool isRED = true;
     while (true) {
-        MCTSSearcher searcher;
+        MCTSSearcher searcher(4l);
         int action = searcher.search(hex, isRED);
         std::cout << "Made move " + std::to_string(action) << std::endl;
         hex.place(action);

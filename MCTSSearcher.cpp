@@ -59,7 +59,7 @@ void MCTSSearcher::createNode(int parent, int action) {
 
 void MCTSSearcher::mainLoop(Hex boardState) {
     long start = 0l;
-    int max_sims = 1000000;
+    int max_sims = 2000;
     GameState gameState(boardState); // Create gameState via boardState
 
     int i = 0;
@@ -111,7 +111,7 @@ void MCTSSearcher::forward(GameState gameState) {
 double MCTSSearcher::rollout(GameState gameState) {
     int depth = 0;
     while (true) {
-        if (!gameState.isTerminal()) {
+        if (gameState.isTerminal()) {
             return gameState.getTerminalValue(true);
         }
         std::vector<int> legalActions = gameState.getLegalActions();
