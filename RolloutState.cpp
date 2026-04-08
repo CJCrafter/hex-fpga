@@ -6,7 +6,7 @@
 
 int RolloutState::selectAction() {
     std::vector<int> legalActions = gameState.getLegalActions();
-    int action = legalActions.at(0); // todo: make random
+    int action = legalActions.at(rng.randInt(legalActions.size()));
     return action;
 }
 

@@ -5,9 +5,10 @@
 #ifndef MCTSHEX_MCTSSEARCHER_H
 #define MCTSHEX_MCTSSEARCHER_H
 
-#define MAX_NODES 200000
+#define MAX_NODES 100000
 #include "GameState.h"
 #include "hex.h"
+#include "rand.h"
 
 class MCTSSearcher {
 public:
@@ -22,9 +23,9 @@ public:
     int childActions[MAX_NODES]{};
     bool isREDs[MAX_NODES]{};
     int nextFree;
+    RNG rng;
 
-    MCTSSearcher() {
-        nextFree = 1;
+    explicit MCTSSearcher(uint64_t seed) : nextFree(0), rng(seed) {
     }
 
     int search(Hex boardState);
@@ -41,7 +42,7 @@ public:
 
     void backup(double reward, int artificialLeaf);
 
-    static double rollout(GameState gameState);
+    double rollout(GameState gameState);
 };
 
 
