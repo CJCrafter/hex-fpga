@@ -1,8 +1,6 @@
-//
-// Created by Aakash Kumar on 4/7/26.
-//
-
 #include "MCTSSearcher.h"
+
+#include <iostream>
 
 #include "GameState.h"
 
@@ -48,6 +46,10 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
 }
 
 void MCTSSearcher::createNode(int parent, int action) {
+    if (nextFree >= MAX_NODES) {
+        std::cout << "Max nodes reached, cannot create more nodes" << std::endl;
+        return;
+    }
     this->parents[nextFree] = parent;
     this->childActions[nextFree] = action;
     this->childrenEnds[parent] = nextFree;
@@ -57,7 +59,7 @@ void MCTSSearcher::createNode(int parent, int action) {
 
 void MCTSSearcher::mainLoop(Hex boardState) {
     long start = 0l;
-    int max_sims = 100000;
+    int max_sims = 1000000;
     GameState gameState(boardState); // Create gameState via boardState
 
     int i = 0;
