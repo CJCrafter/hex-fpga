@@ -39,7 +39,6 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
     if (terminals[parent]) {
         return;
     }
-    //todo: set is reds
 
     std::vector<int> legalActions = boardState.getLegalActions();
     this->childrenStarts[parent] = nextFree;
@@ -82,6 +81,7 @@ void MCTSSearcher::forward(GameState gameState) {
         double logVisitCounts = log(this->visitCounts[node]);
         for (int childNode = childrenStart; childNode <= childrenEnd; childNode++) {
             double childQ = this->returnSums[childNode] / (0.0001 + this->visitCounts[childNode]);
+            // todo: make configurable
             double childUCT = childQ + 1.41 * sqrt(logVisitCounts / (0.0001 + this->visitCounts[childNode]));
             if (childUCT > bestChildUCT) {
                 bestChildUCT = childUCT;
@@ -107,6 +107,19 @@ void MCTSSearcher::forward(GameState gameState) {
 }
 
 double MCTSSearcher::rollout(GameState gameState) {
+    int depth = 0;
+    while (true) {
+        if (!gameState.isTerminal()) {
+            return gameState.getTerminalValue(true);
+        }
+        std::vector<int> legalActions = gameState.getLegalActions();
+        int randomIndex = rand() % legalActions.size();
+        int action = legalActions[randomIndex];
+        gameState.makeMove(action);
+        depth++;
+    }
+
+
     return 0;
 }
 
