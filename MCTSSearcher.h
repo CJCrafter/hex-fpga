@@ -8,6 +8,7 @@
 #define MAX_NODES 100000
 #include "GameState.h"
 #include "hex.h"
+#include "rand.h"
 
 class MCTSSearcher {
 public:
@@ -22,9 +23,9 @@ public:
     int childActions[MAX_NODES]{};
     bool isREDs[MAX_NODES]{};
     int nextFree;
+    RNG rng;
 
-    MCTSSearcher() {
-        nextFree = 0;
+    explicit MCTSSearcher(uint64_t seed) : nextFree(0), rng(seed) {
     }
 
     int search(Hex boardState);
@@ -41,7 +42,7 @@ public:
 
     void backup(double reward, int artificialLeaf);
 
-    static double rollout(GameState gameState);
+    double rollout(GameState gameState);
 };
 
 

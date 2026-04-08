@@ -113,7 +113,7 @@ double MCTSSearcher::rollout(GameState gameState) {
             return gameState.getTerminalValue(true);
         }
         std::vector<int> legalActions = gameState.getLegalActions();
-        int randomIndex = rand() % legalActions.size();
+        int randomIndex = rng.randInt(legalActions.size());
         int action = legalActions[randomIndex];
         gameState.makeMove(action);
         depth++;

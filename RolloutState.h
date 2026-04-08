@@ -5,13 +5,15 @@
 #ifndef MCTSHEX_ROLLOUTSTATE_H
 #define MCTSHEX_ROLLOUTSTATE_H
 #include "GameState.h"
+#include "rand.h"
 
 
 class RolloutState {
 public:
     GameState gameState;
+    RNG& rng;
 
-    RolloutState(GameState gameState) : gameState(gameState) {
+    RolloutState(GameState gameState, RNG& rng) : gameState(gameState), rng(rng) {
     };
 
     int selectAction();
