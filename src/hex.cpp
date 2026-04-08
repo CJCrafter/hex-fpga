@@ -11,14 +11,15 @@ Hex::Hex(int size)
   boardMask_ = (1ULL << (size * size)) - 1;
 
   // column masks for preventing wrap on horizontal shifts
-  notLeftCol_ = 0;
-  notRightCol_ = 0;
+  // build column masks first, then complement
+  uint64_t leftColMask = 0;
+  uint64_t rightColMask = 0;
   for (int r = 0; r < size; r++) {
-    notLeftCol_ |= ~(1ULL << (r * size));
-    notRightCol_ |= ~(1ULL << (r * size + size - 1));
+    leftColMask  |= 1ULL << (r * size);
+    rightColMask |= 1ULL << (r * size + size - 1);
   }
-  notLeftCol_ &= boardMask_;
-  notRightCol_ &= boardMask_;
+  notLeftCol_  = ~leftColMask  & boardMask_;
+  notRightCol_ = ~rightColMask & boardMask_;
 
   // edge masks for win detection
   // player 1 connects top row to bottom row
@@ -61,12 +62,12 @@ uint64_t Hex::flood(uint64_t seed, uint64_t board) const {
   do {
     prev = fill;
     uint64_t neighbors =
-      ((fill << 1) & notRightCol_)              // right
-      | ((fill >> 1) & notLeftCol_)             // left
-      | (fill << size_)                         // down-right (row+1, same col)
-      | (fill >> size_)                         // up-left (row-1, same col)
-      | ((fill << (size_ - 1)) & notLeftCol_)   // down-left (row+1, col-1)
-      | ((fill >> (size_ - 1)) & notRightCol_); // up-right (row-1, col+1)
+      ((fill & notRightCol_) << 1) // right (col+1): don't shift from rightmost col
+      | ((fill & notLeftCol_) >> 1) // left (col-1): don't shift from leftmost col
+      | (fill << size_) // down (row+1, same col)
+      | (fill >> size_) // up (row-1, same col)
+      | ((fill & notLeftCol_) << (size_ - 1)) // down-left (row+1, col-1)
+      | ((fill & notRightCol_) >> (size_ - 1)); // up-right (row-1, col+1)
     fill |= (neighbors & board);
     fill &= boardMask_;
   } while (fill != prev);
