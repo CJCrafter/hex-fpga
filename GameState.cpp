@@ -17,7 +17,7 @@ std::vector<int> GameState::getLegalActions() {
     std::vector<int> legalActions;
     const uint64_t legalActionMap = ~(this->hexGame.player1() | this->hexGame.player2()); // todo use hex game for this
     for (int i = 0; i < hexGame.size() * hexGame.size(); i++) {
-        if (legalActionMap & (1 << i)) {
+        if (legalActionMap & (1ULL << i)) {
             legalActions.push_back(i);
         }
     }

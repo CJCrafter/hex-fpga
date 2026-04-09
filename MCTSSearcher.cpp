@@ -59,7 +59,7 @@ void MCTSSearcher::createNode(int parent, int action) {
 
 void MCTSSearcher::mainLoop(Hex boardState) {
     long start = 0l;
-    int max_sims = 2000;
+    int max_sims = 10000;
     GameState gameState(boardState); // Create gameState via boardState
 
     int i = 0;
