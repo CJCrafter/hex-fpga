@@ -159,3 +159,9 @@ void MCTSSearcher::backup(double reward, int artificialLeafNode) {
         node = parent;
     }
 }
+
+
+static int search(Hex boardState, bool isRED) {
+    MCTSSearcher searcher(4l);
+    return searcher.search(boardState, isRED);
+}

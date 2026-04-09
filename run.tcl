@@ -31,7 +31,7 @@ set hls_prj mcts.prj
 # Open/reset the project
 open_project ${hls_prj} -reset
 # Top function of the design is "digitrec"
-set_top main
+set_top search
 
 # Add design and testbench files
 add_files GameState.cpp  -cflags $CFLAGS

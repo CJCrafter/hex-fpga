@@ -10,7 +10,7 @@
 
 # Extract Vivado HLS include path
 XILINX_VITIS?=/scratch/Xilinx/2025.1/Vitis
-XIL_HLS=source $(XILINX_VITIS)/settings64.sh; vitis-run --mode hls --tcl
+XIL_HLS=source /scratch/Xilinx/2025.1/Vitis/settings64.sh; vitis-run --mode hls --tcl
 VHLS_INC=$(XILINX_VITIS)/include
 # Specify compilation flags
 CFLAGS=-g -I${VHLS_INC}
