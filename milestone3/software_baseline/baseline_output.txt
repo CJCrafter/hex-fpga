@@ -1,0 +1,70 @@
+Run 1
+Made move 7 (10.9447 ms)
+Made move 16 (10.1622 ms)
+Made move 13 (9.429 ms)
+Made move 18 (8.99594 ms)
+Made move 17 (8.32782 ms)
+Made move 8 (7.65634 ms)
+Made move 12 (7.02507 ms)
+Made move 21 (6.14189 ms)
+Made move 22 (5.3727 ms)
+Made move 2 (3.89461 ms)
+Made move 3 (3.40846 ms)
+The game has been won by Red
+
+Run 2
+Made move 7 (10.9584 ms)
+Made move 16 (10.1564 ms)
+Made move 13 (9.4816 ms)
+Made move 18 (9.00524 ms)
+Made move 17 (8.27868 ms)
+Made move 8 (7.65164 ms)
+Made move 12 (6.98695 ms)
+Made move 21 (6.12999 ms)
+Made move 22 (5.44615 ms)
+Made move 2 (3.8868 ms)
+Made move 3 (3.38879 ms)
+The game has been won by Red
+
+Run 3
+Made move 7 (10.8806 ms)
+Made move 16 (10.1738 ms)
+Made move 13 (9.55887 ms)
+Made move 18 (9.06069 ms)
+Made move 17 (8.28083 ms)
+Made move 8 (7.61339 ms)
+Made move 12 (6.98029 ms)
+Made move 21 (6.13213 ms)
+Made move 22 (5.38613 ms)
+Made move 2 (3.91352 ms)
+Made move 3 (3.39642 ms)
+The game has been won by Red
+
+Run 4
+Made move 7 (11.0154 ms)
+Made move 16 (10.2874 ms)
+Made move 13 (9.459 ms)
+Made move 18 (9.15146 ms)
+Made move 17 (8.27808 ms)
+Made move 8 (7.66632 ms)
+Made move 12 (6.98122 ms)
+Made move 21 (6.1207 ms)
+Made move 22 (5.37823 ms)
+Made move 2 (3.88849 ms)
+Made move 3 (3.38225 ms)
+The game has been won by Red
+
+Run 5
+Made move 7 (10.9086 ms)
+Made move 16 (10.1258 ms)
+Made move 13 (9.42428 ms)
+Made move 18 (8.99043 ms)
+Made move 17 (8.28207 ms)
+Made move 8 (7.64976 ms)
+Made move 12 (7.01853 ms)
+Made move 21 (6.1261 ms)
+Made move 22 (5.37696 ms)
+Made move 2 (3.88864 ms)
+Made move 3 (3.38477 ms)
+The game has been won by Red
+

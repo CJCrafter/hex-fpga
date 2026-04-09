@@ -1,0 +1,189 @@
+
+****** vitis-run v2025.1 (64-bit)
+  **** SW Build 6137779 on 2025-05-21-18:10:03
+  **** Start of session at: Wed Apr  8 22:39:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.1 6135595
+Sourcing Tcl script '/home/grad1/alanz/cs599n1/hex-fpga/hls/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project rollout_hls_proj 
+WARNING: [HLS 200-2182] The 'rollout_hls_proj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj'.
+INFO: [HLS 200-1510] Running: set_top rollout_hls 
+INFO: [HLS 200-1510] Running: add_files rollout_hls.cpp 
+INFO: [HLS 200-10] Adding design file 'rollout_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb rollout_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'rollout_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../rollout_tb.cpp in debug mode
+   Compiling ../../../../rollout_hls.cpp in debug mode
+   Generating csim.exe
+Player 1 wins: 56/100
+Near-win P1 wins: 71/100
+PASS: Near-win position produces more P1 wins
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:00; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.15 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.21 seconds; current allocated memory: 216.957 MB.
+INFO: [HLS 200-10] Analyzing design file 'rollout_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.32 seconds. CPU system time: 0.27 seconds. Elapsed time: 0.69 seconds; current allocated memory: 218.988 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 506 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 427 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 334 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 284 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 264 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 252 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 252 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 252 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 252 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 263 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 224 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 196 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 204 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 218 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/grad1/alanz/cs599n1/hex-fpga/hls/rollout_hls_proj/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-178] Inlining function 'HexHLS::flood(unsigned long, unsigned long) const (.6)' into 'HexHLS::checkWin() const' (./hex_hls.h:81:0)
+INFO: [HLS 214-178] Inlining function 'HexHLS::init()' into 'rollout_hls(unsigned long, unsigned long, bool, unsigned long)' (rollout_hls.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'HexHLS::getLegalActions(int*) const' into 'rollout_hls(unsigned long, unsigned long, bool, unsigned long)' (rollout_hls.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'xorshift64(unsigned long)' into 'rollout_hls(unsigned long, unsigned long, bool, unsigned long)' (rollout_hls.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'HexHLS::place(int)' into 'rollout_hls(unsigned long, unsigned long, bool, unsigned long)' (rollout_hls.cpp:20:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_66_1> at ./hex_hls.h:66:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_96_1> at ./hex_hls.h:96:26 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.59 seconds. CPU system time: 0.34 seconds. Elapsed time: 7.79 seconds; current allocated memory: 228.879 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 228.879 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 229.062 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 229.094 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'HexHLS::checkWin' (./hex_hls.h:64:45)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 250.789 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 280.113 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rollout_hls' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'checkWin_Pipeline_VITIS_LOOP_66_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_66_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_66_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 281.125 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 281.125 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'checkWin_Pipeline_VITIS_LOOP_66_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_66_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_66_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 281.129 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 281.129 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'checkWin' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 281.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 281.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rollout_hls_Pipeline_VITIS_LOOP_96_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_96_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_96_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 281.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 281.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rollout_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 281.289 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 281.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'checkWin_Pipeline_VITIS_LOOP_66_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'checkWin_Pipeline_VITIS_LOOP_66_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 281.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'checkWin_Pipeline_VITIS_LOOP_66_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'checkWin_Pipeline_VITIS_LOOP_66_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 282.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'checkWin' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'checkWin'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 283.551 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rollout_hls_Pipeline_VITIS_LOOP_96_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'rollout_hls_Pipeline_VITIS_LOOP_96_1' pipeline 'VITIS_LOOP_96_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rollout_hls_Pipeline_VITIS_LOOP_96_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 284.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rollout_hls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rollout_hls/player1_board' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rollout_hls/player2_board' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rollout_hls/isPlayer1Turn' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rollout_hls/rng_seed' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rollout_hls' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'player1_board', 'player2_board', 'isPlayer1Turn' and 'rng_seed' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_64s_5_68_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rollout_hls'.
+INFO: [RTMG 210-278] Implementing memory 'rollout_hls_legalActions_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 286.934 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.25 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.61 seconds; current allocated memory: 291.426 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.61 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.93 seconds; current allocated memory: 295.496 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for rollout_hls.
+INFO: [VLOG 209-307] Generating Verilog RTL for rollout_hls.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 226.91 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:11; Allocated memory: 78.973 MB.
+INFO: [HLS 200-112] Total CPU user time: 7.05 seconds. Total CPU system time: 1.37 seconds. Total elapsed time: 14.47 seconds; peak allocated memory: 295.496 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 16s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
