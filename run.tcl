@@ -69,5 +69,5 @@ csynth_design
 set argv [list $filename $hls_prj]
 set argc 2
 #source "./script/collect_result.tcl"
-}
+
 exit
