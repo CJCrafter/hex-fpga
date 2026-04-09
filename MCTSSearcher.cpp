@@ -84,7 +84,7 @@ void MCTSSearcher::forward(GameState gameState) {
         double logVisitCounts = log(this->visitCounts[node]);
         for (int childNode = childrenStart; childNode <= childrenEnd; childNode++) {
             double childQ = this->returnSums[childNode] / (0.0001 + this->visitCounts[childNode]);
-            // todo: make configurable
+            // todo: Makefile configurable
             double childUCT = childQ + 1.41 * sqrt(logVisitCounts / (0.0001 + this->visitCounts[childNode]));
             if (childUCT > bestChildUCT) {
                 bestChildUCT = childUCT;
