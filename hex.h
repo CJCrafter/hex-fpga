@@ -1,7 +1,7 @@
 #pragma once
-// #include <cstdint>
+#include <cstdint>
 // #include <stdexcept>
-#define uint64_t unsigned long long
+// #define uint64_t unsigned long long
 class Hex {
 public:
     Hex(int size);

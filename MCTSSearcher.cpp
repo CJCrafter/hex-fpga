@@ -1,6 +1,5 @@
 #include "MCTSSearcher.h"
 
-#include <iostream>
 #include <cmath>
 #include "GameState.h"
 
