@@ -23,13 +23,13 @@ int main() {
     Hex hex(5);
     bool isRED = true;
     while (true) {
-        MCTSSearcher *searcher = new MCTSSearcher(4l); // heap allocate
-        auto t0 = std::chrono::high_resolution_clock::now();
-        int action = searcher->search(hex, isRED);
+        // MCTSSearcher *searcher = new MCTSSearcher(4l); // heap allocate
+        // auto t0 = std::chrono::high_resolution_clock::now();
+        int action = search(hex, isRED);
         auto t1 = std::chrono::high_resolution_clock::now();
-        double ms = std::chrono::duration<double, std::milli>(t1 - t0).count();
-        delete searcher;
-        std::cout << "Made move " + std::to_string(action) << " (" << ms << " ms)" << std::endl;
+        // double ms = std::chrono::duration<double, std::milli>(t1 - t0).count();
+        // delete searcher;
+        std::cout << "Made move " + std::to_string(action) << std::endl; // << " (" << ms << " ms)"
         hex.place(action);
         std::string player = isRED ? "Red" : "Blue";
         isRED = !isRED;

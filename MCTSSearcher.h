@@ -53,5 +53,5 @@ public:
     double rollout(GameState gameState);
 };
 
-
+int search(Hex boardState, bool isRED);
 #endif //MCTSHEX_MCTSSEARCHER_H
