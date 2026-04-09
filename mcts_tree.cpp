@@ -71,7 +71,7 @@ void MCTSTree::DecisionNode::updateActionStats(const int action, const double re
     double valueSquareSum = actionValueSquareSums[action] + result * result;
 
     actionVisitCounts[action] = visitCount + 1;
-    actionQValues[action] = valueSum / visitCount;
+    actionQValues[action] = valueSum / (visitCount + 1);
     actionValueSums[action] = valueSum;
 
     actionValueSquareSums[action] = valueSquareSum;

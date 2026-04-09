@@ -5,6 +5,7 @@
 #ifndef MCTSHEX_MCTSSEARCHER_H
 #define MCTSHEX_MCTSSEARCHER_H
 
+#include <cstring>
 #define MAX_NODES 200000
 #include "GameState.h"
 #include "hex.h"
@@ -26,9 +27,16 @@ public:
     RNG rng;
 
     explicit MCTSSearcher(uint64_t seed) : nextFree(0), rng(seed) {
+        memset(visitCounts, 0, sizeof(visitCounts));
+        memset(returnSums, 0, sizeof(returnSums));
+        memset(parents, 0, sizeof(parents));
+        memset(childrenStarts, 0, sizeof(childrenStarts));
+        memset(childrenEnds, 0, sizeof(childrenEnds));
+        memset(expandeds, 0, sizeof(expandeds));
+        memset(terminals, 0, sizeof(terminals));
+        memset(childActions, 0, sizeof(childActions));
+        memset(isREDs, 0, sizeof(isREDs));
     }
-
-    int search(Hex boardState);
 
     int search(Hex boardState, bool isRED);
 

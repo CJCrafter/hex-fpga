@@ -87,7 +87,7 @@ void MCTSSearcher::backup(std::vector<SearchNode> &path, double reward) {
 
 double MCTSSearcher::rollout(const GameState &gameState) {
     RolloutState rolloutState(gameState);
-    while (rolloutState.isTerminal()) {
+    while (!rolloutState.isTerminal()) {
         int action = rolloutState.selectAction();
         rolloutState.makeMove(action);
     }
