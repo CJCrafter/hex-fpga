@@ -37,11 +37,13 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
     if (terminals[parent]) {
         return;
     }
-
-    std::vector<int> legalActions = boardState.getLegalActions();
+    const Hex hexGame = boardState.hexGame;
     this->childrenStarts[parent] = nextFree;
-    for (int action: legalActions) {
-        createNode(parent, action);
+    const uint64_t legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
+    for (int i = 0; i < boardState.hexGame.size() * hexGame.size(); i++) {
+        if (legalActionMap & (1ULL << i)) {
+            createNode(parent, i);
+        }
     }
 }
 
