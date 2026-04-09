@@ -16,6 +16,6 @@ csim_design
 csynth_design
 
 # generate reports
-# cosim_design  # optional: RTL co-simulation
+# cosim_design
 
 exit
