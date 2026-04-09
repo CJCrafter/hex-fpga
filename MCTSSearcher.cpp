@@ -49,7 +49,7 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
 
 void MCTSSearcher::createNode(int parent, int action) {
     if (nextFree >= MAX_NODES) {
-        std::cout << "Max nodes reached, cannot create more nodes" << std::endl;
+        // std::cout << "Max nodes reached, cannot create more nodes" << std::endl;
         return;
     }
     this->parents[nextFree] = parent;
@@ -113,9 +113,29 @@ void MCTSSearcher::forward(GameState gameState) {
 double MCTSSearcher::rollout(GameState gameState) {
     int depth = 0;
     while (!gameState.isTerminal()) {
-        std::vector<int> legalActions = gameState.getLegalActions();
-        int randomIndex = rng.randInt(legalActions.size());
-        int action = legalActions[randomIndex];
+        // std::vector<int> legalActions = gameState.getLegalActions();
+        const Hex hexGame = gameState.hexGame;
+        const uint64_t legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
+        int numLegalActions = 0;
+        for (int i = 0; i < gameState.hexGame.size() * hexGame.size(); i++) {
+            if (legalActionMap & (1ULL << i)) {
+                numLegalActions++;
+            }
+        }
+
+        int randomIndex = rng.randInt(numLegalActions);
+        // int action = legalActions[randomIndex];
+        int action = 0;
+        int actionIdx = 0;
+        for (int i = 0; i < gameState.hexGame.size() * hexGame.size(); i++) {
+            if (legalActionMap & (1ULL << i)) {
+                if (actionIdx == randomIndex) {
+                    action = i;
+                    break;
+                }
+                actionIdx++;
+            }
+        }
         gameState.makeMove(action);
         depth++;
     }

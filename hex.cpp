@@ -3,7 +3,7 @@
 Hex::Hex(int size)
     : size_(size), isPlayer1Turn_(true), lastMove_(-1), player1_(0), player2_(0) {
     if (size >= 7) {
-        throw std::invalid_argument("size must be less than 7");
+        // throw std::invalid_argument("size must be less than 7");
     }
 
     // all valid board bits
@@ -38,10 +38,10 @@ void Hex::place(int position) {
     uint64_t bit = 1ULL << position;
 
     if (position < 0 || position >= size_ * size_) {
-        throw std::invalid_argument("position out of bounds");
+        // throw std::invalid_argument("position out of bounds");
     }
     if ((player1_ | player2_) & bit) {
-        throw std::invalid_argument("position already occupied");
+        // throw std::invalid_argument("position already occupied");
     }
 
     if (isPlayer1Turn_) {

@@ -4,7 +4,7 @@
 
 #ifndef MCTSHEX_GAMESTATE_H
 #define MCTSHEX_GAMESTATE_H
-#include <vector>
+// #include <vector>
 
 #include "hex.h"
 
@@ -20,7 +20,7 @@ public:
 
     void makeMove(int action);
 
-    std::vector<int> getLegalActions();
+    // std::vector<int> getLegalActions();
 
     bool isTerminal();
 
