@@ -17,6 +17,7 @@ public:
     int lastMove() const { return lastMove_; }
 
     // todo: get legal moves
+    bool is_first;
 
 private:
     uint64_t flood(uint64_t seed, uint64_t board) const;
@@ -33,4 +34,5 @@ private:
     uint64_t bottomRow_;
     uint64_t leftCol_;
     uint64_t rightCol_;
+
 };

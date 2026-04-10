@@ -20,8 +20,9 @@ void printbits(unsigned long long n) {
 }
 
 int main() {
-    Hex hex(5);
+    Hex hex(3);
     bool isRED = true;
+
     while (true) {
         // MCTSSearcher *searcher = new MCTSSearcher(4l); // heap allocate
         // auto t0 = std::chrono::high_resolution_clock::now();
@@ -45,6 +46,7 @@ int main() {
 
         if (hex.checkWin()) {
             std::cout << "The game has been won by " + player << std::endl;
+            hex = Hex(3);
             break;
         }
     }

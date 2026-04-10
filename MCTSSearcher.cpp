@@ -1,6 +1,7 @@
 #include "MCTSSearcher.h"
 
-#include "hls_math.h"
+// #include "hls_math.h"
+#include <cmath>
 #include "GameState.h"
 
 
@@ -40,7 +41,7 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
     this->childrenStarts[parent] = nextFree;
     const uint64_t legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
     for (int i = 0; i < boardState.hexGame.size() * hexGame.size(); i++) {
-        if (legalActionMap & (1ULL << i)) {
+        if (legalActionMap & (1ULL << i) || hexGame.is_first) {
             createNode(parent, i);
         }
     }
