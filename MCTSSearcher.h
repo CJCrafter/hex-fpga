@@ -14,7 +14,7 @@
 class MCTSSearcher {
 public:
     int visitCounts[MAX_NODES]{};
-    double returnSums[MAX_NODES]{};
+    float returnSums[MAX_NODES]{};
     int parents[MAX_NODES]{};
     int childrenStarts[MAX_NODES]{};
     int childrenEnds[MAX_NODES]{};
@@ -27,15 +27,15 @@ public:
     RNG rng;
 
     explicit MCTSSearcher(uint64_t seed) : nextFree(0), rng(seed) {
-        memset(visitCounts, 0, sizeof(visitCounts));
-        memset(returnSums, 0, sizeof(returnSums));
-        memset(parents, 0, sizeof(parents));
-        memset(childrenStarts, 0, sizeof(childrenStarts));
-        memset(childrenEnds, 0, sizeof(childrenEnds));
-        memset(expandeds, 0, sizeof(expandeds));
-        memset(terminals, 0, sizeof(terminals));
-        memset(childActions, 0, sizeof(childActions));
-        memset(isREDs, 0, sizeof(isREDs));
+        // memset(visitCounts, 0, sizeof(visitCounts));
+        // memset(returnSums, 0, sizeof(returnSums));
+        // memset(parents, 0, sizeof(parents));
+        // memset(childrenStarts, 0, sizeof(childrenStarts));
+        // memset(childrenEnds, 0, sizeof(childrenEnds));
+        // memset(expandeds, 0, sizeof(expandeds));
+        // memset(terminals, 0, sizeof(terminals));
+        // memset(childActions, 0, sizeof(childActions));
+        // memset(isREDs, 0, sizeof(isREDs));
     }
 
     int search(Hex boardState, bool isRED);
