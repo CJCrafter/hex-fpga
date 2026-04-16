@@ -6,7 +6,7 @@
 
 GameState GameState::clone() {
     // todo: need hexGame.clone()
-    return {Hex(hexGame)};
+    return {Hex<HEX_SIZE>(hexGame)};
 }
 
 void GameState::makeMove(int action) {

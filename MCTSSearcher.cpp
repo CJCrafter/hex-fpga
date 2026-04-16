@@ -5,7 +5,7 @@
 #include "GameState.h"
 
 
-int MCTSSearcher::search(Hex boardState, bool isRED) {
+int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
     parents[0] = -1; // root node has no parent
     nextFree = 1;
     isREDs[0] = isRED; // set this based on starting condition
@@ -37,11 +37,11 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
     if (terminals[parent]) {
         return;
     }
-    const Hex hexGame = boardState.hexGame;
+    const Hex<HEX_SIZE> hexGame = boardState.hexGame;
     this->childrenStarts[parent] = nextFree;
-    const uint64_t legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
+    const auto legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
     for (int i = 0; i < boardState.hexGame.size() * hexGame.size(); i++) {
-        if (legalActionMap & (1ULL << i) || hexGame.is_first) {
+        if ((bool)(legalActionMap & (typename Hex<HEX_SIZE>::uintsize_t(1) << i)) || hexGame.is_first) {
             createNode(parent, i);
         }
     }
@@ -59,7 +59,7 @@ void MCTSSearcher::createNode(int parent, int action) {
     nextFree++;
 }
 
-void MCTSSearcher::mainLoop(Hex boardState) {
+void MCTSSearcher::mainLoop(Hex<HEX_SIZE> boardState) {
     long start = 0l;
     int max_sims = 1;
     GameState gameState(boardState); // Create gameState via boardState
@@ -114,11 +114,11 @@ double MCTSSearcher::rollout(GameState gameState) {
     int depth = 0;
     while (!gameState.isTerminal()) {
         // std::vector<int> legalActions = gameState.getLegalActions();
-        const Hex hexGame = gameState.hexGame;
-        const uint64_t legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
+        const Hex<HEX_SIZE> hexGame = gameState.hexGame;
+        const auto legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
         int numLegalActions = 0;
         for (int i = 0; i < gameState.hexGame.size() * hexGame.size(); i++) {
-            if (legalActionMap & (1ULL << i)) {
+            if ((bool)(legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
                 numLegalActions++;
             }
         }
@@ -128,7 +128,7 @@ double MCTSSearcher::rollout(GameState gameState) {
         int action = 0;
         int actionIdx = 0;
         for (int i = 0; i < gameState.hexGame.size() * hexGame.size(); i++) {
-            if (legalActionMap & (1ULL << i)) {
+            if ((bool)(legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
                 if (actionIdx == randomIndex) {
                     action = i;
                     break;
@@ -162,7 +162,7 @@ void MCTSSearcher::backup(double reward, int artificialLeafNode) {
 }
 
 
-int search(Hex boardState, bool isRED) {
+int search(Hex<HEX_SIZE> boardState, bool isRED) {
     MCTSSearcher searcher(4l);
     return searcher.search(boardState, isRED);
 }

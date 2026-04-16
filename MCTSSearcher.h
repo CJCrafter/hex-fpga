@@ -38,13 +38,13 @@ public:
         // memset(isREDs, 0, sizeof(isREDs));
     }
 
-    int search(Hex boardState, bool isRED);
+    int search(Hex<HEX_SIZE> boardState, bool isRED);
 
-    void expand(int parent, GameState gameState);
+    void expand(int parent, GameState boardState);
 
     void createNode(int parent, int action);
 
-    void mainLoop(Hex boardState);
+    void mainLoop(Hex<HEX_SIZE> boardState);
 
     void forward(GameState gameState);
 
@@ -53,5 +53,5 @@ public:
     double rollout(GameState gameState);
 };
 
-int search(Hex boardState, bool isRED);
+int search(Hex<HEX_SIZE> boardState, bool isRED);
 #endif //MCTSHEX_MCTSSEARCHER_H

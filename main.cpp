@@ -20,7 +20,7 @@ void printbits(unsigned long long n) {
 }
 
 int main() {
-    Hex hex(3);
+    Hex<HEX_SIZE> hex;
     bool isRED = true;
 
     while (true) {
@@ -35,18 +35,18 @@ int main() {
         std::string player = isRED ? "Red" : "Blue";
         isRED = !isRED;
         std::cout << player << std::endl;
-        unsigned long long player1 = hex.player1();
-        unsigned long long player2 = hex.player2();
+        auto player1 = hex.player1();
+        auto player2 = hex.player2();
         std::cout << "player1:";
-        printbits(player1);
+        printbits((unsigned long long)player1);
         std::cout << std::endl;
         std::cout << "player2:";
-        printbits(player2);
+        printbits((unsigned long long)player2);
         std::cout << std::endl;
 
         if (hex.checkWin()) {
             std::cout << "The game has been won by " + player << std::endl;
-            hex = Hex(3);
+            hex = Hex<HEX_SIZE>();
             break;
         }
     }

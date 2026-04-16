@@ -8,13 +8,14 @@
 
 #include "hex.h"
 
+constexpr unsigned int HEX_SIZE = 3;
 
 class GameState {
 public:
-    GameState(Hex hex) : hexGame(hex) {
+    GameState(Hex<HEX_SIZE> hex) : hexGame(hex) {
     }
 
-    Hex hexGame;
+    Hex<HEX_SIZE> hexGame;
 
     GameState clone();
 

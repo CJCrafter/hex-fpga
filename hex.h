@@ -1,38 +1,116 @@
 #pragma once
+#include <cstddef>
 #include <cstdint>
-// #include <stdexcept>
-// #define uint64_t unsigned long long
+
+#include "ap_int.h"
+
+template <unsigned int size_>
 class Hex {
-public:
-    Hex(int size);
+  public:
+    typedef ap_uint<size_ * size_> uintsize_t;
 
-    void place(int position);
+    static constexpr uintsize_t boardMask() {
+      return (uintsize_t(1) << (size_ * size_)) - 1;
+    }
 
-    bool checkWin() const;
+    static constexpr uintsize_t leftCol() {
+      uintsize_t mask = 0;
+      for (int r = 0; r < size_; r++)
+        mask |= uintsize_t(1) << (r * size_);
+      return mask;
+    }
+
+    static constexpr uintsize_t rightCol() {
+      uintsize_t mask = 0;
+      for (int r = 0; r < size_; r++)
+        mask |= uintsize_t(1) << (r * size_ + size_ - 1);
+      return mask;
+    }
+
+    static constexpr uintsize_t notLeftCol() {
+      return ~leftCol() & boardMask();
+    }
+
+    static constexpr uintsize_t notRightCol() {
+      return ~rightCol() & boardMask();
+    }
+
+    static constexpr uintsize_t topRow() {
+      uintsize_t mask = 0;
+      for (int c = 0; c < size_; c++)
+        mask |= uintsize_t(1) << c;
+      return mask;
+    }
+
+    static constexpr uintsize_t bottomRow() {
+      uintsize_t mask = 0;
+      for (int c = 0; c < size_; c++)
+        mask |= uintsize_t(1) << ((size_ - 1) * size_ + c);
+      return mask;
+    }
+
+    Hex() : isPlayer1Turn_(true), lastMove_(-1), player1_(0), player2_(0),
+            is_first(true) {}
+
+    void place(int position) {
+      uintsize_t bit = uintsize_t(1) << position;
+
+      if (isPlayer1Turn_) {
+        player1_ |= bit;
+      } else {
+        player2_ |= bit;
+        is_first = false;
+      }
+
+      lastMove_ = position;
+      isPlayer1Turn_ = !isPlayer1Turn_;
+    }
+
+    bool checkWin() const {
+      if (lastMove_ < 0) return false;
+
+      uintsize_t seed = uintsize_t(1) << lastMove_;
+
+      if (!isPlayer1Turn_) {
+        uintsize_t connected = flood(seed, player1_);
+        return (bool)(connected & topRow()) && (bool)(connected & bottomRow());
+      } else {
+        uintsize_t connected = flood(seed, player2_);
+        return (bool)(connected & leftCol()) && (bool)(connected & rightCol());
+      }
+    }
 
     int size() const { return size_; }
     bool isPlayer1Turn() const { return isPlayer1Turn_; }
-    uint64_t player1() const { return player1_; }
-    uint64_t player2() const { return player2_; }
+    uintsize_t player1() const { return player1_; }
+    uintsize_t player2() const { return player2_; }
     int lastMove() const { return lastMove_; }
 
-    // todo: get legal moves
     bool is_first;
 
 private:
-    uint64_t flood(uint64_t seed, uint64_t board) const;
+    static uintsize_t flood(uintsize_t seed, uintsize_t board) {
+      uintsize_t fill = seed & board;
+      uintsize_t prev;
 
-    int size_;
+      do {
+        prev = fill;
+        uintsize_t neighbors =
+            ((fill & notRightCol()) << 1)
+          | ((fill & notLeftCol()) >> 1)
+          | (fill << size_)
+          | (fill >> size_)
+          | ((fill & notLeftCol()) << (size_ - 1))
+          | ((fill & notRightCol()) >> (size_ - 1));
+        fill |= (neighbors & board);
+        fill &= boardMask();
+      } while (fill != prev);
+
+      return fill;
+    }
+
     bool isPlayer1Turn_;
     int lastMove_;
-    uint64_t player1_;
-    uint64_t player2_;
-    uint64_t boardMask_;
-    uint64_t notLeftCol_;
-    uint64_t notRightCol_;
-    uint64_t topRow_;
-    uint64_t bottomRow_;
-    uint64_t leftCol_;
-    uint64_t rightCol_;
-
+    uintsize_t player1_;
+    uintsize_t player2_;
 };

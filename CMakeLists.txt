@@ -9,7 +9,6 @@ add_executable(MCTSHex
         GameState.cpp
         GameState.h
         hex.h
-        hex.cpp
         main.cpp
         MCTSSearcher.cpp
         MCTSSearcher.h
