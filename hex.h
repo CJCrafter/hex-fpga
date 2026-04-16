@@ -8,7 +8,8 @@ public:
     typedef ap_uint<size_ * size_> uintsize_t;
 
     static constexpr uintsize_t boardMask() {
-        return (uintsize_t(1) << (size_ * size_)) - 1;
+        // return (uintsize_t(1) << (size_ * size_)) - 1;
+        return ~(uintsize_t(0));
     }
 
     static constexpr uintsize_t leftCol() {
