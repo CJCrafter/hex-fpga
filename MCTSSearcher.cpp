@@ -126,7 +126,7 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
         const Hex<HEX_SIZE> hexGame = gameState.hexGame;
         const auto legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
         int numLegalActions = 0;
-        for (int i = 0; i < hexGame.size() * hexGame.size(); i++) {
+        for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
             if ((bool) (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
                 numLegalActions++;
             }
