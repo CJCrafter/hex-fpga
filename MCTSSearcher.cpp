@@ -101,7 +101,7 @@ void MCTSSearcher::forward(GameState gameState) {
                 bestChildNode = childNode;
             }
         }
-        std::cout << bestChildUCT << std::endl;
+        // std::cout << bestChildUCT << std::endl;
 
         int action = this->childActions[bestChildNode];
         gameState.makeMove(action);
