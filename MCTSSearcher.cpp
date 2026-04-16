@@ -3,7 +3,6 @@
 #include "hls_math.h"
 // #include <cmath>
 #include "GameState.h"
-#include "ap_fixed.h"
 
 
 int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
@@ -169,6 +168,3 @@ int search(Hex<HEX_SIZE> boardState, bool isRED) {
     return searcher.search(boardState, isRED);
 }
 
-
-void dut(hls::stream<ap_uint<32> > &in, hls::stream<ap_uint<32> > &out) {
-}

@@ -4,7 +4,6 @@
 
 #include "GameState.h"
 
-#include "MCTSSearcher.h"
 
 GameState GameState::clone() {
     // todo: need hexGame.clone()

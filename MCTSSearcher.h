@@ -14,7 +14,6 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
-typedef ap_fixed<32, 18> fixed_point_t;
 
 
 class MCTSSearcher {
