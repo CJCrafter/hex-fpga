@@ -17,7 +17,7 @@ int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
     int childStart = childrenStarts[0];
     int childEnd = childrenEnds[0];
     int bestChildNode = childrenStarts[0];
-    fixed_point_t bestChildValue = -99999;
+    fixed_point_t bestChildValue = -100;
     fixed_point_t EPS = fixed_point_t(0.0001);
     for (int child = childStart; child <= childEnd; child++) {
         fixed_point_t childQ = this->returnSums[child] / (EPS + this->visitCounts[child]);
@@ -85,7 +85,7 @@ void MCTSSearcher::forward(GameState gameState) {
         int childrenEnd = childrenEnds[node]; // inclusive
 
         int bestChildNode = childrenStart;
-        fixed_point_t bestChildUCT = -999999;
+        fixed_point_t bestChildUCT = -100;
         const fixed_point_t EPS = fixed_point_t(0.0001);
         const fixed_point_t UCT_C = fixed_point_t(1.41);
 
@@ -101,6 +101,7 @@ void MCTSSearcher::forward(GameState gameState) {
                 bestChildNode = childNode;
             }
         }
+        std::cout << bestChildUCT << std::endl;
 
         int action = this->childActions[bestChildNode];
         gameState.makeMove(action);
