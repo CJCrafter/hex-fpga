@@ -1,7 +1,7 @@
 #include "MCTSSearcher.h"
 
-// #include "hls_math.h"
-#include <cmath>
+#include "hls_math.h"
+// #include <cmath>
 #include "GameState.h"
 
 
@@ -82,6 +82,8 @@ void MCTSSearcher::forward(GameState gameState) {
 
         int bestChildNode = childrenStart;
         double bestChildUCT = -999999;
+        // todo: this log is scary, use a learned neural function instead
+
         double logVisitCounts = log(this->visitCounts[node]);
         for (int childNode = childrenStart; childNode <= childrenEnd; childNode++) {
             double childQ = this->returnSums[childNode] / (0.0001 + this->visitCounts[childNode]);

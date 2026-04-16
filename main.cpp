@@ -7,6 +7,7 @@
 #include <limits.h>
 #include <stdio.h>
 
+
 void printbits(unsigned long long n) {
     unsigned long long i;
     i = 1UL << (sizeof(n) * CHAR_BIT - 1);

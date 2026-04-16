@@ -5,11 +5,16 @@
 #ifndef MCTSHEX_MCTSSEARCHER_H
 #define MCTSHEX_MCTSSEARCHER_H
 
-#include <cstring>
+// #include <cstring>
 #define MAX_NODES 2000
 #include "GameState.h"
 #include "hex.h"
 #include "rand.h"
+
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+
 
 class MCTSSearcher {
 public:
