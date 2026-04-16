@@ -2,6 +2,8 @@
 
 #include "hls_math.h"
 // #include <cmath>
+#include <iostream>
+
 #include "GameState.h"
 
 
@@ -43,7 +45,7 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
     const auto legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
     for (int i = 0; i < boardState.hexGame.size() * hexGame.size(); i++) {
         // || hexGame.is_first todo: support this later, see if this fixes the issue
-        if ((bool) (legalActionMap & (typename Hex<HEX_SIZE>::uintsize_t(1) << i)) ) {
+        if ((bool) (legalActionMap & (typename Hex<HEX_SIZE>::uintsize_t(1) << i))) {
             createNode(parent, i);
         }
     }
@@ -124,11 +126,13 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
         const Hex<HEX_SIZE> hexGame = gameState.hexGame;
         const auto legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
         int numLegalActions = 0;
-        for (int i = 0; i < gameState.hexGame.size() * hexGame.size(); i++) {
+        for (int i = 0; i < hexGame.size() * hexGame.size(); i++) {
             if ((bool) (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
                 numLegalActions++;
             }
         }
+
+        std::cout << numLegalActions << std::endl;
 
         int randomIndex = rng.randInt(numLegalActions);
         // int action = legalActions[randomIndex];
