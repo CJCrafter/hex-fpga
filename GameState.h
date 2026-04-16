@@ -7,8 +7,9 @@
 // #include <vector>
 
 #include "hex.h"
+#include "MCTSSearcher.h"
 
-constexpr unsigned int HEX_SIZE = 3;
+constexpr unsigned int HEX_SIZE = 11;
 
 class GameState {
 public:
@@ -25,7 +26,7 @@ public:
 
     bool isTerminal();
 
-    float getTerminalValue(bool isRED);
+    fixed_point_t getTerminalValue(bool isRED);
 };
 
 

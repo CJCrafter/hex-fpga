@@ -31,13 +31,14 @@ set hls_prj mcts.prj
 # Open/reset the project
 open_project ${hls_prj} -reset
 # Top function of the design is "digitrec"
-set_top search
+set_top dut
 
 # Add design and testbench files
 add_files GameState.cpp  -cflags $CFLAGS
 add_files MCTSSearcher.cpp  -cflags $CFLAGS
 add_files rand.cpp  -cflags $CFLAGS
-add_files hex.cpp  -cflags $CFLAGS
+add_files hex.h  -cflags $CFLAGS
+add_files dut.cpp  -cflags $CFLAGS
 
 add_files -tb main.cpp -cflags $CFLAGS
 
@@ -45,7 +46,7 @@ add_files -tb main.cpp -cflags $CFLAGS
 
 open_solution "solution1"
 # Use Zynq device
-set_part {xc7z020clg484-1}
+set_part xck26-sfvc784-2LV-c
 
 # Target clock period is 10ns
 create_clock -period 10

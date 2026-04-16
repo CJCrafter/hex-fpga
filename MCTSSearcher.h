@@ -14,12 +14,13 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+typedef ap_fixed<32, 18> fixed_point_t;
 
 
 class MCTSSearcher {
 public:
     int visitCounts[MAX_NODES]{};
-    float returnSums[MAX_NODES]{};
+    fixed_point_t returnSums[MAX_NODES]{};
     int parents[MAX_NODES]{};
     int childrenStarts[MAX_NODES]{};
     int childrenEnds[MAX_NODES]{};
@@ -53,10 +54,11 @@ public:
 
     void forward(GameState gameState);
 
-    void backup(double reward, int artificialLeaf);
+    void backup(fixed_point_t reward, int artificialLeaf);
 
-    double rollout(GameState gameState);
+    fixed_point_t rollout(GameState gameState);
 };
 
 int search(Hex<HEX_SIZE> boardState, bool isRED);
+
 #endif //MCTSHEX_MCTSSEARCHER_H
