@@ -6,7 +6,7 @@
 #define MCTSHEX_MCTSSEARCHER_H
 
 // #include <cstring>
-#define MAX_NODES 20000
+#define MAX_NODES 40000
 #include "GameState.h"
 #include "hex.h"
 #include "rand.h"
