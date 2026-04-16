@@ -12,8 +12,6 @@
 #include "rand.h"
 
 #include <fstream>
-#include <iomanip>
-#include <iostream>
 
 
 class MCTSSearcher {

@@ -16,8 +16,9 @@ int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
     int childEnd = childrenEnds[0];
     int bestChildNode = childrenStarts[0];
     fixed_point_t bestChildValue = -99999;
+    fixed_point_t EPS = fixed_point_t(0.0001);
     for (int child = childStart; child <= childEnd; child++) {
-        fixed_point_t childQ = this->returnSums[child] / (0.0001 + this->visitCounts[child]);
+        fixed_point_t childQ = this->returnSums[child] / (EPS + this->visitCounts[child]);
         if (childQ > bestChildValue) {
             bestChildValue = childQ;
             bestChildNode = child;
@@ -82,12 +83,16 @@ void MCTSSearcher::forward(GameState gameState) {
 
         int bestChildNode = childrenStart;
         fixed_point_t bestChildUCT = -999999;
+        const fixed_point_t EPS = fixed_point_t(0.0001);
+        const fixed_point_t UCT_C = fixed_point_t(1.41);
+
         // todo: this log is scary, use a learned neural function instead
-        fixed_point_t logVisitCounts = hls::log(this->visitCounts[node]);
+        fixed_point_t logVisitCounts = hls::log(this->visitCounts[node] + EPS);
         for (int childNode = childrenStart; childNode <= childrenEnd; childNode++) {
-            fixed_point_t childQ = this->returnSums[childNode] / (0.0001 + this->visitCounts[childNode]);
+            fixed_point_t childQ = this->returnSums[childNode] / (EPS + this->visitCounts[childNode]);
             // todo: Makefile configurable
-            fixed_point_t childUCT = childQ + 1.41 * hls::sqrt(logVisitCounts / (0.0001 + this->visitCounts[childNode]));
+            fixed_point_t childUCT =
+                    childQ + UCT_C * hls::sqrt(logVisitCounts / (EPS + this->visitCounts[childNode]));
             if (childUCT > bestChildUCT) {
                 bestChildUCT = childUCT;
                 bestChildNode = childNode;
@@ -167,4 +172,3 @@ int search(Hex<HEX_SIZE> boardState, bool isRED) {
     MCTSSearcher searcher(4l);
     return searcher.search(boardState, isRED);
 }
-
