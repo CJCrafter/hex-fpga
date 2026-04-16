@@ -32,7 +32,7 @@ bool GameState::isTerminal() {
 
 fixed_point_t GameState::getTerminalValue(bool isRED) {
     if (isTerminal()) {
-        if (!hexGame.isPlayer1Turn()) {
+        if (hexGame.isPlayer1Turn()) {
             return (isRED) ? 1.0f : 0;
         }
     }

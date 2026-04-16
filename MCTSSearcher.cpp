@@ -138,7 +138,7 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
         // int action = legalActions[randomIndex];
         int action = 0;
         int actionIdx = 0;
-        for (int i = 0; i < gameState.hexGame.size() * hexGame.size(); i++) {
+        for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
             if ((bool) (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
                 if (actionIdx == randomIndex) {
                     action = i;
