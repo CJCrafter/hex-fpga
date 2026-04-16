@@ -10,7 +10,7 @@
 #include "ap_fixed.h"
 typedef ap_fixed<32, 18> fixed_point_t; // todo: make this its own header
 
-constexpr unsigned int HEX_SIZE = 11;
+constexpr unsigned int HEX_SIZE = 7;
 
 class GameState {
 public:
