@@ -42,7 +42,8 @@ void MCTSSearcher::expand(int parent, GameState boardState) {
     this->childrenStarts[parent] = nextFree;
     const auto legalActionMap = ~(hexGame.player1() | hexGame.player2()); // todo use hex game for this
     for (int i = 0; i < boardState.hexGame.size() * hexGame.size(); i++) {
-        if ((bool) (legalActionMap & (typename Hex<HEX_SIZE>::uintsize_t(1) << i)) || hexGame.is_first) {
+        // || hexGame.is_first todo: support this later, see if this fixes the issue
+        if ((bool) (legalActionMap & (typename Hex<HEX_SIZE>::uintsize_t(1) << i)) ) {
             createNode(parent, i);
         }
     }

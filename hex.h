@@ -1,6 +1,4 @@
 #pragma once
-#include <cstddef>
-#include <cstdint>
 
 #include "ap_int.h"
 
@@ -60,6 +58,7 @@ public:
             player1_ |= bit;
         } else {
             player2_ |= bit;
+            // todo: if overlap with player_1, then unset player1s bit
             is_first = false;
         }
 
