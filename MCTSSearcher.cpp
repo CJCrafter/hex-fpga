@@ -132,7 +132,7 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
             }
         }
 
-        std::cout << numLegalActions << std::endl;
+        // std::cout << numLegalActions << std::endl;
 
         int randomIndex = rng.randInt(numLegalActions);
         // int action = legalActions[randomIndex];
