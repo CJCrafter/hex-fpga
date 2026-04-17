@@ -29,6 +29,7 @@
   }
 
   void write_word(int fdw, bus_t word) {
+      // todo make sure this is exactly like lab4's host.cpp
       int nbytes = write(fdw, (void *) &word, sizeof(word));
       if (nbytes < 0) {
           std::cerr << "Error writing to CiFra Openbus device channel: "
