@@ -11,7 +11,8 @@ GameState GameState::clone() {
 }
 
 void GameState::makeMove(int action) {
-    return hexGame.place(action);
+    hexGame.place(action);
+    legalActionMap = ~(this->hexGame.player1() | this->hexGame.player2());
 }
 
 //
@@ -32,9 +33,15 @@ bool GameState::isTerminal() {
 
 fixed_point_t GameState::getTerminalValue(bool isRED) {
     if (isTerminal()) {
-        if (hexGame.isPlayer1Turn()) {
+        if (!hexGame.isPlayer1Turn()) {
             return (isRED) ? 1.0f : 0;
         }
+        return (!isRED) ? 1.0f : 0;
     }
     return 0; // todo call a value function here;
+}
+
+bool GameState::isEmpty(int a) {
+    // todo use hex game for this
+    return (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << a)) != 0;
 }

@@ -14,7 +14,9 @@ constexpr unsigned int HEX_SIZE = 11;
 
 class GameState {
 public:
+    Hex<HEX_SIZE>::uintsize_t legalActionMap{};
     GameState(Hex<HEX_SIZE> hex) : hexGame(hex) {
+        legalActionMap = ~(this->hexGame.player1() | this->hexGame.player2());
     }
 
     Hex<HEX_SIZE> hexGame;
@@ -26,8 +28,18 @@ public:
     // std::vector<int> getLegalActions();
 
     bool isTerminal();
-
+    bool isEmpty(int a);
     fixed_point_t getTerminalValue(bool isRED);
+
+    int getNumLegalActions() {
+        int numLegalActions = 0;
+        for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
+            if (static_cast<bool>(this->legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
+                numLegalActions++;
+            }
+        }
+        return numLegalActions;
+    }
 };
 
 

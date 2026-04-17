@@ -6,7 +6,7 @@
 #define MCTSHEX_MCTSSEARCHER_H
 
 // #include <cstring>
-#define MAX_NODES 40000
+#define MAX_NODES 20000
 #include "GameState.h"
 #include "hex.h"
 #include "rand.h"
@@ -19,9 +19,13 @@ public:
     int visitCounts[MAX_NODES]{};
     fixed_point_t returnSums[MAX_NODES]{};
     int parents[MAX_NODES]{};
-    int childrenStarts[MAX_NODES]{};
-    int childrenEnds[MAX_NODES]{};
-    bool expandeds[MAX_NODES]{};
+    int firstChilds[MAX_NODES]{};
+    int numChildren[MAX_NODES]{};
+    int nextSiblings[MAX_NODES]{};
+    int numLegalActions[MAX_NODES]{};
+    // int childrenStarts[MAX_NODES]{};
+    // int childrenEnds[MAX_NODES]{};
+    // bool expandeds[MAX_NODES]{};
     bool terminals[MAX_NODES]{};
     // mapping from parent to child node which action was taken to get from parent to child
     int childActions[MAX_NODES]{};
@@ -43,9 +47,11 @@ public:
 
     int search(Hex<HEX_SIZE> boardState, bool isRED);
 
-    void expand(int parent, GameState boardState);
+    int expand(int parent, GameState boardState);
 
-    void createNode(int parent, int action);
+    int pickUntriedAction(int parent, GameState boardState);
+
+    void createNode(int parent, int action, GameState boardState);
 
     void mainLoop(Hex<HEX_SIZE> boardState);
 
