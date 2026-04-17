@@ -70,5 +70,5 @@ cosim_design
 set argv [list $filename $hls_prj]
 set argc 2
 #source "./script/collect_result.tcl"
-
+export_design -format ip_catalog
 exit
