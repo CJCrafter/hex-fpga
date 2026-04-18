@@ -50,7 +50,12 @@ deploy: ${BUILD_PATH}/bitstream.bit
 	mkdir -p ${KRIA_DIR}
 	cp ${BUILD_PATH}/bitstream.bit ${KRIA_DIR}/
 	cp ${SRC_PATH}/host.cpp ${SRC_PATH}/host.h ${KRIA_DIR}/
-	cp ${SRC_PATH}/hex.h ${SRC_PATH}/GameState.cpp ${SRC_PATH}/GameState.h ${KRIA_DIR}/
+	cp ${SRC_PATH}/dut.cpp ${SRC_PATH}/dut.h ${KRIA_DIR}/
+	cp ${SRC_PATH}/GameState.cpp ${SRC_PATH}/GameState.h ${KRIA_DIR}/
+	cp ${SRC_PATH}/MCTSSearcher.cpp ${SRC_PATH}/MCTSSearcher.h ${KRIA_DIR}/
+	cp ${SRC_PATH}/rand.cpp ${SRC_PATH}/rand.h ${KRIA_DIR}/
+	cp ${SRC_PATH}/main.cpp ${SRC_PATH}/hex.h ${KRIA_DIR}/
+	cp ${SRC_PATH}/kria/Makefile ${KRIA_DIR}/
 
 clean:
 	rm -rf ${BUILD_PATH}
