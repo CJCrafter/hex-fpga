@@ -47,6 +47,7 @@ void MCTSSearcher::mainLoop(Hex<HEX_SIZE> boardState) {
         i++;
     }
 }
+
 int MCTSSearcher::expand(int parent, GameState boardState) {
     if (nextFree >= MAX_NODES) {
         return -1;
@@ -63,17 +64,12 @@ int MCTSSearcher::expand(int parent, GameState boardState) {
 }
 
 int MCTSSearcher::pickUntriedAction(int parent, GameState boardState) {
-    const Hex<HEX_SIZE> hexGame = boardState.hexGame;
+    auto untried = boardState.legalActionMap & ~triedMask[parent];
+    if (untried == 0) return -1;
 
     for (int a = 0; a < HEX_SIZE * HEX_SIZE; ++a) {
-        if (!boardState.isEmpty(a)) continue;
-        bool tried = false;
-        for (int c = firstChilds[parent]; c != -1; c = this->nextSiblings[c])
-            if (childActions[c] == a) {
-                tried = true;
-                break;
-            }
-        if (!tried) return a;
+#pragma HLS PIPELINE II=1
+        if (untried[a]) return a;
     }
     return -1;
 }
@@ -92,7 +88,8 @@ void MCTSSearcher::createNode(int parent, int action, GameState boardState) {
     this->nextSiblings[nextFree] = firstChilds[parent];
     this->firstChilds[parent] = nextFree;
     this->numChildren[parent]++;
-    int numLegalActionsHere =this->numLegalActions[parent] - 1;
+    triedMask[parent] |= (Hex<HEX_SIZE>::uintsize_t(1) << action);
+    int numLegalActionsHere = this->numLegalActions[parent] - 1;
     // for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
     //     if (static_cast<bool>(boardState.legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
     //         numLegalActions++;
@@ -101,10 +98,15 @@ void MCTSSearcher::createNode(int parent, int action, GameState boardState) {
     this->numLegalActions[nextFree] = numLegalActionsHere;
 
     // this->childrenEnds[parent] = nextFree;
+    this->visitCounts[nextFree] = 0;
+    this->meanQ[nextFree] = 0;
+    this->numChildren[nextFree] = 0;
+    this->terminals[nextFree] = false;
+    this->triedMask[nextFree] = 0;
+
     this->isREDs[nextFree] = !this->isREDs[parent];
     nextFree++;
 }
-
 
 
 void MCTSSearcher::forward(GameState gameState) {
@@ -116,17 +118,17 @@ void MCTSSearcher::forward(GameState gameState) {
         // int childrenEnd = childrenEnds[node]; // inclusive
 
         int bestChildNode = firstChilds[node];
-        fixed_point_t bestChildUCT = -100;
+        uct_t bestChildUCT = -100;
         const fixed_point_t EPS = fixed_point_t(0.0001);
         const fixed_point_t UCT_C = fixed_point_t(1.41);
 
         // todo: this log is scary, use a learned neural function instead
-        fixed_point_t logVisitCounts = hls::log(this->visitCounts[node] + EPS);
+        uct_t logVisitCounts = hls::log(uct_t(visitCounts[node]));
         for (int childNode = firstChilds[node]; childNode != -1; childNode = this->nextSiblings[childNode]) {
-            fixed_point_t childQ = this->returnSums[childNode] / (EPS + this->visitCounts[childNode]);
+            uct_t childQ = this->meanQ[childNode];
             // todo: Makefile configurable
-            fixed_point_t childUCT =
-                    childQ + UCT_C * hls::sqrt(logVisitCounts / (EPS + this->visitCounts[childNode]));
+            uct_t childUCT =
+                    childQ + UCT_C * hls::sqrt(logVisitCounts / (this->visitCounts[childNode]));
             if (childUCT > bestChildUCT) {
                 bestChildUCT = childUCT;
                 bestChildNode = childNode;
@@ -142,12 +144,11 @@ void MCTSSearcher::forward(GameState gameState) {
     // either node is not expanded or it is terminal here
     if (!(numLegalActions[node] == numChildren[node])) {
         int child = expand(node, gameState);
-    if (child >= 0) {
-        gameState.makeMove(childActions[child]);
-        node = child;
-        if (gameState.isTerminal()) terminals[node] = true;
-    }
-
+        if (child >= 0) {
+            gameState.makeMove(childActions[child]);
+            node = child;
+            if (gameState.isTerminal()) terminals[node] = true;
+        }
     }
     if (!terminals[node]) {
         reward = rollout(gameState);
@@ -162,9 +163,19 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
     while (!gameState.isTerminal()) {
         // std::vector<int> legalActions = gameState.getLegalActions();
         const Hex<HEX_SIZE> hexGame = gameState.hexGame;
-        Hex<HEX_SIZE>::uintsize_t legalActionMap = ~(hexGame.player1() | hexGame.player2());
+        Hex<HEX_SIZE>::uintsize_t legalActionMap = gameState.legalActionMap;
         // todo use hex game for this
-        int numLegalActionsHere = gameState.getNumLegalActions();
+        // int numLegalActionsHere = gameState.getNumLegalActions();
+
+        int numLegalActionsHere;
+
+        int sum = 0;
+        for (int i = 0; i < 49; i++) {
+#pragma HLS UNROLL
+            sum += legalActionMap[i];
+        }
+        numLegalActionsHere = sum;
+
 
         // std::cout << numLegalActions << std::endl;
 
@@ -173,7 +184,8 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
         int action = 0;
         int actionIdx = 0;
         for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
-            if ((bool) (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1) << i))) {
+#pragma HLS PIPELINE II=1
+            if (legalActionMap[i]) {
                 if (actionIdx == randomIndex) {
                     action = i;
                     break;
@@ -194,12 +206,18 @@ void MCTSSearcher::backup(fixed_point_t reward, int artificialLeafNode) {
     int node = artificialLeafNode;
     while (node != -1) {
         int parent = parents[node];
+        fixed_point_t perspectiveReward = reward;
+
         if (!isREDs[node]) {
-            returnSums[node] += reward;
+            perspectiveReward = reward;
         } else {
-            returnSums[node] += 1 - reward;
+            perspectiveReward = 1 - reward;
         }
+
         visitCounts[node] += 1;
+        fixed_point_t delta = perspectiveReward - meanQ[node];
+        meanQ[node] += delta / visitCounts[node];
+
 
         // apply reward and invert for
         node = parent;

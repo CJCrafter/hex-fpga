@@ -8,13 +8,15 @@
 
 #include "hex.h"
 #include "ap_fixed.h"
-typedef ap_fixed<32, 18> fixed_point_t; // todo: make this its own header
+// we care about mainly fractional values so
+typedef ap_fixed<20, 5> fixed_point_t; // todo: make this its own header
 // typedef float fixed_point_t;
 constexpr unsigned int HEX_SIZE = 7;
 
 class GameState {
 public:
     Hex<HEX_SIZE>::uintsize_t legalActionMap{};
+
     GameState(Hex<HEX_SIZE> hex) : hexGame(hex) {
         legalActionMap = ~(this->hexGame.player1() | this->hexGame.player2());
     }
@@ -28,7 +30,9 @@ public:
     // std::vector<int> getLegalActions();
 
     bool isTerminal();
+
     bool isEmpty(int a);
+
     fixed_point_t getTerminalValue(bool isRED);
 
     int getNumLegalActions() {
@@ -38,6 +42,7 @@ public:
                 numLegalActions++;
             }
         }
+
         return numLegalActions;
     }
 };

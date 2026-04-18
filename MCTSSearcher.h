@@ -6,34 +6,45 @@
 #define MCTSHEX_MCTSSEARCHER_H
 
 // #include <cstring>
-#define MAX_NODES 20000
+#define MAX_NODES 11000
 #include "GameState.h"
 #include "hex.h"
 #include "rand.h"
 
 #include <fstream>
 
+using uct_t   = ap_fixed<32, 16>;     // visit-count casts, log/sqrt, UCT score
 
 class MCTSSearcher {
 public:
-    int visitCounts[MAX_NODES]{};
-    fixed_point_t returnSums[MAX_NODES]{};
-    int parents[MAX_NODES]{};
-    int firstChilds[MAX_NODES]{};
-    int numChildren[MAX_NODES]{};
-    int nextSiblings[MAX_NODES]{};
-    int numLegalActions[MAX_NODES]{};
+    int visitCounts[MAX_NODES];
+    fixed_point_t meanQ[MAX_NODES];
+    int parents[MAX_NODES];
+    int firstChilds[MAX_NODES];
+    int numChildren[MAX_NODES];
+    int nextSiblings[MAX_NODES];
+    int numLegalActions[MAX_NODES];
     // int childrenStarts[MAX_NODES]{};
     // int childrenEnds[MAX_NODES]{};
     // bool expandeds[MAX_NODES]{};
-    bool terminals[MAX_NODES]{};
+    bool terminals[MAX_NODES];
     // mapping from parent to child node which action was taken to get from parent to child
-    int childActions[MAX_NODES]{};
-    bool isREDs[MAX_NODES]{};
+    int childActions[MAX_NODES];
+    Hex<HEX_SIZE>::uintsize_t triedMask[MAX_NODES];
+    bool isREDs[MAX_NODES];
     int nextFree;
     RNG rng;
 
     explicit MCTSSearcher(uint64_t seed) : nextFree(0), rng(seed) {
+        parents[0]      = -1;
+        firstChilds[0]  = -1;
+        numChildren[0]  = 0;
+        visitCounts[0]  = 0;
+        meanQ[0]        = 0;
+        terminals[0]    = false;
+        triedMask[0]    = 0;
+
+
         // memset(visitCounts, 0, sizeof(visitCounts));
         // memset(returnSums, 0, sizeof(returnSums));
         // memset(parents, 0, sizeof(parents));
