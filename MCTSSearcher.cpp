@@ -36,27 +36,6 @@ int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
 }
 
 void MCTSSearcher::mainLoop(Hex<HEX_SIZE> boardState) {
-#pragma HLS ARRAY_PARTITION variable=visitCounts   cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=returnSums    cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=firstChilds   cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=nextSiblings  cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=numChildren   cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=numLegalActions cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=childActions  cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=parents       cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=isREDs        cyclic factor=4
-#pragma HLS ARRAY_PARTITION variable=terminals     cyclic factor=4
-
-#pragma HLS DEPENDENCE variable=visitCounts  inter false
-#pragma HLS DEPENDENCE variable=returnSums   inter false
-#pragma HLS DEPENDENCE variable=firstChilds  inter false
-#pragma HLS DEPENDENCE variable=nextSiblings inter false
-#pragma HLS DEPENDENCE variable=numChildren  inter false
-#pragma HLS DEPENDENCE variable=childActions inter false
-#pragma HLS DEPENDENCE variable=parents      inter false
-#pragma HLS DEPENDENCE variable=isREDs       inter false
-#pragma HLS DEPENDENCE variable=terminals    inter false
-
     long start = 0l;
     int max_sims = 10000;
     GameState gameState(boardState);
@@ -131,8 +110,6 @@ void MCTSSearcher::createNode(int parent, int action, GameState boardState) {
 void MCTSSearcher::forward(GameState gameState) {
     fixed_point_t reward = 0;
     int node = 0;
-    visitCounts[node] += 1;
-    returnSums[node] += isREDs[node] ? fixed_point_t(1) : fixed_point_t(0);
     while (numLegalActions[node] == numChildren[node] && !terminals[node]) {
         // select action via UCT
         // int childrenStart = childrenStarts[node];
@@ -160,8 +137,6 @@ void MCTSSearcher::forward(GameState gameState) {
         int action = this->childActions[bestChildNode];
         gameState.makeMove(action);
         node = bestChildNode;
-        visitCounts[node] += 1;
-        returnSums[node] += isREDs[node] ? fixed_point_t(1) : fixed_point_t(0);
     }
 
     // either node is not expanded or it is terminal here
@@ -170,8 +145,6 @@ void MCTSSearcher::forward(GameState gameState) {
     if (child >= 0) {
         gameState.makeMove(childActions[child]);
         node = child;
-        visitCounts[node] += 1;
-        returnSums[node] += isREDs[node] ? fixed_point_t(1) : fixed_point_t(0);
         if (gameState.isTerminal()) terminals[node] = true;
     }
 
@@ -221,8 +194,6 @@ void MCTSSearcher::backup(fixed_point_t reward, int artificialLeafNode) {
     int node = artificialLeafNode;
     while (node != -1) {
         int parent = parents[node];
-        visitCounts[node] -= 1;
-        returnSums[node] -= isREDs[node] ? fixed_point_t(1) : fixed_point_t(0);
         if (!isREDs[node]) {
             returnSums[node] += reward;
         } else {
