@@ -170,7 +170,7 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
         int numLegalActionsHere;
 
         int sum = 0;
-        for (int i = 0; i < 49; i++) {
+        for (int i = 0; i < 121; i++) {
 #pragma HLS UNROLL
             sum += legalActionMap[i];
         }
