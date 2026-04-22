@@ -1,0 +1,1 @@
+/usr/bin/c++ -I/scratch/Xilinx/2025.1/Vitis/include -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/MCTSHex.dir/GameState.cpp.o CMakeFiles/MCTSHex.dir/main.cpp.o CMakeFiles/MCTSHex.dir/MCTSSearcher.cpp.o CMakeFiles/MCTSHex.dir/rand.cpp.o -o MCTSHex

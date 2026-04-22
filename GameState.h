@@ -11,7 +11,7 @@
 // we care about mainly fractional values so
 typedef ap_fixed<20, 5> fixed_point_t; // todo: make this its own header
 // typedef float fixed_point_t;
-constexpr unsigned int HEX_SIZE = 7;
+constexpr unsigned int HEX_SIZE = 11;
 
 class GameState {
 public:

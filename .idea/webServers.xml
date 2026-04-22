@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="71043f60-1746-4afc-9cfe-769eec7477ea" name="cs599">
+        <fileTransfer rootFolder="/home/course/aakash27" accessType="SFTP" host="cs599" port="22" sshConfigId="77094b4f-b26a-4aad-883c-c3d7be77b91f" sshConfig="aakash27@cs599:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
