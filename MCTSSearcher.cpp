@@ -176,17 +176,17 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
             // sum += legalActionMap[i];
             sum += legalActionMap[i];
             int result = static_cast<int>((legalActionMap) & (Hex<HEX_SIZE>::uintsize_t(1UL) << i) != 0);
-            std::cout << "result: " << result << std::endl;
+            // std::cout << "result: " << result << std::endl;
             if (result) {
                 sum += 1;
             }
-            std::cout << "sel: " << (Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
-            std::cout << "map: " << legalActionMap << std::endl;
-            std::cout << "and: " << (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) << ", " << (
-                (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) != 0) << std::endl;
-            std::cout << "sum: " << sum << std::endl;
+            // std::cout << "sel: " << (Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
+            // std::cout << "map: " << legalActionMap << std::endl;
+            // std::cout << "and: " << (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) << ", " << (
+            // (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) != 0) << std::endl;
+            // std::cout << "sum: " << sum << std::endl;
         }
-        std::cout << "final legal actions:" << std::endl;
+        // std::cout << "final legal actions:" << std::endl;
         numLegalActionsHere = sum;
 
 
