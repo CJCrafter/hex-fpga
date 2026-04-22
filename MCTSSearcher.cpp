@@ -117,20 +117,41 @@ void MCTSSearcher::forward(GameState gameState) {
         // int childrenStart = childrenStarts[node];
         // int childrenEnd = childrenEnds[node]; // inclusive
 
-        int bestChildNode = firstChilds[node];
-        uct_t bestChildUCT = -100;
-        const fixed_point_t EPS = fixed_point_t(0.0001);
-        const fixed_point_t UCT_C = fixed_point_t(1.41);
+        // int bestChildNode = firstChilds[node];
+        // uct_t bestChildUCT = -100;
+        // const fixed_point_t EPS = fixed_point_t(0.0001);
+        // const fixed_point_t UCT_C = fixed_point_t(1.41);
 
-        // todo: this log is scary, use a learned neural function instead
-        uct_t logVisitCounts = hls::log(uct_t(visitCounts[node]));
+        // // todo: this log is scary, use a learned neural function instead
+        // uct_t logVisitCounts = hls::log(uct_t(visitCounts[node]));
+        // for (int childNode = firstChilds[node]; childNode != -1; childNode = this->nextSiblings[childNode]) {
+        //     uct_t childQ = this->meanQ[childNode];
+        //     // todo: Makefile configurable
+        //     uct_t childUCT =
+        //             childQ + UCT_C * hls::sqrt(logVisitCounts / (this->visitCounts[childNode]));
+        //     if (childUCT > bestChildUCT) {
+        //         bestChildUCT = childUCT;
+        //         bestChildNode = childNode;
+        //     }
+        // }
+
+        int bestChildNode = firstChilds[node];
+        uct_t bestChildPUCT = uct_t(-100);
+        const uct_t PUCT_C = uct_t(3.0); // might need to tune
+
+        // take all parent dependent work out of the per child loop
+        // uniform prior P = 1/numLegalActions means siblings shares the same exploration numerator, so compute once
+        uct_t sqrtParentVisits = hls::sqrt(uct_t(visitCounts[node]));
+        uct_t uniformPrior = uct_t(1) / uct_t(numLegalActions[node]);
+        uct_t explorationScale = PUCT_C * uniformPrior * sqrtParentVisits;
+
         for (int childNode = firstChilds[node]; childNode != -1; childNode = this->nextSiblings[childNode]) {
+        #pragma HLS PIPELINE II=1
             uct_t childQ = this->meanQ[childNode];
-            // todo: Makefile configurable
-            uct_t childUCT =
-                    childQ + UCT_C * hls::sqrt(logVisitCounts / (this->visitCounts[childNode]));
-            if (childUCT > bestChildUCT) {
-                bestChildUCT = childUCT;
+            // PUCT: Q + c * P(a|s) * sqrt(N(s)) / (1 + N(s,a))
+            uct_t childPUCT = childQ + explorationScale / uct_t(1 + this->visitCounts[childNode]);
+            if (childPUCT > bestChildPUCT) {
+                bestChildPUCT = childPUCT;
                 bestChildNode = childNode;
             }
         }
