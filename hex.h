@@ -74,10 +74,10 @@ public:
 
         if (!isPlayer1Turn_) {
             uintsize_t connected = flood(seed, player1_);
-            return (bool) (connected & topRow()) && (bool) (connected & bottomRow());
+            return static_cast<bool>(connected & topRow()) && static_cast<bool>(connected & bottomRow());
         } else {
             uintsize_t connected = flood(seed, player2_);
-            return (bool) (connected & leftCol()) && (bool) (connected & rightCol());
+            return static_cast<bool>(connected & leftCol()) && static_cast<bool>(connected & rightCol());
         }
     }
 
