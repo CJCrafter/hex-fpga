@@ -178,8 +178,8 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
             if (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) {
                 sum++;
             }
-            std::cout << "sel: " << (Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
-            std::cout << "map: " << legalActionMap << std::endl;
+            std::cout << "sel: " << std::bitset<121>(Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
+            std::cout << "map: " <<std::bitset<121>(legalActionMap)<< std::endl;
         }
         std::cout << "final legal actions:" << std::endl;
         numLegalActionsHere = sum;
