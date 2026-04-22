@@ -176,7 +176,7 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
             // sum += legalActionMap[i];
             // sum += legalActionMap[i];
             if ((legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i) != 0)) {
-                sum++;
+                sum += 1;
             }
             std::cout << "sel: " << (Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
             std::cout << "map: " << legalActionMap << std::endl;
