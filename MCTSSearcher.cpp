@@ -174,8 +174,8 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
         for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
 #pragma HLS UNROLL
             // sum += legalActionMap[i];
-            // sum += legalActionMap[i];
-            int result = (legalActionMap >> i & (Hex<HEX_SIZE>::uintsize_t(1UL)) != 0);
+            sum += legalActionMap[i];
+            int result = static_cast<int>((legalActionMap) & (Hex<HEX_SIZE>::uintsize_t(1UL) << i) != 0);
             std::cout << "result: " << result << std::endl;
             if (result) {
                 sum += 1;
