@@ -14,3 +14,7 @@
 #ifndef BOARD_SIZE
 #define BOARD_SIZE 7
 #endif
+
+#ifndef MCTS_HLS_TYPES
+#define MCTS_HLS_TYPES 0
+#endif

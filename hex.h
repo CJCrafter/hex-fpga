@@ -1,15 +1,15 @@
 #pragma once
 
-#include "ap_int.h"
-
+// #include "ap_int.h"
+#include "mcts_types.h"
 template<unsigned int size_>
 class Hex {
 public:
-    typedef ap_uint<size_ * size_> uintsize_t;
+    typedef bitboard_t<size_ * size_> uintsize_t;
 
     static constexpr uintsize_t boardMask() {
-        // return (uintsize_t(1) << (size_ * size_)) - 1;
-        return ~(uintsize_t(0));
+        return (uintsize_t(1) << (size_ * size_)) - 1;
+        // return ~(uintsize_t(0));
     }
 
     static constexpr uintsize_t leftCol() {

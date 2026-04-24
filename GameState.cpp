@@ -4,7 +4,6 @@
 
 #include "GameState.h"
 
-
 GameState GameState::clone() {
     // todo: need hexGame.clone()
     return {Hex<HEX_SIZE>(hexGame)};

@@ -8,9 +8,10 @@
 
 #include "hex.h"
 #include "config.h"
-#include "ap_fixed.h"
+#include "mcts_types.h"
+
 // we care about mainly fractional values so
-typedef ap_fixed<20, 5> fixed_point_t; // todo: make this its own header
+// typedef ap_fixed<20, 5> fixed_point_t; // todo: make this its own header
 // typedef float fixed_point_t;
 constexpr unsigned int HEX_SIZE = BOARD_SIZE;
 

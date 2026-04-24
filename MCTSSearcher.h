@@ -9,10 +9,11 @@
 #include "GameState.h"
 #include "hex.h"
 #include "rand.h"
+#include "mcts_types.h"
 
 #include <fstream>
 
-using uct_t   = ap_fixed<32, 16>;     // visit-count casts, log/sqrt, UCT score
+// using uct_t   = ap_fixed<32, 16>;     // visit-count casts, log/sqrt, UCT score
 template <int TOTAL_SIMS>
 class MCTSSearcher {
 public:
