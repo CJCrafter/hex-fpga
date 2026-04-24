@@ -12,6 +12,7 @@ using uct_t = ap_fixed<32, 16>;
 template<int N>
 using bitboard_t = ap_uint<N>;
 
+
 inline uct_t mcts_log(uct_t x) { return hls::log(x); }
 inline uct_t mcts_sqrt(uct_t x) { return hls::sqrt(x); }
 

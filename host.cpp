@@ -111,7 +111,7 @@ int main() {
         double ms = std::chrono::duration<double, std::milli>(t1 - t0).count();
         std::cout << "Made move " + std::to_string(action) << " (" << ms << " ms)" << std::endl;
 
-        double sims_per_sec = 10000.0 / (ms / 1000.0);
+        double sims_per_sec = MCTS_TOTAL_SIMS * NUM_ROLLOUT_SIMS / (ms / 1000.0);
         std::cout << "sims/sec = " << sims_per_sec << "\n";
 
         hex.place(action);

@@ -1,0 +1,15 @@
+vitis-run --mode hls --tcl artifacts/run.tcl
+mkdir -p build/hw_dut
+find mcts.prj/solution1/impl -path '*/verilog/*.v' -type f -exec cp {} build/hw_dut/ \;
+vivado -mode batch -source artifacts/run_bitstream.tcl
+mkdir -p build
+cp kria.prj/kria.prj.runs/impl_1/design_1_wrapper.bit build/bitstream.bit
+
+
+scp build/bitstream.bit *.cpp *.h ubuntu@10.210.1.175:/home/ubuntu/aakash27/hex-fpga/
+ssh ubuntu@10.210.1.175
+g++-13 -I/usr/lib/vitis_hls -DHLS_NO_XIL_FPO_LIB -O3 host.cpp -o host
+sudo fpgautil -b bitstream.bit
+ls -l /dev/cifra_openbus_read_32 /dev/cifra_openbus_write_32
+./host
+g++ -I/usr/lib/vitis_hls -DHLS_NO_XIL_FPO_LIB -O3 host.cpp -o host
