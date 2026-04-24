@@ -7,11 +7,12 @@
 // #include <vector>
 
 #include "hex.h"
+#include "config.h"
 #include "ap_fixed.h"
 // we care about mainly fractional values so
 typedef ap_fixed<20, 5> fixed_point_t; // todo: make this its own header
 // typedef float fixed_point_t;
-constexpr unsigned int HEX_SIZE = 11;
+constexpr unsigned int HEX_SIZE = BOARD_SIZE;
 
 class GameState {
 public:

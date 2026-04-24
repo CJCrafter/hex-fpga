@@ -10,3 +10,7 @@
 #ifndef MCTS_DEBUG
 #define MCTS_DEBUG 0
 #endif
+
+#ifndef BOARD_SIZE
+#define BOARD_SIZE 7
+#endif
