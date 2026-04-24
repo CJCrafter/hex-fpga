@@ -1,0 +1,259 @@
+
+
+================================================================
+== Vitis HLS Report for 'dut'
+================================================================
+* Date:           Thu Apr 23 22:10:21 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        mcts.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.167 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%player2_loc = alloca i64 1"   --->   Operation 13 'alloca' 'player2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%player1_48_loc = alloca i64 1"   --->   Operation 14 'alloca' 'player1_48_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%searcher_visitCounts = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 15 'alloca' 'searcher_visitCounts' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%searcher_meanQ = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 16 'alloca' 'searcher_meanQ' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 5100> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%searcher_parents = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 17 'alloca' 'searcher_parents' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%searcher_firstChilds = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 18 'alloca' 'searcher_firstChilds' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%searcher_numChildren = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 19 'alloca' 'searcher_numChildren' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%searcher_nextSiblings = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 20 'alloca' 'searcher_nextSiblings' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%searcher_numLegalActions = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 21 'alloca' 'searcher_numLegalActions' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%searcher_terminals = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 22 'alloca' 'searcher_terminals' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%searcher_childActions = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 23 'alloca' 'searcher_childActions' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%searcher_triedMask = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 24 'alloca' 'searcher_triedMask' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%searcher_isREDs = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 25 'alloca' 'searcher_isREDs' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%searcher_logVisitCounts = alloca i64 1" [MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 26 'alloca' 'searcher_logVisitCounts' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_1 : Operation 27 [2/2] (0.00ns)   --->   "%call_ln0 = call void @dut_Pipeline_VITIS_LOOP_17_1, i32 %strm_in, i49 %player1_48_loc"   --->   Operation 27 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 1.40>
+ST_2 : Operation 28 [1/2] (1.40ns)   --->   "%call_ln0 = call void @dut_Pipeline_VITIS_LOOP_17_1, i32 %strm_in, i49 %player1_48_loc"   --->   Operation 28 'call' 'call_ln0' <Predicate = true> <Delay = 1.40> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln0 = call void @dut_Pipeline_VITIS_LOOP_27_3, i32 %strm_in, i49 %player2_loc"   --->   Operation 29 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 1.40>
+ST_4 : Operation 30 [1/2] (1.40ns)   --->   "%call_ln0 = call void @dut_Pipeline_VITIS_LOOP_27_3, i32 %strm_in, i49 %player2_loc"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 1.40> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 2.65>
+ST_5 : Operation 31 [1/1] ( I:1.63ns O:1.63ns )   --->   "%strm_in_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in" [dut.cpp:37]   --->   Operation 31 'read' 'strm_in_read' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_5 : Operation 32 [1/1] (1.01ns)   --->   "%is_red = icmp_ne  i32 %strm_in_read, i32 0" [dut.cpp:37]   --->   Operation 32 'icmp' 'is_red' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.65>
+ST_6 : Operation 33 [1/1] ( I:1.63ns O:1.63ns )   --->   "%strm_in_read_1 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in" [dut.cpp:38]   --->   Operation 33 'read' 'strm_in_read_1' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_6 : Operation 34 [1/1] (1.01ns)   --->   "%is_player1_turn = icmp_ne  i32 %strm_in_read_1, i32 0" [dut.cpp:38]   --->   Operation 34 'icmp' 'is_player1_turn' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.63>
+ST_7 : Operation 35 [1/1] ( I:1.63ns O:1.63ns )   --->   "%p_04 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in" [dut.cpp:39]   --->   Operation 35 'read' 'p_04' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%this_parents_addr = getelementptr i32 %searcher_parents, i64 0, i64 0" [./MCTSSearcher.h:42->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 36 'getelementptr' 'this_parents_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln42 = store i32 4294967295, i13 %this_parents_addr" [./MCTSSearcher.h:42->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 37 'store' 'store_ln42' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%this_firstChilds_addr = getelementptr i32 %searcher_firstChilds, i64 0, i64 0" [./MCTSSearcher.h:43->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 38 'getelementptr' 'this_firstChilds_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln43 = store i32 4294967295, i13 %this_firstChilds_addr" [./MCTSSearcher.h:43->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 39 'store' 'store_ln43' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%this_numChildren_addr = getelementptr i32 %searcher_numChildren, i64 0, i64 0" [./MCTSSearcher.h:44->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 40 'getelementptr' 'this_numChildren_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln44 = store i32 0, i13 %this_numChildren_addr" [./MCTSSearcher.h:44->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 41 'store' 'store_ln44' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%this_visitCounts_addr = getelementptr i32 %searcher_visitCounts, i64 0, i64 0" [./MCTSSearcher.h:45->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 42 'getelementptr' 'this_visitCounts_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln45 = store i32 0, i13 %this_visitCounts_addr" [./MCTSSearcher.h:45->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 43 'store' 'store_ln45' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%this_meanQ_addr = getelementptr i20 %searcher_meanQ, i64 0, i64 0" [./MCTSSearcher.h:46->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 44 'getelementptr' 'this_meanQ_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln46 = store i20 0, i13 %this_meanQ_addr" [./MCTSSearcher.h:46->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 45 'store' 'store_ln46' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 5100> <RAM>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%this_terminals_addr = getelementptr i1 %searcher_terminals, i64 0, i64 0" [./MCTSSearcher.h:47->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 46 'getelementptr' 'this_terminals_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln47 = store i1 0, i13 %this_terminals_addr" [./MCTSSearcher.h:47->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 47 'store' 'store_ln47' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%this_triedMask_addr = getelementptr i49 %searcher_triedMask, i64 0, i64 0" [./MCTSSearcher.h:48->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 48 'getelementptr' 'this_triedMask_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln48 = store i49 0, i13 %this_triedMask_addr" [./MCTSSearcher.h:48->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 49 'store' 'store_ln48' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%this_logVisitCounts_addr = getelementptr i32 %searcher_logVisitCounts, i64 0, i64 0" [./MCTSSearcher.h:50->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 50 'getelementptr' 'this_logVisitCounts_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln51 = store i32 0, i13 %this_logVisitCounts_addr" [./MCTSSearcher.h:51->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 51 'store' 'store_ln51' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+
+State 8 <SV = 7> <Delay = 3.88>
+ST_8 : Operation 52 [1/1] (0.00ns)   --->   "%player1_48_loc_load = load i49 %player1_48_loc"   --->   Operation 52 'load' 'player1_48_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 53 [1/1] (0.00ns)   --->   "%player2_loc_load = load i49 %player2_loc"   --->   Operation 53 'load' 'player2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 54 [1/1] ( I:1.63ns O:1.63ns )   --->   "%strm_in_read_2 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in" [dut.cpp:40]   --->   Operation 54 'read' 'strm_in_read_2' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_8 : Operation 55 [1/1] (1.01ns)   --->   "%last_move = add i32 %strm_in_read_2, i32 4294967295" [dut.cpp:40]   --->   Operation 55 'add' 'last_move' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 56 [2/2] (1.23ns)   --->   "%empty = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 42, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" [MCTSSearcher.cpp:285->dut.cpp:49]   --->   Operation 56 'call' 'empty' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 1.23>
+ST_9 : Operation 57 [1/2] (1.23ns)   --->   "%empty = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 42, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" [MCTSSearcher.cpp:285->dut.cpp:49]   --->   Operation 57 'call' 'empty' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 1.23>
+ST_10 : Operation 58 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln42 = store i32 4294967295, i13 %this_parents_addr" [./MCTSSearcher.h:42->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 58 'store' 'store_ln42' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_10 : Operation 59 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln43 = store i32 4294967295, i13 %this_firstChilds_addr" [./MCTSSearcher.h:43->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 59 'store' 'store_ln43' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_10 : Operation 60 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln44 = store i32 0, i13 %this_numChildren_addr" [./MCTSSearcher.h:44->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 60 'store' 'store_ln44' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_10 : Operation 61 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln45 = store i32 0, i13 %this_visitCounts_addr" [./MCTSSearcher.h:45->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 61 'store' 'store_ln45' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_10 : Operation 62 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln46 = store i20 0, i13 %this_meanQ_addr" [./MCTSSearcher.h:46->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 62 'store' 'store_ln46' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 5100> <RAM>
+ST_10 : Operation 63 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln47 = store i1 0, i13 %this_terminals_addr" [./MCTSSearcher.h:47->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 63 'store' 'store_ln47' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_10 : Operation 64 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln48 = store i49 0, i13 %this_triedMask_addr" [./MCTSSearcher.h:48->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 64 'store' 'store_ln48' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+ST_10 : Operation 65 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln51 = store i32 0, i13 %this_logVisitCounts_addr" [./MCTSSearcher.h:51->MCTSSearcher.cpp:284->dut.cpp:49]   --->   Operation 65 'store' 'store_ln51' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+
+State 11 <SV = 10> <Delay = 1.23>
+ST_11 : Operation 66 [2/2] (1.23ns)   --->   "%action = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 43, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" [MCTSSearcher.cpp:285->dut.cpp:49]   --->   Operation 66 'call' 'action' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 11> <Delay = 2.87>
+ST_12 : Operation 67 [1/1] (0.00ns)   --->   "%spectopmodule_ln6 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [dut.cpp:6]   --->   Operation 67 'spectopmodule' 'spectopmodule_ln6' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln6 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0" [dut.cpp:6]   --->   Operation 68 'specinterface' 'specinterface_ln6' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %strm_in, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 70 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %strm_in"   --->   Operation 70 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %strm_out, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 72 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %strm_out"   --->   Operation 72 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 73 [1/2] (1.23ns)   --->   "%action = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 43, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" [MCTSSearcher.cpp:285->dut.cpp:49]   --->   Operation 73 'call' 'action' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Generic Core
+ST_12 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln285 = zext i6 %action" [MCTSSearcher.cpp:285->dut.cpp:49]   --->   Operation 74 'zext' 'zext_ln285' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 75 [1/1] ( I:1.63ns O:1.63ns )   --->   "%write_ln51 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %strm_out, i32 %zext_ln285" [dut.cpp:51]   --->   Operation 75 'write' 'write_ln51' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_12 : Operation 76 [1/1] (0.00ns)   --->   "%ret_ln52 = ret" [dut.cpp:52]   --->   Operation 76 'ret' 'ret_ln52' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 1.402ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'dut_Pipeline_VITIS_LOOP_17_1' [26]  (1.402 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 1.402ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'dut_Pipeline_VITIS_LOOP_27_3' [28]  (1.402 ns)
+
+ <State 5>: 2.652ns
+The critical path consists of the following:
+	fifo read operation ('strm_in_read', dut.cpp:37) on port 'strm_in' (dut.cpp:37) [30]  (1.636 ns)
+	'icmp' operation 1 bit ('is_red', dut.cpp:37) [31]  (1.016 ns)
+
+ <State 6>: 2.652ns
+The critical path consists of the following:
+	fifo read operation ('strm_in_read_1', dut.cpp:38) on port 'strm_in' (dut.cpp:38) [32]  (1.636 ns)
+	'icmp' operation 1 bit ('is_player1_turn', dut.cpp:38) [33]  (1.016 ns)
+
+ <State 7>: 1.636ns
+The critical path consists of the following:
+	fifo read operation ('p_04', dut.cpp:39) on port 'strm_in' (dut.cpp:39) [34]  (1.636 ns)
+
+ <State 8>: 3.889ns
+The critical path consists of the following:
+	fifo read operation ('strm_in_read_2', dut.cpp:40) on port 'strm_in' (dut.cpp:40) [35]  (1.636 ns)
+	'add' operation 32 bit ('last_move', dut.cpp:40) [36]  (1.016 ns)
+	'call' operation 6 bit ('empty', MCTSSearcher.cpp:285->dut.cpp:49) to 'search' [53]  (1.237 ns)
+
+ <State 9>: 1.237ns
+The critical path consists of the following:
+	'call' operation 6 bit ('empty', MCTSSearcher.cpp:285->dut.cpp:49) to 'search' [53]  (1.237 ns)
+
+ <State 10>: 1.237ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln42', ./MCTSSearcher.h:42->MCTSSearcher.cpp:284->dut.cpp:49) of constant 4294967295 on array 'searcher.parents', MCTSSearcher.cpp:284->dut.cpp:49 [54]  (1.237 ns)
+
+ <State 11>: 1.237ns
+The critical path consists of the following:
+	'call' operation 6 bit ('action', MCTSSearcher.cpp:285->dut.cpp:49) to 'search' [62]  (1.237 ns)
+
+ <State 12>: 2.873ns
+The critical path consists of the following:
+	'call' operation 6 bit ('action', MCTSSearcher.cpp:285->dut.cpp:49) to 'search' [62]  (1.237 ns)
+	fifo write operation ('write_ln51', dut.cpp:51) on port 'strm_out' (dut.cpp:51) [64]  (1.636 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,485 @@
+<stg><name>search_Pipeline_VITIS_LOOP_42_1</name>
+
+
+<trans_list>
+
+<trans id="27" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32">
+<![CDATA[
+newFuncRoot:0 %numLegalActions = alloca i32 1
+
+]]></Node>
+<StgValue><ssdm name="numLegalActions"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="6" op_0_bw="32">
+<![CDATA[
+newFuncRoot:1 %i = alloca i32 1
+
+]]></Node>
+<StgValue><ssdm name="i"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="49" op_0_bw="49" op_1_bw="49">
+<![CDATA[
+newFuncRoot:2 %gameState_legalActionMap_read = read i49 @_ssdm_op_Read.ap_auto.i49, i49 %gameState_legalActionMap
+
+]]></Node>
+<StgValue><ssdm name="gameState_legalActionMap_read"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="6" op_1_bw="6">
+<![CDATA[
+newFuncRoot:3 %store_ln42 = store i6 0, i6 %i
+
+]]></Node>
+<StgValue><ssdm name="store_ln42"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+newFuncRoot:4 %store_ln41 = store i32 0, i32 %numLegalActions
+
+]]></Node>
+<StgValue><ssdm name="store_ln41"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0">
+<![CDATA[
+newFuncRoot:5 %br_ln0 = br void %for.body.i.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="10" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="6" op_0_bw="6" op_1_bw="0">
+<![CDATA[
+for.body.i.i:0 %i_1 = load i6 %i
+
+]]></Node>
+<StgValue><ssdm name="i_1"/></StgValue>
+</operation>
+
+<operation id="11" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="1" op_0_bw="6" op_1_bw="6">
+<![CDATA[
+for.body.i.i:1 %icmp_ln42 = icmp_eq  i6 %i_1, i6 49
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln42"/></StgValue>
+</operation>
+
+<operation id="12" st_id="2" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="6" op_0_bw="6" op_1_bw="6">
+<![CDATA[
+for.body.i.i:2 %i_2 = add i6 %i_1, i6 1
+
+]]></Node>
+<StgValue><ssdm name="i_2"/></StgValue>
+</operation>
+
+<operation id="13" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+for.body.i.i:3 %br_ln42 = br i1 %icmp_ln42, void %for.body.i.i.split, void %_ZN9GameState18getNumLegalActionsEv.exit.i.exitStub
+
+]]></Node>
+<StgValue><ssdm name="br_ln42"/></StgValue>
+</operation>
+
+<operation id="14" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+for.body.i.i.split:0 %numLegalActions_load = load i32 %numLegalActions
+
+]]></Node>
+<StgValue><ssdm name="numLegalActions_load"/></StgValue>
+</operation>
+
+<operation id="15" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<![CDATA[
+for.body.i.i.split:1 %specpipeline_ln41 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0
+
+]]></Node>
+<StgValue><ssdm name="specpipeline_ln41"/></StgValue>
+</operation>
+
+<operation id="16" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
+<![CDATA[
+for.body.i.i.split:2 %speclooptripcount_ln41 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 49, i64 49, i64 49
+
+]]></Node>
+<StgValue><ssdm name="speclooptripcount_ln41"/></StgValue>
+</operation>
+
+<operation id="17" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+for.body.i.i.split:3 %specloopname_ln42 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
+
+]]></Node>
+<StgValue><ssdm name="specloopname_ln42"/></StgValue>
+</operation>
+
+<operation id="18" st_id="2" stage="1" lat="1">
+<core>BitSelector</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="1" op_0_bw="1" op_1_bw="49" op_2_bw="6">
+<![CDATA[
+for.body.i.i.split:4 %tobool_i_i = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i6, i49 %gameState_legalActionMap_read, i6 %i_1
+
+]]></Node>
+<StgValue><ssdm name="tobool_i_i"/></StgValue>
+</operation>
+
+<operation id="19" st_id="2" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+for.body.i.i.split:5 %add_ln44 = add i32 %numLegalActions_load, i32 1
+
+]]></Node>
+<StgValue><ssdm name="add_ln44"/></StgValue>
+</operation>
+
+<operation id="20" st_id="2" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+for.body.i.i.split:6 %numLegalActions_1 = select i1 %tobool_i_i, i32 %add_ln44, i32 %numLegalActions_load
+
+]]></Node>
+<StgValue><ssdm name="numLegalActions_1"/></StgValue>
+</operation>
+
+<operation id="21" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="0" op_0_bw="6" op_1_bw="6" op_2_bw="0" op_3_bw="0">
+<![CDATA[
+for.body.i.i.split:7 %store_ln42 = store i6 %i_2, i6 %i
+
+]]></Node>
+<StgValue><ssdm name="store_ln42"/></StgValue>
+</operation>
+
+<operation id="22" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
+<![CDATA[
+for.body.i.i.split:8 %store_ln41 = store i32 %numLegalActions_1, i32 %numLegalActions
+
+]]></Node>
+<StgValue><ssdm name="store_ln41"/></StgValue>
+</operation>
+
+<operation id="23" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="0" op_0_bw="0">
+<![CDATA[
+for.body.i.i.split:9 %br_ln42 = br void %for.body.i.i
+
+]]></Node>
+<StgValue><ssdm name="br_ln42"/></StgValue>
+</operation>
+
+<operation id="24" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+_ZN9GameState18getNumLegalActionsEv.exit.i.exitStub:0 %numLegalActions_load_1 = load i32 %numLegalActions
+
+]]></Node>
+<StgValue><ssdm name="numLegalActions_load_1"/></StgValue>
+</operation>
+
+<operation id="25" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+_ZN9GameState18getNumLegalActionsEv.exit.i.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %numLegalActions_out, i32 %numLegalActions_load_1
+
+]]></Node>
+<StgValue><ssdm name="write_ln0"/></StgValue>
+</operation>
+
+<operation id="26" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln42" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="0">
+<![CDATA[
+_ZN9GameState18getNumLegalActionsEv.exit.i.exitStub:2 %ret_ln0 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="34" name="gameState_legalActionMap" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gameState_legalActionMap"/></StgValue>
+</port>
+<port id="35" name="numLegalActions_out" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="numLegalActions_out"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="37" from="StgValue_36" to="numLegalActions" fromId="36" toId="4">
+</dataflow>
+<dataflow id="38" from="StgValue_36" to="i" fromId="36" toId="5">
+</dataflow>
+<dataflow id="40" from="_ssdm_op_Read.ap_auto.i49" to="gameState_legalActionMap_read" fromId="39" toId="6">
+</dataflow>
+<dataflow id="41" from="gameState_legalActionMap" to="gameState_legalActionMap_read" fromId="34" toId="6">
+</dataflow>
+<dataflow id="43" from="StgValue_42" to="store_ln42" fromId="42" toId="7">
+</dataflow>
+<dataflow id="44" from="i" to="store_ln42" fromId="5" toId="7">
+</dataflow>
+<dataflow id="46" from="StgValue_45" to="store_ln41" fromId="45" toId="8">
+</dataflow>
+<dataflow id="47" from="numLegalActions" to="store_ln41" fromId="4" toId="8">
+</dataflow>
+<dataflow id="48" from="i" to="i_1" fromId="5" toId="10">
+</dataflow>
+<dataflow id="49" from="i_1" to="icmp_ln42" fromId="10" toId="11">
+</dataflow>
+<dataflow id="51" from="StgValue_50" to="icmp_ln42" fromId="50" toId="11">
+</dataflow>
+<dataflow id="52" from="i_1" to="i_2" fromId="10" toId="12">
+</dataflow>
+<dataflow id="54" from="StgValue_53" to="i_2" fromId="53" toId="12">
+</dataflow>
+<dataflow id="55" from="icmp_ln42" to="br_ln42" fromId="11" toId="13">
+</dataflow>
+<dataflow id="56" from="numLegalActions" to="numLegalActions_load" fromId="4" toId="14">
+</dataflow>
+<dataflow id="58" from="_ssdm_op_SpecPipeline" to="specpipeline_ln41" fromId="57" toId="15">
+</dataflow>
+<dataflow id="60" from="StgValue_59" to="specpipeline_ln41" fromId="59" toId="15">
+</dataflow>
+<dataflow id="61" from="StgValue_45" to="specpipeline_ln41" fromId="45" toId="15">
+</dataflow>
+<dataflow id="62" from="StgValue_45" to="specpipeline_ln41" fromId="45" toId="15">
+</dataflow>
+<dataflow id="63" from="StgValue_45" to="specpipeline_ln41" fromId="45" toId="15">
+</dataflow>
+<dataflow id="65" from="empty_0" to="specpipeline_ln41" fromId="64" toId="15">
+</dataflow>
+<dataflow id="67" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln41" fromId="66" toId="16">
+</dataflow>
+<dataflow id="69" from="StgValue_68" to="speclooptripcount_ln41" fromId="68" toId="16">
+</dataflow>
+<dataflow id="70" from="StgValue_68" to="speclooptripcount_ln41" fromId="68" toId="16">
+</dataflow>
+<dataflow id="71" from="StgValue_68" to="speclooptripcount_ln41" fromId="68" toId="16">
+</dataflow>
+<dataflow id="73" from="_ssdm_op_SpecLoopName" to="specloopname_ln42" fromId="72" toId="17">
+</dataflow>
+<dataflow id="75" from="empty_14" to="specloopname_ln42" fromId="74" toId="17">
+</dataflow>
+<dataflow id="77" from="_ssdm_op_BitSelect.i1.i49.i6" to="tobool_i_i" fromId="76" toId="18">
+</dataflow>
+<dataflow id="78" from="gameState_legalActionMap_read" to="tobool_i_i" fromId="6" toId="18">
+</dataflow>
+<dataflow id="79" from="i_1" to="tobool_i_i" fromId="10" toId="18">
+</dataflow>
+<dataflow id="80" from="numLegalActions_load" to="add_ln44" fromId="14" toId="19">
+</dataflow>
+<dataflow id="81" from="StgValue_36" to="add_ln44" fromId="36" toId="19">
+</dataflow>
+<dataflow id="82" from="tobool_i_i" to="numLegalActions_1" fromId="18" toId="20">
+</dataflow>
+<dataflow id="83" from="add_ln44" to="numLegalActions_1" fromId="19" toId="20">
+</dataflow>
+<dataflow id="84" from="numLegalActions_load" to="numLegalActions_1" fromId="14" toId="20">
+</dataflow>
+<dataflow id="85" from="i_2" to="store_ln42" fromId="12" toId="21">
+</dataflow>
+<dataflow id="86" from="i" to="store_ln42" fromId="5" toId="21">
+</dataflow>
+<dataflow id="87" from="numLegalActions_1" to="store_ln41" fromId="20" toId="22">
+</dataflow>
+<dataflow id="88" from="numLegalActions" to="store_ln41" fromId="4" toId="22">
+</dataflow>
+<dataflow id="89" from="numLegalActions" to="numLegalActions_load_1" fromId="4" toId="24">
+</dataflow>
+<dataflow id="91" from="_ssdm_op_Write.ap_auto.i32P0A" to="write_ln0" fromId="90" toId="25">
+</dataflow>
+<dataflow id="92" from="numLegalActions_out" to="write_ln0" fromId="35" toId="25">
+</dataflow>
+<dataflow id="93" from="numLegalActions_load_1" to="write_ln0" fromId="24" toId="25">
+</dataflow>
+<dataflow id="94" from="icmp_ln42" to="StgValue_2" fromId="11" toId="2">
+</dataflow>
+</dataflows>
+
+
+</stg>

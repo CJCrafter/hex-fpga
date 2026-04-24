@@ -1,0 +1,152 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 41,673       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 17,333       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  8,890       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  8,686       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  7,521       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  7,410       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  7,410       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  7,410       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  7,410       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  7,546       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  7,546       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  7,706       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  7,702       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  7,702       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  7,570       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  7,648       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++---------------------------+-----------------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+| Function                  | Location              | Compile/Link    | Unroll/Inline   | Array/Struct    | Performance     | HW Transforms   |
++---------------------------+-----------------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+| + dut                     | dut.cpp:6             | 41,673          | 7,521           | 7,546           | 7,702           | 7,648           |
+|    Hex                    | hex.h:51              |    45           |                 |                 |                 |                 |
+|    setPlayer1             | hex.h:90              |     4           |                 |                 |                 |                 |
+|    setPlayer2             | hex.h:94              |     4           |                 |                 |                 |                 |
+|    setPlayer1Turn         | hex.h:102             |     3           |                 |                 |                 |                 |
+|    setLastMove            | hex.h:98              |     3           |                 |                 |                 |                 |
+|  + search                 | MCTSSearcher.cpp:280  | 41,189          | 7,465           | 7,487           | 7,227           | 7,283           |
+|   + MCTSSearcher          | MCTSSearcher.h:41     |   241           |                 |                 |                 |                 |
+|      RNG                  | rand.h:13             |    10           |                 |                 |                 |                 |
+|   + search                | MCTSSearcher.cpp:11   | 40,869          | 7,350 (2 calls) | 7,372 (2 calls) | 7,112 (2 calls) | 7,238 (2 calls) |
+|    + mainLoop             | MCTSSearcher.cpp:40   | 40,820          |                 |                 |                 |                 |
+|     + GameState           | GameState.h:22        |   120           |                 |                 |                 |                 |
+|        player1            | hex.h:86              |     4           |                 |                 |                 |                 |
+|        player2            | hex.h:87              |     4           |                 |                 |                 |                 |
+|       getNumLegalActions  | GameState.h:40        |   147           |                 |                 |                 |                 |
+|     + clone               | GameState.cpp:7       |   126           |                 |                 |                 |                 |
+|      + GameState          | GameState.h:22        |   120           |                 |                 |                 |                 |
+|         player1           | hex.h:86              |     4           |                 |                 |                 |                 |
+|         player2           | hex.h:87              |     4           |                 |                 |                 |                 |
+|     + forward             | MCTSSearcher.cpp:124  | 40,403          |                 |                 |                 |                 |
+|        mcts_sqrt          | mcts_types.h:16       | 4,674           |                 |                 |                 |                 |
+|      + makeMove           | GameState.cpp:12      |   458 (2 calls) |                 |                 |                 |                 |
+|         place             | hex.h:55              |   226 (2 calls) |                 |                 |                 |                 |
+|         player1           | hex.h:86              |     8 (2 calls) |                 |                 |                 |                 |
+|         player2           | hex.h:87              |     8 (2 calls) |                 |                 |                 |                 |
+|      + expand             | MCTSSearcher.cpp:53   |   459           |                 |                 |                 |                 |
+|         pickUntriedAction | MCTSSearcher.cpp:69   |   164           |                 |                 |                 |                 |
+|         createNode        | MCTSSearcher.cpp:88   |   271           |                 |                 |                 |                 |
+|      + isTerminal         | GameState.cpp:29      | 6,215           |                 |                 |                 |                 |
+|       + checkWin          | hex.h:70              | 6,212           |                 |                 |                 |                 |
+|        + flood            | hex.h:110             | 5,410 (2 calls) |                 |                 |                 |                 |
+|         + notRightCol     | hex.h:33              | 1,584 (4 calls) |                 |                 |                 |                 |
+|            rightCol       | hex.h:22              |   412 (4 calls) |                 |                 |                 |                 |
+|            boardMask      | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|         + notLeftCol      | hex.h:29              | 1,576 (4 calls) |                 |                 |                 |                 |
+|            leftCol        | hex.h:15              |   404 (4 calls) |                 |                 |                 |                 |
+|            boardMask      | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|           boardMask       | hex.h:10              |   394 (2 calls) |                 |                 |                 |                 |
+|          topRow           | hex.h:37              |   111           |                 |                 |                 |                 |
+|          bottomRow        | hex.h:44              |   101           |                 |                 |                 |                 |
+|          leftCol          | hex.h:15              |   101           |                 |                 |                 |                 |
+|          rightCol         | hex.h:22              |   103           |                 |                 |                 |                 |
+|      + rollout            | MCTSSearcher.cpp:181  | 13,659          |                 |                 |                 |                 |
+|       + isTerminal        | GameState.cpp:29      | 6,215           |                 |                 |                 |                 |
+|        + checkWin         | hex.h:70              | 6,212           |                 |                 |                 |                 |
+|         + flood           | hex.h:110             | 5,410 (2 calls) |                 |                 |                 |                 |
+|          + notRightCol    | hex.h:33              | 1,584 (4 calls) |                 |                 |                 |                 |
+|             rightCol      | hex.h:22              |   412 (4 calls) |                 |                 |                 |                 |
+|             boardMask     | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|          + notLeftCol     | hex.h:29              | 1,576 (4 calls) |                 |                 |                 |                 |
+|             leftCol       | hex.h:15              |   404 (4 calls) |                 |                 |                 |                 |
+|             boardMask     | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|            boardMask      | hex.h:10              |   394 (2 calls) |                 |                 |                 |                 |
+|           topRow          | hex.h:37              |   111           |                 |                 |                 |                 |
+|           bottomRow       | hex.h:44              |   101           |                 |                 |                 |                 |
+|           leftCol         | hex.h:15              |   101           |                 |                 |                 |                 |
+|           rightCol        | hex.h:22              |   103           |                 |                 |                 |                 |
+|       + randInt           | rand.h:26             |    29           |                 |                 |                 |                 |
+|          next             | rand.h:18             |    24           |                 |                 |                 |                 |
+|       + makeMove          | GameState.cpp:12      |   229           |                 |                 |                 |                 |
+|          place            | hex.h:55              |   113           |                 |                 |                 |                 |
+|          player1          | hex.h:86              |     4           |                 |                 |                 |                 |
+|          player2          | hex.h:87              |     4           |                 |                 |                 |                 |
+|       + getTerminalValue  | GameState.cpp:33      | 7,079           |                 |                 |                 |                 |
+|        + isTerminal       | GameState.cpp:29      | 6,215           |                 |                 |                 |                 |
+|         + checkWin        | hex.h:70              | 6,212           |                 |                 |                 |                 |
+|          + flood          | hex.h:110             | 5,410 (2 calls) |                 |                 |                 |                 |
+|           + notRightCol   | hex.h:33              | 1,584 (4 calls) |                 |                 |                 |                 |
+|              rightCol     | hex.h:22              |   412 (4 calls) |                 |                 |                 |                 |
+|              boardMask    | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|           + notLeftCol    | hex.h:29              | 1,576 (4 calls) |                 |                 |                 |                 |
+|              leftCol      | hex.h:15              |   404 (4 calls) |                 |                 |                 |                 |
+|              boardMask    | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|             boardMask     | hex.h:10              |   394 (2 calls) |                 |                 |                 |                 |
+|            topRow         | hex.h:37              |   111           |                 |                 |                 |                 |
+|            bottomRow      | hex.h:44              |   101           |                 |                 |                 |                 |
+|            leftCol        | hex.h:15              |   101           |                 |                 |                 |                 |
+|            rightCol       | hex.h:22              |   103           |                 |                 |                 |                 |
+|          isPlayer1Turn    | hex.h:85              |     3           |                 |                 |                 |                 |
+|      + getTerminalValue   | GameState.cpp:33      | 7,079           |                 |                 |                 |                 |
+|       + isTerminal        | GameState.cpp:29      | 6,215           |                 |                 |                 |                 |
+|        + checkWin         | hex.h:70              | 6,212           |                 |                 |                 |                 |
+|         + flood           | hex.h:110             | 5,410 (2 calls) |                 |                 |                 |                 |
+|          + notRightCol    | hex.h:33              | 1,584 (4 calls) |                 |                 |                 |                 |
+|             rightCol      | hex.h:22              |   412 (4 calls) |                 |                 |                 |                 |
+|             boardMask     | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|          + notLeftCol     | hex.h:29              | 1,576 (4 calls) |                 |                 |                 |                 |
+|             leftCol       | hex.h:15              |   404 (4 calls) |                 |                 |                 |                 |
+|             boardMask     | hex.h:10              |   788 (4 calls) |                 |                 |                 |                 |
+|            boardMask      | hex.h:10              |   394 (2 calls) |                 |                 |                 |                 |
+|           topRow          | hex.h:37              |   111           |                 |                 |                 |                 |
+|           bottomRow       | hex.h:44              |   101           |                 |                 |                 |                 |
+|           leftCol         | hex.h:15              |   101           |                 |                 |                 |                 |
+|           rightCol        | hex.h:22              |   103           |                 |                 |                 |                 |
+|         isPlayer1Turn     | hex.h:85              |     3           |                 |                 |                 |                 |
+|      + backup             | MCTSSearcher.cpp:256  | 5,965           |                 |                 |                 |                 |
+|         mcts_log          | mcts_types.h:15       | 4,747           |                 |                 |                 |                 |
+|    + forward              | MCTSSearcher.cpp:124  |                 | 7,252 (2 calls) | 7,270 (2 calls) | 7,014 (2 calls) | 7,122 (2 calls) |
+|       sqrt_fixed<32, 16>  | hls_sqrt_apfixed.h:19 |                 | 2,784 (2 calls) | 2,720 (2 calls) | 2,720 (2 calls) | 2,722 (2 calls) |
+|       rollout             | MCTSSearcher.cpp:181  |                 | 2,688 (8 calls) | 2,752 (8 calls) | 2,672 (8 calls) | 2,768 (8 calls) |
+|       log<32, 16>         | hls_log_apfixed.h:473 |                 |  976 (2 calls)  |  976 (2 calls)  |  848 (2 calls)  |  850 (2 calls)  |
+|     RNG                   | rand.h:13             |    10           |                 |                 |                 |                 |
+|   + randInt               | rand.h:26             |    29           |                 |                 |                 |                 |
+|      next                 | rand.h:18             |    24           |                 |                 |                 |                 |
++---------------------------+-----------------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

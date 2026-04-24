@@ -1,0 +1,10 @@
+In file included from dut.cpp:3:
+In file included from ./MCTSSearcher.h:9:
+In file included from ./GameState.h:9:
+In file included from ./hex.h:4:
+In file included from ./mcts_types.h:7:
+In file included from /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h:1057:
+/scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:16:34: warning: unknown warning group '-Wmisleading-indentation', ignored [-Wunknown-warning-option]
+#pragma clang diagnostic ignored "-Wmisleading-indentation"
+                                 ^
+1 warning generated.

@@ -1,0 +1,1096 @@
+{
+  "0": {
+    "basicblocks": 29,
+    "calls": "57 56 58 66 72 70",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "dut.cpp",
+    "fileloc": 6,
+    "instructions": 157,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 6,
+    "name": "dut",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 41673
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "73",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 223,
+    "instructions": 13,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "range_reduction<24>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1474
+  },
+  "10": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "rand.h",
+    "fileloc": 13,
+    "instructions": 10,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "RNG",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 10
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 354,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.87",
+    "total_instructions": 1089
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 210,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.22",
+    "total_instructions": 1089
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "42 44",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "GameState.h",
+    "fileloc": 22,
+    "instructions": 35,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "GameState",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 120
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 644,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.91",
+    "total_instructions": 1089
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 716,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.155",
+    "total_instructions": 1089
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 570,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.90",
+    "total_instructions": 1089
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "10",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.h",
+    "fileloc": 41,
+    "instructions": 66,
+    "loads": {
+      "L": 5
+    },
+    "memory_accesses": 0,
+    "name": "MCTSSearcher",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 241
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1006,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.159",
+    "total_instructions": 1089
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 788,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.156",
+    "total_instructions": 1089
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "4",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "rand.h",
+    "fileloc": 26,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "randInt",
+    "total_instructions": 29
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 932,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.158",
+    "total_instructions": 1089
+  },
+  "21": {
+    "basicblocks": 9,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "GameState.h",
+    "fileloc": 40,
+    "instructions": 36,
+    "memory_accesses": 4,
+    "name": "getNumLegalActions",
+    "total_instructions": 147
+  },
+  "22": {
+    "basicblocks": 1,
+    "calls": "13",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "GameState.cpp",
+    "fileloc": 7,
+    "instructions": 6,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "clone",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 126
+  },
+  "23": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1221,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.225",
+    "total_instructions": 1089
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1295,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.226",
+    "total_instructions": 1089
+  },
+  "25": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1078,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.223",
+    "total_instructions": 1089
+  },
+  "26": {
+    "basicblocks": 30,
+    "calls": "37 28 45 28 43 41 47 40",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 124,
+    "instructions": 225,
+    "loads": {
+      "L": 19
+    },
+    "memory_accesses": 12,
+    "name": "forward",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 40403
+  },
+  "27": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1150,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.224",
+    "total_instructions": 1089
+  },
+  "28": {
+    "basicblocks": 1,
+    "calls": "46 42 44",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "GameState.cpp",
+    "fileloc": 12,
+    "instructions": 31,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "makeMove",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 229
+  },
+  "29": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 69,
+    "instructions": 43,
+    "memory_accesses": 2,
+    "name": "pickUntriedAction",
+    "total_instructions": 164
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 426,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.88",
+    "total_instructions": 1089
+  },
+  "30": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1659,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.357",
+    "total_instructions": 1089
+  },
+  "31": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 88,
+    "instructions": 136,
+    "loads": {
+      "L": 20
+    },
+    "memory_accesses": 0,
+    "name": "createNode",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 271
+  },
+  "32": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1585,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.356",
+    "total_instructions": 1089
+  },
+  "33": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1513,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.292",
+    "total_instructions": 1089
+  },
+  "34": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1439,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.291",
+    "total_instructions": 1089
+  },
+  "35": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1367,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.290",
+    "total_instructions": 1089
+  },
+  "36": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 2377,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.604",
+    "total_instructions": 1089
+  },
+  "37": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "mcts_types.h",
+    "fileloc": 16,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "mcts_sqrt",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4674
+  },
+  "38": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1846,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.443",
+    "total_instructions": 1089
+  },
+  "39": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 1774,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.421",
+    "total_instructions": 1089
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "rand.h",
+    "fileloc": 18,
+    "instructions": 24,
+    "loads": {
+      "L": 7
+    },
+    "memory_accesses": 0,
+    "name": "next",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 24
+  },
+  "40": {
+    "basicblocks": 8,
+    "calls": "52",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 256,
+    "instructions": 115,
+    "loads": {
+      "L": 9
+    },
+    "memory_accesses": 24,
+    "name": "backup",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 5965
+  },
+  "41": {
+    "basicblocks": 24,
+    "calls": "43 2 28 47",
+    "control_depth": 6,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 181,
+    "instructions": 71,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 4,
+    "name": "rollout",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 13659
+  },
+  "42": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 86,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "player1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "43": {
+    "basicblocks": 1,
+    "calls": "59",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "GameState.cpp",
+    "fileloc": 29,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "isTerminal",
+    "total_instructions": 6215
+  },
+  "44": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 87,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "player2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "45": {
+    "basicblocks": 7,
+    "calls": "29 31",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 53,
+    "instructions": 24,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "expand",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 459
+  },
+  "46": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hex.h",
+    "fileloc": 55,
+    "instructions": 36,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "place",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 113
+  },
+  "47": {
+    "basicblocks": 6,
+    "calls": "43 51",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "GameState.cpp",
+    "fileloc": 33,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "getTerminalValue",
+    "total_instructions": 7079
+  },
+  "48": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 10,
+    "instructions": 22,
+    "memory_accesses": 0,
+    "name": "boardMask",
+    "total_instructions": 197
+  },
+  "49": {
+    "basicblocks": 1,
+    "calls": "68 48",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 29,
+    "instructions": 19,
+    "memory_accesses": 0,
+    "name": "notLeftCol",
+    "total_instructions": 394
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 498,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.89",
+    "total_instructions": 1089
+  },
+  "50": {
+    "basicblocks": 1,
+    "calls": "61 48",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 33,
+    "instructions": 19,
+    "memory_accesses": 0,
+    "name": "notRightCol",
+    "total_instructions": 396
+  },
+  "51": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 85,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "isPlayer1Turn",
+    "total_instructions": 3
+  },
+  "52": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "mcts_types.h",
+    "fileloc": 15,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "mcts_log",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4747
+  },
+  "53": {
+    "basicblocks": 14,
+    "calls": "1",
+    "control_depth": 2,
+    "def_use_depth": 6,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 473,
+    "instructions": 365,
+    "loads": {
+      "G": 2,
+      "L": 9
+    },
+    "memory_accesses": 13,
+    "name": "log<32, 16>",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 4737
+  },
+  "54": {
+    "basicblocks": 5,
+    "calls": "50 49 49 50 48",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 110,
+    "instructions": 176,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 26,
+    "name": "flood",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2705
+  },
+  "55": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 37,
+    "instructions": 26,
+    "memory_accesses": 3,
+    "name": "topRow",
+    "total_instructions": 111
+  },
+  "56": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 90,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "setPlayer1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "57": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 51,
+    "instructions": 11,
+    "memory_accesses": 0,
+    "name": "Hex",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 45
+  },
+  "58": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 94,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "setPlayer2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "59": {
+    "basicblocks": 15,
+    "calls": "54 55 67 54 68 61",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hex.h",
+    "fileloc": 70,
+    "instructions": 119,
+    "loads": {
+      "L": 7
+    },
+    "memory_accesses": 0,
+    "name": "checkWin",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 6212
+  },
+  "6": {
+    "basicblocks": 5,
+    "calls": "13 21 22 26",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 40,
+    "instructions": 24,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "mainLoop",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 40820
+  },
+  "60": {
+    "basicblocks": 1,
+    "calls": "62 63 71 69 75 74 65 12 9 11 3 5 16 14 15 19 8 20 18 25 27 23 24 35 34 33 32 30 39 38 36",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.pp.cpp",
+    "fileloc": 0,
+    "instructions": 32,
+    "memory_accesses": 0,
+    "name": "",
+    "total_instructions": 28079
+  },
+  "61": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "hex.h",
+    "fileloc": 22,
+    "instructions": 29,
+    "memory_accesses": 3,
+    "name": "rightCol",
+    "total_instructions": 103
+  },
+  "62": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 47,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 273
+  },
+  "63": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 70,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.16",
+    "total_instructions": 273
+  },
+  "64": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 10,
+    "def_use_depth": 4,
+    "file": "hls_sqrt_apfixed.h",
+    "fileloc": 19,
+    "instructions": 500,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 85,
+    "name": "sqrt_fixed<32, 16>",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 4664
+  },
+  "65": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 185,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.21",
+    "total_instructions": 273
+  },
+  "66": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 102,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "setPlayer1Turn",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "67": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 44,
+    "instructions": 27,
+    "memory_accesses": 3,
+    "name": "bottomRow",
+    "total_instructions": 101
+  },
+  "68": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 15,
+    "instructions": 27,
+    "memory_accesses": 3,
+    "name": "leftCol",
+    "total_instructions": 101
+  },
+  "69": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 116,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.18",
+    "total_instructions": 273
+  },
+  "7": {
+    "basicblocks": 9,
+    "calls": "6",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 11,
+    "instructions": 49,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 2,
+    "name": "search",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 40869
+  },
+  "70": {
+    "basicblocks": 7,
+    "calls": "17 7 10 2",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 280,
+    "instructions": 40,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "search",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 41189
+  },
+  "71": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 93,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.17",
+    "total_instructions": 273
+  },
+  "72": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 98,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "setLastMove",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "73": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 144,
+    "instructions": 102,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "range_reduce<ap_fixed<29, 7, AP_TRN, AP_WRAP, 0>, 4, 4, 24, 15>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1255
+  },
+  "74": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 162,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.20",
+    "total_instructions": 273
+  },
+  "75": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 139,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.19",
+    "total_instructions": 273
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 860,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.157",
+    "total_instructions": 1089
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_log_apfixed.cpp",
+    "fileloc": 282,
+    "instructions": 65,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.86",
+    "total_instructions": 1089
+  }
+}

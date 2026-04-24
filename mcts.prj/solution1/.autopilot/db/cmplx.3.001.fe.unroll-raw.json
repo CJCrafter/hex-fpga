@@ -1,0 +1,600 @@
+{
+  "0": {
+    "basicblocks": 17,
+    "calls": "1 27 33 8 17 6",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "dut.cpp",
+    "fileloc": 6,
+    "instructions": 100,
+    "loads": {
+      "L": 5
+    },
+    "memory_accesses": 0,
+    "name": "dut",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 17333
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hex.h",
+    "fileloc": 51,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "Hex",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 6
+  },
+  "10": {
+    "basicblocks": 2179,
+    "calls": "",
+    "control_depth": 11,
+    "def_use_depth": 102,
+    "file": "hls_sqrt_apfixed.h",
+    "fileloc": 19,
+    "instructions": 4384,
+    "memory_accesses": 3,
+    "name": "sqrt_fixed<32, 16>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 4384
+  },
+  "11": {
+    "basicblocks": 7,
+    "calls": "31 35",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 53,
+    "instructions": 16,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "expand",
+    "total_instructions": 133
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 87,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "player2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "4",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "GameState.cpp",
+    "fileloc": 29,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "isTerminal",
+    "total_instructions": 119
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 85,
+    "instructions": 2,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "isPlayer1Turn",
+    "total_instructions": 2
+  },
+  "15": {
+    "basicblocks": 16,
+    "calls": "3",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 223,
+    "instructions": 39,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 0,
+    "name": "range_reduction<24>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 160
+  },
+  "16": {
+    "basicblocks": 54,
+    "calls": "32",
+    "control_depth": 3,
+    "def_use_depth": 8,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 256,
+    "instructions": 137,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 15,
+    "name": "backup",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 1127
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hex.h",
+    "fileloc": 98,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "setLastMove",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 7,
+    "file": "rand.h",
+    "fileloc": 18,
+    "instructions": 10,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "next",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 10
+  },
+  "19": {
+    "basicblocks": 10,
+    "calls": "21",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "MCTSSearcher.h",
+    "fileloc": 41,
+    "instructions": 30,
+    "memory_accesses": 0,
+    "name": "MCTSSearcher",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 36
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "13 14",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "GameState.cpp",
+    "fileloc": 33,
+    "instructions": 15,
+    "memory_accesses": 0,
+    "name": "getTerminalValue",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 136
+  },
+  "20": {
+    "basicblocks": 8,
+    "calls": "5",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 11,
+    "instructions": 37,
+    "loads": {
+      "L": 5
+    },
+    "memory_accesses": 2,
+    "name": "search",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 8517
+  },
+  "21": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "rand.h",
+    "fileloc": 13,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "RNG",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 6
+  },
+  "22": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "mcts_types.h",
+    "fileloc": 16,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "mcts_sqrt",
+    "total_instructions": 4388
+  },
+  "23": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 11,
+    "file": "hex.h",
+    "fileloc": 110,
+    "instructions": 28,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "flood",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 28
+  },
+  "24": {
+    "basicblocks": 295,
+    "calls": "15",
+    "control_depth": 34,
+    "def_use_depth": 41,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 473,
+    "instructions": 826,
+    "loads": {
+      "G": 2,
+      "L": 6
+    },
+    "memory_accesses": 11,
+    "name": "log<32, 16>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 986
+  },
+  "25": {
+    "basicblocks": 1,
+    "calls": "36 7 12",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "GameState.cpp",
+    "fileloc": 12,
+    "instructions": 11,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "makeMove",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 43
+  },
+  "26": {
+    "basicblocks": 1,
+    "calls": "18",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "rand.h",
+    "fileloc": 26,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "randInt",
+    "total_instructions": 15
+  },
+  "27": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hex.h",
+    "fileloc": 90,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "setPlayer1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2
+  },
+  "28": {
+    "basicblocks": 1,
+    "calls": "30",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "GameState.cpp",
+    "fileloc": 7,
+    "instructions": 7,
+    "loads": {
+      "L": 5
+    },
+    "memory_accesses": 0,
+    "name": "clone",
+    "total_instructions": 28
+  },
+  "29": {
+    "basicblocks": 18,
+    "calls": "13 26 25 2",
+    "control_depth": 5,
+    "def_use_depth": 48,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 181,
+    "instructions": 205,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "rollout",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 518
+  },
+  "3": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 144,
+    "instructions": 121,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "range_reduce<ap_fixed<29, 7, AP_TRN, AP_WRAP, 0>, 4, 4, 24, 15>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 121
+  },
+  "30": {
+    "basicblocks": 1,
+    "calls": "7 12",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "GameState.h",
+    "fileloc": 22,
+    "instructions": 15,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "GameState",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 21
+  },
+  "31": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 69,
+    "instructions": 26,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "pickUntriedAction",
+    "total_instructions": 26
+  },
+  "32": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "mcts_types.h",
+    "fileloc": 15,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "mcts_log",
+    "total_instructions": 990
+  },
+  "33": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hex.h",
+    "fileloc": 94,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "setPlayer2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2
+  },
+  "34": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "GameState.h",
+    "fileloc": 40,
+    "instructions": 19,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "getNumLegalActions",
+    "total_instructions": 19
+  },
+  "35": {
+    "basicblocks": 10,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 88,
+    "instructions": 91,
+    "loads": {
+      "L": 19
+    },
+    "memory_accesses": 0,
+    "name": "createNode",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 91
+  },
+  "36": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hex.h",
+    "fileloc": 55,
+    "instructions": 26,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "place",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 26
+  },
+  "4": {
+    "basicblocks": 18,
+    "calls": "23 23",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hex.h",
+    "fileloc": 70,
+    "instructions": 61,
+    "loads": {
+      "L": 9
+    },
+    "memory_accesses": 0,
+    "name": "checkWin",
+    "total_instructions": 117
+  },
+  "5": {
+    "basicblocks": 4,
+    "calls": "30 34 28 9",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 40,
+    "instructions": 31,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 0,
+    "name": "mainLoop",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 8480
+  },
+  "6": {
+    "basicblocks": 4,
+    "calls": "19 20 19 20",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 280,
+    "instructions": 113,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "search",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 17219
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hex.h",
+    "fileloc": 86,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "player1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hex.h",
+    "fileloc": 102,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "setPlayer1Turn",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2
+  },
+  "9": {
+    "basicblocks": 114,
+    "calls": "22 25 11 25 13 29 29 29 29 2 16",
+    "control_depth": 2,
+    "def_use_depth": 7,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 124,
+    "instructions": 320,
+    "loads": {
+      "L": 42
+    },
+    "memory_accesses": 7,
+    "name": "forward",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 8381
+  }
+}

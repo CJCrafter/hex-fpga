@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Apr 23 22:10:36 2026
+# Process ID         : 2220491
+# Current directory  : /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/vivado.log
+# Journal file       : /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/vivado.jou
+# Running On         : cs730-test7.bu.edu
+# Platform           : unknown
+# Operating System   : unknown
+# Processor Detail   : Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz
+# CPU Frequency      : 3491.877 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 33287 MB
+# Swap memory        : 16844 MB
+# Total Virtual      : 50131 MB
+# Available Virtual  : 39124 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/course/aakash27/hex-fpga/mcts.prj/solution1/solution1_data.json outdir=/home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip srcdir=/home/course/aakash27/hex-fpga/mcts.prj/solution1 ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/misc
+INFO: Copied 47 verilog file(s) to /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/hdl/verilog
+INFO: Copied 44 vhdl file(s) to /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/hdl/vhdl
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1803.871 ; gain = 64.055 ; free physical = 4016 ; free virtual = 36943
+INFO: Import ports from HDL: /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/hdl/vhdl/dut.vhd (dut)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add ap_fifo interface strm_in
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/scratch/Xilinx/2025.1/Vivado/data/ip'.
+INFO: Add ap_fifo interface strm_out
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/component.xml
+INFO: Created IP archive /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/xilinx_com_hls_dut_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 23 22:10:51 2026...

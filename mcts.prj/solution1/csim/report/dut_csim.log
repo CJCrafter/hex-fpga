@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../main.cpp in debug mode
+   Compiling ../../../../dut.cpp in debug mode
+   Compiling ../../../../rand.cpp in debug mode
+   Compiling ../../../../MCTSSearcher.cpp in debug mode
+   Compiling ../../../../GameState.cpp in debug mode
+   Generating csim.exe
+Made move 25 (71050.8 ms)
+sims/sec = 140.744
+Red
+player1:0000000000000000000000000000000000000010000000000000000000000000
+player2:0000000000000000000000000000000000000000000000000000000000000000
+Made move 43 (70856.9 ms)
+sims/sec = 141.129
+Blue
+player1:0000000000000000000000000000000000000010000000000000000000000000
+player2:0000000000000000000010000000000000000000000000000000000000000000
+Made move 6 (69937.9 ms)
+sims/sec = 142.984
+Red
+player1:0000000000000000000000000000000000000010000000000000000001000000
+player2:0000000000000000000010000000000000000000000000000000000000000000
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 8
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

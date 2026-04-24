@@ -1,0 +1,3 @@
+26 errors generated.
+Error while processing /home/course/aakash27/hex-fpga/mcts.prj/solution1/.autopilot/db/GameState.pp.0.cpp.
+clang-tidy applied 132 of 132 suggested fixes.

@@ -1,0 +1,314 @@
+
+
+================================================================
+== Vitis HLS Report for 'dut_Pipeline_VITIS_LOOP_17_1'
+================================================================
+* Date:           Thu Apr 23 22:10:16 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        mcts.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.157 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       10|       10|  0.100 us|  0.100 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_17_1  |        8|        8|         5|          4|          1|     2|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 4, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.40>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%player1 = alloca i32 1" [dut.cpp:14]   --->   Operation 8 'alloca' 'player1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%word = alloca i32 1" [dut.cpp:17]   --->   Operation 9 'alloca' 'word' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %strm_in, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln17 = store i2 0, i2 %word" [dut.cpp:17]   --->   Operation 11 'store' 'store_ln17' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln14 = store i49 0, i49 %player1" [dut.cpp:14]   --->   Operation 12 'store' 'store_ln14' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln17 = br void %VITIS_LOOP_19_2" [dut.cpp:17]   --->   Operation 13 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%word_3 = load i2 %word" [dut.cpp:17]   --->   Operation 14 'load' 'word_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.54ns)   --->   "%icmp_ln17 = icmp_eq  i2 %word_3, i2 2" [dut.cpp:17]   --->   Operation 15 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.54ns)   --->   "%word_4 = add i2 %word_3, i2 1" [dut.cpp:17]   --->   Operation 16 'add' 'word_4' <Predicate = true> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln17 = br i1 %icmp_ln17, void %VITIS_LOOP_19_2.split_ifconv, void %VITIS_LOOP_29_4.preheader.exitStub" [dut.cpp:17]   --->   Operation 17 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%empty = trunc i2 %word_3" [dut.cpp:17]   --->   Operation 18 'trunc' 'empty' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln17 = store i2 %word_4, i2 %word" [dut.cpp:17]   --->   Operation 19 'store' 'store_ln17' <Predicate = (!icmp_ln17)> <Delay = 0.42>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%player1_load = load i49 %player1"   --->   Operation 153 'load' 'player1_load' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i49P0A, i49 %player1_48_out, i49 %player1_load"   --->   Operation 154 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 155 'ret' 'ret_ln0' <Predicate = (icmp_ln17)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 7.07>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%player1_load_1 = load i49 %player1" [dut.cpp:22]   --->   Operation 20 'load' 'player1_load_1' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] ( I:1.63ns O:1.63ns )   --->   "%partial = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in" [dut.cpp:18]   --->   Operation 21 'read' 'partial' <Predicate = (!icmp_ln17)> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%idx = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 0" [dut.cpp:17]   --->   Operation 22 'bitconcatenate' 'idx' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln22 = trunc i32 %partial" [dut.cpp:22]   --->   Operation 23 'trunc' 'trunc_ln22' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.45ns)   --->   "%player1_1 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_load_1, i6 %idx, i1 %trunc_ln22" [dut.cpp:22]   --->   Operation 24 'bitset' 'player1_1' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%idx_1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 1" [dut.cpp:20]   --->   Operation 25 'bitconcatenate' 'idx_1' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 1" [dut.cpp:22]   --->   Operation 26 'bitselect' 'tmp' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.45ns)   --->   "%player1_2 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_1, i6 %idx_1, i1 %tmp" [dut.cpp:22]   --->   Operation 27 'bitset' 'player1_2' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%idx_2 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 2" [dut.cpp:20]   --->   Operation 28 'bitconcatenate' 'idx_2' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_314 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 2" [dut.cpp:22]   --->   Operation 29 'bitselect' 'tmp_314' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.45ns)   --->   "%player1_3 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_2, i6 %idx_2, i1 %tmp_314" [dut.cpp:22]   --->   Operation 30 'bitset' 'player1_3' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%idx_3 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 3" [dut.cpp:20]   --->   Operation 31 'bitconcatenate' 'idx_3' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_316 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 3" [dut.cpp:22]   --->   Operation 32 'bitselect' 'tmp_316' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.45ns)   --->   "%player1_4 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_3, i6 %idx_3, i1 %tmp_316" [dut.cpp:22]   --->   Operation 33 'bitset' 'player1_4' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%idx_4 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 4" [dut.cpp:20]   --->   Operation 34 'bitconcatenate' 'idx_4' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_318 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 4" [dut.cpp:22]   --->   Operation 35 'bitselect' 'tmp_318' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.45ns)   --->   "%player1_5 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_4, i6 %idx_4, i1 %tmp_318" [dut.cpp:22]   --->   Operation 36 'bitset' 'player1_5' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%idx_5 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 5" [dut.cpp:20]   --->   Operation 37 'bitconcatenate' 'idx_5' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_320 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 5" [dut.cpp:22]   --->   Operation 38 'bitselect' 'tmp_320' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.45ns)   --->   "%player1_6 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_5, i6 %idx_5, i1 %tmp_320" [dut.cpp:22]   --->   Operation 39 'bitset' 'player1_6' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%idx_6 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 6" [dut.cpp:20]   --->   Operation 40 'bitconcatenate' 'idx_6' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_322 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 6" [dut.cpp:22]   --->   Operation 41 'bitselect' 'tmp_322' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.45ns)   --->   "%player1_7 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_6, i6 %idx_6, i1 %tmp_322" [dut.cpp:22]   --->   Operation 42 'bitset' 'player1_7' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%idx_7 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 7" [dut.cpp:20]   --->   Operation 43 'bitconcatenate' 'idx_7' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_324 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 7" [dut.cpp:22]   --->   Operation 44 'bitselect' 'tmp_324' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.45ns)   --->   "%player1_8 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_7, i6 %idx_7, i1 %tmp_324" [dut.cpp:22]   --->   Operation 45 'bitset' 'player1_8' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%idx_8 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 8" [dut.cpp:20]   --->   Operation 46 'bitconcatenate' 'idx_8' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_326 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 8" [dut.cpp:22]   --->   Operation 47 'bitselect' 'tmp_326' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.45ns)   --->   "%player1_9 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_8, i6 %idx_8, i1 %tmp_326" [dut.cpp:22]   --->   Operation 48 'bitset' 'player1_9' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%idx_9 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 9" [dut.cpp:20]   --->   Operation 49 'bitconcatenate' 'idx_9' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_328 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 9" [dut.cpp:22]   --->   Operation 50 'bitselect' 'tmp_328' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.45ns)   --->   "%player1_10 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_9, i6 %idx_9, i1 %tmp_328" [dut.cpp:22]   --->   Operation 51 'bitset' 'player1_10' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%idx_33 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 10" [dut.cpp:20]   --->   Operation 52 'bitconcatenate' 'idx_33' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_330 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 10" [dut.cpp:22]   --->   Operation 53 'bitselect' 'tmp_330' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.45ns)   --->   "%player1_11 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_10, i6 %idx_33, i1 %tmp_330" [dut.cpp:22]   --->   Operation 54 'bitset' 'player1_11' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%idx_34 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 11" [dut.cpp:20]   --->   Operation 55 'bitconcatenate' 'idx_34' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_332 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 11" [dut.cpp:22]   --->   Operation 56 'bitselect' 'tmp_332' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.45ns)   --->   "%player1_12 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_11, i6 %idx_34, i1 %tmp_332" [dut.cpp:22]   --->   Operation 57 'bitset' 'player1_12' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_334 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 12" [dut.cpp:22]   --->   Operation 58 'bitselect' 'tmp_334' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_336 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 13" [dut.cpp:22]   --->   Operation 59 'bitselect' 'tmp_336' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_338 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 14" [dut.cpp:22]   --->   Operation 60 'bitselect' 'tmp_338' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_340 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 15" [dut.cpp:22]   --->   Operation 61 'bitselect' 'tmp_340' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_342 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 16" [dut.cpp:22]   --->   Operation 62 'bitselect' 'tmp_342' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_344 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 17" [dut.cpp:22]   --->   Operation 63 'bitselect' 'tmp_344' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_346 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 18" [dut.cpp:22]   --->   Operation 64 'bitselect' 'tmp_346' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_348 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 19" [dut.cpp:22]   --->   Operation 65 'bitselect' 'tmp_348' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_350 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 20" [dut.cpp:22]   --->   Operation 66 'bitselect' 'tmp_350' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_352 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 21" [dut.cpp:22]   --->   Operation 67 'bitselect' 'tmp_352' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_354 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 22" [dut.cpp:22]   --->   Operation 68 'bitselect' 'tmp_354' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_356 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 23" [dut.cpp:22]   --->   Operation 69 'bitselect' 'tmp_356' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_358 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 24" [dut.cpp:22]   --->   Operation 70 'bitselect' 'tmp_358' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_360 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 25" [dut.cpp:22]   --->   Operation 71 'bitselect' 'tmp_360' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_362 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 26" [dut.cpp:22]   --->   Operation 72 'bitselect' 'tmp_362' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_364 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 27" [dut.cpp:22]   --->   Operation 73 'bitselect' 'tmp_364' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_366 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 28" [dut.cpp:22]   --->   Operation 74 'bitselect' 'tmp_366' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_368 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 29" [dut.cpp:22]   --->   Operation 75 'bitselect' 'tmp_368' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_370 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 30" [dut.cpp:22]   --->   Operation 76 'bitselect' 'tmp_370' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_372 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %partial, i32 31" [dut.cpp:22]   --->   Operation 77 'bitselect' 'tmp_372' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.07>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%idx_35 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 12" [dut.cpp:20]   --->   Operation 78 'bitconcatenate' 'idx_35' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.45ns)   --->   "%player1_13 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_12, i6 %idx_35, i1 %tmp_334" [dut.cpp:22]   --->   Operation 79 'bitset' 'player1_13' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%idx_36 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 13" [dut.cpp:20]   --->   Operation 80 'bitconcatenate' 'idx_36' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.45ns)   --->   "%player1_14 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_13, i6 %idx_36, i1 %tmp_336" [dut.cpp:22]   --->   Operation 81 'bitset' 'player1_14' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%idx_37 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 14" [dut.cpp:20]   --->   Operation 82 'bitconcatenate' 'idx_37' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.45ns)   --->   "%player1_15 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_14, i6 %idx_37, i1 %tmp_338" [dut.cpp:22]   --->   Operation 83 'bitset' 'player1_15' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%idx_38 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 15" [dut.cpp:20]   --->   Operation 84 'bitconcatenate' 'idx_38' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.45ns)   --->   "%player1_16 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_15, i6 %idx_38, i1 %tmp_340" [dut.cpp:22]   --->   Operation 85 'bitset' 'player1_16' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%idx_39 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 16" [dut.cpp:20]   --->   Operation 86 'bitconcatenate' 'idx_39' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.45ns)   --->   "%player1_17 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_16, i6 %idx_39, i1 %tmp_342" [dut.cpp:22]   --->   Operation 87 'bitset' 'player1_17' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%idx_40 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 17" [dut.cpp:20]   --->   Operation 88 'bitconcatenate' 'idx_40' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.78ns)   --->   "%icmp_ln21 = icmp_ne  i6 %idx_40, i6 49" [dut.cpp:21]   --->   Operation 89 'icmp' 'icmp_ln21' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 90 [1/1] (0.45ns)   --->   "%player1_18 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_17, i6 %idx_40, i1 %tmp_344" [dut.cpp:22]   --->   Operation 90 'bitset' 'player1_18' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.50ns)   --->   "%player1_19 = select i1 %icmp_ln21, i49 %player1_18, i49 %player1_17" [dut.cpp:21]   --->   Operation 91 'select' 'player1_19' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%idx_41 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 18" [dut.cpp:20]   --->   Operation 92 'bitconcatenate' 'idx_41' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.78ns)   --->   "%icmp_ln21_1 = icmp_ult  i6 %idx_41, i6 49" [dut.cpp:21]   --->   Operation 93 'icmp' 'icmp_ln21_1' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 94 [1/1] (0.45ns)   --->   "%player1_21 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_19, i6 %idx_41, i1 %tmp_346" [dut.cpp:22]   --->   Operation 94 'bitset' 'player1_21' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 95 [1/1] (0.50ns)   --->   "%player1_20 = select i1 %icmp_ln21_1, i49 %player1_21, i49 %player1_19" [dut.cpp:21]   --->   Operation 95 'select' 'player1_20' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%idx_42 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 19" [dut.cpp:20]   --->   Operation 96 'bitconcatenate' 'idx_42' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.78ns)   --->   "%icmp_ln21_2 = icmp_ult  i6 %idx_42, i6 49" [dut.cpp:21]   --->   Operation 97 'icmp' 'icmp_ln21_2' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 98 [1/1] (0.45ns)   --->   "%player1_23 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_20, i6 %idx_42, i1 %tmp_348" [dut.cpp:22]   --->   Operation 98 'bitset' 'player1_23' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 99 [1/1] (0.50ns)   --->   "%player1_22 = select i1 %icmp_ln21_2, i49 %player1_23, i49 %player1_20" [dut.cpp:21]   --->   Operation 99 'select' 'player1_22' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%idx_43 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 20" [dut.cpp:20]   --->   Operation 100 'bitconcatenate' 'idx_43' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.78ns)   --->   "%icmp_ln21_3 = icmp_ult  i6 %idx_43, i6 49" [dut.cpp:21]   --->   Operation 101 'icmp' 'icmp_ln21_3' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 102 [1/1] (0.45ns)   --->   "%player1_25 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_22, i6 %idx_43, i1 %tmp_350" [dut.cpp:22]   --->   Operation 102 'bitset' 'player1_25' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 103 [1/1] (0.50ns)   --->   "%player1_24 = select i1 %icmp_ln21_3, i49 %player1_25, i49 %player1_22" [dut.cpp:21]   --->   Operation 103 'select' 'player1_24' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%idx_44 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 21" [dut.cpp:20]   --->   Operation 104 'bitconcatenate' 'idx_44' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.78ns)   --->   "%icmp_ln21_4 = icmp_ult  i6 %idx_44, i6 49" [dut.cpp:21]   --->   Operation 105 'icmp' 'icmp_ln21_4' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 106 [1/1] (0.45ns)   --->   "%player1_27 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_24, i6 %idx_44, i1 %tmp_352" [dut.cpp:22]   --->   Operation 106 'bitset' 'player1_27' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 107 [1/1] (0.50ns)   --->   "%player1_26 = select i1 %icmp_ln21_4, i49 %player1_27, i49 %player1_24" [dut.cpp:21]   --->   Operation 107 'select' 'player1_26' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.21>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%idx_45 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 22" [dut.cpp:20]   --->   Operation 108 'bitconcatenate' 'idx_45' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_4 : Operation 109 [1/1] (0.78ns)   --->   "%icmp_ln21_5 = icmp_ult  i6 %idx_45, i6 49" [dut.cpp:21]   --->   Operation 109 'icmp' 'icmp_ln21_5' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 110 [1/1] (0.45ns)   --->   "%player1_29 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_26, i6 %idx_45, i1 %tmp_354" [dut.cpp:22]   --->   Operation 110 'bitset' 'player1_29' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 111 [1/1] (0.50ns)   --->   "%player1_28 = select i1 %icmp_ln21_5, i49 %player1_29, i49 %player1_26" [dut.cpp:21]   --->   Operation 111 'select' 'player1_28' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%idx_46 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 23" [dut.cpp:20]   --->   Operation 112 'bitconcatenate' 'idx_46' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.78ns)   --->   "%icmp_ln21_6 = icmp_ult  i6 %idx_46, i6 49" [dut.cpp:21]   --->   Operation 113 'icmp' 'icmp_ln21_6' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 114 [1/1] (0.45ns)   --->   "%player1_31 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_28, i6 %idx_46, i1 %tmp_356" [dut.cpp:22]   --->   Operation 114 'bitset' 'player1_31' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 115 [1/1] (0.50ns)   --->   "%player1_30 = select i1 %icmp_ln21_6, i49 %player1_31, i49 %player1_28" [dut.cpp:21]   --->   Operation 115 'select' 'player1_30' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 116 [1/1] (0.00ns)   --->   "%idx_47 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 24" [dut.cpp:20]   --->   Operation 116 'bitconcatenate' 'idx_47' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_4 : Operation 117 [1/1] (0.78ns)   --->   "%icmp_ln21_7 = icmp_ult  i6 %idx_47, i6 49" [dut.cpp:21]   --->   Operation 117 'icmp' 'icmp_ln21_7' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 118 [1/1] (0.45ns)   --->   "%player1_33 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_30, i6 %idx_47, i1 %tmp_358" [dut.cpp:22]   --->   Operation 118 'bitset' 'player1_33' <Predicate = (!icmp_ln17)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 119 [1/1] (0.50ns)   --->   "%player1_32 = select i1 %icmp_ln21_7, i49 %player1_33, i49 %player1_30" [dut.cpp:21]   --->   Operation 119 'select' 'player1_32' <Predicate = (!icmp_ln17)> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%idx_48 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 25" [dut.cpp:20]   --->   Operation 120 'bitconcatenate' 'idx_48' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (0.78ns)   --->   "%icmp_ln21_8 = icmp_ult  i6 %idx_48, i6 49" [dut.cpp:21]   --->   Operation 121 'icmp' 'icmp_ln21_8' <Predicate = (!icmp_ln17)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.15>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%specpipeline_ln14 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [dut.cpp:14]   --->   Operation 122 'specpipeline' 'specpipeline_ln14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%speclooptripcount_ln14 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2, i64 2, i64 2" [dut.cpp:14]   --->   Operation 123 'speclooptripcount' 'speclooptripcount_ln14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%specloopname_ln17 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [dut.cpp:17]   --->   Operation 124 'specloopname' 'specloopname_ln17' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 125 [1/1] (0.45ns)   --->   "%player1_35 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_32, i6 %idx_48, i1 %tmp_360" [dut.cpp:22]   --->   Operation 125 'bitset' 'player1_35' <Predicate = (icmp_ln21_8)> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 126 [1/1] (0.50ns)   --->   "%player1_34 = select i1 %icmp_ln21_8, i49 %player1_35, i49 %player1_32" [dut.cpp:21]   --->   Operation 126 'select' 'player1_34' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%idx_49 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 26" [dut.cpp:20]   --->   Operation 127 'bitconcatenate' 'idx_49' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (0.78ns)   --->   "%icmp_ln21_9 = icmp_ult  i6 %idx_49, i6 49" [dut.cpp:21]   --->   Operation 128 'icmp' 'icmp_ln21_9' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 129 [1/1] (0.45ns)   --->   "%player1_37 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_34, i6 %idx_49, i1 %tmp_362" [dut.cpp:22]   --->   Operation 129 'bitset' 'player1_37' <Predicate = true> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 130 [1/1] (0.50ns)   --->   "%player1_36 = select i1 %icmp_ln21_9, i49 %player1_37, i49 %player1_34" [dut.cpp:21]   --->   Operation 130 'select' 'player1_36' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 131 [1/1] (0.00ns)   --->   "%idx_50 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 27" [dut.cpp:20]   --->   Operation 131 'bitconcatenate' 'idx_50' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 132 [1/1] (0.78ns)   --->   "%icmp_ln21_10 = icmp_ult  i6 %idx_50, i6 49" [dut.cpp:21]   --->   Operation 132 'icmp' 'icmp_ln21_10' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 133 [1/1] (0.45ns)   --->   "%player1_39 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_36, i6 %idx_50, i1 %tmp_364" [dut.cpp:22]   --->   Operation 133 'bitset' 'player1_39' <Predicate = true> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 134 [1/1] (0.50ns)   --->   "%player1_38 = select i1 %icmp_ln21_10, i49 %player1_39, i49 %player1_36" [dut.cpp:21]   --->   Operation 134 'select' 'player1_38' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 135 [1/1] (0.00ns)   --->   "%idx_51 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 28" [dut.cpp:20]   --->   Operation 135 'bitconcatenate' 'idx_51' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (0.78ns)   --->   "%icmp_ln21_11 = icmp_ult  i6 %idx_51, i6 49" [dut.cpp:21]   --->   Operation 136 'icmp' 'icmp_ln21_11' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 137 [1/1] (0.45ns)   --->   "%player1_41 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_38, i6 %idx_51, i1 %tmp_366" [dut.cpp:22]   --->   Operation 137 'bitset' 'player1_41' <Predicate = true> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 138 [1/1] (0.50ns)   --->   "%player1_40 = select i1 %icmp_ln21_11, i49 %player1_41, i49 %player1_38" [dut.cpp:21]   --->   Operation 138 'select' 'player1_40' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%idx_52 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 29" [dut.cpp:20]   --->   Operation 139 'bitconcatenate' 'idx_52' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 140 [1/1] (0.78ns)   --->   "%icmp_ln21_12 = icmp_ult  i6 %idx_52, i6 49" [dut.cpp:21]   --->   Operation 140 'icmp' 'icmp_ln21_12' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 141 [1/1] (0.45ns)   --->   "%player1_43 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_40, i6 %idx_52, i1 %tmp_368" [dut.cpp:22]   --->   Operation 141 'bitset' 'player1_43' <Predicate = true> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 142 [1/1] (0.50ns)   --->   "%player1_42 = select i1 %icmp_ln21_12, i49 %player1_43, i49 %player1_40" [dut.cpp:21]   --->   Operation 142 'select' 'player1_42' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 143 [1/1] (0.00ns)   --->   "%idx_53 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 30" [dut.cpp:20]   --->   Operation 143 'bitconcatenate' 'idx_53' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 144 [1/1] (0.78ns)   --->   "%icmp_ln21_13 = icmp_ult  i6 %idx_53, i6 49" [dut.cpp:21]   --->   Operation 144 'icmp' 'icmp_ln21_13' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 145 [1/1] (0.45ns)   --->   "%player1_45 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_42, i6 %idx_53, i1 %tmp_370" [dut.cpp:22]   --->   Operation 145 'bitset' 'player1_45' <Predicate = true> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 146 [1/1] (0.50ns)   --->   "%player1_44 = select i1 %icmp_ln21_13, i49 %player1_45, i49 %player1_42" [dut.cpp:21]   --->   Operation 146 'select' 'player1_44' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 147 [1/1] (0.00ns)   --->   "%idx_54 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i1.i5, i1 %empty, i5 31" [dut.cpp:20]   --->   Operation 147 'bitconcatenate' 'idx_54' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 148 [1/1] (0.78ns)   --->   "%icmp_ln21_14 = icmp_ult  i6 %idx_54, i6 49" [dut.cpp:21]   --->   Operation 148 'icmp' 'icmp_ln21_14' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 149 [1/1] (0.45ns)   --->   "%player1_47 = bitset i49 @_ssdm_op_BitSet.i49.i49.i6.i1, i49 %player1_44, i6 %idx_54, i1 %tmp_372" [dut.cpp:22]   --->   Operation 149 'bitset' 'player1_47' <Predicate = true> <Delay = 0.45> <CoreInst = "BitSet">   --->   Core 154 'BitSet' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'bitset'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 150 [1/1] (0.50ns)   --->   "%player1_46 = select i1 %icmp_ln21_14, i49 %player1_47, i49 %player1_44" [dut.cpp:21]   --->   Operation 150 'select' 'player1_46' <Predicate = true> <Delay = 0.50> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 151 [1/1] (0.42ns)   --->   "%store_ln14 = store i49 %player1_46, i49 %player1" [dut.cpp:14]   --->   Operation 151 'store' 'store_ln14' <Predicate = true> <Delay = 0.42>
+ST_5 : Operation 152 [1/1] (0.00ns)   --->   "%br_ln17 = br void %VITIS_LOOP_19_2" [dut.cpp:17]   --->   Operation 152 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.402ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln17', dut.cpp:17) of constant 0 on local variable 'word', dut.cpp:17 [6]  (0.427 ns)
+	'load' operation 2 bit ('word', dut.cpp:17) on local variable 'word', dut.cpp:17 [10]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln17', dut.cpp:17) [11]  (0.548 ns)
+	'store' operation 0 bit ('store_ln17', dut.cpp:17) of variable 'word', dut.cpp:17 on local variable 'word', dut.cpp:17 [147]  (0.427 ns)
+
+ <State 2>: 7.072ns
+The critical path consists of the following:
+	fifo read operation ('partial', dut.cpp:18) on port 'strm_in' (dut.cpp:18) [19]  (1.636 ns)
+	blocking operation 5.436 ns on control path)
+
+ <State 3>: 7.072ns
+The critical path consists of the following:
+	'select' operation 49 bit ('player1', dut.cpp:21) [76]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [81]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [86]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [91]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [96]  (0.509 ns)
+	blocking operation 4.53 ns on control path)
+
+ <State 4>: 3.213ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln21_5', dut.cpp:21) [98]  (0.781 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [101]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [106]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [111]  (0.509 ns)
+	blocking operation 0.906 ns on control path)
+
+ <State 5>: 7.157ns
+The critical path consists of the following:
+	'select' operation 49 bit ('player1', dut.cpp:21) [116]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [121]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [126]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [131]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [136]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [141]  (0.509 ns)
+	'select' operation 49 bit ('player1', dut.cpp:21) [146]  (0.509 ns)
+	'store' operation 0 bit ('store_ln14', dut.cpp:14) of variable 'player1', dut.cpp:21 on local variable 'player1', dut.cpp:14 [148]  (0.427 ns)
+	blocking operation 3.171 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

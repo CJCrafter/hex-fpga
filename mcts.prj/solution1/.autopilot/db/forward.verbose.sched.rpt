@@ -1,0 +1,642 @@
+
+
+================================================================
+== Vitis HLS Report for 'forward'
+================================================================
+* Date:           Thu Apr 23 22:10:20 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        mcts.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.167 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_127_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 28
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 9 13 
+4 --> 5 16 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 2 
+9 --> 10 13 
+10 --> 11 
+11 --> 12 13 
+12 --> 13 
+13 --> 14 16 
+14 --> 15 17 
+15 --> 16 
+16 --> 18 
+17 --> 16 
+18 --> 19 
+19 --> 20 25 24 26 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 28 
+24 --> 25 
+25 --> 27 23 
+26 --> 25 
+27 --> 23 
+28 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%parent = alloca i32 1" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 29 'alloca' 'parent' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%boardState_legalActionMap = alloca i32 1" [MCTSSearcher.cpp:68->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 30 'alloca' 'boardState_legalActionMap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%boardState_hexGame_player2_s = alloca i32 1" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 31 'alloca' 'boardState_hexGame_player2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%boardState_hexGame_player1_s = alloca i32 1" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 32 'alloca' 'boardState_hexGame_player1_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%boardState_hexGame_lastMove_s = alloca i32 1" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 33 'alloca' 'boardState_hexGame_lastMove_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%gameState_hexGame_player2_read = read i49 @_ssdm_op_Read.ap_auto.i49, i49 %gameState_hexGame_player2_s"   --->   Operation 34 'read' 'gameState_hexGame_player2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%gameState_hexGame_player1_read = read i49 @_ssdm_op_Read.ap_auto.i49, i49 %gameState_hexGame_player1_s"   --->   Operation 35 'read' 'gameState_hexGame_player1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%gameState_hexGame_lastMove_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gameState_hexGame_lastMove_s"   --->   Operation 36 'read' 'gameState_hexGame_lastMove_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%gameState_hexGame_isPlayer1Turn_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %gameState_hexGame_isPlayer1Turn_s"   --->   Operation 37 'read' 'gameState_hexGame_isPlayer1Turn_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%gameState_legalActionMap_read = read i49 @_ssdm_op_Read.ap_auto.i49, i49 %gameState_legalActionMap"   --->   Operation 38 'read' 'gameState_legalActionMap_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%this_rng_read62 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %this_rng_read"   --->   Operation 39 'read' 'this_rng_read62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%this_nextFree_read_1 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %this_nextFree_read"   --->   Operation 40 'read' 'this_nextFree_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_loc48 = alloca i64 1"   --->   Operation 41 'alloca' 'p_loc48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_loc47 = alloca i64 1"   --->   Operation 42 'alloca' 'p_loc47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%prev_10_loc = alloca i64 1"   --->   Operation 43 'alloca' 'prev_10_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%prev_9_loc = alloca i64 1"   --->   Operation 44 'alloca' 'prev_9_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_loc43 = alloca i64 1"   --->   Operation 45 'alloca' 'p_loc43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 46 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%prev_8_loc = alloca i64 1"   --->   Operation 47 'alloca' 'prev_8_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%prev_loc = alloca i64 1"   --->   Operation 48 'alloca' 'prev_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%action_loc = alloca i64 1"   --->   Operation 49 'alloca' 'action_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%bestChildNode_loc = alloca i64 1"   --->   Operation 50 'alloca' 'bestChildNode_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln66 = store i32 %gameState_hexGame_lastMove_read, i32 %boardState_hexGame_lastMove_s" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 51 'store' 'store_ln66' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 52 [1/1] (0.42ns)   --->   "%store_ln66 = store i49 %gameState_hexGame_player1_read, i49 %boardState_hexGame_player1_s" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 52 'store' 'store_ln66' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln66 = store i49 %gameState_hexGame_player2_read, i49 %boardState_hexGame_player2_s" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 53 'store' 'store_ln66' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 54 [1/1] (0.42ns)   --->   "%store_ln68 = store i49 %gameState_legalActionMap_read, i49 %boardState_legalActionMap" [MCTSSearcher.cpp:68->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 54 'store' 'store_ln68' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 55 [1/1] (0.42ns)   --->   "%store_ln70 = store i32 0, i32 %parent" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 55 'store' 'store_ln70' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 56 [1/1] (0.42ns)   --->   "%br_ln127 = br void %while.cond" [MCTSSearcher.cpp:127]   --->   Operation 56 'br' 'br_ln127' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%node_5 = load i32 %parent"   --->   Operation 57 'load' 'node_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln127 = zext i32 %node_5" [MCTSSearcher.cpp:127]   --->   Operation 58 'zext' 'zext_ln127' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%this_numLegalActions_addr = getelementptr i32 %this_numLegalActions, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:127]   --->   Operation 59 'getelementptr' 'this_numLegalActions_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [2/2] (1.23ns)   --->   "%this_numLegalActions_load = load i13 %this_numLegalActions_addr" [MCTSSearcher.cpp:127]   --->   Operation 60 'load' 'this_numLegalActions_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%this_numChildren_addr = getelementptr i32 %this_numChildren, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:127]   --->   Operation 61 'getelementptr' 'this_numChildren_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [2/2] (1.23ns)   --->   "%this_numChildren_load = load i13 %this_numChildren_addr" [MCTSSearcher.cpp:127]   --->   Operation 62 'load' 'this_numChildren_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+
+State 3 <SV = 2> <Delay = 2.68>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%gameState_hexGame_isPlayer1Turn_5 = phi i1 %gameState_hexGame_isPlayer1Turn_read, void %entry, i1 %gameState_hexGame_isPlayer1Turn_s_78, void %if.end.i.i.i23"   --->   Operation 63 'phi' 'gameState_hexGame_isPlayer1Turn_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%gameState_legalActionMap_4 = load i49 %boardState_legalActionMap" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 64 'load' 'gameState_legalActionMap_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%gameState_hexGame_player2_4 = load i49 %boardState_hexGame_player2_s" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 65 'load' 'gameState_hexGame_player2_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%gameState_hexGame_player1_4 = load i49 %boardState_hexGame_player1_s" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 66 'load' 'gameState_hexGame_player1_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%gameState_hexGame_lastMove_4 = load i32 %boardState_hexGame_lastMove_s"   --->   Operation 67 'load' 'gameState_hexGame_lastMove_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_numLegalActions_load = load i13 %this_numLegalActions_addr" [MCTSSearcher.cpp:127]   --->   Operation 68 'load' 'this_numLegalActions_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_3 : Operation 69 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_numChildren_load = load i13 %this_numChildren_addr" [MCTSSearcher.cpp:127]   --->   Operation 69 'load' 'this_numChildren_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_3 : Operation 70 [1/1] (1.01ns)   --->   "%icmp_ln127 = icmp_eq  i32 %this_numLegalActions_load, i32 %this_numChildren_load" [MCTSSearcher.cpp:127]   --->   Operation 70 'icmp' 'icmp_ln127' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln127 = br i1 %icmp_ln127, void %if.then32, void %land.rhs" [MCTSSearcher.cpp:127]   --->   Operation 71 'br' 'br_ln127' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%this_terminals_addr = getelementptr i1 %this_terminals, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:127]   --->   Operation 72 'getelementptr' 'this_terminals_addr' <Predicate = (icmp_ln127)> <Delay = 0.00>
+ST_3 : Operation 73 [2/2] (1.23ns)   --->   "%this_terminals_load = load i13 %this_terminals_addr" [MCTSSearcher.cpp:127]   --->   Operation 73 'load' 'this_terminals_load' <Predicate = (icmp_ln127)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_3 : Operation 74 [1/1] (1.01ns)   --->   "%icmp_ln54 = icmp_sgt  i32 %this_nextFree_read_1, i32 5099" [MCTSSearcher.cpp:54->MCTSSearcher.cpp:159]   --->   Operation 74 'icmp' 'icmp_ln54' <Predicate = (!icmp_ln127)> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.42ns)   --->   "%br_ln54 = br i1 %icmp_ln54, void %if.end.i, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit" [MCTSSearcher.cpp:54->MCTSSearcher.cpp:159]   --->   Operation 75 'br' 'br_ln54' <Predicate = (!icmp_ln127)> <Delay = 0.42>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%this_triedMask_addr = getelementptr i49 %this_triedMask, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 76 'getelementptr' 'this_triedMask_addr' <Predicate = (!icmp_ln127 & !icmp_ln54)> <Delay = 0.00>
+ST_3 : Operation 77 [2/2] (1.23ns)   --->   "%this_triedMask_load = load i13 %this_triedMask_addr" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 77 'load' 'this_triedMask_load' <Predicate = (!icmp_ln127 & !icmp_ln54)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+
+State 4 <SV = 3> <Delay = 1.66>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%specloopname_ln127 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [MCTSSearcher.cpp:127]   --->   Operation 78 'specloopname' 'specloopname_ln127' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_terminals_load = load i13 %this_terminals_addr" [MCTSSearcher.cpp:127]   --->   Operation 79 'load' 'this_terminals_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln127 = br i1 %this_terminals_load, void %if.end.i.i.i23, void %if.end47.loopexit" [MCTSSearcher.cpp:127]   --->   Operation 80 'br' 'br_ln127' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%this_firstChilds_addr = getelementptr i32 %this_firstChilds, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:132]   --->   Operation 81 'getelementptr' 'this_firstChilds_addr' <Predicate = (!this_terminals_load)> <Delay = 0.00>
+ST_4 : Operation 82 [2/2] (1.23ns)   --->   "%bestChildNode = load i13 %this_firstChilds_addr" [MCTSSearcher.cpp:132]   --->   Operation 82 'load' 'bestChildNode' <Predicate = (!this_terminals_load)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%this_logVisitCounts_addr = getelementptr i32 %this_logVisitCounts, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:139]   --->   Operation 83 'getelementptr' 'this_logVisitCounts_addr' <Predicate = (!this_terminals_load)> <Delay = 0.00>
+ST_4 : Operation 84 [2/2] (1.23ns)   --->   "%logVisitCount = load i13 %this_logVisitCounts_addr" [MCTSSearcher.cpp:139]   --->   Operation 84 'load' 'logVisitCount' <Predicate = (!this_terminals_load)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_4 : Operation 85 [1/1] (0.28ns)   --->   "%gameState_hexGame_isPlayer1Turn_s_78 = xor i1 %gameState_hexGame_isPlayer1Turn_5, i1 1" [./hex.h:67->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 85 'xor' 'gameState_hexGame_isPlayer1Turn_s_78' <Predicate = (!this_terminals_load)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/1] (0.42ns)   --->   "%br_ln0 = br void %if.end47"   --->   Operation 86 'br' 'br_ln0' <Predicate = (this_terminals_load)> <Delay = 0.42>
+
+State 5 <SV = 4> <Delay = 2.90>
+ST_5 : Operation 87 [1/2] ( I:1.23ns O:1.23ns )   --->   "%bestChildNode = load i13 %this_firstChilds_addr" [MCTSSearcher.cpp:132]   --->   Operation 87 'load' 'bestChildNode' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_5 : Operation 88 [1/2] ( I:1.23ns O:1.23ns )   --->   "%logVisitCount = load i13 %this_logVisitCounts_addr" [MCTSSearcher.cpp:139]   --->   Operation 88 'load' 'logVisitCount' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_5 : Operation 89 [2/2] (1.66ns)   --->   "%call_ln132 = call void @forward_Pipeline_VITIS_LOOP_140_2, i32 %bestChildNode, i20 %this_meanQ, i32 %this_visitCounts, i32 %logVisitCount, i32 %this_nextSiblings, i32 %bestChildNode_loc" [MCTSSearcher.cpp:132]   --->   Operation 89 'call' 'call_ln132' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 90 [1/2] (0.00ns)   --->   "%call_ln132 = call void @forward_Pipeline_VITIS_LOOP_140_2, i32 %bestChildNode, i20 %this_meanQ, i32 %this_visitCounts, i32 %logVisitCount, i32 %this_nextSiblings, i32 %bestChildNode_loc" [MCTSSearcher.cpp:132]   --->   Operation 90 'call' 'call_ln132' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 1.23>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%bestChildNode_loc_load = load i32 %bestChildNode_loc"   --->   Operation 91 'load' 'bestChildNode_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln152 = zext i32 %bestChildNode_loc_load" [MCTSSearcher.cpp:152]   --->   Operation 92 'zext' 'zext_ln152' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%this_childActions_addr = getelementptr i6 %this_childActions, i64 0, i64 %zext_ln152" [MCTSSearcher.cpp:152]   --->   Operation 93 'getelementptr' 'this_childActions_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 94 [2/2] (1.23ns)   --->   "%action = load i13 %this_childActions_addr" [MCTSSearcher.cpp:152]   --->   Operation 94 'load' 'action' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 5100> <RAM>
+ST_7 : Operation 95 [1/1] (0.42ns)   --->   "%store_ln70 = store i32 %bestChildNode_loc_load, i32 %parent" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 95 'store' 'store_ln70' <Predicate = true> <Delay = 0.42>
+
+State 8 <SV = 7> <Delay = 3.12>
+ST_8 : Operation 96 [1/2] ( I:1.23ns O:1.23ns )   --->   "%action = load i13 %this_childActions_addr" [MCTSSearcher.cpp:152]   --->   Operation 96 'load' 'action' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 5100> <RAM>
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln152_1 = zext i6 %action" [MCTSSearcher.cpp:152]   --->   Operation 97 'zext' 'zext_ln152_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "%zext_ln56 = zext i6 %action" [./hex.h:56->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 98 'zext' 'zext_ln56' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 99 [1/1] (0.73ns)   --->   "%bit = shl i49 1, i49 %zext_ln56" [./hex.h:56->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 99 'shl' 'bit' <Predicate = true> <Delay = 0.73> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node gameState_hexGame_player1_s_76)   --->   "%select_ln58 = select i1 %gameState_hexGame_isPlayer1Turn_5, i49 %bit, i49 0" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 100 'select' 'select_ln58' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 101 [1/1] (0.50ns) (out node of the LUT)   --->   "%gameState_hexGame_player1_s_76 = or i49 %select_ln58, i49 %gameState_hexGame_player1_4" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 101 'or' 'gameState_hexGame_player1_s_76' <Predicate = true> <Delay = 0.50> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node gameState_hexGame_player2_s_77)   --->   "%select_ln58_2 = select i1 %gameState_hexGame_isPlayer1Turn_5, i49 0, i49 %bit" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 102 'select' 'select_ln58_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 103 [1/1] (0.50ns) (out node of the LUT)   --->   "%gameState_hexGame_player2_s_77 = or i49 %select_ln58_2, i49 %gameState_hexGame_player2_4" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:153]   --->   Operation 103 'or' 'gameState_hexGame_player2_s_77' <Predicate = true> <Delay = 0.50> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 104 [1/1] (0.00ns) (grouped into LUT with out node gameState_legalActionMap_79)   --->   "%or_ln14 = or i49 %gameState_hexGame_player1_s_76, i49 %gameState_hexGame_player2_s_77" [GameState.cpp:14->MCTSSearcher.cpp:153]   --->   Operation 104 'or' 'or_ln14' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 105 [1/1] (0.21ns) (out node of the LUT)   --->   "%gameState_legalActionMap_79 = xor i49 %or_ln14, i49 562949953421311" [GameState.cpp:14->MCTSSearcher.cpp:153]   --->   Operation 105 'xor' 'gameState_legalActionMap_79' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 106 [1/1] (0.42ns)   --->   "%store_ln66 = store i32 %zext_ln152_1, i32 %boardState_hexGame_lastMove_s" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 106 'store' 'store_ln66' <Predicate = true> <Delay = 0.42>
+ST_8 : Operation 107 [1/1] (0.42ns)   --->   "%store_ln66 = store i49 %gameState_hexGame_player1_s_76, i49 %boardState_hexGame_player1_s" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 107 'store' 'store_ln66' <Predicate = true> <Delay = 0.42>
+ST_8 : Operation 108 [1/1] (0.42ns)   --->   "%store_ln66 = store i49 %gameState_hexGame_player2_s_77, i49 %boardState_hexGame_player2_s" [MCTSSearcher.cpp:66->MCTSSearcher.cpp:159]   --->   Operation 108 'store' 'store_ln66' <Predicate = true> <Delay = 0.42>
+ST_8 : Operation 109 [1/1] (0.42ns)   --->   "%store_ln68 = store i49 %gameState_legalActionMap_79, i49 %boardState_legalActionMap" [MCTSSearcher.cpp:68->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 109 'store' 'store_ln68' <Predicate = true> <Delay = 0.42>
+ST_8 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln127 = br void %while.cond" [MCTSSearcher.cpp:127]   --->   Operation 110 'br' 'br_ln127' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 3> <Delay = 4.05>
+ST_9 : Operation 111 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_triedMask_load = load i13 %this_triedMask_addr" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 111 'load' 'this_triedMask_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+ST_9 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node untried)   --->   "%xor_ln70 = xor i49 %this_triedMask_load, i49 562949953421311" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 112 'xor' 'xor_ln70' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 113 [1/1] (0.21ns) (out node of the LUT)   --->   "%untried = and i49 %gameState_legalActionMap_4, i49 %xor_ln70" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 113 'and' 'untried' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 114 [1/1] (1.09ns)   --->   "%icmp_ln71 = icmp_eq  i49 %untried, i49 0" [MCTSSearcher.cpp:71->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 114 'icmp' 'icmp_ln71' <Predicate = true> <Delay = 1.09> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 115 [1/1] (0.42ns)   --->   "%br_ln71 = br i1 %icmp_ln71, void %for.body.i.i.preheader, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit" [MCTSSearcher.cpp:71->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 115 'br' 'br_ln71' <Predicate = true> <Delay = 0.42>
+ST_9 : Operation 116 [2/2] (1.51ns)   --->   "%targetBlock = call i1 @forward_Pipeline_VITIS_LOOP_73_1, i49 %untried, i6 %action_loc" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 116 'call' 'targetBlock' <Predicate = (!icmp_ln71)> <Delay = 1.51> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 4> <Delay = 2.06>
+ST_10 : Operation 117 [1/2] (2.06ns)   --->   "%targetBlock = call i1 @forward_Pipeline_VITIS_LOOP_73_1, i49 %untried, i6 %action_loc" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 117 'call' 'targetBlock' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 5> <Delay = 2.25>
+ST_11 : Operation 118 [1/1] (0.00ns)   --->   "%action_loc_load = load i6 %action_loc"   --->   Operation 118 'load' 'action_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 119 [1/1] (0.42ns)   --->   "%br_ln70 = br i1 %targetBlock, void %if.end.i.i, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit" [MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159]   --->   Operation 119 'br' 'br_ln70' <Predicate = true> <Delay = 0.42>
+ST_11 : Operation 120 [1/1] (0.00ns)   --->   "%zext_ln96 = zext i32 %this_nextFree_read_1" [MCTSSearcher.cpp:96->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 120 'zext' 'zext_ln96' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 121 [1/1] (0.00ns)   --->   "%this_parents_addr = getelementptr i32 %this_parents, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:96->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 121 'getelementptr' 'this_parents_addr' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 122 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln96 = store i32 %node_5, i13 %this_parents_addr" [MCTSSearcher.cpp:96->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 122 'store' 'store_ln96' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_11 : Operation 123 [1/1] (0.00ns)   --->   "%this_childActions_addr_1 = getelementptr i6 %this_childActions, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:97->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 123 'getelementptr' 'this_childActions_addr_1' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 124 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln97 = store i6 %action_loc_load, i13 %this_childActions_addr_1" [MCTSSearcher.cpp:97->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 124 'store' 'store_ln97' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 5100> <RAM>
+ST_11 : Operation 125 [1/1] (0.00ns)   --->   "%this_firstChilds_addr_1 = getelementptr i32 %this_firstChilds, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:98->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 125 'getelementptr' 'this_firstChilds_addr_1' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 126 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln98 = store i32 4294967295, i13 %this_firstChilds_addr_1" [MCTSSearcher.cpp:98->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 126 'store' 'store_ln98' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_11 : Operation 127 [1/1] (0.00ns)   --->   "%this_firstChilds_addr_2 = getelementptr i32 %this_firstChilds, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 127 'getelementptr' 'this_firstChilds_addr_2' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 128 [1/1] (1.01ns)   --->   "%add_ln101 = add i32 %this_numChildren_load, i32 1" [MCTSSearcher.cpp:101->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 128 'add' 'add_ln101' <Predicate = (!targetBlock)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 129 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln101 = store i32 %add_ln101, i13 %this_numChildren_addr" [MCTSSearcher.cpp:101->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 129 'store' 'store_ln101' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_11 : Operation 130 [1/1] (0.00ns)   --->   "%zext_ln102 = zext i6 %action_loc_load" [MCTSSearcher.cpp:102->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 130 'zext' 'zext_ln102' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 131 [1/1] (0.73ns)   --->   "%shl_ln102 = shl i49 1, i49 %zext_ln102" [MCTSSearcher.cpp:102->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 131 'shl' 'shl_ln102' <Predicate = (!targetBlock)> <Delay = 0.73> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 132 [1/1] (0.21ns)   --->   "%or_ln102 = or i49 %this_triedMask_load, i49 %shl_ln102" [MCTSSearcher.cpp:102->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 132 'or' 'or_ln102' <Predicate = (!targetBlock)> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 133 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln102 = store i49 %or_ln102, i13 %this_triedMask_addr" [MCTSSearcher.cpp:102->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 133 'store' 'store_ln102' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+ST_11 : Operation 134 [1/1] (1.01ns)   --->   "%numLegalActionsHere = add i32 %this_numLegalActions_load, i32 4294967295" [MCTSSearcher.cpp:103->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 134 'add' 'numLegalActionsHere' <Predicate = (!targetBlock)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 135 [1/1] (0.00ns)   --->   "%this_numLegalActions_addr_1 = getelementptr i32 %this_numLegalActions, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:109->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 135 'getelementptr' 'this_numLegalActions_addr_1' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 136 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln109 = store i32 %numLegalActionsHere, i13 %this_numLegalActions_addr_1" [MCTSSearcher.cpp:109->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 136 'store' 'store_ln109' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_11 : Operation 137 [1/1] (0.00ns)   --->   "%this_visitCounts_addr = getelementptr i32 %this_visitCounts, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:112->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 137 'getelementptr' 'this_visitCounts_addr' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln112 = store i32 0, i13 %this_visitCounts_addr" [MCTSSearcher.cpp:112->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 138 'store' 'store_ln112' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%this_meanQ_addr = getelementptr i20 %this_meanQ, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:113->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 139 'getelementptr' 'this_meanQ_addr' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln113 = store i20 0, i13 %this_meanQ_addr" [MCTSSearcher.cpp:113->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 140 'store' 'store_ln113' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 5100> <RAM>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%this_terminals_addr_1 = getelementptr i1 %this_terminals, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:115->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 141 'getelementptr' 'this_terminals_addr_1' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln115 = store i1 0, i13 %this_terminals_addr_1" [MCTSSearcher.cpp:115->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 142 'store' 'store_ln115' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_11 : Operation 143 [1/1] (0.00ns)   --->   "%this_isREDs_addr = getelementptr i1 %this_isREDs, i64 0, i64 %zext_ln127" [MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 143 'getelementptr' 'this_isREDs_addr' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_11 : Operation 144 [2/2] (1.23ns)   --->   "%this_isREDs_load = load i13 %this_isREDs_addr" [MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 144 'load' 'this_isREDs_load' <Predicate = (!targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+
+State 12 <SV = 6> <Delay = 2.76>
+ST_12 : Operation 145 [2/2] (1.23ns)   --->   "%this_firstChilds_load = load i13 %this_firstChilds_addr_2" [MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 145 'load' 'this_firstChilds_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_12 : Operation 146 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln100 = store i32 %this_nextFree_read_1, i13 %this_firstChilds_addr_2" [MCTSSearcher.cpp:100->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 146 'store' 'store_ln100' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_12 : Operation 147 [1/1] (0.00ns)   --->   "%this_numChildren_addr_1 = getelementptr i32 %this_numChildren, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:114->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 147 'getelementptr' 'this_numChildren_addr_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 148 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln114 = store i32 0, i13 %this_numChildren_addr_1" [MCTSSearcher.cpp:114->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 148 'store' 'store_ln114' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_12 : Operation 149 [1/1] (0.00ns)   --->   "%this_triedMask_addr_1 = getelementptr i49 %this_triedMask, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:116->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 149 'getelementptr' 'this_triedMask_addr_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 150 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln116 = store i49 0, i13 %this_triedMask_addr_1" [MCTSSearcher.cpp:116->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 150 'store' 'store_ln116' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 49> <Depth = 5100> <RAM>
+ST_12 : Operation 151 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_isREDs_load = load i13 %this_isREDs_addr" [MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 151 'load' 'this_isREDs_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_12 : Operation 152 [1/1] (0.28ns)   --->   "%xor_ln118 = xor i1 %this_isREDs_load, i1 1" [MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 152 'xor' 'xor_ln118' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 153 [1/1] (0.00ns)   --->   "%this_isREDs_addr_1 = getelementptr i1 %this_isREDs, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 153 'getelementptr' 'this_isREDs_addr_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 154 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln118 = store i1 %xor_ln118, i13 %this_isREDs_addr_1" [MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 154 'store' 'store_ln118' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+
+State 13 <SV = 7> <Delay = 2.47>
+ST_13 : Operation 155 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_firstChilds_load = load i13 %this_firstChilds_addr_2" [MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 155 'load' 'this_firstChilds_load' <Predicate = (!icmp_ln54 & !icmp_ln71 & !targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_13 : Operation 156 [1/1] (0.00ns)   --->   "%this_nextSiblings_addr = getelementptr i32 %this_nextSiblings, i64 0, i64 %zext_ln96" [MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 156 'getelementptr' 'this_nextSiblings_addr' <Predicate = (!icmp_ln54 & !icmp_ln71 & !targetBlock)> <Delay = 0.00>
+ST_13 : Operation 157 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln99 = store i32 %this_firstChilds_load, i13 %this_nextSiblings_addr" [MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 157 'store' 'store_ln99' <Predicate = (!icmp_ln54 & !icmp_ln71 & !targetBlock)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5100> <RAM>
+ST_13 : Operation 158 [1/1] (1.01ns)   --->   "%add_ln119 = add i32 %this_nextFree_read_1, i32 1" [MCTSSearcher.cpp:119->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 158 'add' 'add_ln119' <Predicate = (!icmp_ln54 & !icmp_ln71 & !targetBlock)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 159 [1/1] (0.42ns)   --->   "%br_ln65 = br void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit" [MCTSSearcher.cpp:65->MCTSSearcher.cpp:159]   --->   Operation 159 'br' 'br_ln65' <Predicate = (!icmp_ln54 & !icmp_ln71 & !targetBlock)> <Delay = 0.42>
+ST_13 : Operation 160 [1/1] (0.00ns)   --->   "%write_flag_0 = phi i1 0, void %if.then32, i1 1, void %if.end.i.i, i1 0, void %if.end.i, i1 0, void %for.body.i.i.preheader"   --->   Operation 160 'phi' 'write_flag_0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 161 [1/1] (0.00ns)   --->   "%this_nextFree_02 = phi i32 0, void %if.then32, i32 %add_ln119, void %if.end.i.i, i32 0, void %if.end.i, i32 0, void %for.body.i.i.preheader" [MCTSSearcher.cpp:119->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 161 'phi' 'this_nextFree_02' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 162 [1/1] (0.00ns)   --->   "%child = phi i32 4294967295, void %if.then32, i32 %this_nextFree_read_1, void %if.end.i.i, i32 4294967295, void %if.end.i, i32 4294967295, void %for.body.i.i.preheader"   --->   Operation 162 'phi' 'child' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 163 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %child, i32 31" [MCTSSearcher.cpp:160]   --->   Operation 163 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 164 [1/1] (0.42ns)   --->   "%br_ln160 = br i1 %tmp, void %if.then36, void %if.end47" [MCTSSearcher.cpp:160]   --->   Operation 164 'br' 'br_ln160' <Predicate = true> <Delay = 0.42>
+ST_13 : Operation 165 [1/1] (0.00ns)   --->   "%zext_ln161 = zext i32 %child" [MCTSSearcher.cpp:161]   --->   Operation 165 'zext' 'zext_ln161' <Predicate = (!tmp)> <Delay = 0.00>
+ST_13 : Operation 166 [1/1] (0.00ns)   --->   "%this_childActions_addr_2 = getelementptr i6 %this_childActions, i64 0, i64 %zext_ln161" [MCTSSearcher.cpp:161]   --->   Operation 166 'getelementptr' 'this_childActions_addr_2' <Predicate = (!tmp)> <Delay = 0.00>
+ST_13 : Operation 167 [2/2] (1.23ns)   --->   "%action_3 = load i13 %this_childActions_addr_2" [MCTSSearcher.cpp:161]   --->   Operation 167 'load' 'action_3' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 5100> <RAM>
+
+State 14 <SV = 8> <Delay = 4.78>
+ST_14 : Operation 168 [1/2] ( I:1.23ns O:1.23ns )   --->   "%action_3 = load i13 %this_childActions_addr_2" [MCTSSearcher.cpp:161]   --->   Operation 168 'load' 'action_3' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 5100> <RAM>
+ST_14 : Operation 169 [1/1] (0.00ns)   --->   "%zext_ln12 = zext i6 %action_3" [GameState.cpp:12->MCTSSearcher.cpp:161]   --->   Operation 169 'zext' 'zext_ln12' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 170 [1/1] (0.28ns)   --->   "%gameState_hexGame_isPlayer1Turn_4 = xor i1 %gameState_hexGame_isPlayer1Turn_5, i1 1" [./hex.h:67->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 170 'xor' 'gameState_hexGame_isPlayer1Turn_4' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 171 [1/1] (0.00ns)   --->   "%zext_ln56_2 = zext i6 %action_3" [./hex.h:56->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 171 'zext' 'zext_ln56_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 172 [1/1] (0.73ns)   --->   "%bit_2 = shl i49 1, i49 %zext_ln56_2" [./hex.h:56->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 172 'shl' 'bit_2' <Predicate = true> <Delay = 0.73> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node gameState_hexGame_player1_5)   --->   "%select_ln58_3 = select i1 %gameState_hexGame_isPlayer1Turn_5, i49 %bit_2, i49 0" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 173 'select' 'select_ln58_3' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 174 [1/1] (0.50ns) (out node of the LUT)   --->   "%gameState_hexGame_player1_5 = or i49 %select_ln58_3, i49 %gameState_hexGame_player1_4" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 174 'or' 'gameState_hexGame_player1_5' <Predicate = true> <Delay = 0.50> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node gameState_hexGame_player2_5)   --->   "%select_ln58_4 = select i1 %gameState_hexGame_isPlayer1Turn_5, i49 0, i49 %bit_2" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 175 'select' 'select_ln58_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 176 [1/1] (0.50ns) (out node of the LUT)   --->   "%gameState_hexGame_player2_5 = or i49 %select_ln58_4, i49 %gameState_hexGame_player2_4" [./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161]   --->   Operation 176 'or' 'gameState_hexGame_player2_5' <Predicate = true> <Delay = 0.50> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 177 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %gameState_hexGame_isPlayer1Turn_5, void %if.else.i.i55, void %if.then3.i.i" [./hex.h:75->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 177 'br' 'br_ln75' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 178 [1/1] (0.21ns)   --->   "%fill_6 = and i49 %gameState_hexGame_player2_5, i49 %bit_2" [./hex.h:111->./hex.h:79->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 178 'and' 'fill_6' <Predicate = (!gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 179 [2/2] (0.42ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_14, i49 %fill_6, i49 %gameState_hexGame_player2_5, i43 %prev_8_loc, i1 %p_loc, i1 %p_loc43" [./hex.h:111->./hex.h:79->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 179 'call' 'call_ln111' <Predicate = (!gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.42> <CoreType = "Generic">   --->   Generic Core
+ST_14 : Operation 180 [1/1] (0.21ns)   --->   "%fill_5 = and i49 %gameState_hexGame_player1_5, i49 %bit_2" [./hex.h:111->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 180 'and' 'fill_5' <Predicate = (gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 181 [2/2] (2.09ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_1, i49 %fill_5, i49 %gameState_hexGame_player1_5, i49 %prev_loc" [./hex.h:111->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 181 'call' 'call_ln111' <Predicate = (gameState_hexGame_isPlayer1Turn_5)> <Delay = 2.09> <CoreType = "Generic">   --->   Generic Core
+
+State 15 <SV = 9> <Delay = 2.09>
+ST_15 : Operation 182 [1/2] (2.09ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_14, i49 %fill_6, i49 %gameState_hexGame_player2_5, i43 %prev_8_loc, i1 %p_loc, i1 %p_loc43" [./hex.h:111->./hex.h:79->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 182 'call' 'call_ln111' <Predicate = true> <Delay = 2.09> <CoreType = "Generic">   --->   Generic Core
+
+State 16 <SV = 10> <Delay = 2.62>
+ST_16 : Operation 183 [1/1] (0.00ns)   --->   "%prev_8_loc_load = load i43 %prev_8_loc"   --->   Operation 183 'load' 'prev_8_loc_load' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 184 [1/1] (0.00ns)   --->   "%prev_8_reload_cast52 = zext i43 %prev_8_loc_load"   --->   Operation 184 'zext' 'prev_8_reload_cast52' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 185 [1/1] (0.00ns)   --->   "%p_loc_load = load i1 %p_loc"   --->   Operation 185 'load' 'p_loc_load' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 186 [1/1] (0.00ns)   --->   "%p_loc43_load = load i1 %p_loc43"   --->   Operation 186 'load' 'p_loc43_load' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 187 [1/1] (0.00ns)   --->   "%tmp_228 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 42" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 187 'bitselect' 'tmp_228' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 188 [1/1] (0.00ns)   --->   "%tmp_229 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 35" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 188 'bitselect' 'tmp_229' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_230 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 28" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 189 'bitselect' 'tmp_230' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 190 [1/1] (0.00ns)   --->   "%tmp_231 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 21" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 190 'bitselect' 'tmp_231' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 191 [1/1] (0.00ns)   --->   "%tmp_232 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 14" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 191 'bitselect' 'tmp_232' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 192 [1/1] (0.00ns)   --->   "%tmp_233 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 7" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 192 'bitselect' 'tmp_233' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 193 [1/1] (0.00ns)   --->   "%trunc_ln80 = trunc i43 %prev_8_loc_load" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 193 'trunc' 'trunc_ln80' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 194 [1/1] (0.00ns)   --->   "%and_ln = bitconcatenate i43 @_ssdm_op_BitConcatenate.i43.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1, i1 %tmp_228, i6 0, i1 %tmp_229, i6 0, i1 %tmp_230, i6 0, i1 %tmp_231, i6 0, i1 %tmp_232, i6 0, i1 %tmp_233, i6 0, i1 %trunc_ln80" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 194 'bitconcatenate' 'and_ln' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 195 [1/1] (1.05ns)   --->   "%icmp_ln80 = icmp_ne  i43 %and_ln, i43 0" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 195 'icmp' 'icmp_ln80' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 196 [1/1] (0.00ns)   --->   "%tmp_234 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 34" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 196 'bitselect' 'tmp_234' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 197 [1/1] (0.00ns)   --->   "%tmp_235 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 27" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 197 'bitselect' 'tmp_235' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 198 [1/1] (0.00ns)   --->   "%tmp_236 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 20" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 198 'bitselect' 'tmp_236' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 199 [1/1] (0.00ns)   --->   "%tmp_237 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 13" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 199 'bitselect' 'tmp_237' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 200 [1/1] (0.00ns)   --->   "%tmp_238 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_8_reload_cast52, i32 6" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 200 'bitselect' 'tmp_238' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 201 [1/1] (0.00ns)   --->   "%and_ln80_6 = bitconcatenate i49 @_ssdm_op_BitConcatenate.i49.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6, i1 %p_loc_load, i6 0, i1 %p_loc43_load, i6 0, i1 %tmp_234, i6 0, i1 %tmp_235, i6 0, i1 %tmp_236, i6 0, i1 %tmp_237, i6 0, i1 %tmp_238, i6 0" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 201 'bitconcatenate' 'and_ln80_6' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 202 [1/1] (1.09ns)   --->   "%icmp_ln80_4 = icmp_ne  i49 %and_ln80_6, i49 0" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 202 'icmp' 'icmp_ln80_4' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 1.09> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 203 [1/1] (0.28ns)   --->   "%and_ln80 = and i1 %icmp_ln80, i1 %icmp_ln80_4" [./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 203 'and' 'and_ln80' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 204 [1/1] (0.00ns)   --->   "%br_ln163 = br i1 %and_ln80, void %if.end45, void %if.then41" [MCTSSearcher.cpp:163]   --->   Operation 204 'br' 'br_ln163' <Predicate = (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 205 [1/1] (0.00ns)   --->   "%prev_loc_load = load i49 %prev_loc"   --->   Operation 205 'load' 'prev_loc_load' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 206 [1/1] (0.00ns)   --->   "%trunc_ln112 = trunc i49 %prev_loc_load" [./hex.h:112->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 206 'trunc' 'trunc_ln112' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 207 [1/1] (0.77ns)   --->   "%icmp_ln77 = icmp_ne  i7 %trunc_ln112, i7 0" [./hex.h:77->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 207 'icmp' 'icmp_ln77' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 208 [1/1] (0.00ns)   --->   "%tmp_227 = partselect i7 @_ssdm_op_PartSelect.i7.i49.i32.i32, i49 %prev_loc_load, i32 42, i32 48" [./hex.h:77->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 208 'partselect' 'tmp_227' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 209 [1/1] (0.77ns)   --->   "%icmp_ln77_4 = icmp_ne  i7 %tmp_227, i7 0" [./hex.h:77->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 209 'icmp' 'icmp_ln77_4' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 210 [1/1] (0.28ns)   --->   "%and_ln77 = and i1 %icmp_ln77, i1 %icmp_ln77_4" [./hex.h:77->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 210 'and' 'and_ln77' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 211 [1/1] (0.00ns)   --->   "%br_ln163 = br i1 %and_ln77, void %if.end45, void %if.then41" [MCTSSearcher.cpp:163]   --->   Operation 211 'br' 'br_ln163' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5)> <Delay = 0.00>
+ST_16 : Operation 212 [1/1] (0.00ns)   --->   "%this_terminals_addr_2 = getelementptr i1 %this_terminals, i64 0, i64 %zext_ln161" [MCTSSearcher.cpp:163]   --->   Operation 212 'getelementptr' 'this_terminals_addr_2' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5 & and_ln77) | (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5 & and_ln80)> <Delay = 0.00>
+ST_16 : Operation 213 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln163 = store i1 1, i13 %this_terminals_addr_2" [MCTSSearcher.cpp:163]   --->   Operation 213 'store' 'store_ln163' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5 & and_ln77) | (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5 & and_ln80)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_16 : Operation 214 [1/1] (0.00ns)   --->   "%br_ln163 = br void %if.end45" [MCTSSearcher.cpp:163]   --->   Operation 214 'br' 'br_ln163' <Predicate = (!icmp_ln127 & !tmp & gameState_hexGame_isPlayer1Turn_5 & and_ln77) | (!icmp_ln127 & !tmp & !gameState_hexGame_isPlayer1Turn_5 & and_ln80)> <Delay = 0.00>
+ST_16 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node gameState_legalActionMap_5)   --->   "%or_ln14_1 = or i49 %gameState_hexGame_player1_5, i49 %gameState_hexGame_player2_5" [GameState.cpp:14->MCTSSearcher.cpp:161]   --->   Operation 215 'or' 'or_ln14_1' <Predicate = (!icmp_ln127 & !tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 216 [1/1] (0.21ns) (out node of the LUT)   --->   "%gameState_legalActionMap_5 = xor i49 %or_ln14_1, i49 562949953421311" [GameState.cpp:14->MCTSSearcher.cpp:161]   --->   Operation 216 'xor' 'gameState_legalActionMap_5' <Predicate = (!icmp_ln127 & !tmp)> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 217 [1/1] (0.42ns)   --->   "%br_ln164 = br void %if.end47" [MCTSSearcher.cpp:164]   --->   Operation 217 'br' 'br_ln164' <Predicate = (!icmp_ln127 & !tmp)> <Delay = 0.42>
+
+State 17 <SV = 9> <Delay = 2.51>
+ST_17 : Operation 218 [1/2] (2.51ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_1, i49 %fill_5, i49 %gameState_hexGame_player1_5, i49 %prev_loc" [./hex.h:111->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163]   --->   Operation 218 'call' 'call_ln111' <Predicate = true> <Delay = 2.51> <CoreType = "Generic">   --->   Generic Core
+
+State 18 <SV = 11> <Delay = 1.23>
+ST_18 : Operation 219 [1/1] (0.00ns)   --->   "%gameState_hexGame_lastMove_3 = phi i32 %zext_ln12, void %if.end45, i32 %gameState_hexGame_lastMove_4, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i32 %gameState_hexGame_lastMove_4, void %if.end47.loopexit"   --->   Operation 219 'phi' 'gameState_hexGame_lastMove_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 220 [1/1] (0.00ns)   --->   "%gameState_hexGame_player1_6 = phi i49 %gameState_hexGame_player1_5, void %if.end45, i49 %gameState_hexGame_player1_4, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i49 %gameState_hexGame_player1_4, void %if.end47.loopexit"   --->   Operation 220 'phi' 'gameState_hexGame_player1_6' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 221 [1/1] (0.00ns)   --->   "%gameState_hexGame_player2_6 = phi i49 %gameState_hexGame_player2_5, void %if.end45, i49 %gameState_hexGame_player2_4, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i49 %gameState_hexGame_player2_4, void %if.end47.loopexit"   --->   Operation 221 'phi' 'gameState_hexGame_player2_6' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 222 [1/1] (0.00ns)   --->   "%gameState_hexGame_isPlayer1Turn_3 = phi i1 %gameState_hexGame_isPlayer1Turn_4, void %if.end45, i1 %gameState_hexGame_isPlayer1Turn_5, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i1 %gameState_hexGame_isPlayer1Turn_5, void %if.end47.loopexit"   --->   Operation 222 'phi' 'gameState_hexGame_isPlayer1Turn_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 223 [1/1] (0.00ns)   --->   "%gameState_legalActionMap_3 = phi i49 %gameState_legalActionMap_5, void %if.end45, i49 %gameState_legalActionMap_4, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i49 %gameState_legalActionMap_4, void %if.end47.loopexit"   --->   Operation 223 'phi' 'gameState_legalActionMap_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 224 [1/1] (0.00ns)   --->   "%node_4 = phi i32 %child, void %if.end45, i32 %node_5, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i32 %node_5, void %if.end47.loopexit"   --->   Operation 224 'phi' 'node_4' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 225 [1/1] (0.00ns)   --->   "%zext_ln167 = zext i32 %node_4" [MCTSSearcher.cpp:167]   --->   Operation 225 'zext' 'zext_ln167' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 226 [1/1] (0.00ns)   --->   "%this_terminals_addr_3 = getelementptr i1 %this_terminals, i64 0, i64 %zext_ln167" [MCTSSearcher.cpp:167]   --->   Operation 226 'getelementptr' 'this_terminals_addr_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 227 [2/2] (1.23ns)   --->   "%this_terminals_load_1 = load i13 %this_terminals_addr_3" [MCTSSearcher.cpp:167]   --->   Operation 227 'load' 'this_terminals_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+
+State 19 <SV = 12> <Delay = 4.77>
+ST_19 : Operation 228 [1/1] (0.00ns)   --->   "%write_flag_1 = phi i1 %write_flag_0, void %if.end45, i1 %write_flag_0, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i1 0, void %if.end47.loopexit"   --->   Operation 228 'phi' 'write_flag_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 229 [1/1] (0.00ns)   --->   "%this_nextFree_1 = phi i32 %this_nextFree_02, void %if.end45, i32 %this_nextFree_02, void %_ZN12MCTSSearcherILi5000EE6expandEi9GameState.exit, i32 0, void %if.end47.loopexit" [MCTSSearcher.cpp:119->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159]   --->   Operation 229 'phi' 'this_nextFree_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 230 [1/2] ( I:1.23ns O:1.23ns )   --->   "%this_terminals_load_1 = load i13 %this_terminals_addr_3" [MCTSSearcher.cpp:167]   --->   Operation 230 'load' 'this_terminals_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5100> <RAM>
+ST_19 : Operation 231 [1/1] (0.00ns)   --->   "%br_ln167 = br i1 %this_terminals_load_1, void %VITIS_LOOP_169_3, void %if.else" [MCTSSearcher.cpp:167]   --->   Operation 231 'br' 'br_ln167' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 232 [2/2] (3.54ns)   --->   "%call_ret6 = call i84 @rollout, i64 %this_rng_read62, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 232 'call' 'call_ret6' <Predicate = (!this_terminals_load_1)> <Delay = 3.54> <CoreType = "Generic">   --->   Generic Core
+ST_19 : Operation 233 [1/1] (0.00ns)   --->   "%tmp_239 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %gameState_hexGame_lastMove_3, i32 31" [./hex.h:71->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 233 'bitselect' 'tmp_239' <Predicate = (this_terminals_load_1)> <Delay = 0.00>
+ST_19 : Operation 234 [1/1] (0.00ns)   --->   "%br_ln71 = br i1 %tmp_239, void %cond.true.i.i.i.i, void %if.then.i.i.i.i" [./hex.h:71->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 234 'br' 'br_ln71' <Predicate = (this_terminals_load_1)> <Delay = 0.00>
+ST_19 : Operation 235 [1/1] (0.00ns)   --->   "%zext_ln73 = zext i32 %gameState_hexGame_lastMove_3" [./hex.h:73->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 235 'zext' 'zext_ln73' <Predicate = (this_terminals_load_1 & !tmp_239)> <Delay = 0.00>
+ST_19 : Operation 236 [1/1] (1.38ns)   --->   "%seed_1 = shl i49 1, i49 %zext_ln73" [./hex.h:73->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 236 'shl' 'seed_1' <Predicate = (this_terminals_load_1 & !tmp_239)> <Delay = 1.38> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 237 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %gameState_hexGame_isPlayer1Turn_3, void %if.then3.i.i.i, void %if.else.i.i.i" [./hex.h:75->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 237 'br' 'br_ln75' <Predicate = (this_terminals_load_1 & !tmp_239)> <Delay = 0.00>
+ST_19 : Operation 238 [1/1] (0.21ns)   --->   "%connected = and i49 %seed_1, i49 %gameState_hexGame_player1_6" [./hex.h:111->./hex.h:76->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 238 'and' 'connected' <Predicate = (this_terminals_load_1 & !tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 239 [2/2] (2.09ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_15, i49 %connected, i49 %gameState_hexGame_player1_6, i49 %prev_9_loc" [./hex.h:111->./hex.h:76->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 239 'call' 'call_ln111' <Predicate = (this_terminals_load_1 & !tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 2.09> <CoreType = "Generic">   --->   Generic Core
+ST_19 : Operation 240 [1/1] (0.21ns)   --->   "%connected_8 = and i49 %seed_1, i49 %gameState_hexGame_player2_6" [./hex.h:111->./hex.h:79->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 240 'and' 'connected_8' <Predicate = (this_terminals_load_1 & !tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 241 [2/2] (0.42ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_16, i49 %connected_8, i49 %gameState_hexGame_player2_6, i43 %prev_10_loc, i1 %p_loc47, i1 %p_loc48" [./hex.h:111->./hex.h:79->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 241 'call' 'call_ln111' <Predicate = (this_terminals_load_1 & !tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.42> <CoreType = "Generic">   --->   Generic Core
+
+State 20 <SV = 13> <Delay = 3.54>
+ST_20 : Operation 242 [1/2] (0.00ns)   --->   "%call_ret6 = call i84 @rollout, i64 %this_rng_read62, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 242 'call' 'call_ret6' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_20 : Operation 243 [1/1] (0.00ns)   --->   "%reward = extractvalue i84 %call_ret6" [MCTSSearcher.cpp:171]   --->   Operation 243 'extractvalue' 'reward' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 244 [1/1] (0.00ns)   --->   "%this_rng_ret1 = extractvalue i84 %call_ret6" [MCTSSearcher.cpp:171]   --->   Operation 244 'extractvalue' 'this_rng_ret1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 245 [2/2] (3.54ns)   --->   "%call_ret9 = call i84 @rollout, i64 %this_rng_ret1, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 245 'call' 'call_ret9' <Predicate = true> <Delay = 3.54> <CoreType = "Generic">   --->   Generic Core
+
+State 21 <SV = 14> <Delay = 3.54>
+ST_21 : Operation 246 [1/2] (0.00ns)   --->   "%call_ret9 = call i84 @rollout, i64 %this_rng_ret1, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 246 'call' 'call_ret9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_21 : Operation 247 [1/1] (0.00ns)   --->   "%ref_tmp57_assign_5 = extractvalue i84 %call_ret9" [MCTSSearcher.cpp:171]   --->   Operation 247 'extractvalue' 'ref_tmp57_assign_5' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 248 [1/1] (0.00ns)   --->   "%this_rng_ret9 = extractvalue i84 %call_ret9" [MCTSSearcher.cpp:171]   --->   Operation 248 'extractvalue' 'this_rng_ret9' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 249 [2/2] (3.54ns)   --->   "%call_ret = call i84 @rollout, i64 %this_rng_ret9, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 249 'call' 'call_ret' <Predicate = true> <Delay = 3.54> <CoreType = "Generic">   --->   Generic Core
+
+State 22 <SV = 15> <Delay = 3.54>
+ST_22 : Operation 250 [1/2] (0.00ns)   --->   "%call_ret = call i84 @rollout, i64 %this_rng_ret9, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 250 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_22 : Operation 251 [1/1] (0.00ns)   --->   "%this_rng_ret6 = extractvalue i84 %call_ret" [MCTSSearcher.cpp:171]   --->   Operation 251 'extractvalue' 'this_rng_ret6' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 252 [2/2] (3.54ns)   --->   "%call_ret1 = call i84 @rollout, i64 %this_rng_ret6, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 252 'call' 'call_ret1' <Predicate = true> <Delay = 3.54> <CoreType = "Generic">   --->   Generic Core
+
+State 23 <SV = 16> <Delay = 3.73>
+ST_23 : Operation 253 [1/1] (0.00ns) (grouped into LUT with out node add_ln171_2)   --->   "%ref_tmp57_assign_4 = extractvalue i84 %call_ret" [MCTSSearcher.cpp:171]   --->   Operation 253 'extractvalue' 'ref_tmp57_assign_4' <Predicate = (!this_terminals_load_1)> <Delay = 0.00>
+ST_23 : Operation 254 [1/2] (0.00ns)   --->   "%call_ret1 = call i84 @rollout, i64 %this_rng_ret6, i49 %gameState_legalActionMap_3, i1 %gameState_hexGame_isPlayer1Turn_3, i32 %gameState_hexGame_lastMove_3, i49 %gameState_hexGame_player1_6, i49 %gameState_hexGame_player2_6" [MCTSSearcher.cpp:171]   --->   Operation 254 'call' 'call_ret1' <Predicate = (!this_terminals_load_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_23 : Operation 255 [1/1] (0.00ns) (grouped into LUT with out node add_ln171_2)   --->   "%ref_tmp57_assign_3 = extractvalue i84 %call_ret1" [MCTSSearcher.cpp:171]   --->   Operation 255 'extractvalue' 'ref_tmp57_assign_3' <Predicate = (!this_terminals_load_1)> <Delay = 0.00>
+ST_23 : Operation 256 [1/1] (0.00ns)   --->   "%this_rng_ret = extractvalue i84 %call_ret1" [MCTSSearcher.cpp:171]   --->   Operation 256 'extractvalue' 'this_rng_ret' <Predicate = (!this_terminals_load_1)> <Delay = 0.00>
+ST_23 : Operation 257 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln171_1 = add i20 %ref_tmp57_assign_5, i20 %reward" [MCTSSearcher.cpp:171]   --->   Operation 257 'add' 'add_ln171_1' <Predicate = (!this_terminals_load_1)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 258 [1/1] (0.89ns) (out node of the LUT)   --->   "%add_ln171_2 = add i20 %ref_tmp57_assign_4, i20 %ref_tmp57_assign_3" [MCTSSearcher.cpp:171]   --->   Operation 258 'add' 'add_ln171_2' <Predicate = (!this_terminals_load_1)> <Delay = 0.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 259 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%add_ln171 = add i20 %add_ln171_2, i20 %add_ln171_1" [MCTSSearcher.cpp:171]   --->   Operation 259 'add' 'add_ln171' <Predicate = (!this_terminals_load_1)> <Delay = 0.69> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 260 [1/1] (0.47ns)   --->   "%br_ln174 = br void %if.end63" [MCTSSearcher.cpp:174]   --->   Operation 260 'br' 'br_ln174' <Predicate = (!this_terminals_load_1)> <Delay = 0.47>
+ST_23 : Operation 261 [1/1] (0.00ns)   --->   "%reward_1 = phi i20 0, void %if.then.i.i.i.i, i20 %select_ln35, void %if.then.i, i20 %add_ln171, void %VITIS_LOOP_169_3" [GameState.cpp:35->MCTSSearcher.cpp:175]   --->   Operation 261 'phi' 'reward_1' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 262 [1/1] (0.00ns)   --->   "%visitCount = phi i3 1, void %if.then.i.i.i.i, i3 1, void %if.then.i, i3 4, void %VITIS_LOOP_169_3"   --->   Operation 262 'phi' 'visitCount' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 263 [2/2] (1.66ns)   --->   "%call_ln35 = call void @forward_Pipeline_VITIS_LOOP_259_1, i32 %node_4, i20 %reward_1, i32 %this_visitCounts, i3 %visitCount, i20 %this_meanQ, i3 %visitCount, i32 %this_logVisitCounts, i32 %this_parents, i1 %this_isREDs, i3 %visitCount, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" [GameState.cpp:35->MCTSSearcher.cpp:175]   --->   Operation 263 'call' 'call_ln35' <Predicate = true> <Delay = 1.66> <CoreType = "Generic">   --->   Generic Core
+ST_23 : Operation 264 [1/1] (0.44ns)   --->   "%select_ln178 = select i1 %write_flag_1, i32 %this_nextFree_1, i32 %this_nextFree_read_1" [MCTSSearcher.cpp:178]   --->   Operation 264 'select' 'select_ln178' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 24 <SV = 13> <Delay = 2.51>
+ST_24 : Operation 265 [1/2] (2.51ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_15, i49 %connected, i49 %gameState_hexGame_player1_6, i49 %prev_9_loc" [./hex.h:111->./hex.h:76->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 265 'call' 'call_ln111' <Predicate = true> <Delay = 2.51> <CoreType = "Generic">   --->   Generic Core
+
+State 25 <SV = 14> <Delay = 1.86>
+ST_25 : Operation 266 [1/1] (0.00ns)   --->   "%prev_9_loc_load = load i49 %prev_9_loc"   --->   Operation 266 'load' 'prev_9_loc_load' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 267 [1/1] (0.00ns)   --->   "%trunc_ln112_2 = trunc i49 %prev_9_loc_load" [./hex.h:112->./hex.h:76->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 267 'trunc' 'trunc_ln112_2' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 268 [1/1] (0.77ns)   --->   "%icmp_ln77_5 = icmp_ne  i7 %trunc_ln112_2, i7 0" [./hex.h:77->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 268 'icmp' 'icmp_ln77_5' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 269 [1/1] (0.00ns)   --->   "%tmp_251 = partselect i7 @_ssdm_op_PartSelect.i7.i49.i32.i32, i49 %prev_9_loc_load, i32 42, i32 48" [./hex.h:77->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 269 'partselect' 'tmp_251' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 270 [1/1] (0.77ns)   --->   "%icmp_ln77_6 = icmp_ne  i7 %tmp_251, i7 0" [./hex.h:77->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 270 'icmp' 'icmp_ln77_6' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 271 [1/1] (0.28ns)   --->   "%and_ln77_2 = and i1 %icmp_ln77_5, i1 %icmp_ln77_6" [./hex.h:77->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 271 'and' 'and_ln77_2' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 272 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %and_ln77_2, void %if.then.i.i.i.i, void %if.then.i" [GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 272 'br' 'br_ln34' <Predicate = (!tmp_239 & !gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 273 [1/1] (0.00ns)   --->   "%prev_10_loc_load = load i43 %prev_10_loc"   --->   Operation 273 'load' 'prev_10_loc_load' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 274 [1/1] (0.00ns)   --->   "%prev_10_reload_cast53 = zext i43 %prev_10_loc_load"   --->   Operation 274 'zext' 'prev_10_reload_cast53' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 275 [1/1] (0.00ns)   --->   "%p_loc47_load = load i1 %p_loc47"   --->   Operation 275 'load' 'p_loc47_load' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 276 [1/1] (0.00ns)   --->   "%p_loc48_load = load i1 %p_loc48"   --->   Operation 276 'load' 'p_loc48_load' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_240 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 42" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 277 'bitselect' 'tmp_240' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 278 [1/1] (0.00ns)   --->   "%tmp_241 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 35" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 278 'bitselect' 'tmp_241' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 279 [1/1] (0.00ns)   --->   "%tmp_242 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 28" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 279 'bitselect' 'tmp_242' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_243 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 21" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 280 'bitselect' 'tmp_243' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 281 [1/1] (0.00ns)   --->   "%tmp_244 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 14" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 281 'bitselect' 'tmp_244' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 282 [1/1] (0.00ns)   --->   "%tmp_245 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 7" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 282 'bitselect' 'tmp_245' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 283 [1/1] (0.00ns)   --->   "%trunc_ln80_2 = trunc i43 %prev_10_loc_load" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 283 'trunc' 'trunc_ln80_2' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 284 [1/1] (0.00ns)   --->   "%and_ln80_8 = bitconcatenate i43 @_ssdm_op_BitConcatenate.i43.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1, i1 %tmp_240, i6 0, i1 %tmp_241, i6 0, i1 %tmp_242, i6 0, i1 %tmp_243, i6 0, i1 %tmp_244, i6 0, i1 %tmp_245, i6 0, i1 %trunc_ln80_2" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 284 'bitconcatenate' 'and_ln80_8' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 285 [1/1] (1.05ns)   --->   "%icmp_ln80_5 = icmp_ne  i43 %and_ln80_8, i43 0" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 285 'icmp' 'icmp_ln80_5' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 286 [1/1] (0.00ns)   --->   "%tmp_246 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 34" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 286 'bitselect' 'tmp_246' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 287 [1/1] (0.00ns)   --->   "%tmp_247 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 27" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 287 'bitselect' 'tmp_247' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 288 [1/1] (0.00ns)   --->   "%tmp_248 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 20" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 288 'bitselect' 'tmp_248' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 289 [1/1] (0.00ns)   --->   "%tmp_249 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 13" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 289 'bitselect' 'tmp_249' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 290 [1/1] (0.00ns)   --->   "%tmp_250 = bitselect i1 @_ssdm_op_BitSelect.i1.i49.i32, i49 %prev_10_reload_cast53, i32 6" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 290 'bitselect' 'tmp_250' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 291 [1/1] (0.00ns)   --->   "%and_ln80_9 = bitconcatenate i49 @_ssdm_op_BitConcatenate.i49.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6.i1.i6, i1 %p_loc47_load, i6 0, i1 %p_loc48_load, i6 0, i1 %tmp_246, i6 0, i1 %tmp_247, i6 0, i1 %tmp_248, i6 0, i1 %tmp_249, i6 0, i1 %tmp_250, i6 0" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 291 'bitconcatenate' 'and_ln80_9' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 292 [1/1] (1.09ns)   --->   "%icmp_ln80_6 = icmp_ne  i49 %and_ln80_9, i49 0" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 292 'icmp' 'icmp_ln80_6' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 1.09> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 293 [1/1] (0.28ns)   --->   "%and_ln80_3 = and i1 %icmp_ln80_5, i1 %icmp_ln80_6" [./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 293 'and' 'and_ln80_3' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 294 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %and_ln80_3, void %if.then.i.i.i.i, void %if.then.i" [GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 294 'br' 'br_ln34' <Predicate = (!tmp_239 & gameState_hexGame_isPlayer1Turn_3)> <Delay = 0.00>
+ST_25 : Operation 295 [1/1] (0.47ns)   --->   "%br_ln40 = br void %if.end63" [GameState.cpp:40->MCTSSearcher.cpp:175]   --->   Operation 295 'br' 'br_ln40' <Predicate = (gameState_hexGame_isPlayer1Turn_3 & !and_ln80_3) | (!gameState_hexGame_isPlayer1Turn_3 & !and_ln77_2) | (tmp_239)> <Delay = 0.47>
+
+State 26 <SV = 13> <Delay = 2.09>
+ST_26 : Operation 296 [1/2] (2.09ns)   --->   "%call_ln111 = call void @forward_Pipeline_VITIS_LOOP_114_16, i49 %connected_8, i49 %gameState_hexGame_player2_6, i43 %prev_10_loc, i1 %p_loc47, i1 %p_loc48" [./hex.h:111->./hex.h:79->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175]   --->   Operation 296 'call' 'call_ln111' <Predicate = true> <Delay = 2.09> <CoreType = "Generic">   --->   Generic Core
+
+State 27 <SV = 15> <Delay = 0.47>
+ST_27 : Operation 297 [1/1] (0.35ns)   --->   "%select_ln35 = select i1 %gameState_hexGame_isPlayer1Turn_3, i20 0, i20 32768" [GameState.cpp:35->MCTSSearcher.cpp:175]   --->   Operation 297 'select' 'select_ln35' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 298 [1/1] (0.47ns)   --->   "%br_ln35 = br void %if.end63" [GameState.cpp:35->MCTSSearcher.cpp:175]   --->   Operation 298 'br' 'br_ln35' <Predicate = true> <Delay = 0.47>
+
+State 28 <SV = 17> <Delay = 0.00>
+ST_28 : Operation 299 [1/1] (0.00ns)   --->   "%this_rng_0 = phi i64 %this_rng_read62, void %if.then.i.i.i.i, i64 %this_rng_read62, void %if.then.i, i64 %this_rng_ret, void %VITIS_LOOP_169_3" [MCTSSearcher.cpp:171]   --->   Operation 299 'phi' 'this_rng_0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 300 [1/2] (0.00ns)   --->   "%call_ln35 = call void @forward_Pipeline_VITIS_LOOP_259_1, i32 %node_4, i20 %reward_1, i32 %this_visitCounts, i3 %visitCount, i20 %this_meanQ, i3 %visitCount, i32 %this_logVisitCounts, i32 %this_parents, i1 %this_isREDs, i3 %visitCount, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" [GameState.cpp:35->MCTSSearcher.cpp:175]   --->   Operation 300 'call' 'call_ln35' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_28 : Operation 301 [1/1] (0.00ns)   --->   "%mrv = insertvalue i96 <undef>, i32 %select_ln178" [MCTSSearcher.cpp:178]   --->   Operation 301 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 302 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i96 %mrv, i64 %this_rng_0" [MCTSSearcher.cpp:178]   --->   Operation 302 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 303 [1/1] (0.00ns)   --->   "%ret_ln178 = ret i96 %mrv_1" [MCTSSearcher.cpp:178]   --->   Operation 303 'ret' 'ret_ln178' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation 32 bit ('boardState.hexGame.lastMove_', MCTSSearcher.cpp:66->MCTSSearcher.cpp:159) [27]  (0.000 ns)
+	'store' operation 0 bit ('store_ln66', MCTSSearcher.cpp:66->MCTSSearcher.cpp:159) of variable 'gameState_hexGame_lastMove_read' on local variable 'boardState.hexGame.lastMove_', MCTSSearcher.cpp:66->MCTSSearcher.cpp:159 [45]  (0.427 ns)
+
+ <State 2>: 1.237ns
+The critical path consists of the following:
+	'load' operation 32 bit ('node') on local variable 'parent', MCTSSearcher.cpp:70->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159 [53]  (0.000 ns)
+	'getelementptr' operation 13 bit ('this_numLegalActions_addr', MCTSSearcher.cpp:127) [59]  (0.000 ns)
+	'load' operation 32 bit ('this_numLegalActions_load', MCTSSearcher.cpp:127) on array 'this_numLegalActions' [60]  (1.237 ns)
+
+ <State 3>: 2.680ns
+The critical path consists of the following:
+	'load' operation 32 bit ('this_numLegalActions_load', MCTSSearcher.cpp:127) on array 'this_numLegalActions' [60]  (1.237 ns)
+	'icmp' operation 1 bit ('icmp_ln127', MCTSSearcher.cpp:127) [63]  (1.016 ns)
+	multiplexor before 'phi' operation 1 bit ('write_flag_0') [152]  (0.427 ns)
+
+ <State 4>: 1.664ns
+The critical path consists of the following:
+	'load' operation 1 bit ('this_terminals_load', MCTSSearcher.cpp:127) on array 'this_terminals' [68]  (1.237 ns)
+	multiplexor before 'phi' operation 1 bit ('write_flag_1') [214]  (0.427 ns)
+
+ <State 5>: 2.901ns
+The critical path consists of the following:
+	'load' operation 32 bit ('bestChildNode', MCTSSearcher.cpp:132) on array 'this_firstChilds' [72]  (1.237 ns)
+	'call' operation 0 bit ('call_ln132', MCTSSearcher.cpp:132) to 'forward_Pipeline_VITIS_LOOP_140_2' [75]  (1.664 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 1.237ns
+The critical path consists of the following:
+	'load' operation 32 bit ('bestChildNode_loc_load') on local variable 'bestChildNode_loc' [76]  (0.000 ns)
+	'getelementptr' operation 13 bit ('this_childActions_addr', MCTSSearcher.cpp:152) [78]  (0.000 ns)
+	'load' operation 6 bit ('action', MCTSSearcher.cpp:152) on array 'this_childActions' [79]  (1.237 ns)
+
+ <State 8>: 3.120ns
+The critical path consists of the following:
+	'load' operation 6 bit ('action', MCTSSearcher.cpp:152) on array 'this_childActions' [79]  (1.237 ns)
+	'shl' operation 49 bit ('bit', ./hex.h:56->GameState.cpp:13->MCTSSearcher.cpp:153) [82]  (0.736 ns)
+	'select' operation 49 bit ('select_ln58', ./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:153) [83]  (0.000 ns)
+	'or' operation 49 bit ('gameState.hexGame.player1_', ./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:153) [84]  (0.509 ns)
+	'or' operation 49 bit ('or_ln14', GameState.cpp:14->MCTSSearcher.cpp:153) [88]  (0.000 ns)
+	'xor' operation 49 bit ('gameState.legalActionMap', GameState.cpp:14->MCTSSearcher.cpp:153) [89]  (0.212 ns)
+	'store' operation 0 bit ('store_ln68', MCTSSearcher.cpp:68->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) of variable 'gameState.legalActionMap', GameState.cpp:14->MCTSSearcher.cpp:153 on local variable 'boardState.legalActionMap', MCTSSearcher.cpp:68->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159 [93]  (0.427 ns)
+
+ <State 9>: 4.056ns
+The critical path consists of the following:
+	'load' operation 49 bit ('this_triedMask_load', MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) on array 'this_triedMask' [103]  (1.237 ns)
+	'xor' operation 49 bit ('xor_ln70', MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) [104]  (0.000 ns)
+	'and' operation 49 bit ('untried', MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) [105]  (0.212 ns)
+	'icmp' operation 1 bit ('icmp_ln71', MCTSSearcher.cpp:71->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) [106]  (1.097 ns)
+	'call' operation 1 bit ('targetBlock', MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) to 'forward_Pipeline_VITIS_LOOP_73_1' [109]  (1.510 ns)
+
+ <State 10>: 2.062ns
+The critical path consists of the following:
+	'call' operation 1 bit ('targetBlock', MCTSSearcher.cpp:70->MCTSSearcher.cpp:58->MCTSSearcher.cpp:159) to 'forward_Pipeline_VITIS_LOOP_73_1' [109]  (2.062 ns)
+
+ <State 11>: 2.253ns
+The critical path consists of the following:
+	'add' operation 32 bit ('add_ln101', MCTSSearcher.cpp:101->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) [125]  (1.016 ns)
+	'store' operation 0 bit ('store_ln101', MCTSSearcher.cpp:101->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) of variable 'add_ln101', MCTSSearcher.cpp:101->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159 on array 'this_numChildren' [126]  (1.237 ns)
+
+ <State 12>: 2.761ns
+The critical path consists of the following:
+	'load' operation 1 bit ('this_isREDs_load', MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) on array 'this_isREDs' [145]  (1.237 ns)
+	'xor' operation 1 bit ('xor_ln118', MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) [146]  (0.287 ns)
+	'store' operation 0 bit ('store_ln118', MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) of variable 'xor_ln118', MCTSSearcher.cpp:118->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159 on array 'this_isREDs' [148]  (1.237 ns)
+
+ <State 13>: 2.474ns
+The critical path consists of the following:
+	'load' operation 32 bit ('this_firstChilds_load', MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) on array 'this_firstChilds' [121]  (1.237 ns)
+	'store' operation 0 bit ('store_ln99', MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159) of variable 'this_firstChilds_load', MCTSSearcher.cpp:99->MCTSSearcher.cpp:64->MCTSSearcher.cpp:159 on array 'this_nextSiblings' [123]  (1.237 ns)
+
+ <State 14>: 4.784ns
+The critical path consists of the following:
+	'load' operation 6 bit ('action', MCTSSearcher.cpp:161) on array 'this_childActions' [160]  (1.237 ns)
+	'shl' operation 49 bit ('bit', ./hex.h:56->GameState.cpp:13->MCTSSearcher.cpp:161) [164]  (0.736 ns)
+	'select' operation 49 bit ('select_ln58_3', ./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161) [165]  (0.000 ns)
+	'or' operation 49 bit ('gameState.hexGame.player1_', ./hex.h:58->GameState.cpp:13->MCTSSearcher.cpp:161) [166]  (0.509 ns)
+	'and' operation 49 bit ('fill', ./hex.h:111->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163) [196]  (0.212 ns)
+	'call' operation 0 bit ('call_ln111', ./hex.h:111->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163) to 'forward_Pipeline_VITIS_LOOP_114_1' [197]  (2.091 ns)
+
+ <State 15>: 2.091ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln111', ./hex.h:111->./hex.h:79->GameState.cpp:30->MCTSSearcher.cpp:163) to 'forward_Pipeline_VITIS_LOOP_114_14' [172]  (2.091 ns)
+
+ <State 16>: 2.621ns
+The critical path consists of the following:
+	'load' operation 43 bit ('prev_8_loc_load') on local variable 'prev_8_loc' [173]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln80_4', ./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163) [192]  (1.097 ns)
+	'and' operation 1 bit ('and_ln80', ./hex.h:80->GameState.cpp:30->MCTSSearcher.cpp:163) [193]  (0.287 ns)
+	'store' operation 0 bit ('store_ln163', MCTSSearcher.cpp:163) of constant 1 on array 'this_terminals' [207]  (1.237 ns)
+
+ <State 17>: 2.518ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln111', ./hex.h:111->./hex.h:76->GameState.cpp:30->MCTSSearcher.cpp:163) to 'forward_Pipeline_VITIS_LOOP_114_1' [197]  (2.518 ns)
+
+ <State 18>: 1.237ns
+The critical path consists of the following:
+	'phi' operation 32 bit ('node') with incoming values : ('this.nextFree') ('node') [221]  (0.000 ns)
+	'getelementptr' operation 13 bit ('this_terminals_addr_3', MCTSSearcher.cpp:167) [223]  (0.000 ns)
+	'load' operation 1 bit ('this_terminals_load_1', MCTSSearcher.cpp:167) on array 'this_terminals' [224]  (1.237 ns)
+
+ <State 19>: 4.777ns
+The critical path consists of the following:
+	'load' operation 1 bit ('this_terminals_load_1', MCTSSearcher.cpp:167) on array 'this_terminals' [224]  (1.237 ns)
+	'call' operation 84 bit ('call_ret6', MCTSSearcher.cpp:171) to 'rollout' [227]  (3.540 ns)
+
+ <State 20>: 3.540ns
+The critical path consists of the following:
+	'call' operation 84 bit ('call_ret6', MCTSSearcher.cpp:171) to 'rollout' [227]  (0.000 ns)
+	'call' operation 84 bit ('call_ret9', MCTSSearcher.cpp:171) to 'rollout' [230]  (3.540 ns)
+
+ <State 21>: 3.540ns
+The critical path consists of the following:
+	'call' operation 84 bit ('call_ret9', MCTSSearcher.cpp:171) to 'rollout' [230]  (0.000 ns)
+	'call' operation 84 bit ('call_ret', MCTSSearcher.cpp:171) to 'rollout' [233]  (3.540 ns)
+
+ <State 22>: 3.540ns
+The critical path consists of the following:
+	'call' operation 84 bit ('call_ret', MCTSSearcher.cpp:171) to 'rollout' [233]  (0.000 ns)
+	'call' operation 84 bit ('call_ret1', MCTSSearcher.cpp:171) to 'rollout' [236]  (3.540 ns)
+
+ <State 23>: 3.732ns
+The critical path consists of the following:
+	'add' operation 20 bit ('add_ln171_2', MCTSSearcher.cpp:171) [240]  (0.894 ns)
+	'add' operation 20 bit ('add_ln171', MCTSSearcher.cpp:171) [241]  (0.698 ns)
+	multiplexor before 'phi' operation 20 bit ('reward', GameState.cpp:35->MCTSSearcher.cpp:175) with incoming values : ('add_ln171', MCTSSearcher.cpp:171) ('select_ln35', GameState.cpp:35->MCTSSearcher.cpp:175) [292]  (0.476 ns)
+	'phi' operation 20 bit ('reward', GameState.cpp:35->MCTSSearcher.cpp:175) with incoming values : ('add_ln171', MCTSSearcher.cpp:171) ('select_ln35', GameState.cpp:35->MCTSSearcher.cpp:175) [292]  (0.000 ns)
+	'call' operation 0 bit ('call_ln35', GameState.cpp:35->MCTSSearcher.cpp:175) to 'forward_Pipeline_VITIS_LOOP_259_1' [294]  (1.664 ns)
+
+ <State 24>: 2.518ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln111', ./hex.h:111->./hex.h:76->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175) to 'forward_Pipeline_VITIS_LOOP_114_15' [252]  (2.518 ns)
+
+ <State 25>: 1.860ns
+The critical path consists of the following:
+	'load' operation 43 bit ('prev_10_loc_load') on local variable 'prev_10_loc' [263]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln80_6', ./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175) [282]  (1.097 ns)
+	'and' operation 1 bit ('and_ln80_3', ./hex.h:80->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175) [283]  (0.287 ns)
+	blocking operation 0.476 ns on control path)
+
+ <State 26>: 2.091ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln111', ./hex.h:111->./hex.h:79->GameState.cpp:30->GameState.cpp:34->MCTSSearcher.cpp:175) to 'forward_Pipeline_VITIS_LOOP_114_16' [262]  (2.091 ns)
+
+ <State 27>: 0.476ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 64 bit ('this_rng_0', MCTSSearcher.cpp:171) with incoming values : ('this.rng') ('this_rng_ret', MCTSSearcher.cpp:171) [291]  (0.476 ns)
+
+ <State 28>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

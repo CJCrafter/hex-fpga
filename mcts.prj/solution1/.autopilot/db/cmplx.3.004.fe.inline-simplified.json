@@ -1,0 +1,116 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "1",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "dut.cpp",
+    "fileloc": 6,
+    "instructions": 56,
+    "memory_accesses": 0,
+    "name": "dut",
+    "total_instructions": 7521
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "4 4",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 280,
+    "instructions": 115,
+    "memory_accesses": 0,
+    "name": "search",
+    "stores": {
+      "L": 20
+    },
+    "total_instructions": 7465
+  },
+  "2": {
+    "basicblocks": 55,
+    "calls": "3 6 6 6 6 5",
+    "control_depth": 2,
+    "def_use_depth": 11,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 124,
+    "instructions": 402,
+    "loads": {
+      "L": 25
+    },
+    "memory_accesses": 15,
+    "name": "forward",
+    "stores": {
+      "L": 20
+    },
+    "total_instructions": 3626
+  },
+  "3": {
+    "basicblocks": 181,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 102,
+    "file": "hls_sqrt_apfixed.h",
+    "fileloc": 19,
+    "instructions": 1392,
+    "memory_accesses": 1,
+    "name": "sqrt_fixed<32, 16>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1392
+  },
+  "4": {
+    "basicblocks": 8,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 11,
+    "instructions": 49,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 2,
+    "name": "search",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 3675
+  },
+  "5": {
+    "basicblocks": 38,
+    "calls": "",
+    "control_depth": 32,
+    "def_use_depth": 65,
+    "file": "hls_log_apfixed.h",
+    "fileloc": 473,
+    "instructions": 488,
+    "loads": {
+      "G": 3
+    },
+    "memory_accesses": 4,
+    "name": "log<32, 16>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 488
+  },
+  "6": {
+    "basicblocks": 32,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 48,
+    "file": "MCTSSearcher.cpp",
+    "fileloc": 181,
+    "instructions": 336,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "rollout",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 336
+  }
+}

@@ -1,0 +1,189 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 41673, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 17333, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  8890, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  8686, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  7521, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  7410, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  7410, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  7410, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  7410, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  7546, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  7546, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  7706, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  7702, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  7702, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  7570, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  7648, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="dut" col1="dut.cpp:6" col2="41673" col3="7521" col4="7546" col5="7702" col6="7648">
+                    <row id="53" col0="Hex" col1="hex.h:51" col2="45" col3="" col4="" col5="" col6=""/>
+                    <row id="52" col0="setPlayer1" col1="hex.h:90" col2="4" col3="" col4="" col5="" col6=""/>
+                    <row id="54" col0="setPlayer2" col1="hex.h:94" col2="4" col3="" col4="" col5="" col6=""/>
+                    <row id="62" col0="setPlayer1Turn" col1="hex.h:102" col2="3" col3="" col4="" col5="" col6=""/>
+                    <row id="69" col0="setLastMove" col1="hex.h:98" col2="3" col3="" col4="" col5="" col6=""/>
+                    <row id="67" col0="search" col1="MCTSSearcher.cpp:280" col2="41189" col3="7465" col4="7487" col5="7227" col6="7283">
+                        <row id="9" col0="MCTSSearcher" col1="MCTSSearcher.h:41" col2="241" col3="" col4="" col5="" col6="">
+                            <row id="2" col0="RNG" col1="rand.h:13" col2="10" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="66" col0="search" col1="MCTSSearcher.cpp:11" col2="40869" col3="7350" col3_disp="7,350 (2 calls)" col4="7372" col4_disp="7,372 (2 calls)" col5="7112" col5_disp="7,112 (2 calls)" col6="7238" col6_disp="7,238 (2 calls)">
+                            <row id="56" col0="mainLoop" col1="MCTSSearcher.cpp:40" col2="40820" col3="" col4="" col5="" col6="">
+                                <row id="5" col0="GameState" col1="GameState.h:22" col2="120" col3="" col4="" col5="" col6="">
+                                    <row id="37" col0="player1" col1="hex.h:86" col2="4" col3="" col4="" col5="" col6=""/>
+                                    <row id="39" col0="player2" col1="hex.h:87" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="14" col0="getNumLegalActions" col1="GameState.h:40" col2="147" col3="" col4="" col5="" col6=""/>
+                                <row id="15" col0="clone" col1="GameState.cpp:7" col2="126" col3="" col4="" col5="" col6="">
+                                    <row id="5" col0="GameState" col1="GameState.h:22" col2="120" col3="" col4="" col5="" col6="">
+                                        <row id="37" col0="player1" col1="hex.h:86" col2="4" col3="" col4="" col5="" col6=""/>
+                                        <row id="39" col0="player2" col1="hex.h:87" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                </row>
+                                <row id="19" col0="forward" col1="MCTSSearcher.cpp:124" col2="40403" col3="" col4="" col5="" col6="">
+                                    <row id="31" col0="mcts_sqrt" col1="mcts_types.h:16" col2="4674" col3="" col4="" col5="" col6=""/>
+                                    <row id="21" col0="makeMove" col1="GameState.cpp:12" col2="458" col2_disp="  458 (2 calls)" col3="" col4="" col5="" col6="">
+                                        <row id="41" col0="place" col1="hex.h:55" col2="226" col2_disp="  226 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                        <row id="37" col0="player1" col1="hex.h:86" col2="8" col2_disp="    8 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                        <row id="39" col0="player2" col1="hex.h:87" col2="8" col2_disp="    8 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="40" col0="expand" col1="MCTSSearcher.cpp:53" col2="459" col3="" col4="" col5="" col6="">
+                                        <row id="22" col0="pickUntriedAction" col1="MCTSSearcher.cpp:69" col2="164" col3="" col4="" col5="" col6=""/>
+                                        <row id="25" col0="createNode" col1="MCTSSearcher.cpp:88" col2="271" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="38" col0="isTerminal" col1="GameState.cpp:29" col2="6215" col3="" col4="" col5="" col6="">
+                                        <row id="55" col0="checkWin" col1="hex.h:70" col2="6212" col3="" col4="" col5="" col6="">
+                                            <row id="50" col0="flood" col1="hex.h:110" col2="5410" col2_disp="5,410 (2 calls)" col3="" col4="" col5="" col6="">
+                                                <row id="46" col0="notRightCol" col1="hex.h:33" col2="1584" col2_disp="1,584 (4 calls)" col3="" col4="" col5="" col6="">
+                                                    <row id="57" col0="rightCol" col1="hex.h:22" col2="412" col2_disp="  412 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                    <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                </row>
+                                                <row id="44" col0="notLeftCol" col1="hex.h:29" col2="1576" col2_disp="1,576 (4 calls)" col3="" col4="" col5="" col6="">
+                                                    <row id="64" col0="leftCol" col1="hex.h:15" col2="404" col2_disp="  404 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                    <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                </row>
+                                                <row id="43" col0="boardMask" col1="hex.h:10" col2="394" col2_disp="  394 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                            </row>
+                                            <row id="51" col0="topRow" col1="hex.h:37" col2="111" col3="" col4="" col5="" col6=""/>
+                                            <row id="63" col0="bottomRow" col1="hex.h:44" col2="101" col3="" col4="" col5="" col6=""/>
+                                            <row id="64" col0="leftCol" col1="hex.h:15" col2="101" col3="" col4="" col5="" col6=""/>
+                                            <row id="57" col0="rightCol" col1="hex.h:22" col2="103" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                    <row id="36" col0="rollout" col1="MCTSSearcher.cpp:181" col2="13659" col3="" col4="" col5="" col6="">
+                                        <row id="38" col0="isTerminal" col1="GameState.cpp:29" col2="6215" col3="" col4="" col5="" col6="">
+                                            <row id="55" col0="checkWin" col1="hex.h:70" col2="6212" col3="" col4="" col5="" col6="">
+                                                <row id="50" col0="flood" col1="hex.h:110" col2="5410" col2_disp="5,410 (2 calls)" col3="" col4="" col5="" col6="">
+                                                    <row id="46" col0="notRightCol" col1="hex.h:33" col2="1584" col2_disp="1,584 (4 calls)" col3="" col4="" col5="" col6="">
+                                                        <row id="57" col0="rightCol" col1="hex.h:22" col2="412" col2_disp="  412 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                        <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                    </row>
+                                                    <row id="44" col0="notLeftCol" col1="hex.h:29" col2="1576" col2_disp="1,576 (4 calls)" col3="" col4="" col5="" col6="">
+                                                        <row id="64" col0="leftCol" col1="hex.h:15" col2="404" col2_disp="  404 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                        <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                    </row>
+                                                    <row id="43" col0="boardMask" col1="hex.h:10" col2="394" col2_disp="  394 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                                </row>
+                                                <row id="51" col0="topRow" col1="hex.h:37" col2="111" col3="" col4="" col5="" col6=""/>
+                                                <row id="63" col0="bottomRow" col1="hex.h:44" col2="101" col3="" col4="" col5="" col6=""/>
+                                                <row id="64" col0="leftCol" col1="hex.h:15" col2="101" col3="" col4="" col5="" col6=""/>
+                                                <row id="57" col0="rightCol" col1="hex.h:22" col2="103" col3="" col4="" col5="" col6=""/>
+                                            </row>
+                                        </row>
+                                        <row id="12" col0="randInt" col1="rand.h:26" col2="29" col3="" col4="" col5="" col6="">
+                                            <row id="34" col0="next" col1="rand.h:18" col2="24" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                        <row id="21" col0="makeMove" col1="GameState.cpp:12" col2="229" col3="" col4="" col5="" col6="">
+                                            <row id="41" col0="place" col1="hex.h:55" col2="113" col3="" col4="" col5="" col6=""/>
+                                            <row id="37" col0="player1" col1="hex.h:86" col2="4" col3="" col4="" col5="" col6=""/>
+                                            <row id="39" col0="player2" col1="hex.h:87" col2="4" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                        <row id="42" col0="getTerminalValue" col1="GameState.cpp:33" col2="7079" col3="" col4="" col5="" col6="">
+                                            <row id="38" col0="isTerminal" col1="GameState.cpp:29" col2="6215" col3="" col4="" col5="" col6="">
+                                                <row id="55" col0="checkWin" col1="hex.h:70" col2="6212" col3="" col4="" col5="" col6="">
+                                                    <row id="50" col0="flood" col1="hex.h:110" col2="5410" col2_disp="5,410 (2 calls)" col3="" col4="" col5="" col6="">
+                                                        <row id="46" col0="notRightCol" col1="hex.h:33" col2="1584" col2_disp="1,584 (4 calls)" col3="" col4="" col5="" col6="">
+                                                            <row id="57" col0="rightCol" col1="hex.h:22" col2="412" col2_disp="  412 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                            <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                        </row>
+                                                        <row id="44" col0="notLeftCol" col1="hex.h:29" col2="1576" col2_disp="1,576 (4 calls)" col3="" col4="" col5="" col6="">
+                                                            <row id="64" col0="leftCol" col1="hex.h:15" col2="404" col2_disp="  404 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                            <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                        </row>
+                                                        <row id="43" col0="boardMask" col1="hex.h:10" col2="394" col2_disp="  394 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                                    </row>
+                                                    <row id="51" col0="topRow" col1="hex.h:37" col2="111" col3="" col4="" col5="" col6=""/>
+                                                    <row id="63" col0="bottomRow" col1="hex.h:44" col2="101" col3="" col4="" col5="" col6=""/>
+                                                    <row id="64" col0="leftCol" col1="hex.h:15" col2="101" col3="" col4="" col5="" col6=""/>
+                                                    <row id="57" col0="rightCol" col1="hex.h:22" col2="103" col3="" col4="" col5="" col6=""/>
+                                                </row>
+                                            </row>
+                                            <row id="47" col0="isPlayer1Turn" col1="hex.h:85" col2="3" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                    <row id="42" col0="getTerminalValue" col1="GameState.cpp:33" col2="7079" col3="" col4="" col5="" col6="">
+                                        <row id="38" col0="isTerminal" col1="GameState.cpp:29" col2="6215" col3="" col4="" col5="" col6="">
+                                            <row id="55" col0="checkWin" col1="hex.h:70" col2="6212" col3="" col4="" col5="" col6="">
+                                                <row id="50" col0="flood" col1="hex.h:110" col2="5410" col2_disp="5,410 (2 calls)" col3="" col4="" col5="" col6="">
+                                                    <row id="46" col0="notRightCol" col1="hex.h:33" col2="1584" col2_disp="1,584 (4 calls)" col3="" col4="" col5="" col6="">
+                                                        <row id="57" col0="rightCol" col1="hex.h:22" col2="412" col2_disp="  412 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                        <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                    </row>
+                                                    <row id="44" col0="notLeftCol" col1="hex.h:29" col2="1576" col2_disp="1,576 (4 calls)" col3="" col4="" col5="" col6="">
+                                                        <row id="64" col0="leftCol" col1="hex.h:15" col2="404" col2_disp="  404 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                        <row id="43" col0="boardMask" col1="hex.h:10" col2="788" col2_disp="  788 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                                    </row>
+                                                    <row id="43" col0="boardMask" col1="hex.h:10" col2="394" col2_disp="  394 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                                </row>
+                                                <row id="51" col0="topRow" col1="hex.h:37" col2="111" col3="" col4="" col5="" col6=""/>
+                                                <row id="63" col0="bottomRow" col1="hex.h:44" col2="101" col3="" col4="" col5="" col6=""/>
+                                                <row id="64" col0="leftCol" col1="hex.h:15" col2="101" col3="" col4="" col5="" col6=""/>
+                                                <row id="57" col0="rightCol" col1="hex.h:22" col2="103" col3="" col4="" col5="" col6=""/>
+                                            </row>
+                                        </row>
+                                        <row id="47" col0="isPlayer1Turn" col1="hex.h:85" col2="3" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="35" col0="backup" col1="MCTSSearcher.cpp:256" col2="5965" col3="" col4="" col5="" col6="">
+                                        <row id="48" col0="mcts_log" col1="mcts_types.h:15" col2="4747" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="19" col0="forward" col1="MCTSSearcher.cpp:124" col2="" col3="7252" col3_disp="7,252 (2 calls)" col4="7270" col4_disp="7,270 (2 calls)" col5="7014" col5_disp="7,014 (2 calls)" col6="7122" col6_disp="7,122 (2 calls)">
+                                <row id="60" col0="sqrt_fixed&lt;32, 16&gt;" col1="hls_sqrt_apfixed.h:19" col2="" col3="2784" col3_disp="2,784 (2 calls)" col4="2720" col4_disp="2,720 (2 calls)" col5="2720" col5_disp="2,720 (2 calls)" col6="2722" col6_disp="2,722 (2 calls)"/>
+                                <row id="36" col0="rollout" col1="MCTSSearcher.cpp:181" col2="" col3="2688" col3_disp="2,688 (8 calls)" col4="2752" col4_disp="2,752 (8 calls)" col5="2672" col5_disp="2,672 (8 calls)" col6="2768" col6_disp="2,768 (8 calls)"/>
+                                <row id="49" col0="log&lt;32, 16&gt;" col1="hls_log_apfixed.h:473" col2="" col3="976" col3_disp=" 976 (2 calls)" col4="976" col4_disp=" 976 (2 calls)" col5="848" col5_disp=" 848 (2 calls)" col6="850" col6_disp=" 850 (2 calls)"/>
+                            </row>
+                        </row>
+                        <row id="2" col0="RNG" col1="rand.h:13" col2="10" col3="" col4="" col5="" col6=""/>
+                        <row id="12" col0="randInt" col1="rand.h:26" col2="29" col3="" col4="" col5="" col6="">
+                            <row id="34" col0="next" col1="rand.h:18" col2="24" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

@@ -1,0 +1,200 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dut'" level="0">
+<item name = "Date">Thu Apr 23 22:10:26 2026
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">mcts.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.167 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dut_Pipeline_VITIS_LOOP_17_1_fu_233">dut_Pipeline_VITIS_LOOP_17_1, 10, 10, 0.100 us, 0.100 us, 9, 9, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dut_Pipeline_VITIS_LOOP_27_3_fu_240">dut_Pipeline_VITIS_LOOP_27_3, 10, 10, 0.100 us, 0.100 us, 9, 9, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_search_fu_247">search, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 94, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">1, 6, 14840, 30047, -</column>
+<column name="Memory">127, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, 0, 589, -</column>
+<column name="Register">-, -, 49, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">44, ~0, 6, 26, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_dut_Pipeline_VITIS_LOOP_17_1_fu_233">dut_Pipeline_VITIS_LOOP_17_1, 0, 0, 229, 3312, 0</column>
+<column name="grp_dut_Pipeline_VITIS_LOOP_27_3_fu_240">dut_Pipeline_VITIS_LOOP_27_3, 0, 0, 229, 3312, 0</column>
+<column name="grp_search_fu_247">search, 1, 6, 14382, 23423, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="searcher_childActions_U">searcher_childActions_RAM_AUTO_1R1W, 3, 0, 0, 0, 5100, 6, 1, 30600</column>
+<column name="searcher_meanQ_U">searcher_meanQ_RAM_AUTO_1R1W, 8, 0, 0, 0, 5100, 20, 1, 102000</column>
+<column name="searcher_terminals_U">searcher_terminals_RAM_AUTO_1R1W, 1, 0, 0, 0, 5100, 1, 1, 5100</column>
+<column name="searcher_isREDs_U">searcher_terminals_RAM_AUTO_1R1W, 1, 0, 0, 0, 5100, 1, 1, 5100</column>
+<column name="searcher_triedMask_U">searcher_triedMask_RAM_AUTO_1R1W, 16, 0, 0, 0, 5100, 49, 1, 249900</column>
+<column name="searcher_visitCounts_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+<column name="searcher_parents_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+<column name="searcher_firstChilds_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+<column name="searcher_numChildren_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+<column name="searcher_nextSiblings_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+<column name="searcher_numLegalActions_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+<column name="searcher_logVisitCounts_U">searcher_visitCounts_RAM_AUTO_1R1W, 14, 0, 0, 0, 5100, 32, 1, 163200</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="last_move_fu_291_p2">+, 0, 0, 39, 32, 2</column>
+<column name="grp_fu_277_p2">icmp, 0, 0, 39, 32, 1</column>
+<column name="searcher_firstChilds_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_logVisitCounts_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_meanQ_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_numChildren_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_parents_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_terminals_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_triedMask_we0">or, 0, 0, 2, 1, 1</column>
+<column name="searcher_visitCounts_we0">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">65, 13, 1, 13</column>
+<column name="grp_search_fu_247_this_rng_read">14, 3, 6, 18</column>
+<column name="searcher_childActions_ce0">9, 2, 1, 2</column>
+<column name="searcher_childActions_we0">9, 2, 1, 2</column>
+<column name="searcher_firstChilds_address0">9, 2, 13, 26</column>
+<column name="searcher_firstChilds_address0_local">14, 3, 13, 39</column>
+<column name="searcher_firstChilds_ce0">9, 2, 1, 2</column>
+<column name="searcher_firstChilds_d0">9, 2, 32, 64</column>
+<column name="searcher_firstChilds_we0">9, 2, 1, 2</column>
+<column name="searcher_isREDs_ce0">9, 2, 1, 2</column>
+<column name="searcher_isREDs_we0">9, 2, 1, 2</column>
+<column name="searcher_logVisitCounts_address0">9, 2, 13, 26</column>
+<column name="searcher_logVisitCounts_address0_local">14, 3, 13, 39</column>
+<column name="searcher_logVisitCounts_ce0">9, 2, 1, 2</column>
+<column name="searcher_logVisitCounts_d0">9, 2, 32, 64</column>
+<column name="searcher_logVisitCounts_we0">9, 2, 1, 2</column>
+<column name="searcher_meanQ_address0">9, 2, 13, 26</column>
+<column name="searcher_meanQ_address0_local">14, 3, 13, 39</column>
+<column name="searcher_meanQ_ce0">9, 2, 1, 2</column>
+<column name="searcher_meanQ_d0">9, 2, 20, 40</column>
+<column name="searcher_meanQ_we0">9, 2, 1, 2</column>
+<column name="searcher_nextSiblings_ce0">9, 2, 1, 2</column>
+<column name="searcher_nextSiblings_we0">9, 2, 1, 2</column>
+<column name="searcher_numChildren_address0">9, 2, 13, 26</column>
+<column name="searcher_numChildren_address0_local">14, 3, 13, 39</column>
+<column name="searcher_numChildren_ce0">9, 2, 1, 2</column>
+<column name="searcher_numChildren_d0">9, 2, 32, 64</column>
+<column name="searcher_numChildren_we0">9, 2, 1, 2</column>
+<column name="searcher_numLegalActions_ce0">9, 2, 1, 2</column>
+<column name="searcher_numLegalActions_we0">9, 2, 1, 2</column>
+<column name="searcher_parents_address0">9, 2, 13, 26</column>
+<column name="searcher_parents_address0_local">14, 3, 13, 39</column>
+<column name="searcher_parents_ce0">9, 2, 1, 2</column>
+<column name="searcher_parents_d0">9, 2, 32, 64</column>
+<column name="searcher_parents_we0">9, 2, 1, 2</column>
+<column name="searcher_terminals_address0">9, 2, 13, 26</column>
+<column name="searcher_terminals_address0_local">14, 3, 13, 39</column>
+<column name="searcher_terminals_ce0">9, 2, 1, 2</column>
+<column name="searcher_terminals_d0">9, 2, 1, 2</column>
+<column name="searcher_terminals_we0">9, 2, 1, 2</column>
+<column name="searcher_triedMask_address0">9, 2, 13, 26</column>
+<column name="searcher_triedMask_address0_local">14, 3, 13, 39</column>
+<column name="searcher_triedMask_ce0">9, 2, 1, 2</column>
+<column name="searcher_triedMask_d0">9, 2, 49, 98</column>
+<column name="searcher_triedMask_we0">9, 2, 1, 2</column>
+<column name="searcher_visitCounts_address0">9, 2, 13, 26</column>
+<column name="searcher_visitCounts_address0_local">14, 3, 13, 39</column>
+<column name="searcher_visitCounts_ce0">9, 2, 1, 2</column>
+<column name="searcher_visitCounts_d0">9, 2, 32, 64</column>
+<column name="searcher_visitCounts_we0">9, 2, 1, 2</column>
+<column name="strm_in_blk_n">9, 2, 1, 2</column>
+<column name="strm_in_read">20, 4, 1, 4</column>
+<column name="strm_out_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">12, 0, 12, 0</column>
+<column name="grp_dut_Pipeline_VITIS_LOOP_17_1_fu_233_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dut_Pipeline_VITIS_LOOP_27_3_fu_240_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_search_fu_247_ap_start_reg">1, 0, 1, 0</column>
+<column name="is_player1_turn_reg_320">1, 0, 1, 0</column>
+<column name="is_red_reg_315">1, 0, 1, 0</column>
+<column name="last_move_reg_371">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dut, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dut, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dut, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dut, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dut, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dut, return value</column>
+<column name="strm_in_dout">in, 32, ap_fifo, strm_in, pointer</column>
+<column name="strm_in_empty_n">in, 1, ap_fifo, strm_in, pointer</column>
+<column name="strm_in_read">out, 1, ap_fifo, strm_in, pointer</column>
+<column name="strm_out_din">out, 32, ap_fifo, strm_out, pointer</column>
+<column name="strm_out_full_n">in, 1, ap_fifo, strm_out, pointer</column>
+<column name="strm_out_write">out, 1, ap_fifo, strm_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

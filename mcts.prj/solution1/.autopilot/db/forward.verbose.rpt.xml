@@ -1,0 +1,374 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'forward'" level="0">
+<item name = "Date">Thu Apr 23 22:10:25 2026
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">mcts.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.167 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_forward_Pipeline_VITIS_LOOP_140_2_fu_714">forward_Pipeline_VITIS_LOOP_140_2, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_73_1_fu_729">forward_Pipeline_VITIS_LOOP_73_1, 2, 51, 20.000 ns, 0.510 us, 1, 50, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_14_fu_735">forward_Pipeline_VITIS_LOOP_114_14, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_1_fu_744">forward_Pipeline_VITIS_LOOP_114_1, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_rollout_fu_751">rollout, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_15_fu_766">forward_Pipeline_VITIS_LOOP_114_15, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_16_fu_774">forward_Pipeline_VITIS_LOOP_114_16, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_259_1_fu_784">forward_Pipeline_VITIS_LOOP_259_1, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_127_1">?, ?, ?, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2167, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">1, 6, 12016, 19667, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 739, -</column>
+<column name="Register">-, -, 1971, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, 5, 19, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_1_fu_744">forward_Pipeline_VITIS_LOOP_114_1, 0, 0, 51, 399, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_14_fu_735">forward_Pipeline_VITIS_LOOP_114_14, 0, 0, 52, 410, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_15_fu_766">forward_Pipeline_VITIS_LOOP_114_15, 0, 0, 51, 399, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_16_fu_774">forward_Pipeline_VITIS_LOOP_114_16, 0, 0, 52, 410, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_140_2_fu_714">forward_Pipeline_VITIS_LOOP_140_2, 0, 1, 3394, 7813, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_259_1_fu_784">forward_Pipeline_VITIS_LOOP_259_1, 1, 5, 6295, 5398, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_73_1_fu_729">forward_Pipeline_VITIS_LOOP_73_1, 0, 0, 9, 109, 0</column>
+<column name="grp_rollout_fu_751">rollout, 0, 0, 2112, 4729, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln101_fu_1008_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln119_fu_1043_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln171_1_fu_1392_p2">+, 0, 0, 20, 20, 20</column>
+<column name="add_ln171_2_fu_1396_p2">+, 0, 0, 27, 20, 20</column>
+<column name="add_ln171_fu_1402_p2">+, 0, 0, 20, 20, 20</column>
+<column name="numLegalActionsHere_fu_1030_p2">+, 0, 0, 39, 32, 2</column>
+<column name="and_ln77_2_fu_1445_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln77_fu_1332_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln80_3_fu_1630_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln80_fu_1297_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state23_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="connected_8_fu_1378_p2">and, 0, 0, 49, 49, 49</column>
+<column name="connected_fu_1371_p2">and, 0, 0, 49, 49, 49</column>
+<column name="fill_5_fu_1111_p2">and, 0, 0, 49, 49, 49</column>
+<column name="fill_6_fu_1104_p2">and, 0, 0, 49, 49, 49</column>
+<column name="untried_fu_982_p2">and, 0, 0, 49, 49, 49</column>
+<column name="icmp_ln127_fu_880_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln54_fu_886_p2">icmp, 0, 0, 39, 32, 13</column>
+<column name="icmp_ln71_fu_988_p2">icmp, 0, 0, 56, 49, 1</column>
+<column name="icmp_ln77_4_fu_1326_p2">icmp, 0, 0, 14, 7, 1</column>
+<column name="icmp_ln77_5_fu_1423_p2">icmp, 0, 0, 14, 7, 1</column>
+<column name="icmp_ln77_6_fu_1439_p2">icmp, 0, 0, 14, 7, 1</column>
+<column name="icmp_ln77_fu_1310_p2">icmp, 0, 0, 14, 7, 1</column>
+<column name="icmp_ln80_4_fu_1291_p2">icmp, 0, 0, 56, 49, 1</column>
+<column name="icmp_ln80_5_fu_1546_p2">icmp, 0, 0, 50, 43, 1</column>
+<column name="icmp_ln80_6_fu_1624_p2">icmp, 0, 0, 56, 49, 1</column>
+<column name="icmp_ln80_fu_1213_p2">icmp, 0, 0, 50, 43, 1</column>
+<column name="gameState_hexGame_player1_5_fu_1084_p2">or, 0, 0, 49, 49, 49</column>
+<column name="gameState_hexGame_player1_s_76_fu_926_p2">or, 0, 0, 49, 49, 49</column>
+<column name="gameState_hexGame_player2_5_fu_1098_p2">or, 0, 0, 49, 49, 49</column>
+<column name="gameState_hexGame_player2_s_77_fu_939_p2">or, 0, 0, 49, 49, 49</column>
+<column name="or_ln102_fu_1024_p2">or, 0, 0, 49, 49, 49</column>
+<column name="or_ln14_1_fu_1338_p2">or, 0, 0, 49, 49, 49</column>
+<column name="or_ln14_fu_944_p2">or, 0, 0, 49, 49, 49</column>
+<column name="this_meanQ_we0">or, 0, 0, 2, 1, 1</column>
+<column name="this_visitCounts_we0">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln178_fu_1409_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln35_fu_1636_p3">select, 0, 0, 16, 1, 1</column>
+<column name="select_ln58_2_fu_931_p3">select, 0, 0, 46, 1, 1</column>
+<column name="select_ln58_3_fu_1076_p3">select, 0, 0, 46, 1, 49</column>
+<column name="select_ln58_4_fu_1090_p3">select, 0, 0, 46, 1, 1</column>
+<column name="select_ln58_fu_918_p3">select, 0, 0, 46, 1, 49</column>
+<column name="bit_2_fu_1070_p2">shl, 0, 0, 149, 1, 49</column>
+<column name="bit_fu_912_p2">shl, 0, 0, 149, 1, 49</column>
+<column name="seed_1_fu_1365_p2">shl, 0, 0, 149, 1, 49</column>
+<column name="shl_ln102_fu_1018_p2">shl, 0, 0, 149, 1, 49</column>
+<column name="gameState_legalActionMap_5_fu_1342_p2">xor, 0, 0, 49, 49, 2</column>
+<column name="gameState_legalActionMap_79_fu_950_p2">xor, 0, 0, 49, 49, 2</column>
+<column name="grp_fu_814_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln118_fu_1036_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln70_fu_976_p2">xor, 0, 0, 49, 49, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">145, 29, 1, 29</column>
+<column name="ap_phi_mux_child_phi_fu_552_p8">9, 2, 32, 64</column>
+<column name="ap_phi_mux_this_nextFree_02_phi_fu_534_p8">9, 2, 32, 64</column>
+<column name="ap_phi_mux_write_flag_0_phi_fu_515_p8">9, 2, 1, 2</column>
+<column name="ap_return_0">9, 2, 32, 64</column>
+<column name="ap_return_1">9, 2, 64, 128</column>
+<column name="boardState_hexGame_lastMove_s_fu_164">9, 2, 32, 64</column>
+<column name="boardState_hexGame_player1_s_fu_160">9, 2, 49, 98</column>
+<column name="boardState_hexGame_player2_s_fu_156">9, 2, 49, 98</column>
+<column name="boardState_legalActionMap_fu_152">9, 2, 49, 98</column>
+<column name="child_reg_548">9, 2, 32, 64</column>
+<column name="gameState_hexGame_isPlayer1Turn_3_reg_602">9, 2, 1, 2</column>
+<column name="gameState_hexGame_isPlayer1Turn_5_reg_501">9, 2, 1, 2</column>
+<column name="gameState_hexGame_lastMove_3_reg_566">9, 2, 32, 64</column>
+<column name="gameState_hexGame_player1_6_reg_578">9, 2, 49, 98</column>
+<column name="gameState_hexGame_player2_6_reg_590">9, 2, 49, 98</column>
+<column name="gameState_legalActionMap_3_reg_616">9, 2, 49, 98</column>
+<column name="grp_rollout_fu_751_this_rng_read">14, 3, 64, 192</column>
+<column name="node_4_reg_628">9, 2, 32, 64</column>
+<column name="parent_fu_148">9, 2, 32, 64</column>
+<column name="reward_1_reg_673">14, 3, 20, 60</column>
+<column name="this_childActions_address0_local">20, 4, 13, 52</column>
+<column name="this_firstChilds_address0_local">20, 4, 13, 52</column>
+<column name="this_firstChilds_d0_local">14, 3, 32, 96</column>
+<column name="this_isREDs_address0">9, 2, 13, 26</column>
+<column name="this_isREDs_address0_local">14, 3, 13, 39</column>
+<column name="this_isREDs_ce0">9, 2, 1, 2</column>
+<column name="this_logVisitCounts_address0">9, 2, 13, 26</column>
+<column name="this_logVisitCounts_ce0">9, 2, 1, 2</column>
+<column name="this_logVisitCounts_we0">9, 2, 1, 2</column>
+<column name="this_meanQ_address0">14, 3, 13, 39</column>
+<column name="this_meanQ_ce0">14, 3, 1, 3</column>
+<column name="this_meanQ_d0">9, 2, 20, 40</column>
+<column name="this_meanQ_we0">9, 2, 1, 2</column>
+<column name="this_nextFree_1_reg_657">9, 2, 32, 64</column>
+<column name="this_nextSiblings_address0">9, 2, 13, 26</column>
+<column name="this_nextSiblings_ce0">9, 2, 1, 2</column>
+<column name="this_numChildren_address0_local">20, 4, 13, 52</column>
+<column name="this_numChildren_d0_local">14, 3, 32, 96</column>
+<column name="this_numLegalActions_address0_local">14, 3, 13, 39</column>
+<column name="this_parents_address0">9, 2, 13, 26</column>
+<column name="this_parents_ce0">9, 2, 1, 2</column>
+<column name="this_rng_0_reg_703">9, 2, 64, 128</column>
+<column name="this_terminals_address0_local">26, 5, 13, 65</column>
+<column name="this_terminals_d0_local">14, 3, 1, 3</column>
+<column name="this_triedMask_address0_local">20, 4, 13, 52</column>
+<column name="this_triedMask_d0_local">14, 3, 49, 147</column>
+<column name="this_visitCounts_address0">14, 3, 13, 39</column>
+<column name="this_visitCounts_ce0">14, 3, 1, 3</column>
+<column name="this_visitCounts_d0">9, 2, 32, 64</column>
+<column name="this_visitCounts_we0">9, 2, 1, 2</column>
+<column name="visitCount_reg_687">9, 2, 2, 4</column>
+<column name="write_flag_1_reg_641">14, 3, 1, 3</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="action_loc_fu_200">6, 0, 6, 0</column>
+<column name="ap_CS_fsm">28, 0, 28, 0</column>
+<column name="ap_return_0_preg">32, 0, 32, 0</column>
+<column name="ap_return_1_preg">64, 0, 64, 0</column>
+<column name="bestChildNode_reg_1872">32, 0, 32, 0</column>
+<column name="boardState_hexGame_lastMove_s_fu_164">32, 0, 32, 0</column>
+<column name="boardState_hexGame_player1_s_fu_160">49, 0, 49, 0</column>
+<column name="boardState_hexGame_player2_s_fu_156">49, 0, 49, 0</column>
+<column name="boardState_legalActionMap_fu_152">49, 0, 49, 0</column>
+<column name="call_ret_reg_2015_0">20, 0, 20, 0</column>
+<column name="child_reg_548">32, 0, 32, 0</column>
+<column name="connected_8_reg_2000">49, 0, 49, 0</column>
+<column name="connected_reg_1995">49, 0, 49, 0</column>
+<column name="fill_5_reg_1966">49, 0, 49, 0</column>
+<column name="fill_6_reg_1961">49, 0, 49, 0</column>
+<column name="gameState_hexGame_isPlayer1Turn_3_reg_602">1, 0, 1, 0</column>
+<column name="gameState_hexGame_isPlayer1Turn_4_reg_1942">1, 0, 1, 0</column>
+<column name="gameState_hexGame_isPlayer1Turn_5_reg_501">1, 0, 1, 0</column>
+<column name="gameState_hexGame_isPlayer1Turn_s_78_reg_1867">1, 0, 1, 0</column>
+<column name="gameState_hexGame_lastMove_3_reg_566">32, 0, 32, 0</column>
+<column name="gameState_hexGame_lastMove_4_reg_1820">32, 0, 32, 0</column>
+<column name="gameState_hexGame_player1_4_reg_1813">49, 0, 49, 0</column>
+<column name="gameState_hexGame_player1_5_reg_1947">49, 0, 49, 0</column>
+<column name="gameState_hexGame_player1_6_reg_578">49, 0, 49, 0</column>
+<column name="gameState_hexGame_player2_4_reg_1806">49, 0, 49, 0</column>
+<column name="gameState_hexGame_player2_5_reg_1954">49, 0, 49, 0</column>
+<column name="gameState_hexGame_player2_6_reg_590">49, 0, 49, 0</column>
+<column name="gameState_legalActionMap_3_reg_616">49, 0, 49, 0</column>
+<column name="gameState_legalActionMap_4_reg_1799">49, 0, 49, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_14_fu_735_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_15_fu_766_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_16_fu_774_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_114_1_fu_744_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_140_2_fu_714_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_259_1_fu_784_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_forward_Pipeline_VITIS_LOOP_73_1_fu_729_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_rollout_fu_751_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln127_reg_1836">1, 0, 1, 0</column>
+<column name="icmp_ln54_reg_1845">1, 0, 1, 0</column>
+<column name="icmp_ln71_reg_1897">1, 0, 1, 0</column>
+<column name="logVisitCount_reg_1877">32, 0, 32, 0</column>
+<column name="node_4_reg_628">32, 0, 32, 0</column>
+<column name="node_5_reg_1772">32, 0, 32, 0</column>
+<column name="p_loc43_fu_184">1, 0, 1, 0</column>
+<column name="p_loc47_fu_172">1, 0, 1, 0</column>
+<column name="p_loc48_fu_168">1, 0, 1, 0</column>
+<column name="p_loc_fu_188">1, 0, 1, 0</column>
+<column name="parent_fu_148">32, 0, 32, 0</column>
+<column name="prev_10_loc_fu_176">43, 0, 43, 0</column>
+<column name="prev_8_loc_fu_192">43, 0, 43, 0</column>
+<column name="prev_9_loc_fu_180">49, 0, 49, 0</column>
+<column name="prev_loc_fu_196">49, 0, 49, 0</column>
+<column name="ref_tmp57_assign_5_reg_2010">20, 0, 20, 0</column>
+<column name="reg_829">64, 0, 64, 0</column>
+<column name="reward_1_reg_673">20, 0, 20, 0</column>
+<column name="reward_reg_2005">20, 0, 20, 0</column>
+<column name="select_ln178_reg_2025">32, 0, 32, 0</column>
+<column name="targetBlock_reg_1901">1, 0, 1, 0</column>
+<column name="this_firstChilds_addr_2_reg_1913">13, 0, 13, 0</column>
+<column name="this_nextFree_02_reg_530">32, 0, 32, 0</column>
+<column name="this_nextFree_1_reg_657">32, 0, 32, 0</column>
+<column name="this_numChildren_addr_reg_1794">13, 0, 13, 0</column>
+<column name="this_numChildren_load_reg_1831">32, 0, 32, 0</column>
+<column name="this_numLegalActions_load_reg_1826">32, 0, 32, 0</column>
+<column name="this_rng_0_reg_703">64, 0, 64, 0</column>
+<column name="this_terminals_load_1_reg_1987">1, 0, 1, 0</column>
+<column name="this_triedMask_addr_reg_1849">13, 0, 13, 0</column>
+<column name="this_triedMask_load_reg_1887">49, 0, 49, 0</column>
+<column name="tmp_239_reg_1991">1, 0, 1, 0</column>
+<column name="tmp_reg_1923">1, 0, 1, 0</column>
+<column name="untried_reg_1892">49, 0, 49, 0</column>
+<column name="visitCount_reg_687">2, 0, 3, 1</column>
+<column name="write_flag_0_reg_511">1, 0, 1, 0</column>
+<column name="write_flag_1_reg_641">1, 0, 1, 0</column>
+<column name="zext_ln127_reg_1779">32, 0, 64, 32</column>
+<column name="zext_ln12_reg_1937">6, 0, 32, 26</column>
+<column name="zext_ln161_reg_1927">32, 0, 64, 32</column>
+<column name="zext_ln96_reg_1905">32, 0, 64, 32</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, forward, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, forward, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, forward, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, forward, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, forward, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, forward, return value</column>
+<column name="ap_return_0">out, 32, ap_ctrl_hs, forward, return value</column>
+<column name="ap_return_1">out, 64, ap_ctrl_hs, forward, return value</column>
+<column name="this_visitCounts_address0">out, 13, ap_memory, this_visitCounts, array</column>
+<column name="this_visitCounts_ce0">out, 1, ap_memory, this_visitCounts, array</column>
+<column name="this_visitCounts_we0">out, 1, ap_memory, this_visitCounts, array</column>
+<column name="this_visitCounts_d0">out, 32, ap_memory, this_visitCounts, array</column>
+<column name="this_visitCounts_q0">in, 32, ap_memory, this_visitCounts, array</column>
+<column name="this_meanQ_address0">out, 13, ap_memory, this_meanQ, array</column>
+<column name="this_meanQ_ce0">out, 1, ap_memory, this_meanQ, array</column>
+<column name="this_meanQ_we0">out, 1, ap_memory, this_meanQ, array</column>
+<column name="this_meanQ_d0">out, 20, ap_memory, this_meanQ, array</column>
+<column name="this_meanQ_q0">in, 20, ap_memory, this_meanQ, array</column>
+<column name="this_parents_address0">out, 13, ap_memory, this_parents, array</column>
+<column name="this_parents_ce0">out, 1, ap_memory, this_parents, array</column>
+<column name="this_parents_we0">out, 1, ap_memory, this_parents, array</column>
+<column name="this_parents_d0">out, 32, ap_memory, this_parents, array</column>
+<column name="this_parents_q0">in, 32, ap_memory, this_parents, array</column>
+<column name="this_firstChilds_address0">out, 13, ap_memory, this_firstChilds, array</column>
+<column name="this_firstChilds_ce0">out, 1, ap_memory, this_firstChilds, array</column>
+<column name="this_firstChilds_we0">out, 1, ap_memory, this_firstChilds, array</column>
+<column name="this_firstChilds_d0">out, 32, ap_memory, this_firstChilds, array</column>
+<column name="this_firstChilds_q0">in, 32, ap_memory, this_firstChilds, array</column>
+<column name="this_numChildren_address0">out, 13, ap_memory, this_numChildren, array</column>
+<column name="this_numChildren_ce0">out, 1, ap_memory, this_numChildren, array</column>
+<column name="this_numChildren_we0">out, 1, ap_memory, this_numChildren, array</column>
+<column name="this_numChildren_d0">out, 32, ap_memory, this_numChildren, array</column>
+<column name="this_numChildren_q0">in, 32, ap_memory, this_numChildren, array</column>
+<column name="this_nextSiblings_address0">out, 13, ap_memory, this_nextSiblings, array</column>
+<column name="this_nextSiblings_ce0">out, 1, ap_memory, this_nextSiblings, array</column>
+<column name="this_nextSiblings_we0">out, 1, ap_memory, this_nextSiblings, array</column>
+<column name="this_nextSiblings_d0">out, 32, ap_memory, this_nextSiblings, array</column>
+<column name="this_nextSiblings_q0">in, 32, ap_memory, this_nextSiblings, array</column>
+<column name="this_numLegalActions_address0">out, 13, ap_memory, this_numLegalActions, array</column>
+<column name="this_numLegalActions_ce0">out, 1, ap_memory, this_numLegalActions, array</column>
+<column name="this_numLegalActions_we0">out, 1, ap_memory, this_numLegalActions, array</column>
+<column name="this_numLegalActions_d0">out, 32, ap_memory, this_numLegalActions, array</column>
+<column name="this_numLegalActions_q0">in, 32, ap_memory, this_numLegalActions, array</column>
+<column name="this_terminals_address0">out, 13, ap_memory, this_terminals, array</column>
+<column name="this_terminals_ce0">out, 1, ap_memory, this_terminals, array</column>
+<column name="this_terminals_we0">out, 1, ap_memory, this_terminals, array</column>
+<column name="this_terminals_d0">out, 1, ap_memory, this_terminals, array</column>
+<column name="this_terminals_q0">in, 1, ap_memory, this_terminals, array</column>
+<column name="this_childActions_address0">out, 13, ap_memory, this_childActions, array</column>
+<column name="this_childActions_ce0">out, 1, ap_memory, this_childActions, array</column>
+<column name="this_childActions_we0">out, 1, ap_memory, this_childActions, array</column>
+<column name="this_childActions_d0">out, 6, ap_memory, this_childActions, array</column>
+<column name="this_childActions_q0">in, 6, ap_memory, this_childActions, array</column>
+<column name="this_triedMask_address0">out, 13, ap_memory, this_triedMask, array</column>
+<column name="this_triedMask_ce0">out, 1, ap_memory, this_triedMask, array</column>
+<column name="this_triedMask_we0">out, 1, ap_memory, this_triedMask, array</column>
+<column name="this_triedMask_d0">out, 49, ap_memory, this_triedMask, array</column>
+<column name="this_triedMask_q0">in, 49, ap_memory, this_triedMask, array</column>
+<column name="this_isREDs_address0">out, 13, ap_memory, this_isREDs, array</column>
+<column name="this_isREDs_ce0">out, 1, ap_memory, this_isREDs, array</column>
+<column name="this_isREDs_we0">out, 1, ap_memory, this_isREDs, array</column>
+<column name="this_isREDs_d0">out, 1, ap_memory, this_isREDs, array</column>
+<column name="this_isREDs_q0">in, 1, ap_memory, this_isREDs, array</column>
+<column name="this_logVisitCounts_address0">out, 13, ap_memory, this_logVisitCounts, array</column>
+<column name="this_logVisitCounts_ce0">out, 1, ap_memory, this_logVisitCounts, array</column>
+<column name="this_logVisitCounts_we0">out, 1, ap_memory, this_logVisitCounts, array</column>
+<column name="this_logVisitCounts_d0">out, 32, ap_memory, this_logVisitCounts, array</column>
+<column name="this_logVisitCounts_q0">in, 32, ap_memory, this_logVisitCounts, array</column>
+<column name="this_nextFree_read">in, 32, ap_none, this_nextFree_read, scalar</column>
+<column name="this_rng_read">in, 64, ap_none, this_rng_read, scalar</column>
+<column name="gameState_legalActionMap">in, 49, ap_none, gameState_legalActionMap, scalar</column>
+<column name="gameState_hexGame_isPlayer1Turn_s">in, 1, ap_none, gameState_hexGame_isPlayer1Turn_s, scalar</column>
+<column name="gameState_hexGame_lastMove_s">in, 32, ap_none, gameState_hexGame_lastMove_s, scalar</column>
+<column name="gameState_hexGame_player1_s">in, 49, ap_none, gameState_hexGame_player1_s, scalar</column>
+<column name="gameState_hexGame_player2_s">in, 49, ap_none, gameState_hexGame_player2_s, scalar</column>
+</table>
+</item>
+</section>
+</profile>

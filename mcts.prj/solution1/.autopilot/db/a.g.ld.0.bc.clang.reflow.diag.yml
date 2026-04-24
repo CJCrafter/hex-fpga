@@ -1,0 +1,3112 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.40978
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 47, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.16.40979
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 70, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.17.40980
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 93, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.18.40981
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 116, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.19
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 139, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.20
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 162, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.21
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 185, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.22
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 210, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.86
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 282, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.87
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 354, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.88
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 426, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.89
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 498, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.90
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 570, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.91
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 644, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.155
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 716, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.156
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 788, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.157
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 860, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.158
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 932, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.159
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1006, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.223
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1078, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.224
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1150, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.225
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1221, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.226
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1295, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.290
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1367, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.291
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1439, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.292
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1513, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.356
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.357
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1659, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.421
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1774, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.443
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 1846, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.604
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/src/shared/hls/clib/hlsmath/src/common/hls_log_apfixed.cpp, 
+                       Line: 2377, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_log_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.1/hls_product/continuous/640/2025.1/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_log_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 57 }
+Function:        _ZN12MCTSSearcherILi5000EEC2Em
+Args:            
+  - Callee:          'RNG::RNG(unsigned long)'
+    DebugLoc:        { File: ./rand.h, Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::MCTSSearcher(unsigned long)'
+    DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./GameState.h, Line: 23, Column: 42 }
+Function:        _ZN9GameStateC2E3HexILj7EE
+Args:            
+  - Callee:          'Hex<7u>::player1() const'
+    DebugLoc:        { File: ./hex.h, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./GameState.h, Line: 23, Column: 68 }
+Function:        _ZN9GameStateC2E3HexILj7EE
+Args:            
+  - Callee:          'Hex<7u>::player2() const'
+    DebugLoc:        { File: ./hex.h, Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 9, Column: 12 }
+Function:        _ZN9GameState5cloneEv
+Args:            
+  - Callee:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::clone()'
+    DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                   Line: 1268, Column: 12 }
+Function:        _ZN3hls4sqrtILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> sqrt_fixed<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                       Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                       Line: 1267, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 13, Column: 13 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - Callee:          'Hex<7u>::place(int)'
+    DebugLoc:        { File: ./hex.h, Line: 55, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 14, Column: 38 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - Callee:          'Hex<7u>::player1() const'
+    DebugLoc:        { File: ./hex.h, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 14, Column: 64 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - Callee:          'Hex<7u>::player2() const'
+    DebugLoc:        { File: ./hex.h, Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 58, Column: 18 }
+Function:        _ZN12MCTSSearcherILi5000EE6expandEi9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::pickUntriedAction(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 69, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 64, Column: 5 }
+Function:        _ZN12MCTSSearcherILi5000EE6expandEi9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::createNode(int, int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 88, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 34, Column: 17 }
+Function:        _ZN3HexILj7EE11notRightColEv
+Args:            
+  - Callee:          'Hex<7u>::rightCol()'
+    DebugLoc:        { File: ./hex.h, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::notRightCol()'
+    DebugLoc:        { File: ./hex.h, Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 34, Column: 30 }
+Function:        _ZN3HexILj7EE11notRightColEv
+Args:            
+  - Callee:          'Hex<7u>::boardMask()'
+    DebugLoc:        { File: ./hex.h, Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::notRightCol()'
+    DebugLoc:        { File: ./hex.h, Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 30, Column: 17 }
+Function:        _ZN3HexILj7EE10notLeftColEv
+Args:            
+  - Callee:          'Hex<7u>::leftCol()'
+    DebugLoc:        { File: ./hex.h, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::notLeftCol()'
+    DebugLoc:        { File: ./hex.h, Line: 29, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 30, Column: 29 }
+Function:        _ZN3HexILj7EE10notLeftColEv
+Args:            
+  - Callee:          'Hex<7u>::boardMask()'
+    DebugLoc:        { File: ./hex.h, Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::notLeftCol()'
+    DebugLoc:        { File: ./hex.h, Line: 29, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 124, Column: 21 }
+Function:        _ZN3HexILj7EE5floodE7ap_uintILi49EES2_
+Args:            
+  - Callee:          'Hex<7u>::boardMask()'
+    DebugLoc:        { File: ./hex.h, Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::flood(ap_uint<49>, ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 110, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 117, Column: 30 }
+Function:        _ZN3HexILj7EE5floodE7ap_uintILi49EES2_
+Args:            
+  - Callee:          'Hex<7u>::notRightCol()'
+    DebugLoc:        { File: ./hex.h, Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::flood(ap_uint<49>, ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 110, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 121, Column: 32 }
+Function:        _ZN3HexILj7EE5floodE7ap_uintILi49EES2_
+Args:            
+  - Callee:          'Hex<7u>::notLeftCol()'
+    DebugLoc:        { File: ./hex.h, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::flood(ap_uint<49>, ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 110, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 80, Column: 94 }
+Function:        _ZNK3HexILj7EE8checkWinEv
+Args:            
+  - Callee:          'Hex<7u>::rightCol()'
+    DebugLoc:        { File: ./hex.h, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::checkWin() const'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 80, Column: 50 }
+Function:        _ZNK3HexILj7EE8checkWinEv
+Args:            
+  - Callee:          'Hex<7u>::leftCol()'
+    DebugLoc:        { File: ./hex.h, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::checkWin() const'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 76, Column: 36 }
+Function:        _ZNK3HexILj7EE8checkWinEv
+Args:            
+  - Callee:          'Hex<7u>::flood(ap_uint<49>, ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 110, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::checkWin() const'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 77, Column: 50 }
+Function:        _ZNK3HexILj7EE8checkWinEv
+Args:            
+  - Callee:          'Hex<7u>::topRow()'
+    DebugLoc:        { File: ./hex.h, Line: 37, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::checkWin() const'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 77, Column: 93 }
+Function:        _ZNK3HexILj7EE8checkWinEv
+Args:            
+  - Callee:          'Hex<7u>::bottomRow()'
+    DebugLoc:        { File: ./hex.h, Line: 44, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::checkWin() const'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 30, Column: 20 }
+Function:        _ZN9GameState10isTerminalEv
+Args:            
+  - Callee:          'Hex<7u>::checkWin() const'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::isTerminal()'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./rand.h, Line: 27, Column: 33 }
+Function:        _ZN3RNG7randIntEi
+Args:            
+  - Callee:          'RNG::next()'
+    DebugLoc:        { File: ./rand.h, Line: 18, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 34, Column: 9 }
+Function:        _ZN9GameState16getTerminalValueEb
+Args:            
+  - Callee:          'GameState::isTerminal()'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::getTerminalValue(bool)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 35, Column: 22 }
+Function:        _ZN9GameState16getTerminalValueEb
+Args:            
+  - Callee:          'Hex<7u>::isPlayer1Turn() const'
+    DebugLoc:        { File: ./hex.h, Line: 85, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::getTerminalValue(bool)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 251, Column: 22 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'GameState::getTerminalValue(bool)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 246, Column: 19 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 200, Column: 41 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'GameState::isTerminal()'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 225, Column: 31 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 227, Column: 9 }
+Function:        _ZN18log_apfixed_reduce10log_traitsILi2EE15range_reductionILi24EEE9ap_ufixedILi15ELin7EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi29ELi7ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void log_apfixed_reduce::range_reduce<ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 24, 15>(ap_ufixed<24, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<15, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 145, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 223, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 746, Column: 18 }
+Function:        _ZN18log_apfixed_reduce3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 474, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                   Line: 1196, Column: 12 }
+Function:        _ZN3hls3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 474, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> hls::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                       Line: 1195, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 272, Column: 32 }
+Function:        _ZN12MCTSSearcherILi5000EE6backupE8ap_fixedILi20ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEii
+Args:            
+  - Callee:          'mcts_log(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./mcts_types.h, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::backup(ap_fixed<20, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 177, Column: 5 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::backup(ap_fixed<20, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 175, Column: 28 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'GameState::getTerminalValue(bool)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 171, Column: 12 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 163, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'GameState::isTerminal()'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 161, Column: 23 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 144, Column: 38 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'mcts_sqrt(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./mcts_types.h, Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 159, Column: 21 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 42, Column: 15 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 43, Column: 36 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'GameState::getNumLegalActions()'
+    DebugLoc:        { File: ./GameState.h, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 47, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'GameState::clone()'
+    DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 47, Column: 9 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 17, Column: 5 }
+Function:        _ZN12MCTSSearcherILi5000EE6searchE3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 284, Column: 26 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::MCTSSearcher(unsigned long)'
+    DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 285, Column: 31 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 288, Column: 9 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'RNG::RNG(unsigned long)'
+    DebugLoc:        { File: ./rand.h, Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 289, Column: 24 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 49, Column: 18 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 46, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setLastMove(int)'
+    DebugLoc:        { File: ./hex.h, Line: 98, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 45, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setPlayer1Turn(bool)'
+    DebugLoc:        { File: ./hex.h, Line: 102, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 44, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setPlayer2(ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 43, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setPlayer1(ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 90, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 42, Column: 19 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::Hex()'
+    DebugLoc:        { File: ./hex.h, Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 703, Column: 31 }
+Function:        _ZN18log_apfixed_reduce3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_703_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                   Line: 271, Column: 27 }
+Function:        _Z10sqrt_fixedILi32ELi16EE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_271_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                   Line: 243, Column: 27 }
+Function:        _Z10sqrt_fixedILi32ELi16EE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_243_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_282_1
+  - String:          ''' ('
+  - LoopLoc:         'MCTSSearcher.cpp:282:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          search
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_169_3
+  - String:          ''' ('
+  - LoopLoc:         'MCTSSearcher.cpp:169:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'MCTSSearcher<5000>::forward'
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 474, Column: 0 }
+Function:        _ZN18log_apfixed_reduce3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_703_1
+  - String:          ''' ('
+  - LoopLoc:         '/scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h:703:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'log_apfixed_reduce::log<32, 16>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_189_1
+  - String:          ''' ('
+  - LoopLoc:         'MCTSSearcher.cpp:189:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'MCTSSearcher<5000>::rollout'
+  - String:          ''' completely with a factor of '
+  - Factor:          '49'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                   Line: 20, Column: 0 }
+Function:        _Z10sqrt_fixedILi32ELi16EE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_271_2
+  - String:          ''' ('
+  - LoopLoc:         '/scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'sqrt_fixed<32, 16>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '17'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                   Line: 20, Column: 0 }
+Function:        _Z10sqrt_fixedILi32ELi16EE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_243_1
+  - String:          ''' ('
+  - LoopLoc:         '/scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'sqrt_fixed<32, 16>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 57 }
+Function:        _ZN12MCTSSearcherILi5000EEC2Em
+Args:            
+  - Callee:          'RNG::RNG(unsigned long)'
+    DebugLoc:        { File: ./rand.h, Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::MCTSSearcher(unsigned long)'
+    DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./GameState.h, Line: 23, Column: 42 }
+Function:        _ZN9GameStateC2E3HexILj7EE
+Args:            
+  - Callee:          'Hex<7u>::player1() const (.117.148.167)'
+    DebugLoc:        { File: ./hex.h, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./GameState.h, Line: 23, Column: 68 }
+Function:        _ZN9GameStateC2E3HexILj7EE
+Args:            
+  - Callee:          'Hex<7u>::player2() const (.114.145.164)'
+    DebugLoc:        { File: ./hex.h, Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 9, Column: 12 }
+Function:        _ZN9GameState5cloneEv
+Args:            
+  - Callee:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::clone()'
+    DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                   Line: 1268, Column: 12 }
+Function:        _ZN3hls4sqrtILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> sqrt_fixed<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                       Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                       Line: 1267, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 13, Column: 13 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - Callee:          'Hex<7u>::place(int) (.120.151.170)'
+    DebugLoc:        { File: ./hex.h, Line: 55, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 14, Column: 38 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - Callee:          'Hex<7u>::player1() const (.117.148.167)'
+    DebugLoc:        { File: ./hex.h, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 14, Column: 64 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - Callee:          'Hex<7u>::player2() const (.114.145.164)'
+    DebugLoc:        { File: ./hex.h, Line: 87, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 58, Column: 18 }
+Function:        _ZN12MCTSSearcherILi5000EE6expandEi9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::pickUntriedAction(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 69, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 64, Column: 5 }
+Function:        _ZN12MCTSSearcherILi5000EE6expandEi9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::createNode(int, int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 88, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./hex.h, Line: 76, Column: 36 }
+Function:        _ZNK3HexILj7EE8checkWinEv.108.139.158
+Args:            
+  - Callee:          'Hex<7u>::flood(ap_uint<49>, ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 110, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Hex<7u>::checkWin() const (.108.139.158)'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 30, Column: 20 }
+Function:        _ZN9GameState10isTerminalEv.98.105.136.155.183
+Args:            
+  - Callee:          'Hex<7u>::checkWin() const (.108.139.158)'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ./rand.h, Line: 27, Column: 33 }
+Function:        _ZN3RNG7randIntEi
+Args:            
+  - Callee:          'RNG::next()'
+    DebugLoc:        { File: ./rand.h, Line: 18, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 34, Column: 9 }
+Function:        _ZN9GameState16getTerminalValueEb.93
+Args:            
+  - Callee:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: GameState.cpp, Line: 35, Column: 22 }
+Function:        _ZN9GameState16getTerminalValueEb.93
+Args:            
+  - Callee:          'Hex<7u>::isPlayer1Turn() const (.126.133.176)'
+    DebugLoc:        { File: ./hex.h, Line: 85, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 200, Column: 41 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 225, Column: 31 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 246, Column: 19 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 251, Column: 22 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - Callee:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 227, Column: 9 }
+Function:        _ZN18log_apfixed_reduce10log_traitsILi2EE15range_reductionILi24EEE9ap_ufixedILi15ELin7EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi29ELi7ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void log_apfixed_reduce::range_reduce<ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 24, 15>(ap_ufixed<24, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<15, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 145, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 223, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 746, Column: 18 }
+Function:        _ZN18log_apfixed_reduce3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 474, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                   Line: 1196, Column: 12 }
+Function:        _ZN3hls3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 474, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> hls::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                       Line: 1195, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 272, Column: 32 }
+Function:        _ZN12MCTSSearcherILi5000EE6backupE8ap_fixedILi20ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEii
+Args:            
+  - Callee:          'mcts_log(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./mcts_types.h, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::backup(ap_fixed<20, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 144, Column: 38 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'mcts_sqrt(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./mcts_types.h, Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 153, Column: 19 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 159, Column: 21 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 163, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 171, Column: 12 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 175, Column: 28 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 177, Column: 5 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::backup(ap_fixed<20, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 42, Column: 15 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 43, Column: 36 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'GameState::getNumLegalActions()'
+    DebugLoc:        { File: ./GameState.h, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 47, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'GameState::clone()'
+    DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 47, Column: 9 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - Callee:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 17, Column: 5 }
+Function:        _ZN12MCTSSearcherILi5000EE6searchE3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 284, Column: 26 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::MCTSSearcher(unsigned long)'
+    DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 285, Column: 31 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 42, Column: 19 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::Hex()'
+    DebugLoc:        { File: ./hex.h, Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 43, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setPlayer1(ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 90, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 44, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setPlayer2(ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 94, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 45, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setPlayer1Turn(bool)'
+    DebugLoc:        { File: ./hex.h, Line: 102, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 46, Column: 11 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'Hex<7u>::setLastMove(int)'
+    DebugLoc:        { File: ./hex.h, Line: 98, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 49, Column: 18 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_dut_ir
+Args:            
+  - Callee:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_dut_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EEC2Em
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'RNG::RNG(unsigned long)'
+    DebugLoc:        { File: ./rand.h, Line: 13, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::MCTSSearcher(unsigned long)'
+    DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+Function:        _ZN9GameStateC2E3HexILj7EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::player1() const (.117.148.167)'
+    DebugLoc:        { File: ./hex.h, Line: 86, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+Function:        _ZN9GameStateC2E3HexILj7EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::player2() const (.114.145.164)'
+    DebugLoc:        { File: ./hex.h, Line: 87, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+Function:        _ZN9GameState5cloneEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::clone()'
+    DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::place(int) (.120.151.170)'
+    DebugLoc:        { File: ./hex.h, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::player1() const (.117.148.167)'
+    DebugLoc:        { File: ./hex.h, Line: 86, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+Function:        _ZN9GameState8makeMoveEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::player2() const (.114.145.164)'
+    DebugLoc:        { File: ./hex.h, Line: 87, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE6expandEi9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MCTSSearcher<5000>::pickUntriedAction(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 69, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE6expandEi9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MCTSSearcher<5000>::createNode(int, int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 88, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+Function:        _ZNK3HexILj7EE8checkWinEv.108.139.158
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::flood(ap_uint<49>, ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Hex<7u>::checkWin() const (.108.139.158)'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+Function:        _ZN9GameState10isTerminalEv.98.105.136.155.183
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::checkWin() const (.108.139.158)'
+    DebugLoc:        { File: ./hex.h, Line: 70, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+Function:        _ZN3RNG7randIntEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'RNG::next()'
+    DebugLoc:        { File: ./rand.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+Function:        _ZN9GameState16getTerminalValueEb.93
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+Function:        _ZN9GameState16getTerminalValueEb.93
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::isPlayer1Turn() const (.126.133.176)'
+    DebugLoc:        { File: ./hex.h, Line: 85, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'RNG::randInt(int)'
+    DebugLoc:        { File: ./rand.h, Line: 26, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 223, Column: 0 }
+Function:        _ZN18log_apfixed_reduce10log_traitsILi2EE15range_reductionILi24EEE9ap_ufixedILi15ELin7EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi29ELi7ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void log_apfixed_reduce::range_reduce<ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 24, 15>(ap_ufixed<24, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<15, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 145, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 223, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 474, Column: 0 }
+Function:        _ZN18log_apfixed_reduce3logILi32ELi16EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_ufixed<15, -7, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<2>::range_reduction<24>(ap_ufixed<24, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<29, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 223, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 474, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE6backupE8ap_fixedILi20ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcts_log(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./mcts_types.h, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::backup(ap_fixed<20, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcts_sqrt(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./mcts_types.h, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::makeMove(int)'
+    DebugLoc:        { File: GameState.cpp, Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MCTSSearcher<5000>::expand(int, GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 53, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::isTerminal() (.98.105.136.155.183)'
+    DebugLoc:        { File: GameState.cpp, Line: 29, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::getTerminalValue(bool) (.93)'
+    DebugLoc:        { File: GameState.cpp, Line: 33, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MCTSSearcher<5000>::backup(ap_fixed<20, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 256, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::GameState(Hex<7u>)'
+    DebugLoc:        { File: ./GameState.h, Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::getNumLegalActions()'
+    DebugLoc:        { File: ./GameState.h, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE8mainLoopE3HexILj7EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'GameState::clone()'
+    DebugLoc:        { File: GameState.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+Function:        _ZN12MCTSSearcherILi5000EE6searchE3HexILj7EEb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MCTSSearcher<5000>::mainLoop(Hex<7u>)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MCTSSearcher<5000>::MCTSSearcher(unsigned long)'
+    DebugLoc:        { File: ./MCTSSearcher.h, Line: 41, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::Hex()'
+    DebugLoc:        { File: ./hex.h, Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::setPlayer1(ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 90, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::setPlayer2(ap_uint<49>)'
+    DebugLoc:        { File: ./hex.h, Line: 94, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::setPlayer1Turn(bool)'
+    DebugLoc:        { File: ./hex.h, Line: 102, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Hex<7u>::setLastMove(int)'
+    DebugLoc:        { File: ./hex.h, Line: 98, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 27, Column: 22 }
+Function:        _ZN12MCTSSearcherILi5000EE6searchE3HexILj7EEb
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ' '
+  - LoopLoc:         'MCTSSearcher.cpp:27:22'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 140, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_140_2
+  - String:          ' '
+  - LoopLoc:         'MCTSSearcher.cpp:140:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 259, Column: 23 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_259_1
+  - String:          ' '
+  - LoopLoc:         'MCTSSearcher.cpp:259:23'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 230, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_230_3
+  - String:          ' '
+  - LoopLoc:         'MCTSSearcher.cpp:230:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 200, Column: 23 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_200_2
+  - String:          ' '
+  - LoopLoc:         'MCTSSearcher.cpp:200:23'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          ' '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+  - Function:        'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 27, Column: 22 }
+Function:        _ZN12MCTSSearcherILi5000EE6searchE3HexILj7EEb
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          '''('
+  - LoopLoc:         'MCTSSearcher.cpp:27:22'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 259, Column: 23 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_259_1
+  - String:          '''('
+  - LoopLoc:         'MCTSSearcher.cpp:259:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 140, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_140_2
+  - String:          '''('
+  - LoopLoc:         'MCTSSearcher.cpp:140:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 127, Column: 23 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_127_1
+  - String:          '''('
+  - LoopLoc:         'MCTSSearcher.cpp:127:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./hex.h, Line: 114, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '''('
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 230, Column: 27 }
+Function:        _ZN12MCTSSearcherILi5000EE7rolloutE9GameState
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_230_3
+  - String:          '''('
+  - LoopLoc:         'MCTSSearcher.cpp:230:27'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_140_2
+  - String:          '> at '
+  - LoopLoc:         'MCTSSearcher.cpp:140:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_114_1
+  - String:          '> at '
+  - LoopLoc:         './hex.h:114:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_259_1
+  - String:          '> at '
+  - LoopLoc:         'MCTSSearcher.cpp:259:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_42_1
+  - String:          '> at '
+  - LoopLoc:         './GameState.h:42:26'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          '> at '
+  - LoopLoc:         'MCTSSearcher.cpp:27:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_17_1
+  - String:          '> at '
+  - LoopLoc:         'dut.cpp:17:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_27_3
+  - String:          '> at '
+  - LoopLoc:         'dut.cpp:27:22'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: dut.cpp, Line: 29, Column: 26 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_29_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: dut.cpp, Line: 19, Column: 26 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_19_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_29_4
+  - String:          ''' ('
+  - LoopLoc:         'dut.cpp:29:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dut
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_19_2
+  - String:          ''' ('
+  - LoopLoc:         'dut.cpp:19:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dut
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                   Line: 1268, Column: 12 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> sqrt_fixed<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                       Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 171, Column: 12 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'MCTSSearcher<5000>::rollout(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 181, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/hls_math.h, 
+                   Line: 1196, Column: 12 }
+Function:        _ZN12MCTSSearcherILi5000EE7forwardE9GameState
+Args:            
+  - Callee:          'ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log<32, 16>(ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /scratch/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 474, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 47, Column: 9 }
+Function:        _ZN12MCTSSearcherILi5000EE6searchE3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::forward(GameState)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 124, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: MCTSSearcher.cpp, Line: 285, Column: 31 }
+Function:        _Z6search3HexILj7EEb
+Args:            
+  - Callee:          'MCTSSearcher<5000>::search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: dut.cpp, Line: 49, Column: 18 }
+Function:        _Z3dutRN3hls6streamI7ap_uintILi32EELi0EEES4_
+Args:            
+  - Callee:          'search(Hex<7u>, bool)'
+    DebugLoc:        { File: MCTSSearcher.cpp, Line: 280, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'dut(hls::stream<ap_uint<32>, 0>&, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: dut.cpp, Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

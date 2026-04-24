@@ -1,0 +1,1625 @@
+<stg><name>dut</name>
+
+
+<trans_list>
+
+<trans id="77" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="78" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="79" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="80" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="81" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="82" from="6" to="7">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="83" from="7" to="8">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="84" from="8" to="9">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="85" from="9" to="10">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="86" from="10" to="11">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="87" from="11" to="12">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="49" op_0_bw="64">
+<![CDATA[
+entry:0 %player2_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="player2_loc"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="49" op_0_bw="64">
+<![CDATA[
+entry:1 %player1_48_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="player1_48_loc"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="32" op_0_bw="64">
+<![CDATA[
+entry:2 %searcher_visitCounts = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_visitCounts"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="20" op_0_bw="64">
+<![CDATA[
+entry:3 %searcher_meanQ = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_meanQ"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="64">
+<![CDATA[
+entry:4 %searcher_parents = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_parents"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="32" op_0_bw="64">
+<![CDATA[
+entry:5 %searcher_firstChilds = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_firstChilds"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="32" op_0_bw="64">
+<![CDATA[
+entry:6 %searcher_numChildren = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_numChildren"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="32" op_0_bw="64">
+<![CDATA[
+entry:7 %searcher_nextSiblings = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_nextSiblings"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="32" op_0_bw="64">
+<![CDATA[
+entry:8 %searcher_numLegalActions = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_numLegalActions"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="1" op_0_bw="64">
+<![CDATA[
+entry:9 %searcher_terminals = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_terminals"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="6" op_0_bw="64">
+<![CDATA[
+entry:10 %searcher_childActions = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_childActions"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="49" op_0_bw="64">
+<![CDATA[
+entry:11 %searcher_triedMask = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_triedMask"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="1" op_0_bw="64">
+<![CDATA[
+entry:12 %searcher_isREDs = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_isREDs"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="32" op_0_bw="64">
+<![CDATA[
+entry:13 %searcher_logVisitCounts = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="searcher_logVisitCounts"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="49">
+<![CDATA[
+entry:20 %call_ln0 = call void @dut_Pipeline_VITIS_LOOP_17_1, i32 %strm_in, i49 %player1_48_loc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="28" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="49">
+<![CDATA[
+entry:20 %call_ln0 = call void @dut_Pipeline_VITIS_LOOP_17_1, i32 %strm_in, i49 %player1_48_loc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="29" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="49" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:22 %call_ln0 = call void @dut_Pipeline_VITIS_LOOP_27_3, i32 %strm_in, i49 %player2_loc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="30" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="49" op_3_bw="0" op_4_bw="0">
+<![CDATA[
+entry:22 %call_ln0 = call void @dut_Pipeline_VITIS_LOOP_27_3, i32 %strm_in, i49 %player2_loc
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="31" st_id="5" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
+<![CDATA[
+entry:24 %strm_in_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in
+
+]]></Node>
+<StgValue><ssdm name="strm_in_read"/></StgValue>
+</operation>
+
+<operation id="32" st_id="5" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="1" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:25 %is_red = icmp_ne  i32 %strm_in_read, i32 0
+
+]]></Node>
+<StgValue><ssdm name="is_red"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="33" st_id="6" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
+<![CDATA[
+entry:26 %strm_in_read_1 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in
+
+]]></Node>
+<StgValue><ssdm name="strm_in_read_1"/></StgValue>
+</operation>
+
+<operation id="34" st_id="6" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="1" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:27 %is_player1_turn = icmp_ne  i32 %strm_in_read_1, i32 0
+
+]]></Node>
+<StgValue><ssdm name="is_player1_turn"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="35" st_id="7" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
+<![CDATA[
+entry:28 %p_04 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in
+
+]]></Node>
+<StgValue><ssdm name="p_04"/></StgValue>
+</operation>
+
+<operation id="36" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="13" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:31 %this_parents_addr = getelementptr i32 %searcher_parents, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_parents_addr"/></StgValue>
+</operation>
+
+<operation id="37" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="0" op_0_bw="32" op_1_bw="13">
+<![CDATA[
+entry:32 %store_ln42 = store i32 4294967295, i13 %this_parents_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln42"/></StgValue>
+</operation>
+
+<operation id="38" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="13" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:33 %this_firstChilds_addr = getelementptr i32 %searcher_firstChilds, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_firstChilds_addr"/></StgValue>
+</operation>
+
+<operation id="39" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="32" op_1_bw="13">
+<![CDATA[
+entry:34 %store_ln43 = store i32 4294967295, i13 %this_firstChilds_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln43"/></StgValue>
+</operation>
+
+<operation id="40" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="41" bw="13" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:35 %this_numChildren_addr = getelementptr i32 %searcher_numChildren, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_numChildren_addr"/></StgValue>
+</operation>
+
+<operation id="41" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="42" bw="0" op_0_bw="32" op_1_bw="13">
+<![CDATA[
+entry:36 %store_ln44 = store i32 0, i13 %this_numChildren_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln44"/></StgValue>
+</operation>
+
+<operation id="42" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="13" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:37 %this_visitCounts_addr = getelementptr i32 %searcher_visitCounts, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_visitCounts_addr"/></StgValue>
+</operation>
+
+<operation id="43" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="0" op_0_bw="32" op_1_bw="13">
+<![CDATA[
+entry:38 %store_ln45 = store i32 0, i13 %this_visitCounts_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln45"/></StgValue>
+</operation>
+
+<operation id="44" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="13" op_0_bw="20" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:39 %this_meanQ_addr = getelementptr i20 %searcher_meanQ, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_meanQ_addr"/></StgValue>
+</operation>
+
+<operation id="45" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="0" op_0_bw="20" op_1_bw="13">
+<![CDATA[
+entry:40 %store_ln46 = store i20 0, i13 %this_meanQ_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln46"/></StgValue>
+</operation>
+
+<operation id="46" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="13" op_0_bw="1" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:41 %this_terminals_addr = getelementptr i1 %searcher_terminals, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_terminals_addr"/></StgValue>
+</operation>
+
+<operation id="47" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="0" op_0_bw="1" op_1_bw="13">
+<![CDATA[
+entry:42 %store_ln47 = store i1 0, i13 %this_terminals_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln47"/></StgValue>
+</operation>
+
+<operation id="48" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="13" op_0_bw="49" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:43 %this_triedMask_addr = getelementptr i49 %searcher_triedMask, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_triedMask_addr"/></StgValue>
+</operation>
+
+<operation id="49" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="50" bw="0" op_0_bw="49" op_1_bw="13">
+<![CDATA[
+entry:44 %store_ln48 = store i49 0, i13 %this_triedMask_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln48"/></StgValue>
+</operation>
+
+<operation id="50" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="13" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:45 %this_logVisitCounts_addr = getelementptr i32 %searcher_logVisitCounts, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="this_logVisitCounts_addr"/></StgValue>
+</operation>
+
+<operation id="51" st_id="7" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="32" op_1_bw="13">
+<![CDATA[
+entry:46 %store_ln51 = store i32 0, i13 %this_logVisitCounts_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln51"/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="52" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="49" op_0_bw="49" op_1_bw="0">
+<![CDATA[
+entry:21 %player1_48_loc_load = load i49 %player1_48_loc
+
+]]></Node>
+<StgValue><ssdm name="player1_48_loc_load"/></StgValue>
+</operation>
+
+<operation id="53" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="49" op_0_bw="49" op_1_bw="0">
+<![CDATA[
+entry:23 %player2_loc_load = load i49 %player2_loc
+
+]]></Node>
+<StgValue><ssdm name="player2_loc_load"/></StgValue>
+</operation>
+
+<operation id="54" st_id="8" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
+<![CDATA[
+entry:29 %strm_in_read_2 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %strm_in
+
+]]></Node>
+<StgValue><ssdm name="strm_in_read_2"/></StgValue>
+</operation>
+
+<operation id="55" st_id="8" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:30 %last_move = add i32 %strm_in_read_2, i32 4294967295
+
+]]></Node>
+<StgValue><ssdm name="last_move"/></StgValue>
+</operation>
+
+<operation id="56" st_id="8" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="6" op_0_bw="6" op_1_bw="32" op_2_bw="20" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="1" op_9_bw="6" op_10_bw="49" op_11_bw="1" op_12_bw="32" op_13_bw="6" op_14_bw="1" op_15_bw="32" op_16_bw="49" op_17_bw="49" op_18_bw="1" op_19_bw="6" op_20_bw="22" op_21_bw="18" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0">
+<![CDATA[
+entry:47 %empty = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 42, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="57" st_id="9" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="6" op_0_bw="6" op_1_bw="32" op_2_bw="20" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="1" op_9_bw="6" op_10_bw="49" op_11_bw="1" op_12_bw="32" op_13_bw="6" op_14_bw="1" op_15_bw="32" op_16_bw="49" op_17_bw="49" op_18_bw="1" op_19_bw="6" op_20_bw="22" op_21_bw="18" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0">
+<![CDATA[
+entry:47 %empty = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 42, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+</state>
+
+<state id="10" st_id="10">
+
+<operation id="58" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="0" op_0_bw="32" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:48 %store_ln42 = store i32 4294967295, i13 %this_parents_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln42"/></StgValue>
+</operation>
+
+<operation id="59" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="0" op_0_bw="32" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:49 %store_ln43 = store i32 4294967295, i13 %this_firstChilds_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln43"/></StgValue>
+</operation>
+
+<operation id="60" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="0" op_0_bw="32" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:50 %store_ln44 = store i32 0, i13 %this_numChildren_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln44"/></StgValue>
+</operation>
+
+<operation id="61" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="57" bw="0" op_0_bw="32" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:51 %store_ln45 = store i32 0, i13 %this_visitCounts_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln45"/></StgValue>
+</operation>
+
+<operation id="62" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="0" op_0_bw="20" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:52 %store_ln46 = store i20 0, i13 %this_meanQ_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln46"/></StgValue>
+</operation>
+
+<operation id="63" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="59" bw="0" op_0_bw="1" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:53 %store_ln47 = store i1 0, i13 %this_terminals_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln47"/></StgValue>
+</operation>
+
+<operation id="64" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="60" bw="0" op_0_bw="49" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:54 %store_ln48 = store i49 0, i13 %this_triedMask_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln48"/></StgValue>
+</operation>
+
+<operation id="65" st_id="10" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="61" bw="0" op_0_bw="32" op_1_bw="13" op_2_bw="0">
+<![CDATA[
+entry:55 %store_ln51 = store i32 0, i13 %this_logVisitCounts_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln51"/></StgValue>
+</operation>
+</state>
+
+<state id="11" st_id="11">
+
+<operation id="66" st_id="11" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="6" op_0_bw="6" op_1_bw="32" op_2_bw="20" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="1" op_9_bw="6" op_10_bw="49" op_11_bw="1" op_12_bw="32" op_13_bw="6" op_14_bw="1" op_15_bw="32" op_16_bw="49" op_17_bw="49" op_18_bw="1" op_19_bw="6" op_20_bw="22" op_21_bw="18" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0">
+<![CDATA[
+entry:56 %action = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 43, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array
+
+]]></Node>
+<StgValue><ssdm name="action"/></StgValue>
+</operation>
+</state>
+
+<state id="12" st_id="12">
+
+<operation id="67" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+entry:14 %spectopmodule_ln6 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln6"/></StgValue>
+</operation>
+
+<operation id="68" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:15 %specinterface_ln6 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln6"/></StgValue>
+</operation>
+
+<operation id="69" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:16 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %strm_in, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="70" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+entry:17 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %strm_in
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="71" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:18 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %strm_out, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="72" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+entry:19 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %strm_out
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="73" st_id="12" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="6" op_0_bw="6" op_1_bw="32" op_2_bw="20" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="1" op_9_bw="6" op_10_bw="49" op_11_bw="1" op_12_bw="32" op_13_bw="6" op_14_bw="1" op_15_bw="32" op_16_bw="49" op_17_bw="49" op_18_bw="1" op_19_bw="6" op_20_bw="22" op_21_bw="18" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0">
+<![CDATA[
+entry:56 %action = call i6 @search, i32 %searcher_visitCounts, i20 %searcher_meanQ, i32 %searcher_parents, i32 %searcher_firstChilds, i32 %searcher_numChildren, i32 %searcher_nextSiblings, i32 %searcher_numLegalActions, i1 %searcher_terminals, i6 %searcher_childActions, i49 %searcher_triedMask, i1 %searcher_isREDs, i32 %searcher_logVisitCounts, i6 43, i1 %is_player1_turn, i32 %last_move, i49 %player1_48_loc_load, i49 %player2_loc_load, i1 %is_red, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i22 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i18 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array
+
+]]></Node>
+<StgValue><ssdm name="action"/></StgValue>
+</operation>
+
+<operation id="74" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="63" bw="32" op_0_bw="6">
+<![CDATA[
+entry:57 %zext_ln285 = zext i6 %action
+
+]]></Node>
+<StgValue><ssdm name="zext_ln285"/></StgValue>
+</operation>
+
+<operation id="75" st_id="12" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+entry:58 %write_ln51 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %strm_out, i32 %zext_ln285
+
+]]></Node>
+<StgValue><ssdm name="write_ln51"/></StgValue>
+</operation>
+
+<operation id="76" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="65" bw="0">
+<![CDATA[
+entry:59 %ret_ln52 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln52"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="88" name="strm_in" dir="0" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="strm_in"/></StgValue>
+</port>
+<port id="89" name="strm_out" dir="1" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="strm_out"/></StgValue>
+</port>
+<port id="90" name="log_apfixed_reduce_log_inverse_lut_table_array" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="log_apfixed_reduce_log_inverse_lut_table_array"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="91" name="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="92" name="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="94" from="StgValue_93" to="player2_loc" fromId="93" toId="13">
+</dataflow>
+<dataflow id="95" from="StgValue_93" to="player1_48_loc" fromId="93" toId="14">
+</dataflow>
+<dataflow id="96" from="StgValue_93" to="searcher_visitCounts" fromId="93" toId="15">
+</dataflow>
+<dataflow id="97" from="StgValue_93" to="searcher_meanQ" fromId="93" toId="16">
+</dataflow>
+<dataflow id="98" from="StgValue_93" to="searcher_parents" fromId="93" toId="17">
+</dataflow>
+<dataflow id="99" from="StgValue_93" to="searcher_firstChilds" fromId="93" toId="18">
+</dataflow>
+<dataflow id="100" from="StgValue_93" to="searcher_numChildren" fromId="93" toId="19">
+</dataflow>
+<dataflow id="101" from="StgValue_93" to="searcher_nextSiblings" fromId="93" toId="20">
+</dataflow>
+<dataflow id="102" from="StgValue_93" to="searcher_numLegalActions" fromId="93" toId="21">
+</dataflow>
+<dataflow id="103" from="StgValue_93" to="searcher_terminals" fromId="93" toId="22">
+</dataflow>
+<dataflow id="104" from="StgValue_93" to="searcher_childActions" fromId="93" toId="23">
+</dataflow>
+<dataflow id="105" from="StgValue_93" to="searcher_triedMask" fromId="93" toId="24">
+</dataflow>
+<dataflow id="106" from="StgValue_93" to="searcher_isREDs" fromId="93" toId="25">
+</dataflow>
+<dataflow id="107" from="StgValue_93" to="searcher_logVisitCounts" fromId="93" toId="26">
+</dataflow>
+<dataflow id="109" from="dut_Pipeline_VITIS_LOOP_17_1" to="call_ln0" fromId="108" toId="27">
+</dataflow>
+<dataflow id="110" from="strm_in" to="call_ln0" fromId="88" toId="27">
+</dataflow>
+<dataflow id="111" from="player1_48_loc" to="call_ln0" fromId="14" toId="27">
+</dataflow>
+<dataflow id="112" from="dut_Pipeline_VITIS_LOOP_17_1" to="call_ln0" fromId="108" toId="28">
+</dataflow>
+<dataflow id="113" from="strm_in" to="call_ln0" fromId="88" toId="28">
+</dataflow>
+<dataflow id="114" from="player1_48_loc" to="call_ln0" fromId="14" toId="28">
+</dataflow>
+<dataflow id="116" from="dut_Pipeline_VITIS_LOOP_27_3" to="call_ln0" fromId="115" toId="29">
+</dataflow>
+<dataflow id="117" from="strm_in" to="call_ln0" fromId="88" toId="29">
+</dataflow>
+<dataflow id="118" from="player2_loc" to="call_ln0" fromId="13" toId="29">
+</dataflow>
+<dataflow id="119" from="dut_Pipeline_VITIS_LOOP_27_3" to="call_ln0" fromId="115" toId="30">
+</dataflow>
+<dataflow id="120" from="strm_in" to="call_ln0" fromId="88" toId="30">
+</dataflow>
+<dataflow id="121" from="player2_loc" to="call_ln0" fromId="13" toId="30">
+</dataflow>
+<dataflow id="123" from="_ssdm_op_Read.ap_fifo.volatile.i32P0A" to="strm_in_read" fromId="122" toId="31">
+</dataflow>
+<dataflow id="124" from="strm_in" to="strm_in_read" fromId="88" toId="31">
+</dataflow>
+<dataflow id="125" from="strm_in_read" to="is_red" fromId="31" toId="32">
+</dataflow>
+<dataflow id="127" from="StgValue_126" to="is_red" fromId="126" toId="32">
+</dataflow>
+<dataflow id="128" from="_ssdm_op_Read.ap_fifo.volatile.i32P0A" to="strm_in_read_1" fromId="122" toId="33">
+</dataflow>
+<dataflow id="129" from="strm_in" to="strm_in_read_1" fromId="88" toId="33">
+</dataflow>
+<dataflow id="130" from="strm_in_read_1" to="is_player1_turn" fromId="33" toId="34">
+</dataflow>
+<dataflow id="131" from="StgValue_126" to="is_player1_turn" fromId="126" toId="34">
+</dataflow>
+<dataflow id="132" from="_ssdm_op_Read.ap_fifo.volatile.i32P0A" to="p_04" fromId="122" toId="35">
+</dataflow>
+<dataflow id="133" from="strm_in" to="p_04" fromId="88" toId="35">
+</dataflow>
+<dataflow id="134" from="searcher_parents" to="this_parents_addr" fromId="17" toId="36">
+</dataflow>
+<dataflow id="136" from="StgValue_135" to="this_parents_addr" fromId="135" toId="36">
+</dataflow>
+<dataflow id="137" from="StgValue_135" to="this_parents_addr" fromId="135" toId="36">
+</dataflow>
+<dataflow id="139" from="StgValue_138" to="store_ln42" fromId="138" toId="37">
+</dataflow>
+<dataflow id="140" from="this_parents_addr" to="store_ln42" fromId="36" toId="37">
+</dataflow>
+<dataflow id="141" from="searcher_firstChilds" to="this_firstChilds_addr" fromId="18" toId="38">
+</dataflow>
+<dataflow id="142" from="StgValue_135" to="this_firstChilds_addr" fromId="135" toId="38">
+</dataflow>
+<dataflow id="143" from="StgValue_135" to="this_firstChilds_addr" fromId="135" toId="38">
+</dataflow>
+<dataflow id="144" from="StgValue_138" to="store_ln43" fromId="138" toId="39">
+</dataflow>
+<dataflow id="145" from="this_firstChilds_addr" to="store_ln43" fromId="38" toId="39">
+</dataflow>
+<dataflow id="146" from="searcher_numChildren" to="this_numChildren_addr" fromId="19" toId="40">
+</dataflow>
+<dataflow id="147" from="StgValue_135" to="this_numChildren_addr" fromId="135" toId="40">
+</dataflow>
+<dataflow id="148" from="StgValue_135" to="this_numChildren_addr" fromId="135" toId="40">
+</dataflow>
+<dataflow id="149" from="StgValue_126" to="store_ln44" fromId="126" toId="41">
+</dataflow>
+<dataflow id="150" from="this_numChildren_addr" to="store_ln44" fromId="40" toId="41">
+</dataflow>
+<dataflow id="151" from="searcher_visitCounts" to="this_visitCounts_addr" fromId="15" toId="42">
+</dataflow>
+<dataflow id="152" from="StgValue_135" to="this_visitCounts_addr" fromId="135" toId="42">
+</dataflow>
+<dataflow id="153" from="StgValue_135" to="this_visitCounts_addr" fromId="135" toId="42">
+</dataflow>
+<dataflow id="154" from="StgValue_126" to="store_ln45" fromId="126" toId="43">
+</dataflow>
+<dataflow id="155" from="this_visitCounts_addr" to="store_ln45" fromId="42" toId="43">
+</dataflow>
+<dataflow id="156" from="searcher_meanQ" to="this_meanQ_addr" fromId="16" toId="44">
+</dataflow>
+<dataflow id="157" from="StgValue_135" to="this_meanQ_addr" fromId="135" toId="44">
+</dataflow>
+<dataflow id="158" from="StgValue_135" to="this_meanQ_addr" fromId="135" toId="44">
+</dataflow>
+<dataflow id="160" from="StgValue_159" to="store_ln46" fromId="159" toId="45">
+</dataflow>
+<dataflow id="161" from="this_meanQ_addr" to="store_ln46" fromId="44" toId="45">
+</dataflow>
+<dataflow id="162" from="searcher_terminals" to="this_terminals_addr" fromId="22" toId="46">
+</dataflow>
+<dataflow id="163" from="StgValue_135" to="this_terminals_addr" fromId="135" toId="46">
+</dataflow>
+<dataflow id="164" from="StgValue_135" to="this_terminals_addr" fromId="135" toId="46">
+</dataflow>
+<dataflow id="166" from="StgValue_165" to="store_ln47" fromId="165" toId="47">
+</dataflow>
+<dataflow id="167" from="this_terminals_addr" to="store_ln47" fromId="46" toId="47">
+</dataflow>
+<dataflow id="168" from="searcher_triedMask" to="this_triedMask_addr" fromId="24" toId="48">
+</dataflow>
+<dataflow id="169" from="StgValue_135" to="this_triedMask_addr" fromId="135" toId="48">
+</dataflow>
+<dataflow id="170" from="StgValue_135" to="this_triedMask_addr" fromId="135" toId="48">
+</dataflow>
+<dataflow id="172" from="StgValue_171" to="store_ln48" fromId="171" toId="49">
+</dataflow>
+<dataflow id="173" from="this_triedMask_addr" to="store_ln48" fromId="48" toId="49">
+</dataflow>
+<dataflow id="174" from="searcher_logVisitCounts" to="this_logVisitCounts_addr" fromId="26" toId="50">
+</dataflow>
+<dataflow id="175" from="StgValue_135" to="this_logVisitCounts_addr" fromId="135" toId="50">
+</dataflow>
+<dataflow id="176" from="StgValue_135" to="this_logVisitCounts_addr" fromId="135" toId="50">
+</dataflow>
+<dataflow id="177" from="StgValue_126" to="store_ln51" fromId="126" toId="51">
+</dataflow>
+<dataflow id="178" from="this_logVisitCounts_addr" to="store_ln51" fromId="50" toId="51">
+</dataflow>
+<dataflow id="179" from="player1_48_loc" to="player1_48_loc_load" fromId="14" toId="52">
+</dataflow>
+<dataflow id="180" from="player2_loc" to="player2_loc_load" fromId="13" toId="53">
+</dataflow>
+<dataflow id="181" from="_ssdm_op_Read.ap_fifo.volatile.i32P0A" to="strm_in_read_2" fromId="122" toId="54">
+</dataflow>
+<dataflow id="182" from="strm_in" to="strm_in_read_2" fromId="88" toId="54">
+</dataflow>
+<dataflow id="183" from="strm_in_read_2" to="last_move" fromId="54" toId="55">
+</dataflow>
+<dataflow id="184" from="StgValue_138" to="last_move" fromId="138" toId="55">
+</dataflow>
+<dataflow id="186" from="search" to="empty" fromId="185" toId="56">
+</dataflow>
+<dataflow id="187" from="searcher_visitCounts" to="empty" fromId="15" toId="56">
+</dataflow>
+<dataflow id="188" from="searcher_meanQ" to="empty" fromId="16" toId="56">
+</dataflow>
+<dataflow id="189" from="searcher_parents" to="empty" fromId="17" toId="56">
+</dataflow>
+<dataflow id="190" from="searcher_firstChilds" to="empty" fromId="18" toId="56">
+</dataflow>
+<dataflow id="191" from="searcher_numChildren" to="empty" fromId="19" toId="56">
+</dataflow>
+<dataflow id="192" from="searcher_nextSiblings" to="empty" fromId="20" toId="56">
+</dataflow>
+<dataflow id="193" from="searcher_numLegalActions" to="empty" fromId="21" toId="56">
+</dataflow>
+<dataflow id="194" from="searcher_terminals" to="empty" fromId="22" toId="56">
+</dataflow>
+<dataflow id="195" from="searcher_childActions" to="empty" fromId="23" toId="56">
+</dataflow>
+<dataflow id="196" from="searcher_triedMask" to="empty" fromId="24" toId="56">
+</dataflow>
+<dataflow id="197" from="searcher_isREDs" to="empty" fromId="25" toId="56">
+</dataflow>
+<dataflow id="198" from="searcher_logVisitCounts" to="empty" fromId="26" toId="56">
+</dataflow>
+<dataflow id="200" from="StgValue_199" to="empty" fromId="199" toId="56">
+</dataflow>
+<dataflow id="201" from="is_player1_turn" to="empty" fromId="34" toId="56">
+</dataflow>
+<dataflow id="202" from="last_move" to="empty" fromId="55" toId="56">
+</dataflow>
+<dataflow id="203" from="player1_48_loc_load" to="empty" fromId="52" toId="56">
+</dataflow>
+<dataflow id="204" from="player2_loc_load" to="empty" fromId="53" toId="56">
+</dataflow>
+<dataflow id="205" from="is_red" to="empty" fromId="32" toId="56">
+</dataflow>
+<dataflow id="206" from="log_apfixed_reduce_log_inverse_lut_table_array" to="empty" fromId="90" toId="56">
+</dataflow>
+<dataflow id="207" from="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" to="empty" fromId="91" toId="56">
+</dataflow>
+<dataflow id="208" from="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" to="empty" fromId="92" toId="56">
+</dataflow>
+<dataflow id="209" from="search" to="empty" fromId="185" toId="57">
+</dataflow>
+<dataflow id="210" from="searcher_visitCounts" to="empty" fromId="15" toId="57">
+</dataflow>
+<dataflow id="211" from="searcher_meanQ" to="empty" fromId="16" toId="57">
+</dataflow>
+<dataflow id="212" from="searcher_parents" to="empty" fromId="17" toId="57">
+</dataflow>
+<dataflow id="213" from="searcher_firstChilds" to="empty" fromId="18" toId="57">
+</dataflow>
+<dataflow id="214" from="searcher_numChildren" to="empty" fromId="19" toId="57">
+</dataflow>
+<dataflow id="215" from="searcher_nextSiblings" to="empty" fromId="20" toId="57">
+</dataflow>
+<dataflow id="216" from="searcher_numLegalActions" to="empty" fromId="21" toId="57">
+</dataflow>
+<dataflow id="217" from="searcher_terminals" to="empty" fromId="22" toId="57">
+</dataflow>
+<dataflow id="218" from="searcher_childActions" to="empty" fromId="23" toId="57">
+</dataflow>
+<dataflow id="219" from="searcher_triedMask" to="empty" fromId="24" toId="57">
+</dataflow>
+<dataflow id="220" from="searcher_isREDs" to="empty" fromId="25" toId="57">
+</dataflow>
+<dataflow id="221" from="searcher_logVisitCounts" to="empty" fromId="26" toId="57">
+</dataflow>
+<dataflow id="222" from="StgValue_199" to="empty" fromId="199" toId="57">
+</dataflow>
+<dataflow id="223" from="is_player1_turn" to="empty" fromId="34" toId="57">
+</dataflow>
+<dataflow id="224" from="last_move" to="empty" fromId="55" toId="57">
+</dataflow>
+<dataflow id="225" from="player1_48_loc_load" to="empty" fromId="52" toId="57">
+</dataflow>
+<dataflow id="226" from="player2_loc_load" to="empty" fromId="53" toId="57">
+</dataflow>
+<dataflow id="227" from="is_red" to="empty" fromId="32" toId="57">
+</dataflow>
+<dataflow id="228" from="log_apfixed_reduce_log_inverse_lut_table_array" to="empty" fromId="90" toId="57">
+</dataflow>
+<dataflow id="229" from="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" to="empty" fromId="91" toId="57">
+</dataflow>
+<dataflow id="230" from="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" to="empty" fromId="92" toId="57">
+</dataflow>
+<dataflow id="231" from="StgValue_138" to="store_ln42" fromId="138" toId="58">
+</dataflow>
+<dataflow id="232" from="this_parents_addr" to="store_ln42" fromId="36" toId="58">
+</dataflow>
+<dataflow id="233" from="StgValue_138" to="store_ln43" fromId="138" toId="59">
+</dataflow>
+<dataflow id="234" from="this_firstChilds_addr" to="store_ln43" fromId="38" toId="59">
+</dataflow>
+<dataflow id="235" from="StgValue_126" to="store_ln44" fromId="126" toId="60">
+</dataflow>
+<dataflow id="236" from="this_numChildren_addr" to="store_ln44" fromId="40" toId="60">
+</dataflow>
+<dataflow id="237" from="StgValue_126" to="store_ln45" fromId="126" toId="61">
+</dataflow>
+<dataflow id="238" from="this_visitCounts_addr" to="store_ln45" fromId="42" toId="61">
+</dataflow>
+<dataflow id="239" from="StgValue_159" to="store_ln46" fromId="159" toId="62">
+</dataflow>
+<dataflow id="240" from="this_meanQ_addr" to="store_ln46" fromId="44" toId="62">
+</dataflow>
+<dataflow id="241" from="StgValue_165" to="store_ln47" fromId="165" toId="63">
+</dataflow>
+<dataflow id="242" from="this_terminals_addr" to="store_ln47" fromId="46" toId="63">
+</dataflow>
+<dataflow id="243" from="StgValue_171" to="store_ln48" fromId="171" toId="64">
+</dataflow>
+<dataflow id="244" from="this_triedMask_addr" to="store_ln48" fromId="48" toId="64">
+</dataflow>
+<dataflow id="245" from="StgValue_126" to="store_ln51" fromId="126" toId="65">
+</dataflow>
+<dataflow id="246" from="this_logVisitCounts_addr" to="store_ln51" fromId="50" toId="65">
+</dataflow>
+<dataflow id="247" from="search" to="action" fromId="185" toId="66">
+</dataflow>
+<dataflow id="248" from="searcher_visitCounts" to="action" fromId="15" toId="66">
+</dataflow>
+<dataflow id="249" from="searcher_meanQ" to="action" fromId="16" toId="66">
+</dataflow>
+<dataflow id="250" from="searcher_parents" to="action" fromId="17" toId="66">
+</dataflow>
+<dataflow id="251" from="searcher_firstChilds" to="action" fromId="18" toId="66">
+</dataflow>
+<dataflow id="252" from="searcher_numChildren" to="action" fromId="19" toId="66">
+</dataflow>
+<dataflow id="253" from="searcher_nextSiblings" to="action" fromId="20" toId="66">
+</dataflow>
+<dataflow id="254" from="searcher_numLegalActions" to="action" fromId="21" toId="66">
+</dataflow>
+<dataflow id="255" from="searcher_terminals" to="action" fromId="22" toId="66">
+</dataflow>
+<dataflow id="256" from="searcher_childActions" to="action" fromId="23" toId="66">
+</dataflow>
+<dataflow id="257" from="searcher_triedMask" to="action" fromId="24" toId="66">
+</dataflow>
+<dataflow id="258" from="searcher_isREDs" to="action" fromId="25" toId="66">
+</dataflow>
+<dataflow id="259" from="searcher_logVisitCounts" to="action" fromId="26" toId="66">
+</dataflow>
+<dataflow id="261" from="StgValue_260" to="action" fromId="260" toId="66">
+</dataflow>
+<dataflow id="262" from="is_player1_turn" to="action" fromId="34" toId="66">
+</dataflow>
+<dataflow id="263" from="last_move" to="action" fromId="55" toId="66">
+</dataflow>
+<dataflow id="264" from="player1_48_loc_load" to="action" fromId="52" toId="66">
+</dataflow>
+<dataflow id="265" from="player2_loc_load" to="action" fromId="53" toId="66">
+</dataflow>
+<dataflow id="266" from="is_red" to="action" fromId="32" toId="66">
+</dataflow>
+<dataflow id="267" from="log_apfixed_reduce_log_inverse_lut_table_array" to="action" fromId="90" toId="66">
+</dataflow>
+<dataflow id="268" from="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" to="action" fromId="91" toId="66">
+</dataflow>
+<dataflow id="269" from="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" to="action" fromId="92" toId="66">
+</dataflow>
+<dataflow id="271" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln6" fromId="270" toId="67">
+</dataflow>
+<dataflow id="273" from="empty_2" to="spectopmodule_ln6" fromId="272" toId="67">
+</dataflow>
+<dataflow id="275" from="_ssdm_op_SpecInterface" to="specinterface_ln6" fromId="274" toId="68">
+</dataflow>
+<dataflow id="276" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="278" from="empty_3" to="specinterface_ln6" fromId="277" toId="68">
+</dataflow>
+<dataflow id="279" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="280" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="282" from="empty_0" to="specinterface_ln6" fromId="281" toId="68">
+</dataflow>
+<dataflow id="283" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="284" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="285" from="empty_0" to="specinterface_ln6" fromId="281" toId="68">
+</dataflow>
+<dataflow id="286" from="empty_0" to="specinterface_ln6" fromId="281" toId="68">
+</dataflow>
+<dataflow id="287" from="empty_0" to="specinterface_ln6" fromId="281" toId="68">
+</dataflow>
+<dataflow id="288" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="289" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="290" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="291" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="292" from="empty_0" to="specinterface_ln6" fromId="281" toId="68">
+</dataflow>
+<dataflow id="293" from="empty_0" to="specinterface_ln6" fromId="281" toId="68">
+</dataflow>
+<dataflow id="294" from="StgValue_138" to="specinterface_ln6" fromId="138" toId="68">
+</dataflow>
+<dataflow id="295" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="296" from="StgValue_126" to="specinterface_ln6" fromId="126" toId="68">
+</dataflow>
+<dataflow id="297" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="274" toId="69">
+</dataflow>
+<dataflow id="298" from="strm_in" to="specinterface_ln0" fromId="88" toId="69">
+</dataflow>
+<dataflow id="300" from="empty_1" to="specinterface_ln0" fromId="299" toId="69">
+</dataflow>
+<dataflow id="301" from="StgValue_138" to="specinterface_ln0" fromId="138" toId="69">
+</dataflow>
+<dataflow id="302" from="StgValue_138" to="specinterface_ln0" fromId="138" toId="69">
+</dataflow>
+<dataflow id="303" from="empty_0" to="specinterface_ln0" fromId="281" toId="69">
+</dataflow>
+<dataflow id="304" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="305" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="306" from="empty_0" to="specinterface_ln0" fromId="281" toId="69">
+</dataflow>
+<dataflow id="307" from="empty_0" to="specinterface_ln0" fromId="281" toId="69">
+</dataflow>
+<dataflow id="308" from="empty_0" to="specinterface_ln0" fromId="281" toId="69">
+</dataflow>
+<dataflow id="309" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="310" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="311" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="312" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="313" from="empty_0" to="specinterface_ln0" fromId="281" toId="69">
+</dataflow>
+<dataflow id="314" from="empty_0" to="specinterface_ln0" fromId="281" toId="69">
+</dataflow>
+<dataflow id="315" from="StgValue_138" to="specinterface_ln0" fromId="138" toId="69">
+</dataflow>
+<dataflow id="316" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="317" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="69">
+</dataflow>
+<dataflow id="319" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="318" toId="70">
+</dataflow>
+<dataflow id="320" from="strm_in" to="specbitsmap_ln0" fromId="88" toId="70">
+</dataflow>
+<dataflow id="321" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="274" toId="71">
+</dataflow>
+<dataflow id="322" from="strm_out" to="specinterface_ln0" fromId="89" toId="71">
+</dataflow>
+<dataflow id="323" from="empty_1" to="specinterface_ln0" fromId="299" toId="71">
+</dataflow>
+<dataflow id="324" from="StgValue_138" to="specinterface_ln0" fromId="138" toId="71">
+</dataflow>
+<dataflow id="325" from="StgValue_138" to="specinterface_ln0" fromId="138" toId="71">
+</dataflow>
+<dataflow id="326" from="empty_0" to="specinterface_ln0" fromId="281" toId="71">
+</dataflow>
+<dataflow id="327" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="328" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="329" from="empty_0" to="specinterface_ln0" fromId="281" toId="71">
+</dataflow>
+<dataflow id="330" from="empty_0" to="specinterface_ln0" fromId="281" toId="71">
+</dataflow>
+<dataflow id="331" from="empty_0" to="specinterface_ln0" fromId="281" toId="71">
+</dataflow>
+<dataflow id="332" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="333" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="334" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="335" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="336" from="empty_0" to="specinterface_ln0" fromId="281" toId="71">
+</dataflow>
+<dataflow id="337" from="empty_0" to="specinterface_ln0" fromId="281" toId="71">
+</dataflow>
+<dataflow id="338" from="StgValue_138" to="specinterface_ln0" fromId="138" toId="71">
+</dataflow>
+<dataflow id="339" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="340" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="71">
+</dataflow>
+<dataflow id="341" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="318" toId="72">
+</dataflow>
+<dataflow id="342" from="strm_out" to="specbitsmap_ln0" fromId="89" toId="72">
+</dataflow>
+<dataflow id="343" from="search" to="action" fromId="185" toId="73">
+</dataflow>
+<dataflow id="344" from="searcher_visitCounts" to="action" fromId="15" toId="73">
+</dataflow>
+<dataflow id="345" from="searcher_meanQ" to="action" fromId="16" toId="73">
+</dataflow>
+<dataflow id="346" from="searcher_parents" to="action" fromId="17" toId="73">
+</dataflow>
+<dataflow id="347" from="searcher_firstChilds" to="action" fromId="18" toId="73">
+</dataflow>
+<dataflow id="348" from="searcher_numChildren" to="action" fromId="19" toId="73">
+</dataflow>
+<dataflow id="349" from="searcher_nextSiblings" to="action" fromId="20" toId="73">
+</dataflow>
+<dataflow id="350" from="searcher_numLegalActions" to="action" fromId="21" toId="73">
+</dataflow>
+<dataflow id="351" from="searcher_terminals" to="action" fromId="22" toId="73">
+</dataflow>
+<dataflow id="352" from="searcher_childActions" to="action" fromId="23" toId="73">
+</dataflow>
+<dataflow id="353" from="searcher_triedMask" to="action" fromId="24" toId="73">
+</dataflow>
+<dataflow id="354" from="searcher_isREDs" to="action" fromId="25" toId="73">
+</dataflow>
+<dataflow id="355" from="searcher_logVisitCounts" to="action" fromId="26" toId="73">
+</dataflow>
+<dataflow id="356" from="StgValue_260" to="action" fromId="260" toId="73">
+</dataflow>
+<dataflow id="357" from="is_player1_turn" to="action" fromId="34" toId="73">
+</dataflow>
+<dataflow id="358" from="last_move" to="action" fromId="55" toId="73">
+</dataflow>
+<dataflow id="359" from="player1_48_loc_load" to="action" fromId="52" toId="73">
+</dataflow>
+<dataflow id="360" from="player2_loc_load" to="action" fromId="53" toId="73">
+</dataflow>
+<dataflow id="361" from="is_red" to="action" fromId="32" toId="73">
+</dataflow>
+<dataflow id="362" from="log_apfixed_reduce_log_inverse_lut_table_array" to="action" fromId="90" toId="73">
+</dataflow>
+<dataflow id="363" from="log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array" to="action" fromId="91" toId="73">
+</dataflow>
+<dataflow id="364" from="log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array" to="action" fromId="92" toId="73">
+</dataflow>
+<dataflow id="365" from="action" to="zext_ln285" fromId="73" toId="74">
+</dataflow>
+<dataflow id="367" from="_ssdm_op_Write.ap_fifo.volatile.i32P0A" to="write_ln51" fromId="366" toId="75">
+</dataflow>
+<dataflow id="368" from="strm_out" to="write_ln51" fromId="89" toId="75">
+</dataflow>
+<dataflow id="369" from="zext_ln285" to="write_ln51" fromId="74" toId="75">
+</dataflow>
+</dataflows>
+
+
+</stg>

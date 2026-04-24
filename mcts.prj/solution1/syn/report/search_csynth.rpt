@@ -1,0 +1,256 @@
+
+
+================================================================
+== Vitis HLS Report for 'search'
+================================================================
+* Date:           Thu Apr 23 22:10:26 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        mcts.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.167 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                            |                                 |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                  Instance                  |              Module             |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +--------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_search_Pipeline_VITIS_LOOP_42_1_fu_208  |search_Pipeline_VITIS_LOOP_42_1  |       51|       51|  0.510 us|  0.510 us|   50|   50|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_forward_fu_214                          |forward                          |        ?|        ?|         ?|         ?|    ?|    ?|                                              no|
+        |grp_search_Pipeline_VITIS_LOOP_27_1_fu_255  |search_Pipeline_VITIS_LOOP_27_1  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_46_1  |        ?|        ?|         ?|          -|          -|  5000|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     146|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        1|     6|   14161|   22928|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     349|    -|
+|Register         |        -|     -|     221|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        1|     6|   14382|   23423|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|    ~0|       6|      19|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+---------------------------------+---------+----+-------+-------+-----+
+    |                  Instance                  |              Module             | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +--------------------------------------------+---------------------------------+---------+----+-------+-------+-----+
+    |grp_forward_fu_214                          |forward                          |        1|   6|  13987|  22573|    0|
+    |grp_search_Pipeline_VITIS_LOOP_27_1_fu_255  |search_Pipeline_VITIS_LOOP_27_1  |        0|   0|    133|    203|    0|
+    |grp_search_Pipeline_VITIS_LOOP_42_1_fu_208  |search_Pipeline_VITIS_LOOP_42_1  |        0|   0|     41|    152|    0|
+    +--------------------------------------------+---------------------------------+---------+----+-------+-------+-----+
+    |Total                                       |                                 |        1|   6|  14161|  22928|    0|
+    +--------------------------------------------+---------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |i_3_fu_311_p2                       |         +|   0|  0|  20|          13|           1|
+    |icmp_ln46_fu_305_p2                 |      icmp|   0|  0|  20|          13|          13|
+    |or_ln23_fu_270_p2                   |        or|   0|  0|  49|          49|          49|
+    |this_firstChilds_we0                |        or|   0|  0|   2|           1|           1|
+    |this_isREDs_we0                     |        or|   0|  0|   2|           1|           1|
+    |this_numLegalActions_we0            |        or|   0|  0|   2|           1|           1|
+    |this_parents_we0                    |        or|   0|  0|   2|           1|           1|
+    |gameState_legalActionMap_fu_276_p2  |       xor|   0|  0|  49|          49|           2|
+    +------------------------------------+----------+----+---+----+------------+------------+
+    |Total                               |          |   0|  0| 146|         128|          69|
+    +------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                        |  54|         10|    1|         10|
+    |ap_return                        |   9|          2|    6|         12|
+    |i_2_fu_80                        |   9|          2|   13|         26|
+    |this_childActions_address0       |   9|          2|   13|         26|
+    |this_childActions_ce0            |   9|          2|    1|          2|
+    |this_childActions_we0            |   9|          2|    1|          2|
+    |this_firstChilds_address0        |   9|          2|   13|         26|
+    |this_firstChilds_address0_local  |  14|          3|   13|         39|
+    |this_firstChilds_ce0             |   9|          2|    1|          2|
+    |this_firstChilds_d0              |   9|          2|   32|         64|
+    |this_firstChilds_we0             |   9|          2|    1|          2|
+    |this_isREDs_address0             |   9|          2|   13|         26|
+    |this_isREDs_ce0                  |   9|          2|    1|          2|
+    |this_isREDs_d0                   |   9|          2|    1|          2|
+    |this_isREDs_we0                  |   9|          2|    1|          2|
+    |this_nextFree_0_fu_88            |   9|          2|   32|         64|
+    |this_nextSiblings_address0       |  14|          3|   13|         39|
+    |this_nextSiblings_ce0            |  14|          3|    1|          3|
+    |this_nextSiblings_we0            |   9|          2|    1|          2|
+    |this_numLegalActions_address0    |   9|          2|   13|         26|
+    |this_numLegalActions_ce0         |   9|          2|    1|          2|
+    |this_numLegalActions_d0          |   9|          2|   32|         64|
+    |this_numLegalActions_we0         |   9|          2|    1|          2|
+    |this_parents_address0            |   9|          2|   13|         26|
+    |this_parents_ce0                 |   9|          2|    1|          2|
+    |this_parents_d0                  |   9|          2|   32|         64|
+    |this_parents_we0                 |   9|          2|    1|          2|
+    |this_rng_0_fu_84                 |   9|          2|   64|        128|
+    |this_visitCounts_address0        |  14|          3|   13|         39|
+    |this_visitCounts_ce0             |  14|          3|    1|          3|
+    |this_visitCounts_we0             |   9|          2|    1|          2|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            | 349|         75|  331|        711|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                          | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                |   9|   0|    9|          0|
+    |ap_return_preg                                           |   6|   0|    6|          0|
+    |bestChildNode_loc_fu_92                                  |  13|   0|   13|          0|
+    |bestChildNode_reg_429                                    |  32|   0|   32|          0|
+    |gameState_legalActionMap_reg_399                         |  49|   0|   49|          0|
+    |grp_forward_fu_214_ap_start_reg                          |   1|   0|    1|          0|
+    |grp_search_Pipeline_VITIS_LOOP_27_1_fu_255_ap_start_reg  |   1|   0|    1|          0|
+    |grp_search_Pipeline_VITIS_LOOP_42_1_fu_208_ap_start_reg  |   1|   0|    1|          0|
+    |i_2_fu_80                                                |  13|   0|   13|          0|
+    |this_nextFree_0_fu_88                                    |  32|   0|   32|          0|
+    |this_rng_0_fu_84                                         |  64|   0|   64|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                    | 221|   0|  221|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+----------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++-------------------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|                      search|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|                      search|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|                      search|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|                      search|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|                      search|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|                      search|  return value|
+|ap_return                      |  out|    6|  ap_ctrl_hs|                      search|  return value|
+|this_visitCounts_address0      |  out|   13|   ap_memory|            this_visitCounts|         array|
+|this_visitCounts_ce0           |  out|    1|   ap_memory|            this_visitCounts|         array|
+|this_visitCounts_we0           |  out|    1|   ap_memory|            this_visitCounts|         array|
+|this_visitCounts_d0            |  out|   32|   ap_memory|            this_visitCounts|         array|
+|this_visitCounts_q0            |   in|   32|   ap_memory|            this_visitCounts|         array|
+|this_meanQ_address0            |  out|   13|   ap_memory|                  this_meanQ|         array|
+|this_meanQ_ce0                 |  out|    1|   ap_memory|                  this_meanQ|         array|
+|this_meanQ_we0                 |  out|    1|   ap_memory|                  this_meanQ|         array|
+|this_meanQ_d0                  |  out|   20|   ap_memory|                  this_meanQ|         array|
+|this_meanQ_q0                  |   in|   20|   ap_memory|                  this_meanQ|         array|
+|this_parents_address0          |  out|   13|   ap_memory|                this_parents|         array|
+|this_parents_ce0               |  out|    1|   ap_memory|                this_parents|         array|
+|this_parents_we0               |  out|    1|   ap_memory|                this_parents|         array|
+|this_parents_d0                |  out|   32|   ap_memory|                this_parents|         array|
+|this_parents_q0                |   in|   32|   ap_memory|                this_parents|         array|
+|this_firstChilds_address0      |  out|   13|   ap_memory|            this_firstChilds|         array|
+|this_firstChilds_ce0           |  out|    1|   ap_memory|            this_firstChilds|         array|
+|this_firstChilds_we0           |  out|    1|   ap_memory|            this_firstChilds|         array|
+|this_firstChilds_d0            |  out|   32|   ap_memory|            this_firstChilds|         array|
+|this_firstChilds_q0            |   in|   32|   ap_memory|            this_firstChilds|         array|
+|this_numChildren_address0      |  out|   13|   ap_memory|            this_numChildren|         array|
+|this_numChildren_ce0           |  out|    1|   ap_memory|            this_numChildren|         array|
+|this_numChildren_we0           |  out|    1|   ap_memory|            this_numChildren|         array|
+|this_numChildren_d0            |  out|   32|   ap_memory|            this_numChildren|         array|
+|this_numChildren_q0            |   in|   32|   ap_memory|            this_numChildren|         array|
+|this_nextSiblings_address0     |  out|   13|   ap_memory|           this_nextSiblings|         array|
+|this_nextSiblings_ce0          |  out|    1|   ap_memory|           this_nextSiblings|         array|
+|this_nextSiblings_we0          |  out|    1|   ap_memory|           this_nextSiblings|         array|
+|this_nextSiblings_d0           |  out|   32|   ap_memory|           this_nextSiblings|         array|
+|this_nextSiblings_q0           |   in|   32|   ap_memory|           this_nextSiblings|         array|
+|this_numLegalActions_address0  |  out|   13|   ap_memory|        this_numLegalActions|         array|
+|this_numLegalActions_ce0       |  out|    1|   ap_memory|        this_numLegalActions|         array|
+|this_numLegalActions_we0       |  out|    1|   ap_memory|        this_numLegalActions|         array|
+|this_numLegalActions_d0        |  out|   32|   ap_memory|        this_numLegalActions|         array|
+|this_numLegalActions_q0        |   in|   32|   ap_memory|        this_numLegalActions|         array|
+|this_terminals_address0        |  out|   13|   ap_memory|              this_terminals|         array|
+|this_terminals_ce0             |  out|    1|   ap_memory|              this_terminals|         array|
+|this_terminals_we0             |  out|    1|   ap_memory|              this_terminals|         array|
+|this_terminals_d0              |  out|    1|   ap_memory|              this_terminals|         array|
+|this_terminals_q0              |   in|    1|   ap_memory|              this_terminals|         array|
+|this_childActions_address0     |  out|   13|   ap_memory|           this_childActions|         array|
+|this_childActions_ce0          |  out|    1|   ap_memory|           this_childActions|         array|
+|this_childActions_we0          |  out|    1|   ap_memory|           this_childActions|         array|
+|this_childActions_d0           |  out|    6|   ap_memory|           this_childActions|         array|
+|this_childActions_q0           |   in|    6|   ap_memory|           this_childActions|         array|
+|this_triedMask_address0        |  out|   13|   ap_memory|              this_triedMask|         array|
+|this_triedMask_ce0             |  out|    1|   ap_memory|              this_triedMask|         array|
+|this_triedMask_we0             |  out|    1|   ap_memory|              this_triedMask|         array|
+|this_triedMask_d0              |  out|   49|   ap_memory|              this_triedMask|         array|
+|this_triedMask_q0              |   in|   49|   ap_memory|              this_triedMask|         array|
+|this_isREDs_address0           |  out|   13|   ap_memory|                 this_isREDs|         array|
+|this_isREDs_ce0                |  out|    1|   ap_memory|                 this_isREDs|         array|
+|this_isREDs_we0                |  out|    1|   ap_memory|                 this_isREDs|         array|
+|this_isREDs_d0                 |  out|    1|   ap_memory|                 this_isREDs|         array|
+|this_isREDs_q0                 |   in|    1|   ap_memory|                 this_isREDs|         array|
+|this_logVisitCounts_address0   |  out|   13|   ap_memory|         this_logVisitCounts|         array|
+|this_logVisitCounts_ce0        |  out|    1|   ap_memory|         this_logVisitCounts|         array|
+|this_logVisitCounts_we0        |  out|    1|   ap_memory|         this_logVisitCounts|         array|
+|this_logVisitCounts_d0         |  out|   32|   ap_memory|         this_logVisitCounts|         array|
+|this_logVisitCounts_q0         |   in|   32|   ap_memory|         this_logVisitCounts|         array|
+|this_rng_read                  |   in|    6|     ap_none|               this_rng_read|        scalar|
+|boardState_isPlayer1Turn_s     |   in|    1|     ap_none|  boardState_isPlayer1Turn_s|        scalar|
+|boardState_lastMove_s          |   in|   32|     ap_none|       boardState_lastMove_s|        scalar|
+|boardState_player1_s           |   in|   49|     ap_none|        boardState_player1_s|        scalar|
+|boardState_player2_s           |   in|   49|     ap_none|        boardState_player2_s|        scalar|
+|isRED                          |   in|    1|     ap_none|                       isRED|        scalar|
++-------------------------------+-----+-----+------------+----------------------------+--------------+
+

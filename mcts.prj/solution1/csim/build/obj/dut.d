@@ -1,0 +1,52 @@
+obj/dut.o: ../../../../dut.cpp ../../../../dut.h \
+  /scratch/Xilinx/2025.1/Vitis/include/ap_int.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_common.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_decl.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_private.h \
+  /scratch/Xilinx/2025.1/Vitis/include/hls_half.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_half_fpo.h \
+  /scratch/Xilinx/2025.1/Vitis/include/hls_fpo.h \
+  /scratch/Xilinx/2025.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h \
+  /scratch/Xilinx/2025.1/Vitis/include/gmp.h \
+  /scratch/Xilinx/2025.1/Vitis/include/mpfr.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_half_x_utils.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_int_base.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_int_ref.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_int_special.h \
+  /scratch/Xilinx/2025.1/Vitis/include/ap_fixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_fixed_base.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_fixed_ref.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/ap_fixed_special.h \
+  /scratch/Xilinx/2025.1/Vitis/include/hls_stream.h \
+  ../../../../MCTSSearcher.h ../../../../GameState.h ../../../../hex.h \
+  ../../../../mcts_types.h ../../../../config.h \
+  /scratch/Xilinx/2025.1/Vitis/include/hls_math.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_hotbm_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/utils/x_hls_defines.h \
+  /scratch/Xilinx/2025.1/Vitis/include/utils/hls_version.h \
+  /scratch/Xilinx/2025.1/Vitis/include/utils/x_hls_utils.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_cordic_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_exp_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_log_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_sqrt_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_round_copysign_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_pow_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_diff_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_comparison_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_frexp_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_modf_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_isequal_isnotequal_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_all_any_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_select_bitselect_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_erf_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_fmod_rem_quo_remainder_divide_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_lgamma_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/utils/x_hls_traits.h \
+  /scratch/Xilinx/2025.1/Vitis/include/hls_x_complex.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_tgamma_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_fract_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_mad_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_cbrt_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_hypot_apfixed.h \
+  /scratch/Xilinx/2025.1/Vitis/include/etc/hls_ldexp_apfixed.h \
+  ../../../../rand.h

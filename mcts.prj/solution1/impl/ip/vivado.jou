@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Apr 23 22:10:36 2026
+# Process ID         : 2220491
+# Current directory  : /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/vivado.log
+# Journal file       : /home/course/aakash27/hex-fpga/mcts.prj/solution1/impl/ip/vivado.jou
+# Running On         : cs730-test7.bu.edu
+# Platform           : unknown
+# Operating System   : unknown
+# Processor Detail   : Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz
+# CPU Frequency      : 3491.877 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 33287 MB
+# Swap memory        : 16844 MB
+# Total Virtual      : 50131 MB
+# Available Virtual  : 39124 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

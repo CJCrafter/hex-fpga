@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vitis HLS Report for 'dut'
+================================================================
+* Date:           Thu Apr 23 22:10:26 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        mcts.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.167 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                         |                              |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                 Instance                |            Module            |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +-----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_dut_Pipeline_VITIS_LOOP_17_1_fu_233  |dut_Pipeline_VITIS_LOOP_17_1  |       10|       10|  0.100 us|  0.100 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_dut_Pipeline_VITIS_LOOP_27_3_fu_240  |dut_Pipeline_VITIS_LOOP_27_3  |       10|       10|  0.100 us|  0.100 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_search_fu_247                        |search                        |        ?|        ?|         ?|         ?|    ?|    ?|                                              no|
+        +-----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      94|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        1|     6|   14840|   30047|    -|
+|Memory           |      127|     -|       0|       0|    0|
+|Multiplexer      |        -|     -|       0|     589|    -|
+|Register         |        -|     -|      49|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |      128|     6|   14889|   30730|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       44|    ~0|       6|      26|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |                 Instance                |            Module            | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +-----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |grp_dut_Pipeline_VITIS_LOOP_17_1_fu_233  |dut_Pipeline_VITIS_LOOP_17_1  |        0|   0|    229|   3312|    0|
+    |grp_dut_Pipeline_VITIS_LOOP_27_3_fu_240  |dut_Pipeline_VITIS_LOOP_27_3  |        0|   0|    229|   3312|    0|
+    |grp_search_fu_247                        |search                        |        1|   6|  14382|  23423|    0|
+    +-----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |Total                                    |                              |        1|   6|  14840|  30047|    0|
+    +-----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |           Memory           |                Module               | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |searcher_childActions_U     |searcher_childActions_RAM_AUTO_1R1W  |        3|  0|   0|    0|  5100|    6|     1|        30600|
+    |searcher_meanQ_U            |searcher_meanQ_RAM_AUTO_1R1W         |        8|  0|   0|    0|  5100|   20|     1|       102000|
+    |searcher_terminals_U        |searcher_terminals_RAM_AUTO_1R1W     |        1|  0|   0|    0|  5100|    1|     1|         5100|
+    |searcher_isREDs_U           |searcher_terminals_RAM_AUTO_1R1W     |        1|  0|   0|    0|  5100|    1|     1|         5100|
+    |searcher_triedMask_U        |searcher_triedMask_RAM_AUTO_1R1W     |       16|  0|   0|    0|  5100|   49|     1|       249900|
+    |searcher_visitCounts_U      |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    |searcher_parents_U          |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    |searcher_firstChilds_U      |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    |searcher_numChildren_U      |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    |searcher_nextSiblings_U     |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    |searcher_numLegalActions_U  |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    |searcher_logVisitCounts_U   |searcher_visitCounts_RAM_AUTO_1R1W   |       14|  0|   0|    0|  5100|   32|     1|       163200|
+    +----------------------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                       |                                     |      127|  0|   0|    0| 61200|  301|    12|      1535100|
+    +----------------------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |last_move_fu_291_p2          |         +|   0|  0|  39|          32|           2|
+    |grp_fu_277_p2                |      icmp|   0|  0|  39|          32|           1|
+    |searcher_firstChilds_we0     |        or|   0|  0|   2|           1|           1|
+    |searcher_logVisitCounts_we0  |        or|   0|  0|   2|           1|           1|
+    |searcher_meanQ_we0           |        or|   0|  0|   2|           1|           1|
+    |searcher_numChildren_we0     |        or|   0|  0|   2|           1|           1|
+    |searcher_parents_we0         |        or|   0|  0|   2|           1|           1|
+    |searcher_terminals_we0       |        or|   0|  0|   2|           1|           1|
+    |searcher_triedMask_we0       |        or|   0|  0|   2|           1|           1|
+    |searcher_visitCounts_we0     |        or|   0|  0|   2|           1|           1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |Total                        |          |   0|  0|  94|          72|          11|
+    +-----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  65|         13|    1|         13|
+    |grp_search_fu_247_this_rng_read         |  14|          3|    6|         18|
+    |searcher_childActions_ce0               |   9|          2|    1|          2|
+    |searcher_childActions_we0               |   9|          2|    1|          2|
+    |searcher_firstChilds_address0           |   9|          2|   13|         26|
+    |searcher_firstChilds_address0_local     |  14|          3|   13|         39|
+    |searcher_firstChilds_ce0                |   9|          2|    1|          2|
+    |searcher_firstChilds_d0                 |   9|          2|   32|         64|
+    |searcher_firstChilds_we0                |   9|          2|    1|          2|
+    |searcher_isREDs_ce0                     |   9|          2|    1|          2|
+    |searcher_isREDs_we0                     |   9|          2|    1|          2|
+    |searcher_logVisitCounts_address0        |   9|          2|   13|         26|
+    |searcher_logVisitCounts_address0_local  |  14|          3|   13|         39|
+    |searcher_logVisitCounts_ce0             |   9|          2|    1|          2|
+    |searcher_logVisitCounts_d0              |   9|          2|   32|         64|
+    |searcher_logVisitCounts_we0             |   9|          2|    1|          2|
+    |searcher_meanQ_address0                 |   9|          2|   13|         26|
+    |searcher_meanQ_address0_local           |  14|          3|   13|         39|
+    |searcher_meanQ_ce0                      |   9|          2|    1|          2|
+    |searcher_meanQ_d0                       |   9|          2|   20|         40|
+    |searcher_meanQ_we0                      |   9|          2|    1|          2|
+    |searcher_nextSiblings_ce0               |   9|          2|    1|          2|
+    |searcher_nextSiblings_we0               |   9|          2|    1|          2|
+    |searcher_numChildren_address0           |   9|          2|   13|         26|
+    |searcher_numChildren_address0_local     |  14|          3|   13|         39|
+    |searcher_numChildren_ce0                |   9|          2|    1|          2|
+    |searcher_numChildren_d0                 |   9|          2|   32|         64|
+    |searcher_numChildren_we0                |   9|          2|    1|          2|
+    |searcher_numLegalActions_ce0            |   9|          2|    1|          2|
+    |searcher_numLegalActions_we0            |   9|          2|    1|          2|
+    |searcher_parents_address0               |   9|          2|   13|         26|
+    |searcher_parents_address0_local         |  14|          3|   13|         39|
+    |searcher_parents_ce0                    |   9|          2|    1|          2|
+    |searcher_parents_d0                     |   9|          2|   32|         64|
+    |searcher_parents_we0                    |   9|          2|    1|          2|
+    |searcher_terminals_address0             |   9|          2|   13|         26|
+    |searcher_terminals_address0_local       |  14|          3|   13|         39|
+    |searcher_terminals_ce0                  |   9|          2|    1|          2|
+    |searcher_terminals_d0                   |   9|          2|    1|          2|
+    |searcher_terminals_we0                  |   9|          2|    1|          2|
+    |searcher_triedMask_address0             |   9|          2|   13|         26|
+    |searcher_triedMask_address0_local       |  14|          3|   13|         39|
+    |searcher_triedMask_ce0                  |   9|          2|    1|          2|
+    |searcher_triedMask_d0                   |   9|          2|   49|         98|
+    |searcher_triedMask_we0                  |   9|          2|    1|          2|
+    |searcher_visitCounts_address0           |   9|          2|   13|         26|
+    |searcher_visitCounts_address0_local     |  14|          3|   13|         39|
+    |searcher_visitCounts_ce0                |   9|          2|    1|          2|
+    |searcher_visitCounts_d0                 |   9|          2|   32|         64|
+    |searcher_visitCounts_we0                |   9|          2|    1|          2|
+    |strm_in_blk_n                           |   9|          2|    1|          2|
+    |strm_in_read                            |  20|          4|    1|          4|
+    |strm_out_blk_n                          |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 589|        128|  472|       1067|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------+----+----+-----+-----------+
+    |                         Name                         | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                             |  12|   0|   12|          0|
+    |grp_dut_Pipeline_VITIS_LOOP_17_1_fu_233_ap_start_reg  |   1|   0|    1|          0|
+    |grp_dut_Pipeline_VITIS_LOOP_27_3_fu_240_ap_start_reg  |   1|   0|    1|          0|
+    |grp_search_fu_247_ap_start_reg                        |   1|   0|    1|          0|
+    |is_player1_turn_reg_320                               |   1|   0|    1|          0|
+    |is_red_reg_315                                        |   1|   0|    1|          0|
+    |last_move_reg_371                                     |  32|   0|   32|          0|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                 |  49|   0|   49|          0|
+    +------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|           dut|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|           dut|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|           dut|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|           dut|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|           dut|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|           dut|  return value|
+|strm_in_dout     |   in|   32|     ap_fifo|       strm_in|       pointer|
+|strm_in_empty_n  |   in|    1|     ap_fifo|       strm_in|       pointer|
+|strm_in_read     |  out|    1|     ap_fifo|       strm_in|       pointer|
+|strm_out_din     |  out|   32|     ap_fifo|      strm_out|       pointer|
+|strm_out_full_n  |   in|    1|     ap_fifo|      strm_out|       pointer|
+|strm_out_write   |  out|    1|     ap_fifo|      strm_out|       pointer|
++-----------------+-----+-----+------------+--------------+--------------+
+
