@@ -135,12 +135,13 @@ void MCTSSearcher<TOTAL_SIMS>::forward(GameState gameState) {
         const fixed_point_t UCT_C = fixed_point_t(1.41);
 
         // todo: this log is scary, use a learned neural function instead
-        uct_t logVisitCounts = mcts_log(uct_t(visitCounts[node]));
+        // uct_t logVisitCounts = mcts_log(uct_t(visitCounts[node]));
+        uct_t logVisitCount = logVisitCounts[node];
         for (int childNode = firstChilds[node]; childNode != -1; childNode = this->nextSiblings[childNode]) {
             uct_t childQ = this->meanQ[childNode];
             // todo: Makefile configurable
             uct_t childUCT =
-                    childQ + UCT_C * mcts_sqrt(logVisitCounts / (this->visitCounts[childNode]));
+                    childQ + UCT_C * mcts_sqrt(logVisitCount / (this->visitCounts[childNode]));
             if (childUCT > bestChildUCT) {
                 bestChildUCT = childUCT;
                 bestChildNode = childNode;
@@ -162,50 +163,60 @@ void MCTSSearcher<TOTAL_SIMS>::forward(GameState gameState) {
             if (gameState.isTerminal()) terminals[node] = true;
         }
     }
+    int visitCount = 1;
     if (!terminals[node]) {
-        reward = rollout(gameState);
+        reward = 0;
+        for (int i = 0; i < NUM_ROLLOUT_SIMS; ++i) {
+#pragma HLS UNROLL
+            reward += rollout(gameState);
+        }
+        visitCount = NUM_ROLLOUT_SIMS;
     } else {
         reward = gameState.getTerminalValue(true);
     }
-    backup(reward, node);
+    backup(reward, node, visitCount);
 }
 
 template<int TOTAL_SIMS>
 fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
     int depth = 0;
+
+    int numLegalActionsHere = 0;
+    Hex<HEX_SIZE>::uintsize_t legalActionMap = gameState.legalActionMap;
+
+    int sum = 0;
+    // std::cout << "intermediate bits:" << std::endl;
+    for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
+#pragma HLS UNROLL
+        // sum += legalActionMap[i];
+#if MCTS_HLS_TYPES
+        sum += legalActionMap[i];
+#else
+        sum += static_cast<int>((legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) != 0);
+#endif
+    }
+    numLegalActionsHere = sum;
+
     while (!gameState.isTerminal()) {
         // std::vector<int> legalActions = gameState.getLegalActions();
-        const Hex<HEX_SIZE> hexGame = gameState.hexGame;
-        Hex<HEX_SIZE>::uintsize_t legalActionMap = gameState.legalActionMap;
+        // const Hex<HEX_SIZE> hexGame = gameState.hexGame;
+        legalActionMap = gameState.legalActionMap;
         // todo use hex game for this
         // int numLegalActionsHere = gameState.getNumLegalActions();
 
-        int numLegalActionsHere;
 
-        int sum = 0;
-        // std::cout << "intermediate bits:" << std::endl;
-        for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
-#pragma HLS UNROLL
-            // sum += legalActionMap[i];
-#if MCTS_HLS_TYPES
-            sum += legalActionMap[i];
-#else
-            sum += static_cast<int>((legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) != 0);
-#endif
+        // int result = static_cast<int>((legalActionMap) & (Hex<HEX_SIZE>::uintsize_t(1UL) << i) != 0);
+        // std::cout << "result: " << result << std::endl;
+        // if (result) {
+        //     sum += 1;
+        // }
+        // std::cout << "sel: " << (Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
+        // std::cout << "map: " << legalActionMap << std::endl;
+        // std::cout << "and: " << (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) << ", " << (
+        // (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) != 0) << std::endl;
+        // std::cout << "sum: " << sum << std::endl;
 
-            // int result = static_cast<int>((legalActionMap) & (Hex<HEX_SIZE>::uintsize_t(1UL) << i) != 0);
-            // std::cout << "result: " << result << std::endl;
-            // if (result) {
-            //     sum += 1;
-            // }
-            // std::cout << "sel: " << (Hex<HEX_SIZE>::uintsize_t(1UL) << i) << std::endl;
-            // std::cout << "map: " << legalActionMap << std::endl;
-            // std::cout << "and: " << (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) << ", " << (
-            // (legalActionMap & (Hex<HEX_SIZE>::uintsize_t(1UL) << i)) != 0) << std::endl;
-            // std::cout << "sum: " << sum << std::endl;
-        }
         // std::cout << "final legal actions:" << std::endl;
-        numLegalActionsHere = sum;
 
 
         // std::cout << numLegalActionsHere << std::endl;
@@ -215,6 +226,7 @@ fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
         // int action = legalActions[randomIndex];
         int action = 0;
         int actionIdx = 0;
+        int seen = 0;
         for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
 #pragma HLS PIPELINE II=1
             bool isLegal = false;
@@ -232,6 +244,7 @@ fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
             }
         }
         gameState.makeMove(action);
+        numLegalActionsHere -= 1;
         depth++;
     }
 
@@ -240,7 +253,7 @@ fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
 
 
 template<int TOTAL_SIMS>
-void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNode) {
+void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNode, int visitCount) {
     // reward is from red player's perspective
     int node = artificialLeafNode;
     while (node != -1) {
@@ -250,13 +263,13 @@ void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNo
         if (!isREDs[node]) {
             perspectiveReward = reward;
         } else {
-            perspectiveReward = 1 - reward;
+            perspectiveReward = (1 - reward / visitCount) * visitCount;
         }
 
-        visitCounts[node] += 1;
-        fixed_point_t delta = perspectiveReward - meanQ[node];
-        meanQ[node] += delta / visitCounts[node];
+        visitCounts[node] += visitCount;
+        meanQ[node] += (perspectiveReward - meanQ[node] * visitCount) / visitCounts[node];
 
+        logVisitCounts[node] = mcts_log(uct_t(visitCounts[node]));
 
         // apply reward and invert for
         node = parent;
@@ -265,8 +278,16 @@ void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNo
 
 
 int search(Hex<HEX_SIZE> boardState, bool isRED) {
-    MCTSSearcher<MCTS_TOTAL_SIMS> searcher(4l);
-    return searcher.search(boardState, isRED);
+    int actions[NUM_PRALLEL_ROOTS];
+    for (int i = 0; i < NUM_PRALLEL_ROOTS; i++) {
+#pragma HLS UNROLL
+        MCTSSearcher<MCTS_TOTAL_SIMS / NUM_PRALLEL_ROOTS> searcher(42l + i);
+        int action = searcher.search(boardState, isRED);
+        actions[i] = action;
+    }
+    RNG rng(0l);
+    int selected = rng.randInt(NUM_PRALLEL_ROOTS);
+    return actions[selected];
 }
 
 template class MCTSSearcher<MCTS_TOTAL_SIMS>;

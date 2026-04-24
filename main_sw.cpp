@@ -36,7 +36,7 @@ int main() {
         // delete searcher;
         delete searcher;
         std::cout << "Made move " + std::to_string(action) << " (" << ms << " ms)" << std::endl; //
-        double sims_per_sec = MCTS_TOTAL_SIMS / (ms / 1000.0);
+        double sims_per_sec = MCTS_TOTAL_SIMS * NUM_ROLLOUT_SIMS / (ms / 1000.0);
         std::cout << "sims/sec = " << sims_per_sec << "\n";
 
         hex.place(action);

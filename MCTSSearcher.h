@@ -34,6 +34,7 @@ public:
     int childActions[MAX_NODES];
     Hex<HEX_SIZE>::uintsize_t triedMask[MAX_NODES];
     bool isREDs[MAX_NODES];
+    uct_t logVisitCounts[MAX_NODES];
     int nextFree;
     RNG rng;
 
@@ -46,6 +47,8 @@ public:
         terminals[0]    = false;
         triedMask[0]    = 0;
 
+        logVisitCounts[0] = 0;
+        logVisitCounts[nextFree] = 0;
 
         // memset(visitCounts, 0, sizeof(visitCounts));
         // memset(returnSums, 0, sizeof(returnSums));
@@ -70,7 +73,7 @@ public:
 
     void forward(GameState gameState);
 
-    void backup(fixed_point_t reward, int artificialLeaf);
+    void backup(fixed_point_t reward, int artificialLeaf, int visitCount);
 
     fixed_point_t rollout(GameState gameState);
 };
