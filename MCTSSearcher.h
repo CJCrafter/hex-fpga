@@ -6,7 +6,6 @@
 #define MCTSHEX_MCTSSEARCHER_H
 
 // #include <cstring>
-#define MAX_NODES 11000
 #include "GameState.h"
 #include "hex.h"
 #include "rand.h"
@@ -14,9 +13,11 @@
 #include <fstream>
 
 using uct_t   = ap_fixed<32, 16>;     // visit-count casts, log/sqrt, UCT score
-
+template <int TOTAL_SIMS>
 class MCTSSearcher {
 public:
+    static constexpr int MAX_NODES = TOTAL_SIMS + 100;
+
     int visitCounts[MAX_NODES];
     fixed_point_t meanQ[MAX_NODES];
     int parents[MAX_NODES];

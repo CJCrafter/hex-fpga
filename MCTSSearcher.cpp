@@ -1,13 +1,14 @@
 #include "MCTSSearcher.h"
 
+#include "config.h"
 #include "hls_math.h"
 // #include <cmath>
 #include <iostream>
 
 #include "GameState.h"
 
-
-int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
+template <int TOTAL_SIMS>
+int MCTSSearcher<TOTAL_SIMS>::search(Hex<HEX_SIZE> boardState, bool isRED) {
     parents[0] = -1; // root node has no parent
     firstChilds[0] = -1;
     nextFree = 1;
@@ -34,22 +35,21 @@ int MCTSSearcher::search(Hex<HEX_SIZE> boardState, bool isRED) {
 
     return childActions[bestChildNode];
 }
-
-void MCTSSearcher::mainLoop(Hex<HEX_SIZE> boardState) {
+template <int TOTAL_SIMS>
+void MCTSSearcher<TOTAL_SIMS>::mainLoop(Hex<HEX_SIZE> boardState) {
     long start = 0l;
-    int max_sims = 10000;
     GameState gameState(boardState);
     numLegalActions[0] = gameState.getNumLegalActions();
 
     int i = 0;
-    while (i < max_sims) {
+    while (i < TOTAL_SIMS) {
         forward(gameState.clone());
         i++;
     }
 }
-
-int MCTSSearcher::expand(int parent, GameState boardState) {
-    if (nextFree >= MAX_NODES) {
+template <int TOTAL_SIMS>
+int MCTSSearcher<TOTAL_SIMS>::expand(int parent, GameState boardState) {
+    if (nextFree >= MCTSSearcher<TOTAL_SIMS>::MAX_NODES) {
         return -1;
     }
 
@@ -63,7 +63,8 @@ int MCTSSearcher::expand(int parent, GameState boardState) {
     return nextFree - 1;
 }
 
-int MCTSSearcher::pickUntriedAction(int parent, GameState boardState) {
+template <int TOTAL_SIMS>
+int MCTSSearcher<TOTAL_SIMS>::pickUntriedAction(int parent, GameState boardState) {
     auto untried = boardState.legalActionMap & ~triedMask[parent];
     if (untried == 0) return -1;
 
@@ -74,8 +75,9 @@ int MCTSSearcher::pickUntriedAction(int parent, GameState boardState) {
     return -1;
 }
 
-void MCTSSearcher::createNode(int parent, int action, GameState boardState) {
-    if (nextFree >= MAX_NODES) {
+template <int TOTAL_SIMS>
+void MCTSSearcher<TOTAL_SIMS>::createNode(int parent, int action, GameState boardState) {
+    if (nextFree >= MCTSSearcher<TOTAL_SIMS>::MAX_NODES) {
         // std::cout << "Max nodes reached, cannot create more nodes" << std::endl;
         return;
     }
@@ -109,7 +111,8 @@ void MCTSSearcher::createNode(int parent, int action, GameState boardState) {
 }
 
 
-void MCTSSearcher::forward(GameState gameState) {
+template <int TOTAL_SIMS>
+void MCTSSearcher<TOTAL_SIMS>::forward(GameState gameState) {
     fixed_point_t reward = 0;
     int node = 0;
     while (numLegalActions[node] == numChildren[node] && !terminals[node]) {
@@ -158,7 +161,8 @@ void MCTSSearcher::forward(GameState gameState) {
     backup(reward, node);
 }
 
-fixed_point_t MCTSSearcher::rollout(GameState gameState) {
+template <int TOTAL_SIMS>
+fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
     int depth = 0;
     while (!gameState.isTerminal()) {
         // std::vector<int> legalActions = gameState.getLegalActions();
@@ -215,7 +219,8 @@ fixed_point_t MCTSSearcher::rollout(GameState gameState) {
 }
 
 
-void MCTSSearcher::backup(fixed_point_t reward, int artificialLeafNode) {
+template <int TOTAL_SIMS>
+void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNode) {
     // reward is from red player's perspective
     int node = artificialLeafNode;
     while (node != -1) {
@@ -240,6 +245,8 @@ void MCTSSearcher::backup(fixed_point_t reward, int artificialLeafNode) {
 
 
 int search(Hex<HEX_SIZE> boardState, bool isRED) {
-    MCTSSearcher searcher(4l);
+    MCTSSearcher<MCTS_TOTAL_SIMS> searcher(4l);
     return searcher.search(boardState, isRED);
 }
+
+template class MCTSSearcher<MCTS_TOTAL_SIMS>;
