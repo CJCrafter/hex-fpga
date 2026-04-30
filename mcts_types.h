@@ -20,10 +20,10 @@ inline uct_t mcts_log(uct_t x) {
     // todo: figure out how to use https://docs.amd.com/r/en-US/Vitis_Libraries/dsp/rst/group_func_approx_utils.html_1_1
     return hls::log(x);
 }
+
 inline uct_t mcts_sqrt(uct_t x) { return hls::sqrt(x); }
 
 #else
-#include <bitset>
 #include <cmath>
 
 using fixed_point_t = double;
