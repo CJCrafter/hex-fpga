@@ -281,10 +281,14 @@ void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNo
 
 int search(Hex<HEX_SIZE> boardState, bool isRED) {
     int actions[NUM_PRALLEL_ROOTS];
+    Hex<HEX_SIZE> boardStates[NUM_PRALLEL_ROOTS]{};
+    for (int i = 0; i < NUM_PRALLEL_ROOTS; i++) {
+        boardStates[i] = Hex(boardState);
+    }
     for (int i = 0; i < NUM_PRALLEL_ROOTS; i++) {
 #pragma HLS UNROLL
         MCTSSearcher<MCTS_TOTAL_SIMS / NUM_PRALLEL_ROOTS> searcher(42l + i);
-        int action = searcher.search(boardState, isRED);
+        int action = searcher.search(boardStates[i], isRED);
         actions[i] = action;
     }
     RNG rng(0l);

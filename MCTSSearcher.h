@@ -14,38 +14,50 @@
 #include <fstream>
 
 // using uct_t   = ap_fixed<32, 16>;     // visit-count casts, log/sqrt, UCT score
-template <int TOTAL_SIMS>
+template<int TOTAL_SIMS>
 class MCTSSearcher {
 public:
     static constexpr int MAX_NODES = TOTAL_SIMS + 100;
 
     int visitCounts[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=visitCounts type=complete dim=1
     fixed_point_t meanQ[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=meanQ type=complete dim=1
     int parents[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=parents type=complete dim=1
     int firstChilds[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=firstChilds type=complete dim=1
     int numChildren[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=numChildren type=complete dim=1
     int nextSiblings[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=nextSiblings type=complete dim=1
     int numLegalActions[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=numLegalActions type=complete dim=1
     // int childrenStarts[MAX_NODES]{};
     // int childrenEnds[MAX_NODES]{};
     // bool expandeds[MAX_NODES]{};
     bool terminals[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=terminals type=complete dim=1
     // mapping from parent to child node which action was taken to get from parent to child
     int childActions[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=childActions type=complete dim=1
     Hex<HEX_SIZE>::uintsize_t triedMask[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=triedMask type=complete dim=1
     bool isREDs[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=isREDs type=complete dim=1
     uct_t logVisitCounts[MAX_NODES];
+    // #pragma HLS ARRAY_PARTITION variable=logVisitCounts type=complete dim=1
     int nextFree;
     RNG rng;
 
     explicit MCTSSearcher(uint64_t seed) : nextFree(0), rng(seed) {
-        parents[0]      = -1;
-        firstChilds[0]  = -1;
-        numChildren[0]  = 0;
-        visitCounts[0]  = 0;
-        meanQ[0]        = 0;
-        terminals[0]    = false;
-        triedMask[0]    = 0;
+        parents[0] = -1;
+        firstChilds[0] = -1;
+        numChildren[0] = 0;
+        visitCounts[0] = 0;
+        meanQ[0] = 0;
+        terminals[0] = false;
+        triedMask[0] = 0;
 
         logVisitCounts[0] = 0;
         logVisitCounts[nextFree] = 0;
