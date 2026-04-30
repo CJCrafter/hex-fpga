@@ -286,6 +286,7 @@ int search(const Hex<HEX_SIZE> boardState, const bool isRED) {
         boardStates[i] = Hex<HEX_SIZE>(boardState);
     }
 #pragma HLS ARRAY_PARTITION variable=boardStates type=complete dim=1
+#pragma HLS ARRAY_PARTITION variable=actions type=complete dim=1
     for (int i = 0; i < NUM_PRALLEL_ROOTS; i++) {
 #pragma HLS UNROLL
         MCTSSearcher<MCTS_TOTAL_SIMS / NUM_PRALLEL_ROOTS> searcher(42l + i);
