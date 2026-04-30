@@ -24,5 +24,5 @@
 #endif
 
 #ifndef NUM_PRALLEL_ROOTS
-#define NUM_PRALLEL_ROOTS 2
+#define NUM_PRALLEL_ROOTS 4
 #endif
