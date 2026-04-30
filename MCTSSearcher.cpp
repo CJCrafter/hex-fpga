@@ -271,7 +271,7 @@ void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNo
         visitCounts[node] += visitCount;
         meanQ[node] += (perspectiveReward - meanQ[node] * visitCount) / visitCounts[node];
 
-        logVisitCounts[node] = mcts_log(uct_t(visitCounts[node]));
+        logVisitCounts[node] = mcts_log(visitCounts[node]);
 
         // apply reward and invert for
         node = parent;
