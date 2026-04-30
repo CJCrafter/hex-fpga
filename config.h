@@ -16,13 +16,17 @@
 #endif
 
 #ifndef MCTS_HLS_TYPES
-#define MCTS_HLS_TYPES 1
+#define MCTS_HLS_TYPES 0
 #endif
 
 #ifndef NUM_ROLLOUT_SIMS
-#define NUM_ROLLOUT_SIMS 4
+#define NUM_ROLLOUT_SIMS 8
 #endif
 
 #ifndef NUM_PRALLEL_ROOTS
 #define NUM_PRALLEL_ROOTS 2
+#endif
+
+#ifndef USE_PUCT
+#define USE_PUCT 0
 #endif

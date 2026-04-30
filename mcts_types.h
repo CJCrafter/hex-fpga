@@ -13,7 +13,14 @@ template<int N>
 using bitboard_t = ap_uint<N>;
 
 
-inline uct_t mcts_log(uct_t x) { return hls::log(x); }
+uct_t lut[256];
+getLog<uct_t, uct_t>(lut, 7, 8, 1, 0);
+
+inline uct_t mcts_log(uct_t x) {
+    // todo: figure out how to use https://docs.amd.com/r/en-US/Vitis_Libraries/dsp/rst/group_func_approx_utils.html_1_1
+
+    return hls::log(x);
+}
 inline uct_t mcts_sqrt(uct_t x) { return hls::sqrt(x); }
 
 #else
@@ -26,7 +33,12 @@ using uct_t = double;
 template<int N>
 using bitboard_t = unsigned long long;
 
-inline uct_t mcts_log(uct_t x) { return std::log(x); }
-inline uct_t mcts_sqrt(uct_t x) { return std::sqrt(x); }
+inline uct_t mcts_log(uct_t x) {
+    return std::log(x);
+}
+
+inline uct_t mcts_sqrt(uct_t x) {
+    return std::sqrt(x);
+}
 
 #endif
