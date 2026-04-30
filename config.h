@@ -26,7 +26,3 @@
 #ifndef NUM_PRALLEL_ROOTS
 #define NUM_PRALLEL_ROOTS 2
 #endif
-
-#ifndef USE_PUCT
-#define USE_PUCT 0
-#endif
