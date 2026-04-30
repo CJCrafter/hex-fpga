@@ -11,6 +11,6 @@ fi
 
 mkdir results/$1
 cp -r kria results/$1/krea
-cp -r mcts.prj results/$1/krea
+cp -r mcts.prj results/$1/mcts.prj
 cp *.cpp results/$1/
 cp *.h results/$1/
