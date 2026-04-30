@@ -16,7 +16,7 @@
 #endif
 
 #ifndef MCTS_HLS_TYPES
-#define MCTS_HLS_TYPES 0
+#define MCTS_HLS_TYPES 1
 #endif
 
 #ifndef NUM_ROLLOUT_SIMS
