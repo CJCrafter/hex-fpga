@@ -13,8 +13,8 @@ template<int N>
 using bitboard_t = ap_uint<N>;
 
 
-uct_t lut[256];
-getLog<uct_t, uct_t>(lut, 7, 8, 1, 0);
+// uct_t lut[256];
+// getLog<uct_t, uct_t>(lut, 7, 8, 1, 0);
 
 inline uct_t mcts_log(uct_t x) {
     // todo: figure out how to use https://docs.amd.com/r/en-US/Vitis_Libraries/dsp/rst/group_func_approx_utils.html_1_1
