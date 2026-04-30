@@ -279,7 +279,7 @@ void MCTSSearcher<TOTAL_SIMS>::backup(fixed_point_t reward, int artificialLeafNo
 }
 
 
-int search(Hex<HEX_SIZE> boardState, bool isRED) {
+int search(const Hex<HEX_SIZE> boardState, const bool isRED) {
     int actions[NUM_PRALLEL_ROOTS];
     Hex<HEX_SIZE> boardStates[NUM_PRALLEL_ROOTS]{};
     for (int i = 0; i < NUM_PRALLEL_ROOTS; i++) {
