@@ -13,3 +13,262 @@ sudo fpgautil -b bitstream.bit
 ls -l /dev/cifra_openbus_read_32 /dev/cifra_openbus_write_32
 ./host
 g++ -I/usr/lib/vitis_hls -DHLS_NO_XIL_FPO_LIB -O3 host.cpp -o host
+found ms.h
+found ms.cc
+PA4_ROOT=/autograder/source/585-ivc/package
+SOLUTION_ROOT=/autograder/source/solution/package/
+SUBMISSION_ROOT=/autograder/source/submission/package/
+Building submission
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake (found version "1.11.0")
+-- Found MSLibs: /autograder/source/585-ivc/package/include
+CMake Warning at /autograder/source/585-ivc/package/cmake/modules/FindMSLibs.cmake:58 (find_package):
+  By not providing "FindOpenCV.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "OpenCV", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "OpenCV" with any
+  of the following names:
+
+    OpenCVConfig.cmake
+    opencv-config.cmake
+
+  Add the installation prefix of "OpenCV" to CMAKE_PREFIX_PATH or set
+  "OpenCV_DIR" to a directory containing one of the above files.  If "OpenCV"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:19 (find_package)
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /autograder/source/submission/build
+[ 50%] Building CXX object csrc/CMakeFiles/submission-ms.dir/ms.cc.o
+[100%] Linking CXX shared library libsubmission-ms.so
+[100%] Built target submission-ms
+Building tests
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake (found version "1.11.0")
+-- Found MSLibs: /autograder/source/585-ivc/package/include
+CMake Warning at /autograder/source/585-ivc/package/cmake/modules/FindMSLibs.cmake:58 (find_package):
+  By not providing "FindOpenCV.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "OpenCV", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "OpenCV" with any
+  of the following names:
+
+    OpenCVConfig.cmake
+    opencv-config.cmake
+
+  Add the installation prefix of "OpenCV" to CMAKE_PREFIX_PATH or set
+  "OpenCV_DIR" to a directory containing one of the above files.  If "OpenCV"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:19 (find_package)
+
+
+-- Found Solution: /autograder/source/solution/package/include
+-- Found Submission: /autograder/source/submission/package/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /autograder/source/tests/build
+[ 12%] Building CXX object csrc/CMakeFiles/tests-preprocess-tests.dir/preprocess_tests.cc.o
+[ 25%] Linking CXX executable tests-preprocess-tests
+[ 25%] Built target tests-preprocess-tests
+[ 37%] Building CXX object csrc/CMakeFiles/tests-window-tests.dir/window_tests.cc.o
+[ 50%] Linking CXX executable tests-window-tests
+[ 50%] Built target tests-window-tests
+[ 62%] Building CXX object csrc/CMakeFiles/tests-mean-shift-tests.dir/mean_shift_tests.cc.o
+[ 75%] Linking CXX executable tests-mean-shift-tests
+[ 75%] Built target tests-mean-shift-tests
+[ 87%] Building CXX object csrc/CMakeFiles/tests-preprocess-with-grads-tests.dir/preprocess_grads_tests.cc.o
+[100%] Linking CXX executable tests-preprocess-with-grads-tests
+[100%] Built target tests-preprocess-with-grads-tests
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from test_preprocess
+[ RUN      ] test_preprocess.test_preprocess_grayscale
+[       OK ] test_preprocess.test_preprocess_grayscale (2807 ms)
+[ RUN      ] test_preprocess.test_preprocess_color
+[       OK ] test_preprocess.test_preprocess_color (3326 ms)
+[----------] 2 tests from test_preprocess (6134 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (6134 ms total)
+[  PASSED  ] 2 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from test_get_window
+[ RUN      ] test_get_window.test_all_pts_within_radius
+[       OK ] test_get_window.test_all_pts_within_radius (9790 ms)
+[ RUN      ] test_get_window.test_some_pts_outside_radius
+[       OK ] test_get_window.test_some_pts_outside_radius (9813 ms)
+[----------] 2 tests from test_get_window (19604 ms total)
+
+[----------] 1 test from test_update_center
+[ RUN      ] test_update_center.test_update_center
+[       OK ] test_update_center.test_update_center (90 ms)
+[----------] 1 test from test_update_center (90 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (19695 ms total)
+[  PASSED  ] 3 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from test_mean_shift
+[ RUN      ] test_mean_shift.test_grayscale_tiger
+ dataset size=(17856, 3)
+ center= 24  18 104 ms_sub(center)=25.1382 15.8899 105.288 ms_sol(center)=25.1382 15.8899 105.288
+ center= 93 112 201 ms_sub(center)=92.7086 112.168 200.539 ms_sol(center)=92.7086 112.168 200.539
+ center= 71  62 140 ms_sub(center)= 71.001 61.9997     140 ms_sol(center)= 71.001 61.9997     140
+ center=113  12 138 ms_sub(center)=113  12 138 ms_sol(center)=113  12 138
+ center= 81  72 167 ms_sub(center)=82.3619 72.1552 166.889 ms_sol(center)=82.3619 72.1552 166.889
+ center=120  95  92 ms_sub(center)=119.874 94.9406 92.0611 ms_sol(center)=119.874 94.9406 92.0611
+ center=  4  21 255 ms_sub(center)=4.00001      21     255 ms_sol(center)=4.00001      21     255
+ center=140  59  92 ms_sub(center)=139.998 59.0239 92.0221 ms_sol(center)=139.998 59.0239 92.0221
+ center=39 87 88 ms_sub(center)=38.9438 87.2514 88.2145 ms_sol(center)=38.9438 87.2514 88.2145
+ center= 55 115  89 ms_sub(center)=55.0097 115.008 89.0006 ms_sol(center)=55.0097 115.009 89.0006
+ dataset size=(17856, 3)
+ center=74 15 29 ms_sub(center)=73.0853 15.5479 29.1794 ms_sol(center)=73.0853 15.5479 29.1794
+ center= 43  19 133 ms_sub(center)=44.2973 18.3997 132.588 ms_sol(center)=44.2973 18.3997 132.588
+ center=102  45 145 ms_sub(center)=101.964  45.036     145 ms_sol(center)=101.964  45.036     145
+ center=109 105  62 ms_sub(center)=109.031 105.217 62.1043 ms_sol(center)=109.031 105.217 62.1044
+ center= 34 122 255 ms_sub(center)=33.8901 122.436 254.759 ms_sol(center)=33.8901 122.436 254.759
+ center=51 73 80 ms_sub(center)= 51.411 73.4677 79.2879 ms_sol(center)= 51.411 73.4677 79.2879
+ center=123  32 118 ms_sub(center)=    123 32.0004     118 ms_sol(center)=    123 32.0004     118
+ center=63 74 53 ms_sub(center)=63.3148 73.3769 52.6927 ms_sol(center)=63.3148 73.3769 52.6927
+ center= 97  32 217 ms_sub(center)=97.0561  31.943 217.116 ms_sol(center)= 97.056  31.943 217.116
+ center=116  87  27 ms_sub(center)=116.135 87.6496 28.4523 ms_sol(center)=116.135 87.6496 28.4523
+ dataset size=(17856, 3)
+ center= 36  20 163 ms_sub(center)=36.0123 19.9951 162.996 ms_sol(center)=36.0123 19.9951 162.996
+ center= 25  47 124 ms_sub(center)=25.0645 47.0583 124.124 ms_sol(center)=25.0645 47.0583 124.124
+ center=80 66 39 ms_sub(center)=81.0259 65.9993 39.4404 ms_sol(center)=81.0259 65.9993 39.4404
+ center= 47 111 111 ms_sub(center)= 46.996 111.003 110.992 ms_sol(center)= 46.996 111.003 110.992
+ center= 26 109 174 ms_sub(center)=26.2195 109.174  174.36 ms_sol(center)=26.2195 109.174  174.36
+ center=112  67  86 ms_sub(center)=111.561 67.4214   85.29 ms_sol(center)=111.561 67.4214   85.29
+ center= 61 111 134 ms_sub(center)=61.3703 111.388 133.685 ms_sol(center)=61.3703 111.388 133.685
+ center= 93  46 135 ms_sub(center)=93.0913 46.5042 134.996 ms_sol(center)=93.0913 46.5042 134.996
+ center=110  85 198 ms_sub(center)=110.509 85.5222 197.948 ms_sol(center)=110.509 85.5222 197.948
+ center=107  78 175 ms_sub(center)=106.869 78.0652 174.928 ms_sol(center)=106.869 78.0652 174.928
+ dataset size=(17856, 3)
+ center=142  30 255 ms_sub(center)=141.684      30     255 ms_sol(center)=141.684      30     255
+ center=101  72  98 ms_sub(center)=101.063 72.0637 98.1215 ms_sol(center)=101.063 72.0637 98.1215
+ center= 66  67 177 ms_sub(center)=65.5564 66.9998 177.444 ms_sol(center)=65.5564 66.9998 177.444
+ center=119  11 132 ms_sub(center)= 119.46 11.4643 132.015 ms_sol(center)= 119.46 11.4643 132.015
+ center=73 35 45 ms_sub(center)=     73 35.0068 44.9797 ms_sol(center)=     73 35.0068 44.9797
+ center=112  37 170 ms_sub(center)=112.888 38.3549 170.892 ms_sol(center)=112.888 38.3549 170.892
+ center= 41 109  27 ms_sub(center)=42.1063 108.346 27.1011 ms_sol(center)=42.1063 108.346  27.101
+ center=10  6 38 ms_sub(center)=10.0672  5.8418 38.1215 ms_sol(center)=10.0672  5.8418 38.1215
+ center=27 76 64 ms_sub(center)= 27.027 75.7324  63.794 ms_sol(center)= 27.027 75.7324  63.794
+ center=139  29 255 ms_sub(center)=139  29 255 ms_sol(center)=139  29 255
+[       OK ] test_mean_shift.test_grayscale_tiger (7982 ms)
+[ RUN      ] test_mean_shift.test_grayscale_breakfast1
+ dataset size=(489600, 3)
+ center=108 541   4 ms_sub(center)=108.048   541.1 3.65814 ms_sol(center)=108.048 541.099 3.65816
+/autograder/source/tests/csrc/mean_shift_tests.cc:152: Failure
+Value of: (mean_shifted_center_sol - mean_shifted_center_sub).norm() <= DELTA
+  Actual: false
+Expected: true
+your solution when starting with the same center & data, and using raw l2-distance for convergence should get the same center as the solution
+
+[  FAILED  ] test_mean_shift.test_grayscale_breakfast1 (2544 ms)
+[ RUN      ] test_mean_shift.test_grayscale_building
+ dataset size=(25020, 3)
+ center= 17 156 243 ms_sub(center)=16.9665 155.982 242.978 ms_sol(center)=16.9665 155.982 242.978
+/autograder/source/tests/csrc/mean_shift_tests.cc:202: Failure
+Value of: (mean_shifted_center_sol - mean_shifted_center_sub).norm() <= DELTA
+  Actual: false
+Expected: true
+your solution when starting with the same center & data, and using raw l2-distance for convergence should get the same center as the solution
+
+[  FAILED  ] test_mean_shift.test_grayscale_building (85 ms)
+[----------] 3 tests from test_mean_shift (10612 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (10612 ms total)
+[  PASSED  ] 1 test.
+[  FAILED  ] 2 tests, listed below:
+[  FAILED  ] test_mean_shift.test_grayscale_breakfast1
+[  FAILED  ] test_mean_shift.test_grayscale_building
+
+ 2 FAILED TESTS
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from test_preprocess_with_grads
+[ RUN      ] test_preprocess_with_grads.test_preprocess_grayscale
+/autograder/source/tests/csrc/preprocess_grads_tests.cc:182: Failure
+Expected equality of these values:
+  std::get<0>(size)*std::get<1>(size)
+    Which is: 9
+  pts.rows()
+    Which is: 3
+'preprocess_with_grads(GrayscaleByteImg)'should produce a point cloud with 9 points when input image has width=3, height=3
+
+[  FAILED  ] test_preprocess_with_grads.test_preprocess_grayscale (0 ms)
+[ RUN      ] test_preprocess_with_grads.test_preprocess_color
+/autograder/source/tests/csrc/preprocess_grads_tests.cc:228: Failure
+Expected equality of these values:
+  std::get<0>(size)*std::get<1>(size)
+    Which is: 9
+  pts.rows()
+    Which is: 3
+'preprocess_with_grads(ColorByteImg)' should produce a point cloud with 9 points when input image has width=3, height=3
+
+[  FAILED  ] test_preprocess_with_grads.test_preprocess_color (0 ms)
+[----------] 2 tests from test_preprocess_with_grads (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 2 tests, listed below:
+[  FAILED  ] test_preprocess_with_grads.test_preprocess_grayscale
+[  FAILED  ] test_preprocess_with_grads.test_preprocess_color
+
+ 2 FAILED TESTS
+loading ./preprocess_tests.json
+loading ./points.json
+loading ./window_tests.json
+loading ./points.json
+loading ./mean_shift_tests.json
+loading ./points.json
+loading ./preprocess_with_grads_tests.json
+loading ./points.json
+['/autograder/results/preprocess_tests.json', '/autograder/results/window_tests.json', '/autograder/results/mean_shift_tests.json', '/autograder/results/preprocess_with_grads_tests.json']
+loading f=/autograder/results/preprocess_tests.json
+{'score': 0.0, 'execution_time': 6.133, 'output': '', 'output_format': 'simple_format', 'visibility': 'visible', 'stdout_visibility': 'visible', 'tests': [{'score': 6, 'max_score': 6, 'name': 'test_preprocess.test_preprocess_grayscale', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 6, 'max_score': 6, 'name': 'test_preprocess.test_preprocess_color', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}]}
+loading f=/autograder/results/window_tests.json
+{'score': 0.0, 'execution_time': 19.693, 'output': '', 'output_format': 'simple_format', 'visibility': 'visible', 'stdout_visibility': 'visible', 'tests': [{'score': 10, 'max_score': 10, 'name': 'test_get_window.test_all_pts_within_radius', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 10, 'max_score': 10, 'name': 'test_get_window.test_some_pts_outside_radius', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 10, 'max_score': 10, 'name': 'test_update_center.test_update_center', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}]}
+loading f=/autograder/results/mean_shift_tests.json
+{'score': 0.0, 'execution_time': 10.611, 'output': '', 'output_format': 'simple_format', 'visibility': 'visible', 'stdout_visibility': 'visible', 'tests': [{'score': 12, 'max_score': 12, 'name': 'test_mean_shift.test_grayscale_tiger', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 13, 'name': 'test_mean_shift.test_grayscale_breakfast1', 'output': '/autograder/source/tests/csrc/mean_shift_tests.cc:152\nValue of: (mean_shifted_center_sol - mean_shifted_center_sub).norm() <= DELTA\n  Actual: false\nExpected: true\nyour solution when starting with the same center & data, and using raw l2-distance for convergence should get the same center as the solution\n', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 13, 'name': 'test_mean_shift.test_grayscale_building', 'output': '/autograder/source/tests/csrc/mean_shift_tests.cc:202\nValue of: (mean_shifted_center_sol - mean_shifted_center_sub).norm() <= DELTA\n  Actual: false\nExpected: true\nyour solution when starting with the same center & data, and using raw l2-distance for convergence should get the same center as the solution\n', 'output_format': 'simple_format', 'visibility': 'visible'}]}
+loading f=/autograder/results/preprocess_with_grads_tests.json
+{'score': 0.0, 'execution_time': 0.0, 'output': '', 'output_format': 'simple_format', 'visibility': 'visible', 'stdout_visibility': 'visible', 'tests': [{'score': 0, 'max_score': 6, 'name': 'test_preprocess_with_grads.test_preprocess_grayscale', 'output': "/autograder/source/tests/csrc/preprocess_grads_tests.cc:182\nExpected equality of these values:\n  std::get<0>(size)*std::get<1>(size)\n    Which is: 9\n  pts.rows()\n    Which is: 3\n'preprocess_with_grads(GrayscaleByteImg)'should produce a point cloud with 9 points when input image has width=3, height=3\n", 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 6, 'name': 'test_preprocess_with_grads.test_preprocess_color', 'output': "/autograder/source/tests/csrc/preprocess_grads_tests.cc:228\nExpected equality of these values:\n  std::get<0>(size)*std::get<1>(size)\n    Which is: 9\n  pts.rows()\n    Which is: 3\n'preprocess_with_grads(ColorByteImg)' should produce a point cloud with 9 points when input image has width=3, height=3\n", 'output_format': 'simple_format', 'visibility': 'visible'}]}
+{'execution_time': 36.437, 'visibility': 'visible', 'stdout_visibility': 'visible', 'tests': [{'score': 6, 'max_score': 6, 'name': 'test_preprocess.test_preprocess_grayscale', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 6, 'max_score': 6, 'name': 'test_preprocess.test_preprocess_color', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 10, 'max_score': 10, 'name': 'test_get_window.test_all_pts_within_radius', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 10, 'max_score': 10, 'name': 'test_get_window.test_some_pts_outside_radius', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 10, 'max_score': 10, 'name': 'test_update_center.test_update_center', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 12, 'max_score': 12, 'name': 'test_mean_shift.test_grayscale_tiger', 'output': '', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 13, 'name': 'test_mean_shift.test_grayscale_breakfast1', 'output': '/autograder/source/tests/csrc/mean_shift_tests.cc:152\nValue of: (mean_shifted_center_sol - mean_shifted_center_sub).norm() <= DELTA\n  Actual: false\nExpected: true\nyour solution when starting with the same center & data, and using raw l2-distance for convergence should get the same center as the solution\n', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 13, 'name': 'test_mean_shift.test_grayscale_building', 'output': '/autograder/source/tests/csrc/mean_shift_tests.cc:202\nValue of: (mean_shifted_center_sol - mean_shifted_center_sub).norm() <= DELTA\n  Actual: false\nExpected: true\nyour solution when starting with the same center & data, and using raw l2-distance for convergence should get the same center as the solution\n', 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 6, 'name': 'test_preprocess_with_grads.test_preprocess_grayscale', 'output': "/autograder/source/tests/csrc/preprocess_grads_tests.cc:182\nExpected equality of these values:\n  std::get<0>(size)*std::get<1>(size)\n    Which is: 9\n  pts.rows()\n    Which is: 3\n'preprocess_with_grads(GrayscaleByteImg)'should produce a point cloud with 9 points when input image has width=3, height=3\n", 'output_format': 'simple_format', 'visibility': 'visible'}, {'score': 0, 'max_score': 6, 'name': 'test_preprocess_with_grads.test_preprocess_color', 'output': "/autograder/source/tests/csrc/preprocess_grads_tests.cc:228\nExpected equality of these values:\n  std::get<0>(size)*std::get<1>(size)\n    Which is: 9\n  pts.rows()\n    Which is: 3\n'preprocess_with_grads(ColorByteImg)' should produce a point cloud with 9 points when input image has width=3, height=3\n", 'output_format': 'simple_format', 'visibility': 'visible'}]}
