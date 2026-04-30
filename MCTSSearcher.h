@@ -75,7 +75,7 @@ public:
 
     void backup(fixed_point_t reward, int artificialLeaf, int visitCount);
 
-    fixed_point_t rollout(GameState gameState);
+    fixed_point_t rollout(GameState gameState, int seed);
 };
 
 int search(Hex<HEX_SIZE> boardState, bool isRED);

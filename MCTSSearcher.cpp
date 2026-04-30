@@ -164,11 +164,12 @@ void MCTSSearcher<TOTAL_SIMS>::forward(GameState gameState) {
         }
     }
     int visitCount = 1;
+    int seed = rng.next();
     if (!terminals[node]) {
         reward = 0;
         for (int i = 0; i < NUM_ROLLOUT_SIMS; ++i) {
 #pragma HLS UNROLL
-            reward += rollout(gameState);
+            reward += rollout(gameState, seed + i);
         }
         visitCount = NUM_ROLLOUT_SIMS;
     } else {
@@ -178,13 +179,14 @@ void MCTSSearcher<TOTAL_SIMS>::forward(GameState gameState) {
 }
 
 template<int TOTAL_SIMS>
-fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
+fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState, int seed) {
     int depth = 0;
 
     int numLegalActionsHere = 0;
     Hex<HEX_SIZE>::uintsize_t legalActionMap = gameState.legalActionMap;
 
     int sum = 0;
+    RNG current_rng(seed);
     // std::cout << "intermediate bits:" << std::endl;
     for (int i = 0; i < HEX_SIZE * HEX_SIZE; i++) {
 #pragma HLS UNROLL
@@ -222,7 +224,7 @@ fixed_point_t MCTSSearcher<TOTAL_SIMS>::rollout(GameState gameState) {
         // std::cout << numLegalActionsHere << std::endl;
 
 
-        int randomIndex = rng.randInt(numLegalActionsHere);
+        int randomIndex = current_rng.randInt(numLegalActionsHere);
         // int action = legalActions[randomIndex];
         int action = 0;
         int actionIdx = 0;
