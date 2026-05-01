@@ -20,13 +20,9 @@ public:
     static constexpr int MAX_NODES = TOTAL_SIMS + 100;
 
     int visitCounts[MAX_NODES];
-    #pragma HLS ARRAY_PARTITION variable=visitCounts type=cyclic dim=1
     fixed_point_t meanQ[MAX_NODES];
-    #pragma HLS ARRAY_PARTITION variable=meanQ type=cyclic dim=1
     int parents[MAX_NODES];
-    #pragma HLS ARRAY_PARTITION variable=parents type=cyclic dim=1
     int firstChilds[MAX_NODES];
-    #pragma HLS ARRAY_PARTITION variable=firstChilds type=cyclic dim=1
     int numChildren[MAX_NODES];
     // #pragma HLS ARRAY_PARTITION variable=numChildren type=complete dim=1
     int nextSiblings[MAX_NODES];
