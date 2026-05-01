@@ -20,7 +20,7 @@
 #endif
 
 #ifndef NUM_ROLLOUT_SIMS
-#define NUM_ROLLOUT_SIMS 8
+#define NUM_ROLLOUT_SIMS 16
 #endif
 
 #ifndef NUM_PRALLEL_ROOTS
